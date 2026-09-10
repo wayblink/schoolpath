@@ -1,0 +1,53 @@
+{
+  "mode": "apply",
+  "manifestPath": "/Users/jyxc-dz-0101035/yard/house/data/ingest/shgov-search/2026-09-10T08-42-28-257Z-0006d5ee/manifest.json",
+  "failures": [],
+  "rows": 788,
+  "added": 0,
+  "unchanged": 788,
+  "conflicts": 0,
+  "reconciled": 788,
+  "byKeyword": {
+    "学校": {
+      "fetchedPages": 17,
+      "resultCount": 632,
+      "failures": 0,
+      "added": 0,
+      "unchanged": 649,
+      "conflicts": 0
+    },
+    "义务教育": {
+      "fetchedPages": 3,
+      "resultCount": 62,
+      "failures": 0,
+      "added": 0,
+      "unchanged": 65,
+      "conflicts": 0
+    },
+    "招生入学": {
+      "fetchedPages": 2,
+      "resultCount": 23,
+      "failures": 0,
+      "added": 0,
+      "unchanged": 25,
+      "conflicts": 0
+    },
+    "学区": {
+      "fetchedPages": 2,
+      "resultCount": 22,
+      "failures": 0,
+      "added": 0,
+      "unchanged": 24,
+      "conflicts": 0
+    },
+    "对口入学": {
+      "fetchedPages": 2,
+      "resultCount": 23,
+      "failures": 0,
+      "added": 0,
+      "unchanged": 25,
+      "conflicts": 0
+    }
+  },
+  "reportDir": "/Users/jyxc-dz-0101035/yard/house/data/ingest/shgov-search/2026-09-10T08-42-28-257Z-0006d5ee/import-1789029798812"
+}

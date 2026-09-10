@@ -1,0 +1,38 @@
+[
+  {
+    "ts": "2026-08-13T17:19:34.339Z",
+    "operation": "reviewed_school_tier_correction_round1",
+    "mode": "dry-run",
+    "school_id": 3903,
+    "school_name": "上海市闵行区鹤北初级中学",
+    "action": "skip-existing-tier",
+    "current_tier": "四梯队",
+    "source": {
+      "type": "third_party_tier",
+      "name": "上海择校升学转学",
+      "title": "上海各区初中梯队排名",
+      "url": "https://www.vsxue.com/2083.html",
+      "date": "2025",
+      "matchedText": "闵行区初中四梯队：七宝实验中学、龙茗中学、康城实验、闵行三中、闵行四中、鹤北初级中学等。"
+    },
+    "note": "梯队为第三方民间榜单字段，不是教育局官方字段；本次试点仅填补待补充值。来源列出闵行区初中四梯队包含鹤北初级中学，当前行上海市闵行区鹤北初级中学为同区同学段且名称直接包含匹配。"
+  },
+  {
+    "ts": "2026-08-13T17:19:34.341Z",
+    "operation": "reviewed_school_tier_correction_round1",
+    "mode": "dry-run",
+    "school_id": 3904,
+    "school_name": "上海市闵行区龙茗中学",
+    "action": "skip-existing-tier",
+    "current_tier": "四梯队",
+    "source": {
+      "type": "third_party_tier",
+      "name": "上海择校升学转学",
+      "title": "上海各区初中梯队排名",
+      "url": "https://www.vsxue.com/2083.html",
+      "date": "2025",
+      "matchedText": "闵行区初中四梯队：七宝实验中学、龙茗中学、康城实验、闵行三中、闵行四中、鹤北初级中学等。"
+    },
+    "note": "梯队为第三方民间榜单字段，不是教育局官方字段；本次试点仅填补待补充值。来源列出闵行区初中四梯队包含龙茗中学，当前行上海市闵行区龙茗中学为同区同学段且名称直接包含匹配。"
+  }
+]

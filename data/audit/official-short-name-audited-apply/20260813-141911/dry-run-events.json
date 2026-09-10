@@ -1,0 +1,1010 @@
+[
+  {
+    "ts": "2026-08-13T14:19:11.530Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5808,
+    "school_name": "建襄小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "建襄小学",
+        "to": "上海市徐汇区建襄小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "建襄小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区建襄小学",
+      "raw_nature": "公办",
+      "raw_address": "岳阳路255号（岳阳校区） 嘉善路177号（嘉善校区）"
+    },
+    "before": {
+      "name": "建襄小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "天平",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区建襄小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "天平",
+      "school_nature": "公立",
+      "aliases": [
+        "建襄小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.532Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5810,
+    "school_name": "求知小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "求知小学",
+        "to": "上海市徐汇区求知小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "求知小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区求知小学",
+      "raw_nature": "公办",
+      "raw_address": "习勤路91号（西校区） 漕东支路115号（东校区）"
+    },
+    "before": {
+      "name": "求知小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "漕河泾",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区求知小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "漕河泾",
+      "school_nature": "公立",
+      "aliases": [
+        "求知小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.536Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5819,
+    "school_name": "世界小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "世界小学",
+        "to": "上海市徐汇区世界小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "世界小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区世界小学",
+      "raw_nature": "公办",
+      "raw_address": "武康路280弄2号"
+    },
+    "before": {
+      "name": "世界小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "湖南",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区世界小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "湖南",
+      "school_nature": "公立",
+      "aliases": [
+        "世界小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.539Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5820,
+    "school_name": "虹桥路小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "虹桥路小学",
+        "to": "上海市徐汇区虹桥路小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "虹桥路小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区虹桥路小学",
+      "raw_nature": "公办",
+      "raw_address": "番禺路901号"
+    },
+    "before": {
+      "name": "虹桥路小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "徐家汇",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区虹桥路小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "徐家汇",
+      "school_nature": "公立",
+      "aliases": [
+        "虹桥路小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.542Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5821,
+    "school_name": "光启小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "光启小学",
+        "to": "上海市徐汇区光启小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "光启小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区光启小学",
+      "raw_nature": "公办",
+      "raw_address": "零陵路811号"
+    },
+    "before": {
+      "name": "光启小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "徐家汇",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区光启小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "徐家汇",
+      "school_nature": "公立",
+      "aliases": [
+        "光启小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.543Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5826,
+    "school_name": "樱花园小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "樱花园小学",
+        "to": "上海市徐汇区樱花园小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "樱花园小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区樱花园小学",
+      "raw_nature": "公办",
+      "raw_address": "桂平支路18号"
+    },
+    "before": {
+      "name": "樱花园小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "康健",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区樱花园小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "康健",
+      "school_nature": "公立",
+      "aliases": [
+        "樱花园小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.545Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5831,
+    "school_name": "启新小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "启新小学",
+        "to": "上海市徐汇区启新小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "启新小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区启新小学",
+      "raw_nature": "公办",
+      "raw_address": "虹梅南路600号"
+    },
+    "before": {
+      "name": "启新小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "凌云",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区启新小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "凌云",
+      "school_nature": "公立",
+      "aliases": [
+        "启新小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.554Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5835,
+    "school_name": "龙南小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "龙南小学",
+        "to": "上海市徐汇区龙南小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "龙南小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区龙南小学",
+      "raw_nature": "公办",
+      "raw_address": "龙水南路龙南五村200号"
+    },
+    "before": {
+      "name": "龙南小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "龙华",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区龙南小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "龙华",
+      "school_nature": "公立",
+      "aliases": [
+        "龙南小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.555Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5839,
+    "school_name": "华泾小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "华泾小学",
+        "to": "上海市徐汇区华泾小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "华泾小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区华泾小学",
+      "raw_nature": "公办",
+      "raw_address": "华发路175号"
+    },
+    "before": {
+      "name": "华泾小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "华泾",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区华泾小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "华泾",
+      "school_nature": "公立",
+      "aliases": [
+        "华泾小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.559Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5840,
+    "school_name": "徐浦小学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "徐浦小学",
+        "to": "上海市徐汇区徐浦小学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "徐浦小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（小学）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/5c18b5ed91324ff48f27a95a654ab73d.html",
+      "matched_name": "上海市徐汇区徐浦小学",
+      "raw_nature": "公办",
+      "raw_address": "龙吴路2388弄71号"
+    },
+    "before": {
+      "name": "徐浦小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "华泾",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市徐汇区徐浦小学",
+      "district": "徐汇",
+      "type": "primary",
+      "address": "华泾",
+      "school_nature": "公立",
+      "aliases": [
+        "徐浦小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.562Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 5847,
+    "school_name": "五十四中学",
+    "district": "徐汇",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "五十四中学",
+        "to": "上海市第五十四中学"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "五十四中学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年徐汇区义务教育阶段学校（初中）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/832e8a6c9de94342b77c087100ff956c.html",
+      "matched_name": "上海市第五十四中学",
+      "raw_nature": "公办完中",
+      "raw_address": "高中部：康平路34号 初中部：复兴中路1464号"
+    },
+    "before": {
+      "name": "五十四中学",
+      "district": "徐汇",
+      "type": "middle",
+      "address": "天平/湖南",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市第五十四中学",
+      "district": "徐汇",
+      "type": "middle",
+      "address": "天平/湖南",
+      "school_nature": "公立",
+      "aliases": [
+        "五十四中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.570Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6141,
+    "school_name": "御桥小学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "御桥小学",
+        "to": "上海市浦东新区御桥小学（御山校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "御桥小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（小学）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/4b6f7cccd64a4bc2a7e60cfe5a7d202f.html",
+      "matched_name": "上海市浦东新区御桥小学（御山校区）",
+      "raw_nature": "公办",
+      "raw_address": "御山路381号"
+    },
+    "before": {
+      "name": "御桥小学",
+      "district": "浦东",
+      "type": "primary",
+      "address": "北蔡",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市浦东新区御桥小学（御山校区）",
+      "district": "浦东",
+      "type": "primary",
+      "address": "北蔡",
+      "school_nature": "公立",
+      "aliases": [
+        "御桥小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.572Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6142,
+    "school_name": "南码头小学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "南码头小学",
+        "to": "上海市浦东新区南码头小学（东三校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "南码头小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（小学）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/4b6f7cccd64a4bc2a7e60cfe5a7d202f.html",
+      "matched_name": "上海市浦东新区南码头小学（东三校区）",
+      "raw_nature": "公办",
+      "raw_address": "东三里桥路16号"
+    },
+    "before": {
+      "name": "南码头小学",
+      "district": "浦东",
+      "type": "primary",
+      "address": "南码头",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市浦东新区南码头小学（东三校区）",
+      "district": "浦东",
+      "type": "primary",
+      "address": "南码头",
+      "school_nature": "公立",
+      "aliases": [
+        "南码头小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.577Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6143,
+    "school_name": "东方小学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "东方小学",
+        "to": "上海市浦东新区东方小学（蓝村校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "东方小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（小学）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/4b6f7cccd64a4bc2a7e60cfe5a7d202f.html",
+      "matched_name": "上海市浦东新区东方小学（蓝村校区）",
+      "raw_nature": "公办",
+      "raw_address": "蓝村路30弄11号"
+    },
+    "before": {
+      "name": "东方小学",
+      "district": "浦东",
+      "type": "primary",
+      "address": "塘桥",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市浦东新区东方小学（蓝村校区）",
+      "district": "浦东",
+      "type": "primary",
+      "address": "塘桥",
+      "school_nature": "公立",
+      "aliases": [
+        "东方小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.581Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6147,
+    "school_name": "白玉兰小学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "白玉兰小学",
+        "to": "上海市浦东新区白玉兰小学（临沂校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "白玉兰小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（小学）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/4b6f7cccd64a4bc2a7e60cfe5a7d202f.html",
+      "matched_name": "上海市浦东新区白玉兰小学（临沂校区）",
+      "raw_nature": "公办",
+      "raw_address": "临沂路400号"
+    },
+    "before": {
+      "name": "白玉兰小学",
+      "district": "浦东",
+      "type": "primary",
+      "address": "塘桥",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市浦东新区白玉兰小学（临沂校区）",
+      "district": "浦东",
+      "type": "primary",
+      "address": "塘桥",
+      "school_nature": "公立",
+      "aliases": [
+        "白玉兰小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.586Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6148,
+    "school_name": "金茂小学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "金茂小学",
+        "to": "上海市浦东新区金茂小学（碧云校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "金茂小学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（小学）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/4b6f7cccd64a4bc2a7e60cfe5a7d202f.html",
+      "matched_name": "上海市浦东新区金茂小学（碧云校区）",
+      "raw_nature": "公办",
+      "raw_address": "台儿庄路96号"
+    },
+    "before": {
+      "name": "金茂小学",
+      "district": "浦东",
+      "type": "primary",
+      "address": "金桥",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市浦东新区金茂小学（碧云校区）",
+      "district": "浦东",
+      "type": "primary",
+      "address": "金桥",
+      "school_nature": "公立",
+      "aliases": [
+        "金茂小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.590Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6159,
+    "school_name": "清流中学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "清流中学",
+        "to": "上海市清流中学（上南校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "清流中学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "matched_name": "上海市清流中学（上南校区）",
+      "raw_nature": "公办",
+      "raw_address": "上南路801号"
+    },
+    "before": {
+      "name": "清流中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上钢",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市清流中学（上南校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上钢",
+      "school_nature": "公立",
+      "aliases": [
+        "清流中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.594Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6162,
+    "school_name": "洪山中学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "洪山中学",
+        "to": "上海市洪山中学（长清校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "洪山中学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "matched_name": "上海市洪山中学（长清校区）",
+      "raw_nature": "公办",
+      "raw_address": "长清路101号"
+    },
+    "before": {
+      "name": "洪山中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "周家渡",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市洪山中学（长清校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "周家渡",
+      "school_nature": "公立",
+      "aliases": [
+        "洪山中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.597Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6165,
+    "school_name": "北蔡中学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "北蔡中学",
+        "to": "上海市北蔡中学（北中路校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "北蔡中学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "matched_name": "上海市北蔡中学（北中路校区）",
+      "raw_nature": "公办",
+      "raw_address": "北中路493号"
+    },
+    "before": {
+      "name": "北蔡中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "北蔡",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市北蔡中学（北中路校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "北蔡",
+      "school_nature": "公立",
+      "aliases": [
+        "北蔡中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.599Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6166,
+    "school_name": "杨思中学",
+    "district": "浦东",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "杨思中学",
+        "to": "上海市杨思中学（洪山路校区）"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "杨思中学"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "matched_name": "上海市杨思中学（洪山路校区）",
+      "raw_nature": "公办",
+      "raw_address": "洪山路763号"
+    },
+    "before": {
+      "name": "杨思中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "三林",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市杨思中学（洪山路校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "三林",
+      "school_nature": "公立",
+      "aliases": [
+        "杨思中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T14:19:11.643Z",
+    "operation": "official_short_name_expand",
+    "mode": "dry-run",
+    "school_id": 6045,
+    "school_name": "科技学校",
+    "district": "静安",
+    "score": 230,
+    "changes": {
+      "name": {
+        "from": "科技学校",
+        "to": "上海市静安区科技学校"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "科技学校"
+        ]
+      }
+    },
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市各区教育局/政府公开信息",
+      "title": "2025年静安区义务教育阶段公办学校教育教学设施和师资配置公示表",
+      "url": "https://www.shanghai.gov.cn/jaqywjy/20250407/ba037217144a4d7e8f92f5c5f495704c.html",
+      "matched_name": "上海市静安区科技学校",
+      "raw_nature": "",
+      "raw_address": "阳泉路629号、阳曲路350弄1号"
+    },
+    "before": {
+      "name": "科技学校",
+      "district": "静安",
+      "type": "primary",
+      "address": "临汾路",
+      "school_nature": "公立",
+      "aliases": []
+    },
+    "after": {
+      "name": "上海市静安区科技学校",
+      "district": "静安",
+      "type": "primary",
+      "address": "临汾路",
+      "school_nature": "公立",
+      "aliases": [
+        "科技学校"
+      ]
+    }
+  }
+]

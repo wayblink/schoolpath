@@ -1,0 +1,55 @@
+{
+  "documentNumber": "徐教〔2025〕3号",
+  "title": "徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案",
+  "publishDate": "2025-04-07",
+  "officialUrl": "https://www.shanghai.gov.cn/xhqywjy/20250411/2b71e54ac4a94e8bb43eac1db0e33ddd.html",
+  "scope": "district",
+  "district": "徐汇",
+  "year": 2025,
+  "fetchedAt": "2026-06-01",
+  "keyRules": {
+    "fiveYearOneAddress": {
+      "rule": "每户地址五年内只享有一次同校对口入学机会",
+      "exceptions": ["多胞胎", "二胎", "三胎"],
+      "appliesTo": ["小学", "初中"]
+    },
+    "classSize": {
+      "primaryMax": 45,
+      "middleMax": 50
+    },
+    "primarySchoolPriority": [
+      "本区户籍地与居住地一致（户主为直系亲属或儿童本人，产权人为直系亲属或儿童本人）",
+      "本市户籍人户分离（先户籍地与实际居住地一致，再统筹）",
+      "本市集体户籍参照居住地登记入学",
+      "符合条件的非本市户籍（优先持积分达标《上海市居住证》人员的子女）"
+    ],
+    "registrationDates2025": {
+      "在园儿童信息登记": "4月14日—4月27日",
+      "公办小学报名": "5月7日—5月11日",
+      "民办小学报名": "5月7日—5月9日",
+      "公办小学第一批验证": "5月17日—5月20日",
+      "公办小学第二批验证": "5月24日—5月25日",
+      "民办电脑随机录取": "5月19日—5月20日"
+    },
+    "middleSchoolEnrollment": "小学对口入学 + 划块电脑派位入学相结合，对口入学和电脑派位的学生须有本区学籍三年以上",
+    "ageEligibility": "2018年9月1日—2019年8月31日出生，年满6周岁",
+    "specialChildren": ["烈士子女", "现役军人子女（符合条件）", "公安英模子女", "因公牺牲伤残警察子女"]
+  },
+  "officialPortal": {
+    "区教育局招生考试中心": "https://www.xuhui.gov.cn/egov/",
+    "市义务教育入学报名系统": "https://shrxbm.edu.sh.gov.cn",
+    "一网通办义务教育入学专栏": "https://zwdt.sh.gov.cn"
+  },
+  "relatedDocuments": {
+    "市级实施意见": {
+      "documentNumber": "沪教委基〔2025〕11号",
+      "url": "https://edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs_02/20250327/9a8d59612f5249d8aea05d0a55dd900d.html"
+    },
+    "徐汇区小学招生通告PDF": "https://gqxx.xhedu.sh.cn/cms/data/upload/file/zzy/2025年徐汇区小学一年级招生通告.pdf"
+  },
+  "_notes": [
+    "本文件是区级政策框架，不含具体学校对口范围。每所学校的对口街道/小区在各校招生通告中单独发布。",
+    "民办学校全部摇号录取（报名人数 > 计划时）；公办小学按户籍地与居住地一致 + 入户时间长短排序。",
+    "5年一户限制是上海学区房买卖的核心约束 —— 同一房屋 5 年内只能让一个孩子享受对口入学。"
+  ]
+}

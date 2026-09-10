@@ -1,0 +1,4 @@
+import { NextResponse } from "next/server";
+import { getSchoolDistrictRelationFacets,getSchoolDistrictRelations,normalizeProductDistrict } from "@/lib/product/queries";
+export const runtime="nodejs";
+export async function GET(request:Request){const url=new URL(request.url);const requestedDistrict=url.searchParams.get("district")||undefined;const invalidDistrict=Boolean(requestedDistrict?.trim()&&!normalizeProductDistrict(requestedDistrict));const [relations,facets]=await Promise.all([getSchoolDistrictRelations({district:requestedDistrict,area:url.searchParams.get("area")||undefined,schoolType:url.searchParams.get("type")||undefined,q:url.searchParams.get("q")||undefined,limit:Number(url.searchParams.get("limit")||500)}),getSchoolDistrictRelationFacets()]);const summary=invalidDistrict?{...facets.summary,total:0,districts:0,schools:0,committees:0,matched:0,officialAreas:0,sourceRelations:0}:facets.summary;return NextResponse.json({relations,...facets,summary})}

@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server"; import { getSchoolDistrictSummary,getSchools } from "@/lib/product/queries";
+export const runtime="nodejs"; export async function GET(request:Request){const u=new URL(request.url);const [schools,districts]=await Promise.all([getSchools({district:u.searchParams.get("district")||undefined,type:u.searchParams.get("type")||undefined,tier:u.searchParams.get("tier")||undefined,q:u.searchParams.get("q")||undefined,limit:Number(u.searchParams.get("limit")||500)}),getSchoolDistrictSummary()]);return NextResponse.json({schools,districts})}

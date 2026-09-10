@@ -1,0 +1,560 @@
+[
+  {
+    "ts": "2026-06-18T09:14:50.020Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 4663,
+    "school_name": "德富中学",
+    "changes": {
+      "name": {
+        "from": "德富中学",
+        "to": "交大附中附属嘉定德富中学"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "嘉定"
+      },
+      "address": {
+        "from": "上海市嘉定区洪德路618弄",
+        "to": "上海市嘉定区洪德路618号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "德富中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3995,
+        "name": "交大附中附属嘉定德富中学",
+        "district": "嘉定",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+      "date": "2025",
+      "matchedName": "交大附中附属嘉定德富中学",
+      "rawNature": "公办",
+      "rawAddress": "上海市嘉定区洪德路618号"
+    },
+    "note": "2025嘉定官方公办学校基本情况确认全称、嘉定区、公办性质和地址；现有行 district=浦东 且名称为简称，本次按官方源覆盖。",
+    "before": {
+      "id": 4663,
+      "name": "德富中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市嘉定区洪德路618弄",
+      "lat": 31.354716837847548,
+      "lng": 121.25219209273183,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4663,
+      "name": "交大附中附属嘉定德富中学",
+      "district": "嘉定",
+      "type": "middle",
+      "address": "上海市嘉定区洪德路618号",
+      "lat": 31.354716837847548,
+      "lng": 121.25219209273183,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "德富中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.027Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 4781,
+    "school_name": "九峰实验",
+    "changes": {
+      "name": {
+        "from": "九峰实验",
+        "to": "上海市松江九峰实验学校"
+      },
+      "address": {
+        "from": "上海市松江区中山街道方塔北路319号",
+        "to": "松江区方塔北路319号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "九峰实验",
+          "九峰实验学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+      "date": "2025",
+      "matchedName": "上海市松江九峰实验学校",
+      "rawNature": "民办完全中学",
+      "rawAddress": "松江区方塔北路319号"
+    },
+    "note": "2025松江官方学校基本情况 PDF 确认全称、松江区、民办完全中学性质和地址；现有简称保留为别名。",
+    "before": {
+      "id": 4781,
+      "name": "九峰实验",
+      "district": "松江",
+      "type": "middle",
+      "address": "上海市松江区中山街道方塔北路319号",
+      "lat": 31.01057327264131,
+      "lng": 121.24723329249652,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4781,
+      "name": "上海市松江九峰实验学校",
+      "district": "松江",
+      "type": "middle",
+      "address": "松江区方塔北路319号",
+      "lat": 31.01057327264131,
+      "lng": 121.24723329249652,
+      "school_nature": "私立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "九峰实验",
+        "九峰实验学校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.036Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 4792,
+    "school_name": "交中初级",
+    "changes": {
+      "name": {
+        "from": "交中初级",
+        "to": "上海民办浦东交中初级中学"
+      },
+      "district": {
+        "from": "徐汇",
+        "to": "浦东"
+      },
+      "address": {
+        "from": "上海市上海城区浦东新区东方路420号",
+        "to": "东方路420号"
+      },
+      "school_nature": {
+        "from": "公立",
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "交中初级"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海民办浦东交中初级中学",
+      "rawNature": "民办",
+      "rawAddress": "东方路420号"
+    },
+    "note": "2025浦东官方初中招生入学信息确认全称、浦东新区、民办性质和地址；现有行 district=徐汇 为跨区错误，本次按官方源覆盖。",
+    "before": {
+      "id": 4792,
+      "name": "交中初级",
+      "district": "徐汇",
+      "type": "middle",
+      "address": "上海市上海城区浦东新区东方路420号",
+      "lat": 31.23291480555725,
+      "lng": 121.52264582711888,
+      "school_nature": "公立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4792,
+      "name": "上海民办浦东交中初级中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "东方路420号",
+      "lat": 31.23291480555725,
+      "lng": 121.52264582711888,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "交中初级"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.038Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 4899,
+    "school_name": "卢湾中学",
+    "changes": {
+      "name": {
+        "from": "卢湾中学",
+        "to": "上海市卢湾中学"
+      },
+      "address": {
+        "from": "上海市黄浦区打浦路锦城公寓东南侧",
+        "to": "斜土路855号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "卢湾中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年黄浦区初中阶段学校办学基本情况公示",
+      "url": "https://www.shanghai.gov.cn/hpqywjy/20250416/5f05ce5edb724d40aa297cd684e50df6.html",
+      "date": "2025-04-16",
+      "matchedName": "上海市卢湾中学",
+      "rawNature": "公办初中",
+      "rawAddress": "斜土路855号"
+    },
+    "note": "2025黄浦官方初中办学基本情况确认全称、公办初中性质和地址；现有简称保留为别名，并用官方地址覆盖地图误匹配地址。",
+    "before": {
+      "id": 4899,
+      "name": "卢湾中学",
+      "district": "黄浦",
+      "type": "middle",
+      "address": "上海市黄浦区打浦路锦城公寓东南侧",
+      "lat": 31.20230262748015,
+      "lng": 121.47080842334755,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4899,
+      "name": "上海市卢湾中学",
+      "district": "黄浦",
+      "type": "middle",
+      "address": "斜土路855号",
+      "lat": 31.20230262748015,
+      "lng": 121.47080842334755,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "卢湾中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.040Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 5539,
+    "school_name": "崇明实验",
+    "changes": {
+      "name": {
+        "from": "崇明实验",
+        "to": "上海市崇明区实验中学（西园校区）"
+      },
+      "address": {
+        "from": "上海市崇明区西园路237号",
+        "to": "城桥镇西园路237号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "崇明实验",
+          "崇明区实验中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4297,
+        "name": "上海市崇明区实验中学（西园校区）",
+        "district": "崇明",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年崇明区义务教育招生学校基本情况（初中）",
+      "url": "https://www.shanghai.gov.cn/cmqywjy/20250417/b52947a33336407185e4622bb0793dca.html",
+      "date": "2025-04-17",
+      "matchedName": "上海市崇明区实验中学 （西园校区）",
+      "rawNature": "公办",
+      "rawAddress": "城桥镇西园路237号"
+    },
+    "note": "2025崇明官方初中基本情况中多个实验中学校区并列；现有地址西园路237号与西园校区匹配，故更新为西园校区全称、公办性质和官方地址。",
+    "before": {
+      "id": 5539,
+      "name": "崇明实验",
+      "district": "崇明",
+      "type": "middle",
+      "address": "上海市崇明区西园路237号",
+      "lat": 31.62716870315793,
+      "lng": 121.39061337948336,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5539,
+      "name": "上海市崇明区实验中学（西园校区）",
+      "district": "崇明",
+      "type": "middle",
+      "address": "城桥镇西园路237号",
+      "lat": 31.62716870315793,
+      "lng": 121.39061337948336,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "崇明实验",
+        "崇明区实验中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.042Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 5634,
+    "school_name": "莘城学校",
+    "changes": {
+      "name": {
+        "from": "莘城学校",
+        "to": "上海市莘城学校"
+      },
+      "address": {
+        "from": "上海市闵行区普洱路158号",
+        "to": "普洱路158号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "莘城学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3870,
+        "name": "上海市莘城学校",
+        "district": "闵行",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "date": "2025-04-07",
+      "matchedName": "上海市莘城学校",
+      "rawNature": "公办",
+      "rawAddress": "普洱路158号"
+    },
+    "note": "2025闵行官方义务教育阶段学校基本情况确认全称、公办性质和地址；现有简称保留为别名。",
+    "before": {
+      "id": 5634,
+      "name": "莘城学校",
+      "district": "闵行",
+      "type": "middle",
+      "address": "上海市闵行区普洱路158号",
+      "lat": 31.099713234062584,
+      "lng": 121.3895322253393,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5634,
+      "name": "上海市莘城学校",
+      "district": "闵行",
+      "type": "middle",
+      "address": "普洱路158号",
+      "lat": 31.099713234062584,
+      "lng": 121.3895322253393,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "莘城学校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.045Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 5803,
+    "school_name": "世外小学",
+    "changes": {
+      "name": {
+        "from": "世外小学",
+        "to": "上海世外教育附属宝山中环实验小学"
+      },
+      "address": {
+        "from": "上海市宝山区华和路255弄11号(近真大路)",
+        "to": "华和路255弄11号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "世外小学",
+          "宝山世外小学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4346,
+        "name": "上海世外教育附属宝山中环实验小学",
+        "district": "宝山",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年宝山区义务教育阶段学校校区范围与招生计划（小学）",
+      "url": "https://www.shanghai.gov.cn/bsqywjy/20250423/ac8a95f3a4494ef8bd356e112aec499c.html",
+      "date": "2025-04-23",
+      "matchedName": "上海世外教育附属宝山中环实验小学",
+      "rawAddress": "华和路255弄11号"
+    },
+    "note": "2025宝山官方小学招生计划确认全称和地址；官方记录未明确公民办性质，本次不覆盖 school_nature。",
+    "before": {
+      "id": 5803,
+      "name": "世外小学",
+      "district": "宝山",
+      "type": "primary",
+      "address": "上海市宝山区华和路255弄11号(近真大路)",
+      "lat": 31.289982599766095,
+      "lng": 121.40528345179149,
+      "school_nature": null,
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5803,
+      "name": "上海世外教育附属宝山中环实验小学",
+      "district": "宝山",
+      "type": "primary",
+      "address": "华和路255弄11号",
+      "lat": 31.289982599766095,
+      "lng": 121.40528345179149,
+      "school_nature": null,
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "世外小学",
+        "宝山世外小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:14:50.047Z",
+    "operation": "reviewed_school_correction_round3",
+    "mode": "apply",
+    "school_id": 4634,
+    "school_name": "淞谊中学",
+    "changes": {
+      "name": {
+        "from": "淞谊中学",
+        "to": "上海市宝山区淞谊实验学校"
+      },
+      "address": {
+        "from": "上海市宝山区密山路100号(近友谊公园)",
+        "to": "（密山校区） 密山路100号；（东林校区） 东林路125号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "淞谊中学",
+          "淞谊实验学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年宝山区义务教育阶段学校校区范围与招生计划（初中）",
+      "url": "https://www.shanghai.gov.cn/bsqywjy/20250423/497250a7552b43c59fca0a904b1eee82.html",
+      "date": "2025-04-23",
+      "matchedName": "上海市宝山区淞谊实验学校",
+      "rawAddress": "（密山校区） 密山路100号；（东林校区） 东林路125号"
+    },
+    "note": "2025宝山官方初中招生计划确认全称及密山、东林两个校区地址；官方记录未明确公民办性质，本次保留现有 school_nature。",
+    "before": {
+      "id": 4634,
+      "name": "淞谊中学",
+      "district": "宝山",
+      "type": "middle",
+      "address": "上海市宝山区密山路100号(近友谊公园)",
+      "lat": 31.401388594491646,
+      "lng": 121.47908225127273,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4634,
+      "name": "上海市宝山区淞谊实验学校",
+      "district": "宝山",
+      "type": "middle",
+      "address": "（密山校区） 密山路100号；（东林校区） 东林路125号",
+      "lat": 31.401388594491646,
+      "lng": 121.47908225127273,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "淞谊中学",
+        "淞谊实验学校"
+      ]
+    }
+  }
+]

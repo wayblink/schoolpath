@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "HOUSE 上海学区决策助手" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: HOUSE
+        - generic [ref=e6]: 上海学区决策助手
+      - navigation [ref=e7]:
+        - link "学校查询" [ref=e8] [cursor=pointer]:
+          - /url: /schools
+        - link "升学组合" [ref=e9] [cursor=pointer]:
+          - /url: /pathways
+        - link "地图找房" [ref=e10] [cursor=pointer]:
+          - /url: /map
+        - link "区域政策" [ref=e11] [cursor=pointer]:
+          - /url: /policies
+    - main [ref=e12]:
+      - complementary [ref=e13]:
+        - generic [ref=e14]:
+          - combobox [ref=e15]:
+            - option "八区全部" [selected]
+            - option "徐汇区"
+            - option "杨浦区"
+            - option "虹口区"
+            - option "长宁区"
+            - option "静安区"
+            - option "黄浦区"
+            - option "浦东新区"
+            - option "闵行区"
+          - combobox [ref=e16]:
+            - option "全部学段" [selected]
+            - option "小学"
+            - option "初中"
+          - combobox [ref=e17]:
+            - option "全部梯队" [selected]
+            - option "1梯队"
+            - option "2梯队"
+            - option "3梯队"
+            - option "4梯队"
+    - contentinfo [ref=e21]:
+      - text: 学区与梯队信息仅供参考，请以当年度教育主管部门官方发布为准 ·
+      - link "旧版页面" [ref=e22] [cursor=pointer]:
+        - /url: /legacy
+  - alert [ref=e23]

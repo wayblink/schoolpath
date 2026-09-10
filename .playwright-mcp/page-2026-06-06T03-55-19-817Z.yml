@@ -1,0 +1,365 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic:
+        - link "上海择校升学转学" [ref=e5] [cursor=pointer]:
+          - /url: https://www.vsxue.com/
+          - img "上海择校升学转学" [ref=e6]
+        - generic [ref=e8] [cursor=pointer]: 
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "首页" [ref=e12] [cursor=pointer]:
+              - /url: https://www.vsxue.com/
+          - listitem [ref=e13]:
+            - link "幼儿入园" [ref=e14] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca10.html
+          - listitem [ref=e15]:
+            - link "幼升小" [ref=e16] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca5.html
+          - listitem [ref=e17]:
+            - link "小升初" [ref=e18] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca1.html
+          - listitem [ref=e19]:
+            - link "外地子女在沪上学" [ref=e20] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca4.html
+          - listitem [ref=e21]:
+            - link "转学" [ref=e22] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca9.html
+          - listitem [ref=e23]:
+            - link "国际学校" [ref=e24] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca8.html
+          - listitem [ref=e25]:
+            - link "中高考" [ref=e26] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca3.html
+          - listitem [ref=e27]:
+            - link "高考" [ref=e28] [cursor=pointer]:
+              - /url: https://www.vsxue.com/tags-22.html
+          - listitem [ref=e29]:
+            - link "行业资讯" [ref=e30] [cursor=pointer]:
+              - /url: https://www.vsxue.com/ca12.html
+          - listitem [ref=e31]:
+            - link "学校介绍" [ref=e32] [cursor=pointer]:
+              - /url: https://www.vsxue.com/tags-33.html
+  - list [ref=e35]:
+    - listitem [ref=e36]:
+      - link "首页" [ref=e37] [cursor=pointer]:
+        - /url: https://www.vsxue.com/
+    - listitem [ref=e38]:
+      - link "幼儿入园" [ref=e39] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca10.html
+    - listitem [ref=e40]:
+      - link "幼升小" [ref=e41] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca5.html
+    - listitem [ref=e42]:
+      - link "小升初" [ref=e43] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca1.html
+    - listitem [ref=e44]:
+      - link "外地子女在沪上学" [ref=e45] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca4.html
+    - listitem [ref=e46]:
+      - link "转学" [ref=e47] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca9.html
+    - listitem [ref=e48]:
+      - link "国际学校" [ref=e49] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca8.html
+    - listitem [ref=e50]:
+      - link "中高考" [ref=e51] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca3.html
+    - listitem [ref=e52]:
+      - link "高考" [ref=e53] [cursor=pointer]:
+        - /url: https://www.vsxue.com/tags-22.html
+    - listitem [ref=e54]:
+      - link "行业资讯" [ref=e55] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca12.html
+    - listitem [ref=e56]:
+      - link "学校介绍" [ref=e57] [cursor=pointer]:
+        - /url: https://www.vsxue.com/tags-33.html
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - text: 
+      - link "首页" [ref=e60] [cursor=pointer]:
+        - /url: https://www.vsxue.com/
+      - text: 
+      - link "学校介绍" [ref=e61] [cursor=pointer]:
+        - /url: https://www.vsxue.com/ca13.html
+      - text:  正文
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - link "":
+          - /url: javascript:;
+          - generic [ref=e67] [cursor=pointer]: 
+        - heading "最新版！2026上海16区初中梯队排名" [level=1] [ref=e68]
+        - heading "2025.11.29 4363 0" [level=6] [ref=e69]:
+          - generic [ref=e70]: 2025.11.29
+          - generic [ref=e71]: 4363
+          - generic [ref=e72]: 0
+        - generic [ref=e73]:
+          - img "上海择校升学转学" [ref=e75]
+          - paragraph [ref=e77]: 说到上海的好学校，你最先想到什么呢？童妈估计有90%的家长，都会回答“四校八大”。不过“四校八大”是高中，那初中又有没有“四校八大”呢？
+          - paragraph [ref=e78]: 这就要说到很多家长都想知道的：初中梯队排名了！
+          - paragraph [ref=e79]: 其实梯队排名，几乎每年都会更新，大部分初中排名都比较稳定，但由于有新初中的加入、或者是学校合并或是突然成为中考黑马等原因，有相当一部分的初中早就历经了一番洗牌，所以初中梯队排名的更新就非常有必要了。
+          - paragraph [ref=e80]: 本次排名以近年来家长口碑、学校公开数据、初中背景等因素排名综合而成，非官方信息，仅供家长参考，也欢迎更多有识之士提供有效信息指正。
+          - paragraph [ref=e81]
+          - generic [ref=e88]: 01、浦东新区
+          - img [ref=e91] [cursor=pointer]
+          - paragraph [ref=e92]: 浦东的民办初中数量是市内数一数二，不过相对于浦东的学生人数来说，招生的数量也不算大。交中初级、浦华曜都是浦东顶流民办。
+          - paragraph [ref=e93]: 浦东的公办中学的实力还是比较强的，招生人数多，资源也多，还有一些公办是由民办转制来的，比如张江集团，转制之后一样超水准发挥，今年中考，张集约250人参考：
+          - list [ref=e94]:
+            - listitem [ref=e95]:
+              - generic [ref=e96]: 四校录取30人，占比12%；
+            - listitem [ref=e97]:
+              - generic [ref=e98]: 八校级录取68人，占比27%；
+            - listitem [ref=e99]:
+              - generic [ref=e100]: 市重点率以高桥中学672.5分来看，达线率56%；
+            - listitem [ref=e101]:
+              - generic [ref=e102]: 700分以上的学生达到21.2%，现象级；
+          - generic [ref=e103]:
+            - paragraph [ref=e105]: 另外还有一所公办不得不提：建平地杰。
+            - paragraph [ref=e106]: 建平实验一分为三，就有了建平“三兄弟”，分别为建平实验（枣庄）、建平地杰、建平张江。
+            - paragraph [ref=e107]: 自从2024年中考一炮而红之后，建平地杰的实力就超过了“老大”建平实验，今年中考，建平“三兄弟”市重率大致如下：
+            - paragraph [ref=e108]: 建平地杰50%，建平实验约30%，建平张江28%
+            - paragraph [ref=e109]: 现在三校的实力是： 建平地杰＞建平枣庄＞建平张江。
+            - paragraph [ref=e110]
+          - generic [ref=e117]: 02、黄浦区
+          - img [ref=e120] [cursor=pointer]
+          - generic [ref=e121]:
+            - paragraph [ref=e123]: 黄浦区初中的实力比较均衡，区内的四大公办——格致初、向明初、大同初、卢湾初，底蕴深厚；民办立达、永昌、明珠也实力不俗。
+            - paragraph [ref=e124]: 格致初级：背靠格致中学，成为区内第一梯队初中没有悬念。理科教学突出，与格致高中联动紧密，理科班80%的学生可直升格致高中。2024年新增AI实验班，合作大疆教育，理科竞赛全市领先。
+            - paragraph [ref=e125]: 而民办方面，立达表现也很突出，理科竞赛强，65%以上的市重率，近一半的理科班学生可以进入四校八大。
+            - paragraph [ref=e126]
+          - generic [ref=e133]: 03、静安区
+          - img [ref=e136] [cursor=pointer]
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: 静安区的市西初、市北初底蕴深厚，静教院附中口碑极佳，民办扬波和田家炳也很受欢迎。
+            - paragraph [ref=e140]: 公办苏河湾也”闯“出来了，今年中考97人，11人自招上岸，其中1人进入复附，4人进入华二，对比24年有很大的进步。全校700+人数15人左右，市重率也渠道57%，仅次于静教院（市重率66%）。
+          - paragraph [ref=e141]
+          - generic [ref=e148]: 04、徐汇区
+          - img [ref=e151] [cursor=pointer]
+          - paragraph [ref=e152]: 徐汇区的特点是本区的教育很强，华育中学就在徐汇区，自招和中考裸考都是全市最好的初中之一
+          - paragraph [ref=e153]: 复附徐汇实验、上汇实验虽是较新的学校，但因为背靠有实力的“爹”，所以也是比较受家长关注的。
+          - paragraph [ref=e154]: 上汇实验招生条件比较苛刻，且摇号名单不公布，参加摇号的家长反馈，中奖率非常低，有招部分竞赛牛娃，不过还没看到有相关成绩。
+          - paragraph [ref=e155]: 另外，位育初级、园南、徐汇中学中、徐教院附中表现也不错，是比较好的几所公办初中学校。
+          - paragraph [ref=e156]
+          - paragraph [ref=e157]
+          - generic [ref=e164]: 05、长宁区
+          - img [ref=e167] [cursor=pointer]
+          - paragraph [ref=e168]: 长宁区是上海16区小升初里唯一完全电脑派位的区，区内2所民办：包玉刚、新世纪，包玉刚偏体制外，但口碑还是不错的。至于新世纪，一直都是区内的顶流，市重+区重率80%左右。
+          - paragraph [ref=e169]: 长宁区初中主要以公办为主，其中延安初级、西延安、市三初、娄山等校的成绩不错，整体而言，长宁区各所公办初中的水平比较平均，各种学习能力的学生平均分布。
+          - paragraph [ref=e170]
+          - generic [ref=e177]: 06、虹口区
+          - img [ref=e180] [cursor=pointer]
+          - paragraph [ref=e181]: 虹口区教育资源特别的丰富，尤其和临近的几个区比，有全市著名的神仙学校上外附中。
+          - paragraph [ref=e182]: 区内的几所民办，2025中考表现也不错：
+          - generic [ref=e184]:
+            - paragraph [ref=e185]: 新北郊：市重录取率42.5%， 区重及以上录取率85.3%， 普高及以上录取率92.6%；民办克勒：25年中考700分+有16人，区重点及以上录取163人，普高上线率达 91.6%(共186人)。四校及四校分校总共录取13人(四校9人，分校4人)；
+            - paragraph [ref=e186]: 新华初：最高分726.5分(含10分附加分)，大理班710+的至少5个以上，估计有十几个700+，小理班700+的11个，其它高分还有721.5、717.5。
+            - paragraph [ref=e187]: 新复兴：最高分719,自招去了华一，好班大概有5个700+,分数集中在710分。
+          - paragraph [ref=e188]
+          - generic [ref=e195]: 07、杨浦区
+          - img [ref=e198] [cursor=pointer]
+          - paragraph [ref=e199]: 杨浦区的特点是民办的的实力比公办的强一些，兰生是毫无疑问的区内第一。
+          - paragraph [ref=e200]: 民办兰生：2025年四校自招录取29人，其中上中3人、复附15人、华二1人、交附10人。
+          - paragraph [ref=e201]: 存志中学，上外双语，凯慧中学，同济实验，控江附校，这5所学校主要面向杨浦区内招生，是区内比较热门的民办初中。其中存志成绩更好一些，比兰生稍逊一些。
+          - paragraph [ref=e203]: 存志学校：2025中考四校自招录取15人，上中、华二各2人，交附7人，复附4人。
+          - paragraph [ref=e204]: 杨浦区的上音实验，鞍山实验，杨浦实验，鞍山初级，铁岭中学，辽阳中学，控江初级，国和中学这几所公办学校的实力尚可，但是对公办初中生而言，在杨浦区进市重点需要多努力。
+          - paragraph [ref=e205]
+          - paragraph [ref=e212]: 08、普陀区
+          - img [ref=e215] [cursor=pointer]
+          - paragraph [ref=e216]: 普陀区是市区里九年一贯制学校最多的区，九年一贯制学校的学生可以直升本校，胆大的还可以报名摇号民办学校。
+          - paragraph [ref=e217]: 普陀区内民办，进华中学和培佳双语的成绩较好，培佳双语这几年特别突出，每年将近一半的学生自招进入各级市重点，还有许多学生通过裸考考入各所市重点高中。兰田中学今年只招收区内学生。
+          - paragraph [ref=e218]: 普陀今年新加入的两所公办：华二普陀实验、曹二东校，背景都是强，一跃成为区内的新近热门校，两校都实行摇号入学：
+          - list [ref=e219]:
+            - listitem [ref=e220]:
+              - paragraph [ref=e221]: 华二普陀实验学校2025年首招2个班，首年招生摇号结果火热，首年招生中签率仅有7.7%。
+            - listitem [ref=e222]:
+              - paragraph [ref=e223]: 曹二东校，计划招30人，报名236人，录取率12.7%！
+          - paragraph [ref=e224]
+          - paragraph [ref=e231]: 09、闵行区
+          - img [ref=e234] [cursor=pointer]
+          - generic [ref=e235]:
+            - paragraph [ref=e237]: 闵行既是中考大区，也是公认的卷区，公办初中和民办初中的分布相对均衡，闵华二、上宝中学在上海声名远扬。
+            - paragraph [ref=e238]: 闵华二：据说25年中考最高分728，2025年四校自招录取35人，上中1人、复附5人、交附6人、华二16人；值得一提的是学校的钱班，对接华二高中部，注重对数学、物理人才的培养，重视竞赛学习进度快，难度深大。
+            - paragraph [ref=e239]: 上宝中学：2025年四校自招录取34人，其中上中22人、复附6人、交附4人、华二2人。
+          - paragraph [ref=e240]
+          - generic [ref=e247]: 10、宝山区
+          - img [ref=e250] [cursor=pointer]
+          - paragraph [ref=e251]:
+            - generic [ref=e252]: 宝山比较出彩的学校，当然要数宝山华曜，在上海众多初中里崭露头角，成绩斐然：2025年中考，上线人数就有190+；四校录取21人，市重点（含特色高中）录取150人以上。
+          - paragraph [ref=e253]
+          - generic [ref=e260]: 11、嘉定区
+          - img [ref=e263] [cursor=pointer]
+          - paragraph [ref=e264]: 从历年中考数据来看，嘉定区的民办初中强于公办初中，嘉定区最好的民办初中是华曜初级中学，中科院上海实验和同济附属实验这两所公办，上升势头也很猛。
+          - paragraph [ref=e265]: 更值得一提的是新晋“黑马”交附洪德中学，自从被纳入交附体系，校内资源有了提升，今年是交附洪德第一年参加中考，就有3名学生自招四校分，2个交附嘉定、1个交附闵行，也是不错的成绩。
+          - paragraph [ref=e266]
+          - generic [ref=e273]: 12、金山区
+          - img [ref=e276] [cursor=pointer]
+          - paragraph [ref=e277]: 蒙山中学，几乎得到了金山区百分之百的家长和学生的好评，堪称区内招牌中学，在全区排名首位。
+          - paragraph [ref=e278]
+          - generic [ref=e285]: 13、松江区
+          - img [ref=e288] [cursor=pointer]
+          - generic [ref=e289]:
+            - paragraph [ref=e291]: 松江区的民办成绩更出色。九峰实验学校前身为松江二中的“亲儿子”；公办民乐、上外松外和松江七中、松江二中都还不错。
+            - paragraph [ref=e292]: 九峰实验：学校隶属于松江二中教育集团，近三年，市、区级实验性示范性高中录取率均在70%左右。
+            - paragraph [ref=e293]: 上外松外：2025年中考最高分726.5，700分以上据说有24人。
+            - paragraph [ref=e294]: 松江七中：2025年中考最高分726.5分（含民族加分）
+            - paragraph [ref=e295]: 民乐学校：2025年中考最高分726，700分以上有30人；某班710分以上的有8人，全校710分以上的考生约10+。
+          - paragraph [ref=e296]
+          - generic [ref=e303]: 14、青浦区
+          - img [ref=e306] [cursor=pointer]
+          - generic [ref=e307]:
+            - paragraph [ref=e309]: 青浦区的民办学校表现更突出，青浦兰生、民办宋庆龄、五浦汇教学质量出色，发展前景好；公办青浦实验中学、青浦一中成绩突出。
+            - paragraph [ref=e310]: 青浦兰生：2025年中考700分以上的考生有9人。
+            - paragraph [ref=e311]: 五浦汇：号称“复附青浦初中部”，2025年中考最高分721.5分，700分以上的有17人。
+            - paragraph [ref=e312]: 青教院附中：2025年中考最高分711分，700分以上的有5人。
+            - paragraph [ref=e313]
+          - generic [ref=e320]: 15、奉贤区
+          - img [ref=e323] [cursor=pointer]
+          - paragraph [ref=e324]
+          - generic [ref=e331]: 16、崇明区
+          - img [ref=e334] [cursor=pointer]
+          - paragraph [ref=e335]: 以上梯队排名非官方，就目前来说，虽然民办依然略胜一筹，不过公民办的差距正在逐步缩小，具体强弱相信很多家长心里都有一杠秤。
+          - paragraph [ref=e336]
+          - img "上海择校升学转学" [ref=e338]
+        - generic [ref=e340] [cursor=pointer]:  赞同
+        - paragraph [ref=e342]: 本文转载自互联网，如有侵权，联系删除
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - generic [ref=e345]: 
+            - generic [ref=e346]: 
+            - generic [ref=e347]: 
+            - generic [ref=e348]: 
+            - generic [ref=e349]: 
+            - generic [ref=e350]: 
+          - generic [ref=e351]:
+            - link "上一篇" [ref=e353] [cursor=pointer]:
+              - /url: https://www.vsxue.com/2511.html
+            - link "下一篇" [ref=e355] [cursor=pointer]:
+              - /url: https://www.vsxue.com/2512.html
+      - generic [ref=e356]:
+        - heading "相关推荐" [level=4] [ref=e358]
+        - article [ref=e359]:
+          - link "上海各区最强公办初中，差距到底有多大？" [ref=e361] [cursor=pointer]:
+            - /url: https://www.vsxue.com/2955.html
+            - img "上海各区最强公办初中，差距到底有多大？" [ref=e362]
+          - generic [ref=e363]:
+            - heading "上海各区最强公办初中，差距到底有多大？" [level=2] [ref=e364]:
+              - link "上海各区最强公办初中，差距到底有多大？" [ref=e365] [cursor=pointer]:
+                - /url: https://www.vsxue.com/2955.html
+            - generic [ref=e366]: 虽说上海中考是区内竞争，不好跨区比较，但毕竟考的是同一套卷子。不看不知道，一看吓一跳：崇明一个区的700+人数，竟然还不敌静教院一校？！...
+            - paragraph [ref=e367]:
+              - emphasis [ref=e368]:
+                - link "学校介绍" [ref=e369] [cursor=pointer]:
+                  - /url: https://www.vsxue.com/ca13.html
+              - emphasis [ref=e370]: 2026.05.08
+              - emphasis [ref=e371]: 0
+              - emphasis [ref=e372]: 1273
+        - article [ref=e373]:
+          - link "盘点华二系初中，谁才是未来的大哥？" [ref=e375] [cursor=pointer]:
+            - /url: https://www.vsxue.com/2956.html
+            - img "盘点华二系初中，谁才是未来的大哥？" [ref=e376]
+          - generic [ref=e377]:
+            - heading "盘点华二系初中，谁才是未来的大哥？" [level=2] [ref=e378]:
+              - link "盘点华二系初中，谁才是未来的大哥？" [ref=e379] [cursor=pointer]:
+                - /url: https://www.vsxue.com/2956.html
+            - generic [ref=e380]: 华二附中高中儿子多，相对应的初中儿子也不少。高中儿子：华二普陀、华二宝山、华二临港、华二紫竹（相对比较独立）、华二松江。民办有嘉华曜、宝...
+            - paragraph [ref=e381]:
+              - emphasis [ref=e382]:
+                - link "学校介绍" [ref=e383] [cursor=pointer]:
+                  - /url: https://www.vsxue.com/ca13.html
+              - emphasis [ref=e384]: 2026.05.08
+              - emphasis [ref=e385]: 0
+              - emphasis [ref=e386]: 1069
+        - article [ref=e387]:
+          - generic [ref=e388]:
+            - heading "实地考察那么多学校后，我最终决定选择这所！" [level=2] [ref=e389]:
+              - link "实地考察那么多学校后，我最终决定选择这所！" [ref=e390] [cursor=pointer]:
+                - /url: https://www.vsxue.com/2953.html
+            - generic [ref=e391]: 家长自述：我家孩子在浦东的一所二梯队公办小学，今年该小升初了，我考虑给他摇民办学校。浦东是一个教育大区，大区有大区的优势。那就是可选择的学校非常多。孩子成绩虽不是特别拔尖但也还说的过去，我不想让他走体...
+            - paragraph [ref=e392]:
+              - emphasis [ref=e393]:
+                - link "学校介绍" [ref=e394] [cursor=pointer]:
+                  - /url: https://www.vsxue.com/ca13.html
+              - emphasis [ref=e395]: 2026.05.07
+              - emphasis [ref=e396]: 0
+              - emphasis [ref=e397]: 623
+        - article [ref=e398]:
+          - link "别再问新复兴强不强！2025中考+自招+名额分配完整数据，虹口民办标杆实锤！" [ref=e400] [cursor=pointer]:
+            - /url: https://www.vsxue.com/2947.html
+            - img "别再问新复兴强不强！2025中考+自招+名额分配完整数据，虹口民办标杆实锤！" [ref=e401]
+          - generic [ref=e402]:
+            - heading "别再问新复兴强不强！2025中考+自招+名额分配完整数据，虹口民办标杆实锤！" [level=2] [ref=e403]:
+              - link "别再问新复兴强不强！2025中考+自招+名额分配完整数据，虹口民办标杆实锤！" [ref=e404] [cursor=pointer]:
+                - /url: https://www.vsxue.com/2947.html
+            - generic [ref=e405]: 虹口区民办初中虽然只有5所，但实力都很强，拿到全市来看也属牛校，吸引了区内超过五分之一的小学毕业生。像民办初中新华初、新复兴、迅行、新北...
+            - paragraph [ref=e406]:
+              - emphasis [ref=e407]:
+                - link "学校介绍" [ref=e408] [cursor=pointer]:
+                  - /url: https://www.vsxue.com/ca13.html
+              - emphasis [ref=e409]: 2026.05.01
+              - emphasis [ref=e410]: 0
+              - emphasis [ref=e411]: 3413
+        - article [ref=e412]:
+          - link "2026上海公办摇号最新名单：全市12区60所，热门校竞争更激烈！" [ref=e414] [cursor=pointer]:
+            - /url: https://www.vsxue.com/2937.html
+            - img "2026上海公办摇号最新名单：全市12区60所，热门校竞争更激烈！" [ref=e415]
+          - generic [ref=e416]:
+            - heading "2026上海公办摇号最新名单：全市12区60所，热门校竞争更激烈！" [level=2] [ref=e417]:
+              - link "2026上海公办摇号最新名单：全市12区60所，热门校竞争更激烈！" [ref=e418] [cursor=pointer]:
+                - /url: https://www.vsxue.com/2937.html
+            - generic [ref=e419]: 在上海升学，公办也需要摇号早已不是新鲜事。上海推行公办摇号，主要是为了平衡优质教育资源，不让好学校只集中在少数地段，同时打破学区房绑定学...
+            - paragraph [ref=e420]:
+              - emphasis [ref=e421]:
+                - link "学校介绍" [ref=e422] [cursor=pointer]:
+                  - /url: https://www.vsxue.com/ca13.html
+              - emphasis [ref=e423]: 2026.04.29
+              - emphasis [ref=e424]: 0
+              - emphasis [ref=e425]: 1644
+        - article [ref=e426]:
+          - link "海事大学重磅入局！选中本贯通还是高中？" [ref=e428] [cursor=pointer]:
+            - /url: https://www.vsxue.com/2938.html
+            - img "海事大学重磅入局！选中本贯通还是高中？" [ref=e429]
+          - generic [ref=e430]:
+            - heading "海事大学重磅入局！选中本贯通还是高中？" [level=2] [ref=e431]:
+              - link "海事大学重磅入局！选中本贯通还是高中？" [ref=e432] [cursor=pointer]:
+                - /url: https://www.vsxue.com/2938.html
+            - generic [ref=e433]: 2026年上海中考已进入最后冲刺阶段，二模成绩出炉后，"冲高中还是选中本"成为上海户籍家长最纠结的问题。曾经小众的中...
+            - paragraph [ref=e434]:
+              - emphasis [ref=e435]:
+                - link "学校介绍" [ref=e436] [cursor=pointer]:
+                  - /url: https://www.vsxue.com/ca13.html
+              - emphasis [ref=e437]: 2026.04.29
+              - emphasis [ref=e438]: 0
+              - emphasis [ref=e439]: 1033
+  - generic [ref=e441]:
+    - list [ref=e443]:
+      - listitem [ref=e444]: 底部导航
+      - listitem [ref=e445]:
+        - link "幼儿入园" [ref=e446] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca10.html
+      - listitem [ref=e447]:
+        - link "幼升小" [ref=e448] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca5.html
+      - listitem [ref=e449]:
+        - link "小升初" [ref=e450] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca1.html
+      - listitem [ref=e451]:
+        - link "外地子女在沪上学" [ref=e452] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca4.html
+      - listitem [ref=e453]:
+        - link "转学" [ref=e454] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca9.html
+      - listitem [ref=e455]:
+        - link "国际学校" [ref=e456] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca8.html
+      - listitem [ref=e457]:
+        - link "中高考" [ref=e458] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca3.html
+      - listitem [ref=e459]:
+        - link "高考" [ref=e460] [cursor=pointer]:
+          - /url: https://www.vsxue.com/tags-22.html
+      - listitem [ref=e461]:
+        - link "最新文章" [ref=e462] [cursor=pointer]:
+          - /url: https://www.vsxue.com/ca14.html
+    - generic [ref=e463]: Powered By 上海学考是一家升学择校转学借读的教育咨询公司 Theme By 上海学考
+    - link "沪ICP备2021034281号" [ref=e466] [cursor=pointer]:
+      - /url: http://beian.miit.gov.cn/

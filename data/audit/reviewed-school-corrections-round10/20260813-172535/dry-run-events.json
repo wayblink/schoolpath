@@ -1,0 +1,112 @@
+[
+  {
+    "ts": "2026-08-13T17:25:35.732Z",
+    "operation": "reviewed_school_correction_round10",
+    "mode": "dry-run",
+    "school_id": 5085,
+    "school_name": "上海市复旦初级中学",
+    "changes": {
+      "address": {
+        "from": "华山路1626号",
+        "to": "淞虹路475号"
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年长宁区义务教育阶段公办初中办学基本情况",
+      "url": "https://zwgk.shcn.gov.cn/xxgk/xxrxks-zsks/2025/97/77197.html",
+      "date": "2025",
+      "matchedName": "上海市复旦初级中学",
+      "rawNature": "公办初中",
+      "rawAddress": "淞虹路475号"
+    },
+    "note": "现有行 type=primary 且地址/坐标指向复旦中学高中；长宁区义务教育阶段公办初中信息确认初中实体为上海市复旦初级中学，地址淞虹路475号，性质公办。本次修正类型、全称、地址和性质，并清空旧高中坐标以待后续地图核验。",
+    "before": {
+      "id": 5085,
+      "name": "上海市复旦初级中学",
+      "district": "长宁",
+      "type": "middle",
+      "address": "华山路1626号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "复旦初中"
+      ]
+    },
+    "after": {
+      "id": 5085,
+      "name": "上海市复旦初级中学",
+      "district": "长宁",
+      "type": "middle",
+      "address": "淞虹路475号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "复旦初中"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T17:25:35.744Z",
+    "operation": "reviewed_school_correction_round10",
+    "mode": "dry-run",
+    "school_id": 5588,
+    "school_name": "上海市西延安中学",
+    "changes": {
+      "address": {
+        "from": "清池路211号",
+        "to": "金钟路299号"
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年长宁区义务教育阶段公办初中办学基本情况",
+      "url": "https://zwgk.shcn.gov.cn/xxgk/xxrxks-zsks/2025/97/77197.html",
+      "date": "2025",
+      "matchedName": "上海市西延安中学",
+      "rawNature": "公办初中",
+      "rawAddress": "金钟路299号"
+    },
+    "note": "现有行名称为简称且地址/坐标指向延安中学高中；长宁区义务教育阶段公办初中信息确认初中实体为上海市西延安中学，地址金钟路299号，性质公办。本次修正全称、地址和性质，并清空旧高中坐标以待后续地图核验。",
+    "before": {
+      "id": 5588,
+      "name": "上海市西延安中学",
+      "district": "长宁",
+      "type": "middle",
+      "address": "清池路211号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "西延安"
+      ]
+    },
+    "after": {
+      "id": 5588,
+      "name": "上海市西延安中学",
+      "district": "长宁",
+      "type": "middle",
+      "address": "金钟路299号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "西延安"
+      ]
+    }
+  }
+]

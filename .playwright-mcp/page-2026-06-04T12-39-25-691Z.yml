@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: 学
+        - generic [ref=e6]:
+          - generic [ref=e7]: 学区图谱
+          - generic [ref=e8]: SHANGHAI · 2025
+      - generic [ref=e10]:
+        - generic [ref=e11]: 区
+        - combobox [ref=e12] [cursor=pointer]:
+          - option "徐汇" [selected]
+          - option "黄浦"
+          - option "长宁"
+          - option "静安"
+          - option "普陀"
+          - option "虹口"
+          - option "杨浦"
+          - option "浦东"
+          - option "闵行"
+          - option "宝山"
+          - option "嘉定"
+          - option "金山"
+          - option "松江"
+          - option "青浦"
+          - option "奉贤"
+          - option "崇明"
+      - generic [ref=e13]:
+        - button "全部" [ref=e14]
+        - button "小学" [ref=e15]
+        - button "初中" [ref=e16]
+      - generic [ref=e17]: 24 所
+      - generic [ref=e18]:
+        - generic [ref=e19]: 一梯队
+        - generic [ref=e21]: 二梯队
+        - generic [ref=e23]: 三梯队
+        - generic [ref=e25]: 四梯队
+        - generic [ref=e27]: 待补充
+      - generic [ref=e29]:
+        - button "🔍 小区查学校 ⌘K" [ref=e30]:
+          - generic [ref=e31]: 🔍
+          - generic [ref=e32]: 小区查学校
+          - generic [ref=e33]: ⌘K
+        - link "v0.3 BETA" [ref=e34] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e35]:
+      - generic [ref=e37]:
+        - button "上海师范大学第三附属实验学校 小学 公办 二梯队" [ref=e39]:
+          - generic [ref=e41]: 上海师范大学第三附属实验学校
+          - generic [ref=e42]: 小学
+          - generic [ref=e43]: 公办
+          - generic [ref=e45]: 二梯队
+        - button "上海市徐汇区康健外国语实验小学 小学 公办 二梯队" [ref=e47]:
+          - generic [ref=e49]: 上海市徐汇区康健外国语实验小学
+          - generic [ref=e50]: 小学
+          - generic [ref=e51]: 公办
+          - generic [ref=e53]: 二梯队
+        - button "上海市西南位育附属实验学校 小学 公办 未入榜/待补充" [ref=e55]:
+          - generic [ref=e57]: 上海市西南位育附属实验学校
+          - generic [ref=e58]: 小学
+          - generic [ref=e59]: 公办
+          - generic [ref=e61]: 未入榜/待补充
+        - button "复旦大学附属徐汇实验学校 小学 公办 未入榜/待补充" [ref=e63]:
+          - generic [ref=e65]: 复旦大学附属徐汇实验学校
+          - generic [ref=e66]: 小学
+          - generic [ref=e67]: 公办
+          - generic [ref=e69]: 未入榜/待补充
+        - button "上海市中国中学 初中 公办 三梯队" [ref=e71]:
+          - generic [ref=e73]: 上海市中国中学
+          - generic [ref=e74]: 初中
+          - generic [ref=e75]: 公办
+          - generic [ref=e77]: 三梯队
+        - button "上海市徐汇区上海小学（本部校区 ） 小学 公办 二梯队" [ref=e79]:
+          - generic [ref=e81]: 上海市徐汇区上海小学（本部校区 ）
+          - generic [ref=e82]: 小学
+          - generic [ref=e83]: 公办
+          - generic [ref=e85]: 二梯队
+        - button "上海市徐汇区上海小学（龙川校区 ） 小学 公办 二梯队" [ref=e87]:
+          - generic [ref=e89]: 上海市徐汇区上海小学（龙川校区 ）
+          - generic [ref=e90]: 小学
+          - generic [ref=e91]: 公办
+          - generic [ref=e93]: 二梯队
+        - button "上海市徐汇区园南小学 小学 公办 二梯队" [ref=e95]:
+          - generic [ref=e97]: 上海市徐汇区园南小学
+          - generic [ref=e98]: 小学
+          - generic [ref=e99]: 公办
+          - generic [ref=e101]: 二梯队
+        - button "上海市徐汇区教育学院附属实验小学 小学 公办 三梯队" [ref=e103]:
+          - generic [ref=e105]: 上海市徐汇区教育学院附属实验小学
+          - generic [ref=e106]: 小学
+          - generic [ref=e107]: 公办
+          - generic [ref=e109]: 三梯队
+        - button "上海市徐汇区向阳育才小学 小学 公办 一梯队" [ref=e111]:
+          - generic [ref=e113]: 上海市徐汇区向阳育才小学
+          - generic [ref=e114]: 小学
+          - generic [ref=e115]: 公办
+          - generic [ref=e117]: 一梯队
+        - button "上海市徐汇区龙华小学 小学 公办 未入榜/待补充" [ref=e119]:
+          - generic [ref=e121]: 上海市徐汇区龙华小学
+          - generic [ref=e122]: 小学
+          - generic [ref=e123]: 公办
+          - generic [ref=e125]: 未入榜/待补充
+        - button "上海市康健外国语实验中学 初中 公办 未入榜/待补充" [ref=e127]:
+          - generic [ref=e129]: 上海市康健外国语实验中学
+          - generic [ref=e130]: 初中
+          - generic [ref=e131]: 公办
+          - generic [ref=e133]: 未入榜/待补充
+        - button "上海市龙苑中学 初中 公办 未入榜/待补充" [ref=e135]:
+          - generic [ref=e137]: 上海市龙苑中学
+          - generic [ref=e138]: 初中
+          - generic [ref=e139]: 公办
+          - generic [ref=e141]: 未入榜/待补充
+        - button "上海市徐汇区教育学院附属实验中学 初中 公办 二梯队" [ref=e143]:
+          - generic [ref=e145]: 上海市徐汇区教育学院附属实验中学
+          - generic [ref=e146]: 初中
+          - generic [ref=e147]: 公办
+          - generic [ref=e149]: 二梯队
+        - button "上海市园南中学（总校 ） 初中 公办 三梯队" [ref=e151]:
+          - generic [ref=e153]: 上海市园南中学（总校 ）
+          - generic [ref=e154]: 初中
+          - generic [ref=e155]: 公办
+          - generic [ref=e157]: 三梯队
+        - button "上海市园南中学（北校 ） 初中 公办 三梯队" [ref=e159]:
+          - generic [ref=e161]: 上海市园南中学（北校 ）
+          - generic [ref=e162]: 初中
+          - generic [ref=e163]: 公办
+          - generic [ref=e165]: 三梯队
+        - button "上海市汾阳中学 初中 公办 未入榜/待补充" [ref=e167]:
+          - generic [ref=e169]: 上海市汾阳中学
+          - generic [ref=e170]: 初中
+          - generic [ref=e171]: 公办
+          - generic [ref=e173]: 未入榜/待补充
+        - button "上海市徐汇区教育学院 附属实验中学南部分校 初中 公办 未入榜/待补充" [ref=e175]:
+          - generic [ref=e177]: 上海市徐汇区教育学院 附属实验中学南部分校
+          - generic [ref=e178]: 初中
+          - generic [ref=e179]: 公办
+          - generic [ref=e181]: 未入榜/待补充
+        - button "华东理工大学附属中学 初中 公办 未入榜/待补充" [ref=e183]:
+          - generic [ref=e185]: 华东理工大学附属中学
+          - generic [ref=e186]: 初中
+          - generic [ref=e187]: 公办
+          - generic [ref=e189]: 未入榜/待补充
+        - button "上海市梅园中学 初中 公办 未入榜/待补充" [ref=e191]:
+          - generic [ref=e193]: 上海市梅园中学
+          - generic [ref=e194]: 初中
+          - generic [ref=e195]: 公办
+          - generic [ref=e197]: 未入榜/待补充
+        - button "上海市徐汇中学（南校区 ） 初中 公办 二梯队" [ref=e199]:
+          - generic [ref=e201]: 上海市徐汇中学（南校区 ）
+          - generic [ref=e202]: 初中
+          - generic [ref=e203]: 公办
+          - generic [ref=e205]: 二梯队
+        - button "上海师范大学第三附属实验学校（初中） 初中 公办 三梯队" [ref=e207]:
+          - generic [ref=e209]: 上海师范大学第三附属实验学校（初中）
+          - generic [ref=e210]: 初中
+          - generic [ref=e211]: 公办
+          - generic [ref=e213]: 三梯队
+        - button "复旦大学附属徐汇实验学校 （初中 ） 初中 公办 未入榜/待补充" [ref=e215]:
+          - generic [ref=e217]: 复旦大学附属徐汇实验学校 （初中 ）
+          - generic [ref=e218]: 初中
+          - generic [ref=e219]: 公办
+          - generic [ref=e221]: 未入榜/待补充
+        - button "上海市西南位育附属实验学校 （初中 ） 初中 公办 未入榜/待补充" [ref=e223]:
+          - generic [ref=e225]: 上海市西南位育附属实验学校 （初中 ）
+          - generic [ref=e226]: 初中
+          - generic [ref=e227]: 公办
+          - generic [ref=e229]: 未入榜/待补充
+      - generic [ref=e230]:
+        - generic:
+          - generic: 徐汇区
+          - text: ·
+          - generic: 24 校
+      - separator "调整列表和地图宽度" [ref=e232]:
+        - generic [ref=e234]:
+          - button "收起左侧列表" [ref=e235]:
+            - img [ref=e236]
+          - button "收起右侧地图" [ref=e239]:
+            - img [ref=e240]
+  - button "Open Next.js Dev Tools" [ref=e248] [cursor=pointer]:
+    - img [ref=e249]
+  - alert [ref=e252]

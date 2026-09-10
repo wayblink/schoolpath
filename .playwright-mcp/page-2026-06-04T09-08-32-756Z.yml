@@ -1,0 +1,448 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: 学
+        - generic [ref=e6]:
+          - generic [ref=e7]: 学区图谱
+          - generic [ref=e8]: SHANGHAI · 2025
+      - generic [ref=e10]:
+        - generic [ref=e11]: 区
+        - combobox [ref=e12] [cursor=pointer]:
+          - option "徐汇" [selected]
+          - option "黄浦"
+          - option "长宁"
+          - option "静安"
+          - option "普陀"
+          - option "虹口"
+          - option "杨浦"
+          - option "浦东"
+          - option "闵行"
+          - option "宝山"
+          - option "嘉定"
+          - option "金山"
+          - option "松江"
+          - option "青浦"
+          - option "奉贤"
+          - option "崇明"
+      - generic [ref=e13]:
+        - button "全部" [ref=e14]
+        - button "小学" [ref=e15]
+        - button "初中" [ref=e16]
+      - generic [ref=e17]: 24 所
+      - generic [ref=e18]:
+        - generic [ref=e19]: 一梯队
+        - generic [ref=e21]: 二梯队
+        - generic [ref=e23]: 三梯队
+        - generic [ref=e25]: 四梯队
+        - generic [ref=e27]: 待补充
+      - generic [ref=e29]:
+        - button "🔍 小区查学校 ⌘K" [ref=e30]:
+          - generic [ref=e31]: 🔍
+          - generic [ref=e32]: 小区查学校
+          - generic [ref=e33]: ⌘K
+        - link "v0.3 BETA" [ref=e34] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e35]:
+      - generic [ref=e37]:
+        - generic [ref=e61]:
+          - button "上海师范大学第三附属实验学校 小学 公办 二梯队" [active] [ref=e62]:
+            - generic [ref=e64]: 上海师范大学第三附属实验学校
+            - generic [ref=e65]: 小学
+            - generic [ref=e66]: 公办
+            - generic [ref=e68]: 二梯队
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e261]: 学校资讯
+              - generic [ref=e263]:
+                - generic [ref=e264]: 地址
+                - generic [ref=e265]:
+                  - generic [ref=e266]: 上海市徐汇区三江路310号
+                  - link "高德 ↗" [ref=e267] [cursor=pointer]:
+                    - /url: https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%89%E9%99%84%E5%B1%9E%E5%AE%9E%E9%AA%8C%E5%AD%A6%E6%A0%A1%20%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%BE%90%E6%B1%87%E5%8C%BA%E4%B8%89%E6%B1%9F%E8%B7%AF310%E5%8F%B7
+            - generic [ref=e268]:
+              - link "链家搜索 ↗" [ref=e269] [cursor=pointer]:
+                - /url: https://sh.lianjia.com/ershoufang/rs%E4%B8%8A%E6%B5%B7%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%89%E9%99%84%E5%B1%9E%E5%AE%9E%E9%AA%8C%E5%AD%A6%E6%A0%A1/
+              - link "高德搜本校位置 ↗" [ref=e270] [cursor=pointer]:
+                - /url: https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%89%E9%99%84%E5%B1%9E%E5%AE%9E%E9%AA%8C%E5%AD%A6%E6%A0%A1
+              - link "查看招生政策 ↗" [ref=e271] [cursor=pointer]:
+                - /url: https://sh.bendibao.com/
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - generic [ref=e274]: 对口居委
+                - generic [ref=e275]: "(1 个，来源: 上海本地宝 2025-04 (sh.bendibao.com/edu/202547))"
+              - link "嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑（部分） 凯翔居委 （部分） 漕溪新村四村居委 (部分) 公园 道居委" [ref=e278] [cursor=pointer]:
+                - /url: https://www.amap.com/search?query=%E5%BE%90%E6%B1%87%E5%8C%BA%E5%98%89%E8%90%B1%E8%8B%91%E5%B1%85%E5%A7%94%20%E9%BE%99%E6%BC%95%E5%B1%85%E5%A7%94%20%E5%AE%BE%E9%98%B3%E5%B1%85%E5%A7%94%20%E9%A6%A8%E6%B1%87%E5%8D%97%E8%8B%91%20%E5%87%AF%E7%BF%94%E5%B1%85%E5%A7%94%20%20%E6%BC%95%E6%BA%AA%E6%96%B0%E6%9D%91%E5%9B%9B%E6%9D%91%E5%B1%85%E5%A7%94%20(%E9%83%A8%E5%88%86)%20%E5%85%AC%E5%9B%AD%20%E9%81%93%E5%B1%85%E5%A7%94%E5%B1%85%E5%A7%94%E4%BC%9A
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - generic [ref=e281]: 对口小区候选
+                - generic [ref=e282]: (19 个)
+              - list [ref=e284]:
+                - listitem [ref=e285]:
+                  - 'generic "凯翔小区 地址: 龙漕路135弄之1-60号(龙漕路地铁站5号口步行330米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e286]':
+                    - generic [ref=e287]:
+                      - generic [ref=e288]: 凯翔小区
+                      - generic [ref=e289]: 龙漕居委 · 龙漕路135弄之1-60号(龙漕路地铁站5号口步行330米)
+                    - generic [ref=e290]:
+                      - generic [ref=e291]: 直接
+                      - generic [ref=e292]:
+                        - button "定位" [ref=e293]
+                        - link "高德 ↗" [ref=e294] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E5%87%AF%E7%BF%94%E5%B0%8F%E5%8C%BA%20%E9%BE%99%E6%BC%95%E8%B7%AF135%E5%BC%84%E4%B9%8B1-60%E5%8F%B7(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C330%E7%B1%B3)
+                - listitem [ref=e295]:
+                  - 'generic "漕东支路3弄小区 地址: 漕东三路与漕东支路交叉口东南60米 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e296]':
+                    - generic [ref=e297]:
+                      - generic [ref=e298]: 漕东支路3弄小区
+                      - generic [ref=e299]: 龙漕居委 · 漕东三路与漕东支路交叉口东南60米
+                    - generic [ref=e300]:
+                      - generic [ref=e301]: 直接
+                      - generic [ref=e302]:
+                        - button "定位" [ref=e303]
+                        - link "高德 ↗" [ref=e304] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E4%B8%9C%E6%94%AF%E8%B7%AF3%E5%BC%84%E5%B0%8F%E5%8C%BA%20%E6%BC%95%E4%B8%9C%E4%B8%89%E8%B7%AF%E4%B8%8E%E6%BC%95%E4%B8%9C%E6%94%AF%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E4%B8%9C%E5%8D%9760%E7%B1%B3
+                - listitem [ref=e305]:
+                  - 'generic "漕溪四村西区 地址: 田东路(龙漕路地铁站5号口步行320米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e306]':
+                    - generic [ref=e307]:
+                      - generic [ref=e308]: 漕溪四村西区
+                      - generic [ref=e309]: 龙漕居委 · 田东路(龙漕路地铁站5号口步行320米)
+                    - generic [ref=e310]:
+                      - generic [ref=e311]: 直接
+                      - generic [ref=e312]:
+                        - button "定位" [ref=e313]
+                        - link "高德 ↗" [ref=e314] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E5%9B%9B%E6%9D%91%E8%A5%BF%E5%8C%BA%20%E7%94%B0%E4%B8%9C%E8%B7%AF(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C320%E7%B1%B3)
+                - listitem [ref=e315]:
+                  - 'generic "漕溪三村南区 地址: 龙漕路现代商务中心附近 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e316]':
+                    - generic [ref=e317]:
+                      - generic [ref=e318]: 漕溪三村南区
+                      - generic [ref=e319]: 龙漕居委 · 龙漕路现代商务中心附近
+                    - generic [ref=e320]:
+                      - generic [ref=e321]: 直接
+                      - generic [ref=e322]:
+                        - button "定位" [ref=e323]
+                        - link "高德 ↗" [ref=e324] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E4%B8%89%E6%9D%91%E5%8D%97%E5%8C%BA%20%E9%BE%99%E6%BC%95%E8%B7%AF%E7%8E%B0%E4%BB%A3%E5%95%86%E5%8A%A1%E4%B8%AD%E5%BF%83%E9%99%84%E8%BF%91
+                - listitem [ref=e325]:
+                  - 'generic "银星名庭 地址: 龙漕路51弄1-4号(漕宝路地铁站3号口步行180米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e326]':
+                    - generic [ref=e327]:
+                      - generic [ref=e328]: 银星名庭
+                      - generic [ref=e329]: 龙漕居委 · 龙漕路51弄1-4号(漕宝路地铁站3号口步行180米)
+                    - generic [ref=e330]:
+                      - generic [ref=e331]: 直接
+                      - generic [ref=e332]:
+                        - button "定位" [ref=e333]
+                        - link "高德 ↗" [ref=e334] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E9%93%B6%E6%98%9F%E5%90%8D%E5%BA%AD%20%E9%BE%99%E6%BC%95%E8%B7%AF51%E5%BC%841-4%E5%8F%B7(%E6%BC%95%E5%AE%9D%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%993%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C180%E7%B1%B3)
+                - listitem [ref=e335]:
+                  - 'generic "漕溪三村 地址: 漕东四路与漕东支路交叉口西60米 来自: 漕溪新村四村居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e336]':
+                    - generic [ref=e337]:
+                      - generic [ref=e338]: 漕溪三村
+                      - generic [ref=e339]: 漕溪新村四村居委 · 漕东四路与漕东支路交叉口西60米
+                    - generic [ref=e340]:
+                      - generic [ref=e341]: 直接
+                      - generic [ref=e342]:
+                        - button "定位" [ref=e343]
+                        - link "高德 ↗" [ref=e344] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E4%B8%89%E6%9D%91%20%E6%BC%95%E4%B8%9C%E5%9B%9B%E8%B7%AF%E4%B8%8E%E6%BC%95%E4%B8%9C%E6%94%AF%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E8%A5%BF60%E7%B1%B3
+                - listitem [ref=e345]:
+                  - 'generic "龙漕苑 地址: 龙漕路66号 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e346]':
+                    - generic [ref=e347]:
+                      - generic [ref=e348]: 龙漕苑
+                      - generic [ref=e349]: 龙漕居委 · 龙漕路66号
+                    - generic [ref=e350]:
+                      - generic [ref=e351]: 直接
+                      - generic [ref=e352]:
+                        - button "定位" [ref=e353]
+                        - link "高德 ↗" [ref=e354] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E9%BE%99%E6%BC%95%E8%8B%91%20%E9%BE%99%E6%BC%95%E8%B7%AF66%E5%8F%B7
+                - listitem [ref=e355]:
+                  - 'generic "漕溪四村 地址: 田东路31正西方向30米(龙漕路地铁站5号口步行440米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e356]':
+                    - generic [ref=e357]:
+                      - generic [ref=e358]: 漕溪四村
+                      - generic [ref=e359]: 龙漕居委 · 田东路31正西方向30米(龙漕路地铁站5号口步行440米)
+                    - generic [ref=e360]:
+                      - generic [ref=e361]: 直接
+                      - generic [ref=e362]:
+                        - button "定位" [ref=e363]
+                        - link "高德 ↗" [ref=e364] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E5%9B%9B%E6%9D%91%20%E7%94%B0%E4%B8%9C%E8%B7%AF31%E6%AD%A3%E8%A5%BF%E6%96%B9%E5%90%9130%E7%B1%B3(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C440%E7%B1%B3)
+                - listitem [ref=e365]:
+                  - 'generic "漕溪三村北区 地址: 漕河泾镇(漕宝路地铁站2号口步行360米) 来自: 漕溪新村四村居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e366]':
+                    - generic [ref=e367]:
+                      - generic [ref=e368]: 漕溪三村北区
+                      - generic [ref=e369]: 漕溪新村四村居委 · 漕河泾镇(漕宝路地铁站2号口步行360米)
+                    - generic [ref=e370]:
+                      - generic [ref=e371]: 直接
+                      - generic [ref=e372]:
+                        - button "定位" [ref=e373]
+                        - link "高德 ↗" [ref=e374] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E4%B8%89%E6%9D%91%E5%8C%97%E5%8C%BA%20%E6%BC%95%E6%B2%B3%E6%B3%BE%E9%95%87(%E6%BC%95%E5%AE%9D%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%992%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C360%E7%B1%B3)
+                - listitem [ref=e375]:
+                  - 'generic "兆嘉园 地址: 田东路69号(龙漕路地铁站5号口步行440米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e376]':
+                    - generic [ref=e377]:
+                      - generic [ref=e378]: 兆嘉园
+                      - generic [ref=e379]: 龙漕居委 · 田东路69号(龙漕路地铁站5号口步行440米)
+                    - generic [ref=e380]:
+                      - generic [ref=e381]: 直接
+                      - generic [ref=e382]:
+                        - button "定位" [ref=e383]
+                        - link "高德 ↗" [ref=e384] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E5%85%86%E5%98%89%E5%9B%AD%20%E7%94%B0%E4%B8%9C%E8%B7%AF69%E5%8F%B7(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C440%E7%B1%B3)
+                - listitem [ref=e385]:
+                  - 'generic "金海大厦 地址: 龙漕路51弄之1-4号1号楼 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e386]':
+                    - generic [ref=e387]:
+                      - generic [ref=e388]: 金海大厦
+                      - generic [ref=e389]: 龙漕居委 · 龙漕路51弄之1-4号1号楼
+                    - generic [ref=e390]:
+                      - generic [ref=e391]: 直接
+                      - generic [ref=e392]:
+                        - button "定位" [ref=e393]
+                        - link "高德 ↗" [ref=e394] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E9%87%91%E6%B5%B7%E5%A4%A7%E5%8E%A6%20%E9%BE%99%E6%BC%95%E8%B7%AF51%E5%BC%84%E4%B9%8B1-4%E5%8F%B71%E5%8F%B7%E6%A5%BC
+                - listitem [ref=e395]:
+                  - 'generic "漕溪四村东区 地址: 田东路66弄(龙漕路地铁站5号口步行250米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e396]':
+                    - generic [ref=e397]:
+                      - generic [ref=e398]: 漕溪四村东区
+                      - generic [ref=e399]: 龙漕居委 · 田东路66弄(龙漕路地铁站5号口步行250米)
+                    - generic [ref=e400]:
+                      - generic [ref=e401]: 直接
+                      - generic [ref=e402]:
+                        - button "定位" [ref=e403]
+                        - link "高德 ↗" [ref=e404] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E5%9B%9B%E6%9D%91%E4%B8%9C%E5%8C%BA%20%E7%94%B0%E4%B8%9C%E8%B7%AF66%E5%BC%84(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C250%E7%B1%B3)
+                - listitem [ref=e405]:
+                  - 'generic "华南公寓 地址: 田东路70弄之1-5(龙漕路地铁站5号口步行420米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e406]':
+                    - generic [ref=e407]:
+                      - generic [ref=e408]: 华南公寓
+                      - generic [ref=e409]: 龙漕居委 · 田东路70弄之1-5(龙漕路地铁站5号口步行420米)
+                    - generic [ref=e410]:
+                      - generic [ref=e411]: 直接
+                      - generic [ref=e412]:
+                        - button "定位" [ref=e413]
+                        - link "高德 ↗" [ref=e414] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E5%8D%8E%E5%8D%97%E5%85%AC%E5%AF%93%20%E7%94%B0%E4%B8%9C%E8%B7%AF70%E5%BC%84%E4%B9%8B1-5(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C420%E7%B1%B3)
+                - listitem [ref=e415]:
+                  - 'generic "汇知楼 地址: 漕东四路与漕东支路交叉口西140米 来自: 漕溪新村四村居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e416]':
+                    - generic [ref=e417]:
+                      - generic [ref=e418]: 汇知楼
+                      - generic [ref=e419]: 漕溪新村四村居委 · 漕东四路与漕东支路交叉口西140米
+                    - generic [ref=e420]:
+                      - generic [ref=e421]: 直接
+                      - generic [ref=e422]:
+                        - button "定位" [ref=e423]
+                        - link "高德 ↗" [ref=e424] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%B1%87%E7%9F%A5%E6%A5%BC%20%E6%BC%95%E4%B8%9C%E5%9B%9B%E8%B7%AF%E4%B8%8E%E6%BC%95%E4%B8%9C%E6%94%AF%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E8%A5%BF140%E7%B1%B3
+                - listitem [ref=e425]:
+                  - 'generic "漕溪二村201-212号小区 地址: 漕河泾镇漕溪二村 来自: 漕溪新村四村居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e426]':
+                    - generic [ref=e427]:
+                      - generic [ref=e428]: 漕溪二村201-212号小区
+                      - generic [ref=e429]: 漕溪新村四村居委 · 漕河泾镇漕溪二村
+                    - generic [ref=e430]:
+                      - generic [ref=e431]: 直接
+                      - generic [ref=e432]:
+                        - button "定位" [ref=e433]
+                        - link "高德 ↗" [ref=e434] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E6%BA%AA%E4%BA%8C%E6%9D%91201-212%E5%8F%B7%E5%B0%8F%E5%8C%BA%20%E6%BC%95%E6%B2%B3%E6%B3%BE%E9%95%87%E6%BC%95%E6%BA%AA%E4%BA%8C%E6%9D%91
+                - listitem [ref=e435]:
+                  - 'generic "澳龙公寓 地址: 龙漕路51弄之1-4号3号楼 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e436]':
+                    - generic [ref=e437]:
+                      - generic [ref=e438]: 澳龙公寓
+                      - generic [ref=e439]: 龙漕居委 · 龙漕路51弄之1-4号3号楼
+                    - generic [ref=e440]:
+                      - generic [ref=e441]: 直接
+                      - generic [ref=e442]:
+                        - button "定位" [ref=e443]
+                        - link "高德 ↗" [ref=e444] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BE%B3%E9%BE%99%E5%85%AC%E5%AF%93%20%E9%BE%99%E6%BC%95%E8%B7%AF51%E5%BC%84%E4%B9%8B1-4%E5%8F%B73%E5%8F%B7%E6%A5%BC
+                - listitem [ref=e445]:
+                  - 'generic "科汇景苑 地址: 田东路69弄之1-5号(龙漕路地铁站5号口步行470米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e446]':
+                    - generic [ref=e447]:
+                      - generic [ref=e448]: 科汇景苑
+                      - generic [ref=e449]: 龙漕居委 · 田东路69弄之1-5号(龙漕路地铁站5号口步行470米)
+                    - generic [ref=e450]:
+                      - generic [ref=e451]: 直接
+                      - generic [ref=e452]:
+                        - button "定位" [ref=e453]
+                        - link "高德 ↗" [ref=e454] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E7%A7%91%E6%B1%87%E6%99%AF%E8%8B%91%20%E7%94%B0%E4%B8%9C%E8%B7%AF69%E5%BC%84%E4%B9%8B1-5%E5%8F%B7(%E9%BE%99%E6%BC%95%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C470%E7%B1%B3)
+                - listitem [ref=e455]:
+                  - 'generic "气象苑 地址: 龙漕路58弄6-36号(漕宝路地铁站4号口步行220米) 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e456]':
+                    - generic [ref=e457]:
+                      - generic [ref=e458]: 气象苑
+                      - generic [ref=e459]: 龙漕居委 · 龙漕路58弄6-36号(漕宝路地铁站4号口步行220米)
+                    - generic [ref=e460]:
+                      - generic [ref=e461]: 直接
+                      - generic [ref=e462]:
+                        - button "定位" [ref=e463]
+                        - link "高德 ↗" [ref=e464] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%B0%94%E8%B1%A1%E8%8B%91%20%E9%BE%99%E6%BC%95%E8%B7%AF58%E5%BC%846-36%E5%8F%B7(%E6%BC%95%E5%AE%9D%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%994%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C220%E7%B1%B3)
+                - listitem [ref=e465]:
+                  - 'generic "漕东三路顾家厍25号楼小区 地址: 漕东三路顾家厍25号楼1-5号 来自: 龙漕居委 来源: 直接（居委周边） 抓取日期: 2026-06-03" [ref=e466]':
+                    - generic [ref=e467]:
+                      - generic [ref=e468]: 漕东三路顾家厍25号楼小区
+                      - generic [ref=e469]: 龙漕居委 · 漕东三路顾家厍25号楼1-5号
+                    - generic [ref=e470]:
+                      - generic [ref=e471]: 直接
+                      - generic [ref=e472]:
+                        - button "定位" [ref=e473]
+                        - link "高德 ↗" [ref=e474] [cursor=pointer]:
+                          - /url: https://www.amap.com/search?query=%E6%BC%95%E4%B8%9C%E4%B8%89%E8%B7%AF%E9%A1%BE%E5%AE%B6%E5%8E%8D25%E5%8F%B7%E6%A5%BC%E5%B0%8F%E5%8C%BA%20%E6%BC%95%E4%B8%9C%E4%B8%89%E8%B7%AF%E9%A1%BE%E5%AE%B6%E5%8E%8D25%E5%8F%B7%E6%A5%BC1-5%E5%8F%B7
+              - generic [ref=e475]:
+                - generic [ref=e476]: 直接（高德 PlaceSearch 反查居委）
+                - generic [ref=e478]: 派生（继承自对口小学）
+        - button "上海市徐汇区康健外国语实验小学 小学 公办 二梯队" [ref=e70]:
+          - generic [ref=e72]: 上海市徐汇区康健外国语实验小学
+          - generic [ref=e73]: 小学
+          - generic [ref=e74]: 公办
+          - generic [ref=e76]: 二梯队
+        - button "上海市西南位育附属实验学校 小学 公办 未入榜/待补充" [ref=e78]:
+          - generic [ref=e80]: 上海市西南位育附属实验学校
+          - generic [ref=e81]: 小学
+          - generic [ref=e82]: 公办
+          - generic [ref=e84]: 未入榜/待补充
+        - button "复旦大学附属徐汇实验学校 小学 公办 未入榜/待补充" [ref=e86]:
+          - generic [ref=e88]: 复旦大学附属徐汇实验学校
+          - generic [ref=e89]: 小学
+          - generic [ref=e90]: 公办
+          - generic [ref=e92]: 未入榜/待补充
+        - button "上海市中国中学 初中 公办 三梯队" [ref=e94]:
+          - generic [ref=e96]: 上海市中国中学
+          - generic [ref=e97]: 初中
+          - generic [ref=e98]: 公办
+          - generic [ref=e100]: 三梯队
+        - button "上海市徐汇区上海小学（本部校区 ） 小学 公办 二梯队" [ref=e102]:
+          - generic [ref=e104]: 上海市徐汇区上海小学（本部校区 ）
+          - generic [ref=e105]: 小学
+          - generic [ref=e106]: 公办
+          - generic [ref=e108]: 二梯队
+        - button "上海市徐汇区上海小学（龙川校区 ） 小学 公办 二梯队" [ref=e110]:
+          - generic [ref=e112]: 上海市徐汇区上海小学（龙川校区 ）
+          - generic [ref=e113]: 小学
+          - generic [ref=e114]: 公办
+          - generic [ref=e116]: 二梯队
+        - button "上海市徐汇区园南小学 小学 公办 二梯队" [ref=e118]:
+          - generic [ref=e120]: 上海市徐汇区园南小学
+          - generic [ref=e121]: 小学
+          - generic [ref=e122]: 公办
+          - generic [ref=e124]: 二梯队
+        - button "上海市徐汇区教育学院附属实验小学 小学 公办 三梯队" [ref=e126]:
+          - generic [ref=e128]: 上海市徐汇区教育学院附属实验小学
+          - generic [ref=e129]: 小学
+          - generic [ref=e130]: 公办
+          - generic [ref=e132]: 三梯队
+        - button "上海市徐汇区向阳育才小学 小学 公办 一梯队" [ref=e134]:
+          - generic [ref=e136]: 上海市徐汇区向阳育才小学
+          - generic [ref=e137]: 小学
+          - generic [ref=e138]: 公办
+          - generic [ref=e140]: 一梯队
+        - button "上海市徐汇区龙华小学 小学 公办 未入榜/待补充" [ref=e142]:
+          - generic [ref=e144]: 上海市徐汇区龙华小学
+          - generic [ref=e145]: 小学
+          - generic [ref=e146]: 公办
+          - generic [ref=e148]: 未入榜/待补充
+        - button "上海市康健外国语实验中学 初中 公办 未入榜/待补充" [ref=e150]:
+          - generic [ref=e152]: 上海市康健外国语实验中学
+          - generic [ref=e153]: 初中
+          - generic [ref=e154]: 公办
+          - generic [ref=e156]: 未入榜/待补充
+        - button "上海市龙苑中学 初中 公办 未入榜/待补充" [ref=e158]:
+          - generic [ref=e160]: 上海市龙苑中学
+          - generic [ref=e161]: 初中
+          - generic [ref=e162]: 公办
+          - generic [ref=e164]: 未入榜/待补充
+        - button "上海市徐汇区教育学院附属实验中学 初中 公办 二梯队" [ref=e166]:
+          - generic [ref=e168]: 上海市徐汇区教育学院附属实验中学
+          - generic [ref=e169]: 初中
+          - generic [ref=e170]: 公办
+          - generic [ref=e172]: 二梯队
+        - button "上海市园南中学（总校 ） 初中 公办 三梯队" [ref=e174]:
+          - generic [ref=e176]: 上海市园南中学（总校 ）
+          - generic [ref=e177]: 初中
+          - generic [ref=e178]: 公办
+          - generic [ref=e180]: 三梯队
+        - button "上海市园南中学（北校 ） 初中 公办 三梯队" [ref=e182]:
+          - generic [ref=e184]: 上海市园南中学（北校 ）
+          - generic [ref=e185]: 初中
+          - generic [ref=e186]: 公办
+          - generic [ref=e188]: 三梯队
+        - button "上海市汾阳中学 初中 公办 未入榜/待补充" [ref=e190]:
+          - generic [ref=e192]: 上海市汾阳中学
+          - generic [ref=e193]: 初中
+          - generic [ref=e194]: 公办
+          - generic [ref=e196]: 未入榜/待补充
+        - button "上海市徐汇区教育学院 附属实验中学南部分校 初中 公办 未入榜/待补充" [ref=e198]:
+          - generic [ref=e200]: 上海市徐汇区教育学院 附属实验中学南部分校
+          - generic [ref=e201]: 初中
+          - generic [ref=e202]: 公办
+          - generic [ref=e204]: 未入榜/待补充
+        - button "华东理工大学附属中学 初中 公办 未入榜/待补充" [ref=e206]:
+          - generic [ref=e208]: 华东理工大学附属中学
+          - generic [ref=e209]: 初中
+          - generic [ref=e210]: 公办
+          - generic [ref=e212]: 未入榜/待补充
+        - button "上海市梅园中学 初中 公办 未入榜/待补充" [ref=e214]:
+          - generic [ref=e216]: 上海市梅园中学
+          - generic [ref=e217]: 初中
+          - generic [ref=e218]: 公办
+          - generic [ref=e220]: 未入榜/待补充
+        - button "上海市徐汇中学（南校区 ） 初中 公办 二梯队" [ref=e222]:
+          - generic [ref=e224]: 上海市徐汇中学（南校区 ）
+          - generic [ref=e225]: 初中
+          - generic [ref=e226]: 公办
+          - generic [ref=e228]: 二梯队
+        - button "上海师范大学第三附属实验学校（初中） 初中 公办 三梯队" [ref=e230]:
+          - generic [ref=e232]: 上海师范大学第三附属实验学校（初中）
+          - generic [ref=e233]: 初中
+          - generic [ref=e234]: 公办
+          - generic [ref=e236]: 三梯队
+        - button "复旦大学附属徐汇实验学校 （初中 ） 初中 公办 未入榜/待补充" [ref=e238]:
+          - generic [ref=e240]: 复旦大学附属徐汇实验学校 （初中 ）
+          - generic [ref=e241]: 初中
+          - generic [ref=e242]: 公办
+          - generic [ref=e244]: 未入榜/待补充
+        - button "上海市西南位育附属实验学校 （初中 ） 初中 公办 未入榜/待补充" [ref=e246]:
+          - generic [ref=e248]: 上海市西南位育附属实验学校 （初中 ）
+          - generic [ref=e249]: 初中
+          - generic [ref=e250]: 公办
+          - generic [ref=e252]: 未入榜/待补充
+      - generic [ref=e38]:
+        - generic [ref=e39] [cursor=pointer]:
+          - iframe [ref=e253]:
+            
+          - generic [ref=e255]:
+            - generic:
+              - 'generic "凯翔小区 龙漕路135弄之1-60号(龙漕路地铁站5号口步行330米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e480]'
+              - 'generic "漕东支路3弄小区 漕东三路与漕东支路交叉口东南60米 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e482]'
+              - 'generic "漕溪四村西区 田东路(龙漕路地铁站5号口步行320米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e484]'
+              - 'generic "漕溪三村南区 龙漕路现代商务中心附近 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e486]'
+              - 'generic "银星名庭 龙漕路51弄1-4号(漕宝路地铁站3号口步行180米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e488]'
+              - 'generic "漕溪三村 漕东四路与漕东支路交叉口西60米 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e490]'
+              - 'generic "龙漕苑 龙漕路66号 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e492]'
+              - 'generic "漕溪四村 田东路31正西方向30米(龙漕路地铁站5号口步行440米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e494]'
+              - 'generic "漕溪三村北区 漕河泾镇(漕宝路地铁站2号口步行360米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e496]'
+              - 'generic "兆嘉园 田东路69号(龙漕路地铁站5号口步行440米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e498]'
+              - 'generic "金海大厦 龙漕路51弄之1-4号1号楼 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e500]'
+              - 'generic "漕溪四村东区 田东路66弄(龙漕路地铁站5号口步行250米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e502]'
+              - 'generic "华南公寓 田东路70弄之1-5(龙漕路地铁站5号口步行420米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e504]'
+              - 'generic "汇知楼 漕东四路与漕东支路交叉口西140米 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e506]'
+              - 'generic "漕溪二村201-212号小区 漕河泾镇漕溪二村 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e508]'
+              - 'generic "澳龙公寓 龙漕路51弄之1-4号3号楼 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e510]'
+              - 'generic "科汇景苑 田东路69弄之1-5号(龙漕路地铁站5号口步行470米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e512]'
+              - 'generic "气象苑 龙漕路58弄6-36号(漕宝路地铁站4号口步行220米) 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e514]'
+              - 'generic "漕东三路顾家厍25号楼小区 漕东三路顾家厍25号楼1-5号 来自居委: 嘉萱苑居委 龙漕居委 宾阳居委 馨汇南苑 凯翔居委 漕溪新村四村居委 (部分) 公园 道居委 直接（居委周边）" [ref=e516]'
+          - generic:
+            - img
+          - generic [ref=e257]: © 2026 AutoNavi
+        - generic:
+          - generic: 徐汇区
+          - text: ·
+          - generic: 24 校 · 19 小区
+      - separator "调整列表和地图宽度" [ref=e40]:
+        - generic [ref=e42]:
+          - button "收起左侧列表" [ref=e43]:
+            - img [ref=e44]
+          - button "收起右侧地图" [ref=e47]:
+            - img [ref=e48]
+  - button "Open Next.js Dev Tools" [ref=e56] [cursor=pointer]:
+    - img [ref=e57]
+  - alert [ref=e60]

@@ -1,0 +1,691 @@
+{
+  "_notes": [
+    "梯队不是教育局官方字段。本文件用于人工维护第三方/自定义梯队口径。",
+    "增量回填时按 district + names/alias 匹配学校；未匹配学校保留现有值，不通过重灌库处理。",
+    "verified=false 表示待人工复核，不应作为购房或择校决策的唯一依据。"
+  ],
+  "items": [
+    {
+      "district": "徐汇",
+      "names": ["上海市徐汇区向阳育才小学"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表将“向阳小学”列为徐汇小学一梯队；当前数据中的“向阳育才小学”需人工核验是否同一口径。",
+      "verified": false
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海师范大学第三附属实验学校",
+        "上海市徐汇区康健外国语实验小学",
+        "上海市徐汇区上海小学（本部校区 ）",
+        "上海市徐汇区上海小学（龙川校区 ）",
+        "上海市徐汇区园南小学"
+      ],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的徐汇小学第二梯队名单包含上海小学、园南小学、上海师范大学第三附属实验学校、康健外国语小学。",
+      "verified": false
+    },
+    {
+      "district": "徐汇",
+      "names": ["上海市徐汇区教育学院附属实验小学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的徐汇小学第三梯队名单包含“徐教院附小”；当前数据学校全名需人工核验。",
+      "verified": false
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市徐汇区教育学院附属实验中学",
+        "上海市徐汇中学（南校区 ）"
+      ],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "上海各区初中梯队排名页面的徐汇区初中第二梯队名单包含徐汇中学、徐教院附中。",
+      "verified": false
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市中国中学",
+        "上海市园南中学（总校 ）",
+        "上海市园南中学（北校 ）",
+        "上海师范大学第三附属实验学校（初中）"
+      ],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "上海各区初中梯队排名页面的徐汇区初中第三梯队名单包含园南中学、中国中学、师三实验等。",
+      "verified": false
+    },
+    {
+      "district": "黄浦",
+      "stage": "middle",
+      "names": ["民办立达", "私立永昌", "格致初级", "大同初级"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出黄浦区初中一梯队：民办立达、私立永昌、格致初级、大同初级。当前数据库暂无黄浦初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "黄浦",
+      "stage": "middle",
+      "names": ["民办明珠", "向明初级", "卢湾初级"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出黄浦区初中二梯队：民办明珠、向明初级、卢湾初级。当前数据库暂无黄浦初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "黄浦",
+      "stage": "middle",
+      "names": ["大境初级", "震旦外国语", "储能中学", "黄教院附属中山学校", "敬业中学", "第十中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出黄浦区初中三梯队：大境初级、震旦外国语、储能中学、黄教院附属中山学校、敬业中学、第十中学等。当前数据库暂无黄浦初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "虹口",
+      "stage": "middle",
+      "names": ["上外附中", "新华初级", "新复兴初级", "迅行中学"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出虹口区初中一梯队：上外附中、新华初级、新复兴初级、迅行中学。",
+      "verified": false
+    },
+    {
+      "district": "虹口",
+      "stage": "middle",
+      "names": ["新北郊初级", "上外克勒", "上海市长青学校"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出虹口区初中二梯队：新北郊初级、上外克勒、长青学校。",
+      "verified": false
+    },
+    {
+      "district": "虹口",
+      "stage": "middle",
+      "names": ["上海市虹口实验学校", "上海市钟山初级中学", "上海市北郊学校", "北虹初级"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出虹口区初中三梯队：虹口实验、钟山初级、北郊学校、北虹初级。",
+      "verified": false
+    },
+    {
+      "district": "虹口",
+      "stage": "middle",
+      "names": ["上海市海南中学", "上海市曲阳第二中学", "上海市江湾初级中学", "同济大学附属澄衷中学", "上海市虹口区教育学院实验中学"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出虹口区初中四梯队：海南中学、曲阳二中、江湾初级、澄衷初级、虹教院附校等。",
+      "verified": false
+    },
+    {
+      "district": "长宁",
+      "stage": "middle",
+      "names": ["延安初级中学", "西延安中学"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出长宁区初中一梯队：延安初级中学、西延安中学。当前数据库暂无长宁初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "长宁",
+      "stage": "middle",
+      "names": ["娄山中学", "新世纪中学", "市三女中"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出长宁区初中二梯队：娄山中学、新世纪中学、市三女中。当前数据库暂无长宁初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "长宁",
+      "stage": "middle",
+      "names": ["天山初级中学", "复旦初级中学", "华政附属", "建青"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出长宁区初中三梯队：天山初级中学、复旦初级中学、华政附属、建青。当前数据库暂无长宁初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "长宁",
+      "stage": "middle",
+      "names": ["姚连生中学", "开元", "虹桥中学"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出长宁区初中四梯队：姚连生中学、开元、虹桥中学等。当前数据库暂无长宁初中行，本条先作为来源口径保存。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "primary",
+      "names": [
+        "上海市第二师范学校附属小学",
+        "上海市杨浦区控江二村小学",
+        "民办打一外国语小学",
+        "上外附属双语学校"
+      ],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的杨浦区2024小学一梯队列出：二师附小、控江二小、民办打一外国语小学、上外附属双语学校。梯队为民间口径，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "primary",
+      "names": [
+        "上海市杨浦区打虎山路第一小学",
+        "复旦大学附属小学",
+        "复旦大学第二附属学校（小学部）",
+        "上海理工大学附属小学",
+        "上海市杨浦区杨浦小学",
+        "上海市杨浦区齐齐哈尔路第一小学",
+        "上海市杨浦区水丰路小学",
+        "上海音乐学院实验学校（小学部）",
+        "复旦科技园实验学校小学部",
+        "上海市杨浦区复旦科技园小学",
+        "上海音乐学院实验学校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的杨浦区2024小学二梯队列出：打虎山路第一小学、复旦大学附属小学、上理工附小、杨浦小学、齐齐哈尔路第一小学、水丰路小学、上音实验学校小学部、复旦科技园实验学校小学部。部分学校名称与当前库内全名存在口径差异，已加入别名待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "primary",
+      "names": [
+        "六一小学",
+        "上海市杨浦区六一小学",
+        "沪东外国语学校",
+        "上海市杨浦区同济小学",
+        "平凉路第三小学",
+        "上海市杨浦区平凉路第三小学",
+        "许昌路第五小学",
+        "上海市杨浦区许昌路第五小学",
+        "中原路小学",
+        "上海市杨浦区中原路小学",
+        "五角场小学",
+        "上海市杨浦区五角场小学",
+        "杨教院实验学校小学部",
+        "上海市杨浦区教育学院实验小学",
+        "凤城新村小学",
+        "上海市杨浦区凤城新村小学",
+        "政立路二小",
+        "回民小学",
+        "上海市杨浦区回民小学",
+        "内江路二小",
+        "上海市杨浦区内江路第二小学",
+        "二联小学",
+        "上海市杨浦区二联小学",
+        "市东实验学校小学部",
+        "上海市市东实验学校（上海市市东中学）",
+        "怀德路第一小学",
+        "上海市杨浦区怀德路第一小学"
+      ],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的杨浦区2024小学三梯队列出：六一小学、沪东外国语学校、同济小学、平凉路三小、许昌路第五小学、中原路小学、五角场小学、杨教院实验学校小学部、凤城新村小学、政立路二小、回民小学、内江路二小、二联小学、市东实验学校小学部、怀德路第一小学。梯队为民间口径，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "middle",
+      "names": ["兰生复旦", "同济存志", "上外双语"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出杨浦区初中一梯队：兰生复旦、同济存志、上外双语。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "middle",
+      "names": ["同济实验学校", "控江附属民办", "民办杨浦实验"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出杨浦区初中二梯队：同济实验学校、控江附属民办、民办杨浦实验。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "middle",
+      "names": ["凯慧中学", "沪东外国语", "上音实验", "铁岭中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出杨浦区初中三梯队：凯慧中学、沪东外国语、上音实验、铁岭中学。",
+      "verified": false
+    },
+    {
+      "district": "杨浦",
+      "stage": "middle",
+      "names": ["鞍山实验", "三门中学", "鞍山初级", "同济初级"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出杨浦区初中四梯队：鞍山实验、三门中学、鞍山初级、同济初级等。",
+      "verified": false
+    },
+    {
+      "district": "宝山",
+      "stage": "middle",
+      "names": ["华曜宝山", "华二宝山", "上海民办华曜宝山实验学校", "至德实验", "行知二中", "上海民办至德实验学校"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出宝山区初中一梯队：华曜宝山（华二宝山）、至德实验（行知二中）。",
+      "verified": false
+    },
+    {
+      "district": "宝山",
+      "stage": "middle",
+      "names": ["上海市宝山实验学校", "上海市民办交华中学", "上海市宝山区求真中学", "上海市宝山区求真中学北校", "上海市宝山区求真中学南校", "和衷中学", "淞谊中学"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出宝山区初中二梯队：宝山实验、交华中学、求真中学、和衷中学、淞谊中学。",
+      "verified": false
+    },
+    {
+      "district": "宝山",
+      "stage": "middle",
+      "names": ["上海市宝山区教育学院附属中学", "上海市月浦实验学校", "上海市宝山区上海大学附属中学实验学校", "上海师范大学附属宝山经纬实验中学", "上海市宝山实验学校分校 （原上海市宝钢新世纪学校）", "上海市宝山区杨泰实验中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出宝山区初中三梯队：宝山教院附中、月浦实验、上大附中实验、经纬实验、宝钢新世纪、杨泰实验。",
+      "verified": false
+    },
+    {
+      "district": "宝山",
+      "stage": "middle",
+      "names": ["上海市吴淞中学附属宝山实验学校 （原上海市海滨第二中学）", "上海市月浦中学", "上海市吴淞中学附属宝山实验学校 （原上海市吴淞初级中学）", "上海市宝山区共富实验学校"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出宝山区初中四梯队：海滨二中、月浦中学、吴淞初级、共富实验等。",
+      "verified": false
+    },
+    {
+      "district": "静安",
+      "stage": "middle",
+      "names": ["上海市市西中学教育集团", "上海市静安区市北初级中学北校", "民办扬波"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出静安区初中一梯队：市西初级、市北初级、民办扬波。",
+      "verified": false
+    },
+    {
+      "district": "静安",
+      "stage": "middle",
+      "names": ["田家炳", "静教院附校", "上海市风华初级中学教育集团"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出静安区初中二梯队：田家炳、静教院附校、风华初级。",
+      "verified": false
+    },
+    {
+      "district": "静安",
+      "stage": "middle",
+      "names": ["上外静中", "同济大学附属七一中学", "上海外国语大学苏河湾实验中学", "上海市新中初级中学教育集团", "上海市久隆模范中学", "上海市育才初级中学", "上海市彭浦初级中学教育集团", "上海市彭浦初级中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出静安区初中三梯队：上外静中、七一中学、上外苏河湾、新中初级、久隆模范、育才初级、彭浦初级。",
+      "verified": false
+    },
+    {
+      "district": "静安",
+      "stage": "middle",
+      "names": ["时代中学", "新和中学", "民立中学", "爱国学校"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出静安区初中四梯队：时代中学、新和中学、民立中学、爱国学校等。",
+      "verified": false
+    },
+    {
+      "district": "嘉定",
+      "stage": "middle",
+      "names": ["华曜嘉定", "华二嘉定"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出嘉定区初中一梯队：华曜嘉定（华二嘉定）。",
+      "verified": false
+    },
+    {
+      "district": "嘉定",
+      "stage": "middle",
+      "names": ["民办桃李园", "民办嘉一联合", "嘉定世外", "中科院上海实验"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出嘉定区初中二梯队：民办桃李园、民办嘉一联合、嘉定世外、中科院上海实验。",
+      "verified": false
+    },
+    {
+      "district": "嘉定",
+      "stage": "middle",
+      "names": ["同济大学附属实验", "怀少学校", "远东学校", "震川中学", "华师大附属双语"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出嘉定区初中三梯队：同济大学附属实验、怀少学校、远东学校、震川中学、华师大附属双语。",
+      "verified": false
+    },
+    {
+      "district": "嘉定",
+      "stage": "middle",
+      "names": ["上外嘉定外国语", "曹二附属江桥", "德富中学", "迎园中学", "斌心学校", "疁城实验"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出嘉定区初中四梯队：上外嘉定外国语、曹二附属江桥、德富中学、迎园中学、斌心学校、疁城实验等。",
+      "verified": false
+    },
+    {
+      "district": "普陀",
+      "stage": "primary",
+      "names": ["华师大附属小学", "华东师范大学附属小学"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的普陀区2024小学一梯队列出：华师大附属小学。梯队为民间口径，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "普陀",
+      "stage": "primary",
+      "names": [
+        "武宁路小学",
+        "上海市普陀区武宁路小学",
+        "江宁学校",
+        "上海市江宁学校",
+        "新普陀小学",
+        "上海市普陀区新普陀小学及东校",
+        "上海市普陀区新普陀小学西校",
+        "金洲小学",
+        "上海金洲小学",
+        "中远实验学校",
+        "上海市中远实验学校",
+        "朝春中心小学",
+        "上海市普陀区朝春中心小学",
+        "真如文英小学",
+        "上海市普陀区真如文英中心小学",
+        "长征中心小学",
+        "上海市普陀区长征中心小学",
+        "中山北路一小",
+        "上海市普陀区中山北路第一小学",
+        "晋元附校",
+        "上海市晋元高级中学附属学校（含西校及南校）",
+        "培佳双语学校",
+        "上海培佳双语学校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的普陀区2024小学二梯队列出：武宁路小学、江宁学校、新普陀小学、金洲小学、中远实验学校、朝春中心小学、真如文英小学、长征中心小学、中山北路一小、晋元附校、培佳双语学校。九年一贯制学校在当前库中按对应学校全名加入别名，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "普陀",
+      "stage": "primary",
+      "names": [
+        "浮阳路小学",
+        "曹杨中学附属学校",
+        "上海市曹杨中学附属学校",
+        "沪太新村第一小学",
+        "上海市普陀区沪太新村第一小学",
+        "万里城实验学校",
+        "上海市万里城实验学校",
+        "曹二附校",
+        "上海市曹杨第二中学附属学校",
+        "沪太路一小",
+        "子长学校",
+        "上海市子长学校",
+        "华师附属外国语学校",
+        "华东师范大学附属外国语实验学校",
+        "曹杨新村六小",
+        "上海市普陀区曹杨新村第六小学",
+        "上外尚阳外国语学校",
+        "上海市上外尚阳外国语学校",
+        "普教院附校",
+        "普陀区教育学院附属学校",
+        "华师大四附校",
+        "华东师范大学第四附属中学",
+        "曹杨六小"
+      ],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2048.html",
+      "sourceNote": "2025版上海16区最新小学梯队排名图表的普陀区2024小学三梯队列出：浮阳路小学、曹杨中学附属学校、沪太新村第一小学、万里城实验学校、曹二附校、沪太路一小、子长学校、华师附属外国语学校、曹杨新村六小、上外尚阳外国语学校、普教院附校、华师大四附校、曹杨六小。梯队为民间口径，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "普陀",
+      "stage": "middle",
+      "names": ["进华中学", "上海华东师范大学附属进华中学", "梅陇中学", "上海市普陀区梅陇实验中学", "培佳双语", "上海培佳双语学校"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出普陀区初中一梯队：进华中学、梅陇中学、培佳双语。",
+      "verified": false
+    },
+    {
+      "district": "普陀",
+      "stage": "middle",
+      "names": ["曹杨中学", "上海市曹杨中学", "晋元附校", "上海市晋元高级中学附属学校（含西校及南校）", "中远实验", "上海市中远实验学校", "曹二附属", "上海市曹杨第二中学附属学校", "华师大四附中", "华东师范大学第四附属中学"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出普陀区初中二梯队：曹杨中学、晋元附校、中远实验、曹二附属、华师大四附中。",
+      "verified": false
+    },
+    {
+      "district": "浦东",
+      "stage": "middle",
+      "names": ["张江集团学校", "上海市张江集团中学", "新竹园", "上海市建平中学西校", "交中初级", "上海市建平实验中学", "上海市建平实验张江中学", "上海市建平实验地杰中学"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出浦东新区初中一梯队：张江集团学校、新竹园、建平西校、交中初级、建平实验。",
+      "verified": false
+    },
+    {
+      "district": "浦东",
+      "stage": "middle",
+      "names": ["浦华二", "上中东校", "进才外国语", "上海市进才中学北校", "上海市进才实验中学", "上海市浦东新区进才实验中学南校", "建平远翔", "上海市实验学校东校"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出浦东新区初中二梯队：浦华二、上中东校、进才外国语、进才北校、进才实验、建平远翔、上海实验东校。",
+      "verified": false
+    },
+    {
+      "district": "浦东",
+      "stage": "middle",
+      "names": ["上海市洋泾菊园实验学校", "尚德实验", "上海市南汇第四中学", "上海市南汇第三中学", "洋泾外国语", "上海市北蔡中学", "上海市南汇第二中学", "上海市致远中学", "上海市清流中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出浦东新区初中三梯队：洋泾菊园、尚德实验、南汇四中、南汇三中、洋泾外国语、北蔡中学、南汇二中、致远中学、清流中学等。",
+      "verified": false
+    },
+    {
+      "district": "浦东",
+      "stage": "middle",
+      "names": ["上海市浦东模范中学", "上海市陆行中学南校", "华东师范大学附属东昌中学南校", "上海市上南中学北校", "上海市五三中学", "上海市川沙中学华夏西校", "上海市川沙中学南校", "上海市澧溪中学"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出浦东新区初中四梯队：浦东模范中学、陆行南校、东昌南校、上南北校、五三、川沙中学华夏西校、川中南校、澧溪等。",
+      "verified": false
+    },
+    {
+      "district": "闵行",
+      "stage": "middle",
+      "names": ["上宝中学", "文来中学"],
+      "tier": "一梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出闵行区初中一梯队：上宝中学、文来中学。",
+      "verified": false
+    },
+    {
+      "district": "闵行",
+      "stage": "middle",
+      "names": ["文绮中学", "上师初级中学", "华东师范大学第二附属中学附属初级中学", "上外民办闵行外国语中学", "上海市实验学校西校"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出闵行区初中二梯队：文绮中学、上师初级中学、华师大二附中附属初中、上外民办闵行外国语中学、上实西校。",
+      "verified": false
+    },
+    {
+      "district": "闵行",
+      "stage": "middle",
+      "names": ["交大二附中", "上海市闵行区莘松中学", "上海市莘城学校", "上海市七宝中学附属鑫都实验中学", "上海市闵行区七宝第三中学", "上海市闵行区七宝第二中学", "上海市莘光学校", "华二紫竹外国语", "上海市闵行区马桥复旦万科实验中学", "协和双语学校"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出闵行区初中三梯队：交大二附中、莘松中学、莘城学校、七宝鑫都附属实验中学、七宝三中、七宝二中、莘光学校、华二紫竹外国语、复旦万科实验学校、协和双语学校等。",
+      "verified": false
+    },
+    {
+      "district": "闵行",
+      "stage": "middle",
+      "names": ["七宝实验中学", "龙茗中学", "康城实验", "闵行三中", "闵行四中", "鹤北初级中学"],
+      "tier": "四梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面列出闵行区初中四梯队：七宝实验中学、龙茗中学、康城实验、闵行三中、闵行四中、鹤北初级中学等。",
+      "verified": false
+    },
+    {
+      "district": "松江",
+      "stage": "middle",
+      "names": ["九峰实验", "茸一中学", "民乐中学", "上外松外", "三新学校", "上海市松江区第七中学", "华师大松江实验", "上海市松江区九亭中学"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对松江区使用“优质民办/优质公办”分类，未给数字梯队；本条将优质民办与优质公办映射为二梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "松江",
+      "stage": "middle",
+      "names": ["松江二中集团初级中学", "松江四中初级中学", "泖港学校", "松江区第六中学", "佘山学校", "华师大松江实验中学", "新桥中学", "叶榭学校", "小昆山学校", "新浜学校"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对松江区列出“强校工程实验校”；本条映射为三梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "青浦",
+      "stage": "middle",
+      "names": ["宋庆龄学校", "复旦五浦汇", "青浦世外", "青浦平和", "青浦协和", "青浦兰生复旦", "上海市青浦区实验中学", "上海市青浦区第一中学", "上海市青浦区进修学院附属中学", "上海市青浦区东方中学", "上海市青浦区尚美中学"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对青浦区使用“优质民办/优质公办”分类，未给数字梯队；本条将优质民办与优质公办映射为二梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "青浦",
+      "stage": "middle",
+      "names": ["佳信学校", "毓华学校", "珠溪中学", "金泽中学", "颜安中学", "沈巷中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对青浦区列出“强校工程实验校”；本条映射为三梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "奉贤",
+      "stage": "middle",
+      "names": ["上海世外教育附属临港外国语学校", "帕丁顿双语", "奉贤实验", "育秀学校", "弘文学校", "华亭学校", "奉贤二中", "阳光外国语"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对奉贤区使用“优质民办/优质公办”分类，未给数字梯队；本条将优质民办与优质公办映射为二梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "奉贤",
+      "stage": "middle",
+      "names": ["古华中学", "奉贤区教院附中", "肖塘中学", "西渡学校", "四团中学", "平安学校", "青村中学", "金汇学校", "胡桥学校", "头桥中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对奉贤区列出“强校工程实验校”；本条映射为三梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "崇明",
+      "stage": "middle",
+      "names": ["民一中学", "新纪元双语学校", "上实东滩", "崇中附属东门中学", "实验中学"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对崇明区使用“优质民办/优质公办”分类，未给数字梯队；本条将优质民办与优质公办映射为二梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "崇明",
+      "stage": "middle",
+      "names": ["裕安中学", "正大中学", "马桥中学", "横沙中学", "新民中学", "长兴中学", "长明中学", "崇西中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对崇明区列出“强校工程实验校”；本条映射为三梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "金山",
+      "stage": "middle",
+      "names": ["金山世外", "杭州湾", "金盟中学", "剑桥实验", "永昌中学", "上海市蒙山中学", "上海市罗星中学", "上海市西林中学", "华东师范大学附属枫泾中学"],
+      "tier": "二梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对金山区使用“优质民办/优质公办”分类，未给数字梯队；本条将优质民办与优质公办映射为二梯队用于展示，待人工复核。",
+      "verified": false
+    },
+    {
+      "district": "金山",
+      "stage": "middle",
+      "names": ["上海市朱行中学", "上海市亭新中学", "上海市金卫中学", "上海市张堰第二中学", "吕巷中学", "上海市松隐中学"],
+      "tier": "三梯队",
+      "sourceName": "上海择校升学转学",
+      "sourceUrl": "https://www.vsxue.com/2083.html",
+      "sourceNote": "页面对金山区列出“强校工程实验校”；本条映射为三梯队用于展示，待人工复核。",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "ts": "2026-08-13T16:42:18.814Z",
+    "operation": "reviewed_school_correction_round4",
+    "mode": "dry-run",
+    "school_id": 4818,
+    "school_name": "上海市梅陇中学",
+    "changes": {
+      "lat": {
+        "from": 31.243056,
+        "to": null
+      },
+      "lng": {
+        "from": 121.389314,
+        "to": null
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4516,
+        "name": "上海市梅陇中学",
+        "district": "普陀",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年普陀区义务教育阶段学校教育教学、后勤设施设备和师资配置基本情况表",
+      "url": "https://www.shanghai.gov.cn/ptqywjy/20251110/d17caa0f4c8c41d4ba91f0516f53ef12.html",
+      "date": "2025",
+      "matchedName": "上海市梅陇中学",
+      "rawNature": "公办初中",
+      "rawAddress": "丹巴路1588号"
+    },
+    "note": "2025普陀官方学校基本情况确认全称、普陀区、公办初中性质和丹巴路1588号地址；现有行 district=徐汇 且地址/坐标来自公交线路POI，故按官方源纠正并清空旧错误坐标，等待后续地图反查填充。",
+    "before": {
+      "id": 4818,
+      "name": "上海市梅陇中学",
+      "district": "普陀",
+      "type": "middle",
+      "address": "丹巴路1588号",
+      "lat": 31.243056,
+      "lng": 121.389314,
+      "school_nature": "公立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "梅陇中学",
+        "上海市梅陇中学"
+      ]
+    },
+    "after": {
+      "id": 4818,
+      "name": "上海市梅陇中学",
+      "district": "普陀",
+      "type": "middle",
+      "address": "丹巴路1588号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "梅陇中学",
+        "上海市梅陇中学"
+      ]
+    }
+  }
+]

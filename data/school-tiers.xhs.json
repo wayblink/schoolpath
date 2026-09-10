@@ -1,0 +1,727 @@
+{
+  "_notes": [
+    "本文件由 scripts/xhs-tier-aggregate.ts 自动生成，源数据为 data/xhs/notes-*.jsonl。",
+    "投票算法：仅采纳「X梯队：A、B、C」list 模式，跨学校共现的散文修饰一律忽略。",
+    "verified=false 表示需要人工/LLM 复核。少数派票（如 dist 一2/二3/三0/四0 的『二梯队』）建议二次确认。",
+    "增量重写：每次 aggregate 完整覆盖。如需保留特定条目，请将 verified 改 true 并迁移到 data/school-tiers.json。"
+  ],
+  "_generated_at": "2026-06-08T09:18:32.091Z",
+  "_source_jsonls": [
+    "notes-20260608.jsonl",
+    "notes-citywide-20260608.jsonl"
+  ],
+  "items": [
+    {
+      "district": "宝山",
+      "names": [
+        "华东师范大学第二附属中学宝山校区",
+        "华曜宝山",
+        "华二宝山"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：9 票 (一8/二0/三1/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "嘉定",
+      "names": [
+        "华东师范大学第二附属中学嘉定校区",
+        "华曜嘉定",
+        "华二嘉定"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：9 票 (一8/二0/三1/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市民办华育中学",
+        "华育中学",
+        "民办华育"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：8 票 (一7/二0/三0/四1)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市民办西南模范中学",
+        "西南模范",
+        "西南模范中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：8 票 (一5/二1/三0/四2)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市西南位育中学",
+        "西南位育",
+        "西南位育中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：8 票 (一5/二1/三0/四2)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "宝山",
+      "names": [
+        "上海市行知二中",
+        "至德实验",
+        "行知二中"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：8 票 (一8/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "杨浦",
+      "names": [
+        "上海市兰生复旦中学",
+        "兰生复旦",
+        "兰生复旦中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：7 票 (一7/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584, 6889d614000000002301a3fb",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海交通大学附属浦东实验中学",
+        "交中初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：6 票 (一4/二0/三1/四1)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 6847eb70000000000f03a11e",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "黄浦",
+      "names": [
+        "上海市民办立达中学",
+        "民办立达",
+        "立达中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：6 票 (一5/二0/三0/四1)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "杨浦",
+      "names": [
+        "上海外国语大学附属双语学校",
+        "上外双语"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：6 票 (一6/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584, 6889d614000000002301a3fb",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "虹口",
+      "names": [
+        "上海外国语大学附属外国语学校",
+        "上外附中"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：6 票 (一5/二1/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市民办进华中学",
+        "进华中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一4/二0/三1/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "黄浦",
+      "names": [
+        "上海市格致初级中学",
+        "格致初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一5/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584, 6874e1d90000000023006bd0",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "黄浦",
+      "names": [
+        "上海市大同初级中学",
+        "大同初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一4/二1/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584, 6874e1d90000000023006bd0",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "杨浦",
+      "names": [
+        "上海市存志中学",
+        "同济存志",
+        "存志中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一4/二0/三0/四1)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海市民办张江集团学校",
+        "张江集团学校",
+        "张江集团"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一4/二1/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市梅陇中学",
+        "梅陇中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海培佳双语学校",
+        "培佳双语"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "unknown"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海市建平中学西校（大唐校区）",
+        "建平西校"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市静安区市北初级中学",
+        "市北初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市市西初级中学",
+        "市西初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市民办扬波中学",
+        "民办扬波"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "虹口",
+      "names": [
+        "上海市新华初级中学",
+        "新华初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "虹口",
+      "names": [
+        "上海市新复兴初级中学",
+        "新复兴初级"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一4/二0/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "金山",
+      "names": [
+        "上海市蒙山中学",
+        "蒙山中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/67d6987e000000000e006f22",
+      "sourceNote": "XHS list-mode 投票聚合：2 票 (一1/二1/三0/四0)；引用 note_ids: 67d6987e000000000e006f22",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市世界外国语中学",
+        "世外中学"
+      ],
+      "tier": "一梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6781d4f2000000001703f5b9",
+      "sourceNote": "XHS list-mode 投票聚合：2 票 (一1/二0/三0/四1)；引用 note_ids: 6781d4f2000000001703f5b9",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市曹杨第二中学附属学校",
+        "曹二附属"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：8 票 (一0/二4/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市徐汇中学（南校区 ）",
+        "徐汇中学"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：7 票 (一0/二6/三1/四0)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市位育初级中学",
+        "位育初级"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：7 票 (一1/二5/三0/四1)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市南洋模范初级中学",
+        "南模初级"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：6 票 (一1/二5/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "虹口",
+      "names": [
+        "上海市长青学校",
+        "长青学校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一0/二5/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584, 6940fbba000000001f00df82",
+      "verified": false,
+      "stage": "primary"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海中学东校",
+        "上中东校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一0/二4/三0/四1)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 687750c9000000001202c24c, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "黄浦",
+      "names": [
+        "上海市向明初级中学",
+        "向明初级"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：5 票 (一1/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584, 6874e1d90000000023006bd0",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市曹杨中学",
+        "曹杨中学"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海市进才中学北校",
+        "进才北校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市静安区教育学院附属学校教育集团",
+        "静教院附校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "primary"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市风华初级中学",
+        "风华初级"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市晋元高级中学附属学校",
+        "晋元附校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "黄浦",
+      "names": [
+        "上海市卢湾初级中学",
+        "卢湾初级"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海市进才外国语中学",
+        "进才外国语"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "嘉定",
+      "names": [
+        "上海市民办桃李园实验学校",
+        "民办桃李园"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "嘉定",
+      "names": [
+        "上海民办嘉一联合中学",
+        "民办嘉一联合"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二4/三0/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "松江",
+      "names": [
+        "上海市三新学校",
+        "三新学校"
+      ],
+      "tier": "二梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/68535873000000001203e7be",
+      "sourceNote": "XHS list-mode 投票聚合：2 票 (一1/二1/三0/四0)；引用 note_ids: 68535873000000001203e7be, 6825e055000000000303ae61",
+      "verified": false,
+      "stage": "primary"
+    },
+    {
+      "district": "徐汇",
+      "names": [
+        "上海市中国中学",
+        "中国中学"
+      ],
+      "tier": "三梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：6 票 (一0/二0/三5/四1)；引用 note_ids: 69ef17db0000000035023d80, 6781d4f2000000001703f5b9, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 6915834500000000040075e8",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市兰田中学",
+        "兰田中学"
+      ],
+      "tier": "三梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三4/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "杨浦",
+      "names": [
+        "上海市民办凯慧中学",
+        "凯慧中学"
+      ],
+      "tier": "三梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三4/四0)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "松江",
+      "names": [
+        "上海市松江区民乐学校",
+        "民乐学校"
+      ],
+      "tier": "三梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/68535873000000001203e7be",
+      "sourceNote": "XHS list-mode 投票聚合：2 票 (一1/二0/三1/四0)；引用 note_ids: 68535873000000001203e7be, 6825e055000000000303ae61",
+      "verified": false,
+      "stage": "primary"
+    },
+    {
+      "district": "宝山",
+      "names": [
+        "上海市月浦中学",
+        "月浦中学"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "普陀",
+      "names": [
+        "上海市延河中学",
+        "延河中学"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "浦东",
+      "names": [
+        "上海市浦东模范中学",
+        "浦东模范中学"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市民立中学",
+        "民立中学"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市爱国学校",
+        "爱国学校"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "静安",
+      "names": [
+        "上海市时代中学",
+        "时代中学"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69ef17db0000000035023d80",
+      "sourceNote": "XHS list-mode 投票聚合：4 票 (一0/二0/三0/四4)；引用 note_ids: 69ef17db0000000035023d80, 695e5cfb000000000d00b10d, 6979b8e3000000000a029e6e, 697854da0000000022031584",
+      "verified": false,
+      "stage": "middle"
+    },
+    {
+      "district": "长宁",
+      "names": [
+        "上海市延安初级中学",
+        "延安初级"
+      ],
+      "tier": "四梯队",
+      "sourceName": "小红书 XHS",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/687750c9000000001202c24c",
+      "sourceNote": "XHS list-mode 投票聚合：2 票 (一1/二0/三0/四1)；引用 note_ids: 687750c9000000001202c24c, 68db5451000000000700cb37",
+      "verified": false,
+      "stage": "middle"
+    }
+  ]
+}

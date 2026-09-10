@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "HOUSE 上海学区决策助手" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: HOUSE
+        - generic [ref=e6]: 上海学区决策助手
+      - navigation [ref=e7]:
+        - link "学校查询" [ref=e8] [cursor=pointer]:
+          - /url: /schools
+        - link "升学组合" [ref=e9] [cursor=pointer]:
+          - /url: /pathways
+        - link "地图找房" [ref=e10] [cursor=pointer]:
+          - /url: /map
+        - link "区域政策" [ref=e11] [cursor=pointer]:
+          - /url: /policies
+    - main [ref=e12]:
+      - generic [ref=e13]:
+        - text: 01 · 学校查询
+        - heading "快速找到学校，理解它关联的小区与政策" [level=1] [ref=e14]
+        - paragraph [ref=e15]: 当前数据来自迁移后的 catalog 产品层；梯队仍按来源属性展示，不代表教育主管部门官方排名。
+      - generic [ref=e16]:
+        - textbox "搜索学校名称或别名" [ref=e17]
+        - combobox [ref=e18]:
+          - option "全部区域" [selected]
+          - option "黄浦"
+          - option "徐汇"
+          - option "长宁"
+          - option "静安"
+          - option "普陀"
+          - option "虹口"
+          - option "杨浦"
+          - option "浦东"
+          - option "闵行"
+          - option "宝山"
+          - option "嘉定"
+          - option "金山"
+          - option "松江"
+          - option "青浦"
+          - option "奉贤"
+          - option "崇明"
+        - combobox [ref=e19]:
+          - option "全部学段" [selected]
+          - option "小学"
+          - option "初中"
+          - option "九年一贯"
+      - generic [ref=e20]: 查询中…
+    - contentinfo [ref=e21]:
+      - text: 学区与梯队信息仅供参考，请以当年度教育主管部门官方发布为准 ·
+      - link "旧版页面" [ref=e22] [cursor=pointer]:
+        - /url: /legacy
+  - alert [ref=e23]

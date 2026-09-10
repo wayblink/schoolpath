@@ -1,0 +1,5 @@
+[     247ms] [ERROR] Mixed Content: The page at 'https://www.vsxue.com/2515.html' was loaded over HTTPS, but requested an insecure script 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=494642'. This request has been blocked; the content must be served over HTTPS. @ https://www.vsxue.com/2515.html:84
+[     518ms] [WARNING] Interface 'comment.reply' is deprecated in ZBP 1.6, please update your plugin or theme! @ https://www.vsxue.com/zb_system/script/zblogphp.js:0
+[     518ms] [WARNING] Interface 'comment.reply' is deprecated in ZBP 1.6, please update your plugin or theme! @ https://www.vsxue.com/zb_system/script/zblogphp.js:0
+[     518ms] [WARNING] Interface 'comment.postsuccess' is deprecated in ZBP 1.6, please update your plugin or theme! @ https://www.vsxue.com/zb_system/script/zblogphp.js:0
+[    6510ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.vsxue.com/favicon.ico:0

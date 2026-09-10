@@ -1,0 +1,43 @@
+[     226ms] [LOG] AES init done debug @ https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6:198
+[     839ms] [LOG] Wed Jun 17 2026 17:44:47 GMT+0800 (中国标准时间) @ https://g.alicdn.com/AWSC/et/1.83.41/et_f.js:1
+[     897ms] [LOG] <AMap JSAPI> 使用 JSAPI 安全模式，代理服务请以_AMapService 作为一级路由 @ https://webapi.amap.com/maps?v=2.0&key=d1f15ad3fdf0c704434eaf23c7c18698&plugin=AMap.Adaptor:0
+[    1031ms] [LOG] [SEO Config] Environment: production @ https://www.amap.com/build/lib.7c352c3546f33a4ca6c3.js:1
+[    1031ms] [LOG] [SEO Config] Configuration: {DEBUG: false, TRACK_ENDPOINT: /service/seo/track, SESSION_TIMEOUT: 1800000, BATCH_ENABLED: true, BATCH_SIZE: 20} @ https://www.amap.com/build/lib.7c352c3546f33a4ca6c3.js:1
+[    1031ms] [LOG] [SEO Config] Configuration applied successfully @ https://www.amap.com/build/lib.7c352c3546f33a4ca6c3.js:1
+[    1047ms] [LOG] [Track] New session detected, reset from_page to 0 @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:0
+[    1047ms] [LOG] [VersionControl] 请求接口: https://amap-pc-ssr.amap.com/ssr/api/getNewVersionRolloutConfig @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:67
+[    1056ms] [LOG] [initLoc] @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1056ms] [LOG] [remoteLoc] @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1075ms] [LOG] [watch loc] @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1083ms] [LOG] [Track] reportBiz success: biz_page_view @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:0
+[    1083ms] [LOG] [Route] Enter page: search , from_page: 0 @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1110ms] [LOG] amap.search status start @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:68
+[    1188ms] [LOG] [VersionControl] 接口返回: 1 @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:67
+[    1188ms] [LOG] [VersionControl] 改进的灰度计算 - 用户ID: 58c6db7d-af99-43d5-8ce4-5edef97ddc20 桶位置: 7325 阈值: 10000 灰度比例: 1 命中: true @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:67
+[    1188ms] [LOG] [VersionControl] 灰度命中，设置Cookie @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:67
+[    1188ms] [LOG] [VersionControl] 灰度命中，渲染新版按钮组件 @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:67
+[    1190ms] [LOG] [Track] reportBiz success: PC_new_version_button_show @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:0
+[    1191ms] [LOG] [VersionControl] 新版按钮组件已渲染并初始化 @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:67
+[    1269ms] [WARNING] CardDataManager: No card data found @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:70
+[    1270ms] [LOG] App download content updated with card data: {title: 扫码下载 高德地图, content: 高德地图 哪儿都熟, picUrl: , schema: } @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:66
+[    1273ms] [LOG] %c [APLUS] -- APLUS INIT SUCCESS background:#3B82FE; padding: 4px; padding-right: 8px; border-radius: 4px; color: #fff; @ :1
+[    1494ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://webapi.amap.com/maps?v=2.0&key=d1f15ad3fdf0c704434eaf23c7c18698&plugin=AMap.Adaptor:0
+[    1514ms] [LOG] [IPCityLoc] @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1515ms] [LOG] [watch loc] @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1645ms] [LOG] status: no_data @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    1645ms] [LOG] result: {} @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:80
+[    2284ms] [ERROR] Failed to load resource: the server responded with a status of 419 () @ https://www.amap.com/service/poiInfo?query_type=TQUERY&pagesize=20&pagenum=1&qii=true&cluster_state=5&need_utd=true&utd_sceneid=1000&div=PC1000&addr_poi_merge=true&is_classify=true&zoom=9.5&geoobj=121.005747%7C30.798217%7C122.562071%7C31.712877&city=110000&keywords=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6:0
+[    2284ms] [ERROR] amap.ajax err: {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ https://www.amap.com/build/tools.7c352c3546f33a4ca6c3.js:0
+[    2287ms] [ERROR] {readyState: 4, getResponseHeader: , getAllResponseHeaders: , setRequestHeader: , overrideMimeType: } @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:68
+[    2287ms] [LOG] core trigger 419 @ https://www.amap.com/build/tools.7c352c3546f33a4ca6c3.js:0
+[    2318ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6:0
+[    2318ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6:0
+[    2319ms] [LOG] amap.search status end @ https://www.amap.com/build/main.7c352c3546f33a4ca6c3.js:68
+[    2851ms] [COUNT] %c%d: 1 @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2851ms] [DIR] %c%d font-size:0;color:transparent Error @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2851ms] [DIRXML] %c%d font-size:0;color:transparent Error @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2851ms] [INFO] %c%d font-size:0;color:transparent NaN @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2851ms] [INFO] %c%d font-size:0;color:transparent NaN @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2851ms] [LOG] %c%d font-size:0;color:transparent NaN @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2851ms] [TABLE] %c%d font-size:0;color:transparent Error @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0
+[    2852ms] [INFO] %c%d font-size:0;color:transparent NaN @ https://g.alicdn.com/captcha-frontend/FeiLin/1.4.2/feilin077.9c21cd83840c510feaa076bfb6a2c78caf99ee7d8de84475423b348e21a54481.js:0

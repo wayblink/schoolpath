@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: house
+          POSTGRES_USER: house
+          POSTGRES_PASSWORD: house_dev_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U house -d house"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgres://house:house_dev_password@127.0.0.1:5432/house
+      NEXT_PUBLIC_AMAP_KEY: ""
+      NEXT_PUBLIC_AMAP_SECURITY_CODE: ""
+      HOUSE_TEST_BASE_URL: http://127.0.0.1:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.30.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 25
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:migrate
+      - run: pnpm db:pg:import-sqlite
+      - run: pnpm redesign:schema
+      - run: pnpm redesign:load-source --parsed=data/ingest/xuequzhushou/20260711-035825/parsed.json
+      - run: pnpm redesign:prepare-review --parsed=data/ingest/xuequzhushou/20260711-035825/parsed.json
+      - run: pnpm redesign:publish-schools
+      - run: pnpm redesign:publish-relations
+      - run: pnpm redesign:flatten-schools
+      - run: pnpm lint
+      - run: pnpm exec tsc --noEmit
+      - run: pnpm build
+      - name: Run tests against production server
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp -r public .next/standalone/public
+          mkdir -p .next/standalone/.next
+          cp -r .next/static .next/standalone/.next/static
+          node .next/standalone/server.js >"$RUNNER_TEMP/house-next.log" 2>&1 &
+          server_pid=$!
+          cleanup() {
+            kill "$server_pid" 2>/dev/null || true
+            wait "$server_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          for attempt in {1..30}; do
+            if curl --fail --silent "$HOUSE_TEST_BASE_URL/" >/dev/null; then
+              break
+            fi
+            if ! kill -0 "$server_pid" 2>/dev/null; then
+              cat "$RUNNER_TEMP/house-next.log"
+              exit 1
+            fi
+            sleep 2
+          done
+          curl --fail --silent "$HOUSE_TEST_BASE_URL/" >/dev/null
+          pnpm test

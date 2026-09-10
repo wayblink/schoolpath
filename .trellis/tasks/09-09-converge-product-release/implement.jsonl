@@ -1,0 +1,3 @@
+{"file":".trellis/spec/frontend/index.md","reason":"实现新版产品页面和共享查询层时确认项目的前端规范入口。"}
+{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"实现 lint、测试和 CI 质量门禁时作为项目质量约束参考。"}
+{"file":".trellis/spec/frontend/type-safety.md","reason":"修复 any、路由响应和查询类型时作为类型安全约束参考。"}

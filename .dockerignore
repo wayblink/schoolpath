@@ -1,0 +1,10 @@
+.next
+node_modules
+.git
+.tmp
+data/house.sqlite
+data/house.sqlite-*
+npm-debug.log
+pnpm-debug.log
+Dockerfile
+docker-compose.yml

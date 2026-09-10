@@ -1,0 +1,372 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "跳至内容" [ref=e4] [cursor=pointer]:
+      - generic [ref=e6]: 跳至内容
+    - button "辅助功能反馈" [ref=e7] [cursor=pointer]:
+      - generic [ref=e9]: 辅助功能反馈
+    - generic [ref=e10]:
+      - link "返回到必应搜索" [ref=e11] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "返回到必应搜索" [level=1] [ref=e12]
+      - search [ref=e13]:
+        - button "搜索" [ref=e16] [cursor=pointer]
+        - searchbox "在此处输入你的搜索 — 输入时会显示搜索建议" [ref=e17]: 徐汇区教育局 2025 义务教育招生
+    - complementary "帐户奖励和偏好设置" [ref=e21]:
+      - button "Microsoft Rewards"
+      - link "登录" [ref=e22] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic "登录" [ref=e23]
+    - generic:
+      - generic "国内版" [ref=e24]
+      - generic "国际版" [ref=e25] [cursor=pointer]
+    - navigation "主菜单" [ref=e26]:
+      - list [ref=e27]:
+        - listitem [ref=e28]:
+          - link "网页" [ref=e29] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=e30]:
+          - link "图片" [ref=e31] [cursor=pointer]:
+            - /url: /images/search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&FORM=HDRSC2
+        - listitem [ref=e32]:
+          - link "视频" [ref=e33] [cursor=pointer]:
+            - /url: /videos/search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&FORM=HDRSC3
+        - listitem [ref=e34]:
+          - link "学术" [ref=e35] [cursor=pointer]:
+            - /url: /academic/search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&FORM=HDRSC4
+        - listitem [ref=e36]:
+          - link "词典" [ref=e37] [cursor=pointer]:
+            - /url: /dict/search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&FORM=HDRSC6
+        - listitem [ref=e38]:
+          - link "地图" [ref=e39] [cursor=pointer]:
+            - /url: /maps?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&FORM=HDRSC7
+        - listitem [ref=e40]:
+          - button "更多" [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+            - text: 更多
+  - main "搜索结果" [ref=e46]:
+    - generic [ref=e48]: 约 19,000 个结果
+    - generic [ref=e59]:
+      - list [ref=e60]:
+        - listitem [ref=e61]:
+          - generic [ref=e62]:
+            - text: 包含
+            - link "徐汇 区 \"教育 局\" 2025 义乌 高考 入学 海淀 区 北京 市" [ref=e63] [cursor=pointer]:
+              - /url: /search?q=%e5%be%90%e6%b1%87+%e5%8c%ba+%22%e6%95%99%e8%82%b2+%e5%b1%80%22+2025+%e4%b9%89%e4%b9%8c+%e9%ab%98%e8%80%83+%e5%85%a5%e5%ad%a6+%e6%b5%b7%e6%b7%80+%e5%8c%ba+%e5%8c%97%e4%ba%ac+%e5%b8%82&FORM=AWRE
+              - text: 徐汇 区 "教育 局" 2025 义
+              - strong [ref=e64]: 乌 高考 入学 海淀 区 北京 市
+            - text: 的结果。
+          - generic [ref=e65]:
+            - text: 是否只需要
+            - link "徐汇区教育局 2025 义务教育招生" [ref=e66] [cursor=pointer]:
+              - /url: /search?q=%2b%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&filters=rcrse%3a%221%22&FORM=RCRE
+            - text: 的结果?
+        - listitem [ref=e67]:
+          - link "上海市政府" [ref=e69] [cursor=pointer]:
+            - /url: https://www.shanghai.gov.cn/xhqywjy/20250411/2b71e54ac4a94e8bb43eac1db0e33ddd.html
+            - generic [ref=e74]:
+              - generic [ref=e75]: 上海市政府
+              - generic [ref=e78]: https://www.shanghai.gov.cn › xhqywjy
+          - heading "徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案" [level=2] [ref=e79]:
+            - link "徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案" [ref=e80] [cursor=pointer]:
+              - /url: https://www.shanghai.gov.cn/xhqywjy/20250411/2b71e54ac4a94e8bb43eac1db0e33ddd.html
+              - strong [ref=e81]: 徐汇区
+              - text: 关于
+              - strong [ref=e82]: "2025"
+              - text: 年
+              - strong [ref=e83]: 义务教育
+              - text: 阶段学校
+              - strong [ref=e84]: 招生
+              - text: 入学工作的实施方案
+          - paragraph [ref=e86]: 2025年4月7日 · 徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案. 徐教〔2025〕3号. 根据《中华人民共和国义务教育法》《中共上海市委 上海市人民政府关于贯彻<中共中央 国务院关于深化 …
+        - listitem [ref=e87]:
+          - link "搜狐" [ref=e89] [cursor=pointer]:
+            - /url: https://www.sohu.com/a/933820378_121124009
+            - generic [ref=e94]:
+              - generic [ref=e95]: 搜狐
+              - generic [ref=e98]: https://www.sohu.com
+          - heading "上海徐汇区公示2025年公办、民办学校招生结果" [level=2] [ref=e99]:
+            - link "上海徐汇区公示2025年公办、民办学校招生结果" [ref=e100] [cursor=pointer]:
+              - /url: https://www.sohu.com/a/933820378_121124009
+              - text: 上海
+              - strong [ref=e101]: 徐汇区
+              - text: 公示
+              - strong [ref=e102]: "2025"
+              - text: 年公办、民办学校
+              - strong [ref=e103]: 招生
+              - text: 结果
+          - paragraph [ref=e105]: 2025年9月11日 · 近日，徐汇区教育局公布了2025年区内义务教育阶段学校招生结果，每个学校各招了几个班级？ 一起来关注。 注：内容来源徐汇区教育局网站…
+        - listitem [ref=e106]:
+          - link "上海学考" [ref=e108] [cursor=pointer]:
+            - /url: https://www.vsxue.com/2140.html
+            - generic [ref=e113]:
+              - generic [ref=e114]: 上海学考
+              - generic [ref=e117]: https://www.vsxue.com
+          - heading "徐汇区关于2025年义务教育阶段学校 招生入学工作的实施方案 ..." [level=2] [ref=e118]:
+            - link "徐汇区关于2025年义务教育阶段学校 招生入学工作的实施方案 ..." [ref=e119] [cursor=pointer]:
+              - /url: https://www.vsxue.com/2140.html
+              - strong [ref=e120]: 徐汇区
+              - text: 关于
+              - strong [ref=e121]: "2025"
+              - text: 年
+              - strong [ref=e122]: 义务教育
+              - text: 阶段学校
+              - strong [ref=e123]: 招生
+              - text: 入学工作的实施方案 ...
+          - paragraph [ref=e125]: 4 月14日—4月27日，凡本区在园适龄儿童家长通过幼 儿园登记孩子入学信息，未入园适龄儿童家长可在规定时间登 录徐汇区教育局招生考试中心网站（网址：https://www.xuhui.gov.cn/egov/） 查看 …
+        - listitem [ref=e126]:
+          - link "shobserver.cn" [ref=e128] [cursor=pointer]:
+            - /url: https://www.shobserver.cn/sgh/detail?id=1543646
+            - generic [ref=e133]:
+              - generic [ref=e134]: shobserver.cn
+              - generic [ref=e137]: https://www.shobserver.cn › sgh › detail
+          - heading "徐汇区2025年义务教育阶段学校招生入学工作即将启动！" [level=2] [ref=e138]:
+            - link "徐汇区2025年义务教育阶段学校招生入学工作即将启动！" [ref=e139] [cursor=pointer]:
+              - /url: https://www.shobserver.cn/sgh/detail?id=1543646
+              - strong [ref=e140]: 徐汇区2025
+              - text: 年
+              - strong [ref=e141]: 义务教育
+              - text: 阶段学校
+              - strong [ref=e142]: 招生
+              - text: 入学工作即将启动！
+          - paragraph [ref=e144]: 2025年4月7日 · 根据《中华人民共和国义务教育法》《中共上海市委 上海市人民政府关于贯彻 的实施意见》（沪委发〔2020〕3号）、《上海市实施〈中华人民共和国义务教育法〉办法》、《上海市教育 …
+        - listitem [ref=e145]:
+          - link "今日头条" [ref=e147] [cursor=pointer]:
+            - /url: https://www.toutiao.com/article/7490473400058642994/
+            - generic [ref=e152]:
+              - generic [ref=e153]: 今日头条
+              - generic [ref=e156]: https://www.toutiao.com › article
+          - heading "徐汇区2025年义务教育阶段学校招生入学工作即将启动！" [level=2] [ref=e157]:
+            - link "徐汇区2025年义务教育阶段学校招生入学工作即将启动！" [ref=e158] [cursor=pointer]:
+              - /url: https://www.toutiao.com/article/7490473400058642994/
+              - strong [ref=e159]: 徐汇区2025
+              - text: 年
+              - strong [ref=e160]: 义务教育
+              - text: 阶段学校
+              - strong [ref=e161]: 招生
+              - text: 入学工作即将启动！
+          - paragraph [ref=e163]: 2025年4月7日 · 根据《中华人民共和国义务教育法》《中共上海市委 上海市人民政府关于贯彻<中共中央 国务院关于深化教育教学改革全面提高义务教育质量的意见>的实施意见》（沪委发〔2020〕3号） …
+        - listitem [ref=e164]:
+          - link "xhedu.sh.cn" [ref=e166] [cursor=pointer]:
+            - /url: https://gqxx.xhedu.sh.cn/cms/data/upload/file/zzy/2025%E5%B9%B4%E5%BE%90%E6%B1%87%E5%8C%BA%E5%B0%8F%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E6%8B%9B%E7%94%9F%E9%80%9A%E5%91%8A.pdf
+            - generic [ref=e171]:
+              - generic [ref=e172]: xhedu.sh.cn
+              - generic [ref=e175]: https://gqxx.xhedu.sh.cn › cms › data › upload › file › zzy
+          - generic [ref=e176]:
+            - text: "[PDF]"
+            - heading "2025年徐汇区小学一年级招生通告" [level=2] [ref=e177]:
+              - link "2025年徐汇区小学一年级招生通告" [ref=e178] [cursor=pointer]:
+                - /url: https://gqxx.xhedu.sh.cn/cms/data/upload/file/zzy/2025%E5%B9%B4%E5%BE%90%E6%B1%87%E5%8C%BA%E5%B0%8F%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E6%8B%9B%E7%94%9F%E9%80%9A%E5%91%8A.pdf
+                - strong [ref=e179]: "2025"
+                - text: 年
+                - strong [ref=e180]: 徐汇区
+                - text: 小学一年级
+                - strong [ref=e181]: 招生
+                - text: 通告
+          - paragraph [ref=e183]: 2025年4月1日 · 2025年徐汇区小学一年级招生通告 一.招生对象 2018 年9 月1 日—2019 年8 月31 日出生,年 满6周岁的本市户籍适龄儿童和符合条件的非本市户籍适龄儿童。
+        - listitem [ref=e184]:
+          - link "上海本地宝" [ref=e186] [cursor=pointer]:
+            - /url: https://sh.bendibao.com/edu/202547/296228.shtm
+            - generic [ref=e191]:
+              - generic [ref=e192]: 上海本地宝
+              - generic [ref=e195]: https://sh.bendibao.com › edu
+          - heading "2025上海徐汇区义务教育招生入学政策- 上海本地宝" [level=2] [ref=e196]:
+            - link "2025上海徐汇区义务教育招生入学政策- 上海本地宝" [ref=e197] [cursor=pointer]:
+              - /url: https://sh.bendibao.com/edu/202547/296228.shtm
+              - strong [ref=e198]: "2025"
+              - text: 上海
+              - strong [ref=e199]: 徐汇区义务教育招生
+              - text: 入学政策- 上海本地宝
+          - paragraph [ref=e201]: 2025年4月7日 · 上海本地宝上海教育提供2025上海徐汇区义务教育招生入学政策有关的信息，4月7日，徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案公布，政策全文如下。
+        - listitem [ref=e202]:
+          - link "上海教育" [ref=e204] [cursor=pointer]:
+            - /url: https://edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs_02/20250327/9a8d59612f5249d8aea05d0a55dd900d.html
+            - generic [ref=e209]:
+              - generic [ref=e210]: 上海教育
+              - generic [ref=e213]: https://edu.sh.gov.cn
+          - heading "上海市教育委员会关于2025年本市义务教育阶段学校招生 ..." [level=2] [ref=e214]:
+            - link "上海市教育委员会关于2025年本市义务教育阶段学校招生 ..." [ref=e215] [cursor=pointer]:
+              - /url: https://edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs_02/20250327/9a8d59612f5249d8aea05d0a55dd900d.html
+              - text: 上海市
+              - strong [ref=e216]: 教育
+              - text: 委员会关于
+              - strong [ref=e217]: "2025"
+              - text: 年本市
+              - strong [ref=e218]: 义务教育
+              - text: 阶段学校
+              - strong [ref=e219]: 招生
+              - text: ...
+          - paragraph [ref=e221]: 2025年3月27日 · 根据国家和本市义务教育相关法律法规和政策文件精神，为促进依法办学、规范义务教育阶段学校招生入学工作，现就2025年本市义务教育阶段学校招生入学工作提出以下实施意见： 一 …
+        - listitem [ref=e222]:
+          - link "jzzjf.com" [ref=e224] [cursor=pointer]:
+            - /url: https://www.jzzjf.com/news/show/3834
+            - generic [ref=e229]:
+              - generic [ref=e230]: jzzjf.com
+              - generic [ref=e233]: https://www.jzzjf.com › news › show
+          - heading "2025年上海徐汇区初中招生入学政策" [level=2] [ref=e234]:
+            - link "2025年上海徐汇区初中招生入学政策" [ref=e235] [cursor=pointer]:
+              - /url: https://www.jzzjf.com/news/show/3834
+              - strong [ref=e236]: "2025"
+              - text: 年上海
+              - strong [ref=e237]: 徐汇区
+              - text: 初中
+              - strong [ref=e238]: 招生
+              - text: 入学政策
+          - paragraph [ref=e240]: 2025年4月8日 · 徐汇区关于2025 年义务教育阶段学校招生入学工作的实施方案根据《中华人民共和国义务教育法》《中共上海市委上海市人民政府关于贯彻<中共中央国务院关于深化教育教学改革全面提 …
+        - listitem [ref=e241]:
+          - generic [ref=e242]:
+            - heading "深入了解 徐汇区教育局 2025 义务教育招生" [level=2] [ref=e243]:
+              - text: 深入了解
+              - strong [ref=e244]: 徐汇区教育局 2025 义务教育招生
+            - list [ref=e245]:
+              - listitem [ref=e246]:
+                - link "上海市徐汇区教育局官网" [ref=e247] [cursor=pointer]:
+                  - /url: /search?q=%e4%b8%8a%e6%b5%b7%e5%b8%82%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80%e5%ae%98%e7%bd%91&FORM=QSRE1
+                  - generic [ref=e249]:
+                    - text: 上海市
+                    - strong [ref=e250]: 徐汇区教育局
+                    - text: 官网
+              - listitem [ref=e251]:
+                - link "徐汇区2022年入学政策" [ref=e252] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba2022%e5%b9%b4%e5%85%a5%e5%ad%a6%e6%94%bf%e7%ad%96&FORM=QSRE2
+                  - generic [ref=e254]:
+                    - strong [ref=e255]: 徐汇区
+                    - text: 2022年入学政策
+              - listitem [ref=e256]:
+                - link "徐汇区2025年招生计划" [ref=e257] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba2025%e5%b9%b4%e6%8b%9b%e7%94%9f%e8%ae%a1%e5%88%92&FORM=QSRE3
+                  - generic [ref=e259]:
+                    - strong [ref=e260]: 徐汇区2025
+                    - text: 年
+                    - strong [ref=e261]: 招生
+                    - text: 计划
+              - listitem [ref=e262]:
+                - link "徐汇区教育委员会官网" [ref=e263] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%a7%94%e5%91%98%e4%bc%9a%e5%ae%98%e7%bd%91&FORM=QSRE4
+                  - generic [ref=e265]:
+                    - strong [ref=e266]: 徐汇区教育
+                    - text: 委员会官网
+              - listitem [ref=e267]:
+                - link "徐汇区2025年义务教育" [ref=e268] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba2025%e5%b9%b4%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2&FORM=QSRE5
+                  - generic [ref=e270]:
+                    - strong [ref=e271]: 徐汇区2025
+                    - text: 年
+                    - strong [ref=e272]: 义务教育
+              - listitem [ref=e273]:
+                - link "徐汇区小学招生简章" [ref=e274] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e5%b0%8f%e5%ad%a6%e6%8b%9b%e7%94%9f%e7%ae%80%e7%ab%a0&FORM=QSRE6
+                  - generic [ref=e276]:
+                    - strong [ref=e277]: 徐汇区
+                    - text: 小学
+                    - strong [ref=e278]: 招生
+                    - text: 简章
+              - listitem [ref=e279]:
+                - link "徐汇区小学入学政策" [ref=e280] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e5%b0%8f%e5%ad%a6%e5%85%a5%e5%ad%a6%e6%94%bf%e7%ad%96&FORM=QSRE7
+                  - generic [ref=e282]:
+                    - strong [ref=e283]: 徐汇区
+                    - text: 小学入学政策
+              - listitem [ref=e284]:
+                - link "上海市徐汇区教育委员会" [ref=e285] [cursor=pointer]:
+                  - /url: /search?q=%e4%b8%8a%e6%b5%b7%e5%b8%82%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%a7%94%e5%91%98%e4%bc%9a&FORM=QSRE8
+                  - generic [ref=e287]:
+                    - text: 上海市
+                    - strong [ref=e288]: 徐汇区教育
+                    - text: 委员会
+        - listitem [ref=e289]:
+          - link "某些结果已被删除" [ref=e290] [cursor=pointer]:
+            - /url: http://go.microsoft.com/fwlink/?LinkID=617350
+          - generic [ref=e291]: 一些您可能无法访问的结果已被隐去。
+          - link "显示无法访问的结果" [ref=e292] [cursor=pointer]:
+            - /url: /search?q=%E5%BE%90%E6%B1%87%E5%8C%BA%E6%95%99%E8%82%B2%E5%B1%80+2025+%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%8B%9B%E7%94%9F&search=&form=P4041&ubiroff=1
+        - listitem [ref=e293]:
+          - navigation "徐汇区教育局 2025 义务教育招生 的更多搜索结果":
+            - list:
+              - listitem [ref=e294]:
+                - generic "第 1 页" [ref=e295]: "1"
+              - listitem [ref=e296]:
+                - link "第 2 页" [ref=e297] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&search=&FPIG=CB019C1B48E443998D5C0842B1C7ECCC&first=9&FORM=PERE
+                  - text: "2"
+              - listitem [ref=e298]:
+                - link "第 3 页" [ref=e299] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&search=&FPIG=CB019C1B48E443998D5C0842B1C7ECCC&first=19&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=e300]:
+                - link "下一页" [ref=e301] [cursor=pointer]:
+                  - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80+2025+%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2%e6%8b%9b%e7%94%9f&search=&FPIG=CB019C1B48E443998D5C0842B1C7ECCC&first=9&FORM=PORE
+      - complementary "更多结果" [ref=e303]:
+        - list [ref=e304]:
+          - listitem [ref=e305]:
+            - generic [ref=e308]:
+              - heading "深入了解 徐汇区教育局 2025 义务教育招生" [level=2] [ref=e310]:
+                - text: 深入了解
+                - strong [ref=e311]: 徐汇区教育局 2025 义务教育招生
+              - generic [ref=e312]:
+                - generic:
+                  - list
+                - generic [ref=e313]:
+                  - link "上海市徐汇区教育局官网" [ref=e315] [cursor=pointer]:
+                    - /url: /search?q=%e4%b8%8a%e6%b5%b7%e5%b8%82%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%b1%80%e5%ae%98%e7%bd%91&FORM=R5FD
+                    - generic [ref=e317]:
+                      - text: 上海市
+                      - strong [ref=e318]: 徐汇区教育局
+                      - text: 官网
+                  - link "徐汇区2022年入学政策" [ref=e320] [cursor=pointer]:
+                    - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba2022%e5%b9%b4%e5%85%a5%e5%ad%a6%e6%94%bf%e7%ad%96&FORM=R5FD1
+                    - generic [ref=e322]:
+                      - strong [ref=e323]: 徐汇区
+                      - text: 2022年入学政策
+                  - link "徐汇区2025年招生计划" [ref=e325] [cursor=pointer]:
+                    - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba2025%e5%b9%b4%e6%8b%9b%e7%94%9f%e8%ae%a1%e5%88%92&FORM=R5FD2
+                    - generic [ref=e327]:
+                      - strong [ref=e328]: 徐汇区2025
+                      - text: 年
+                      - strong [ref=e329]: 招生
+                      - text: 计划
+                  - link "徐汇区教育委员会官网" [ref=e331] [cursor=pointer]:
+                    - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%a7%94%e5%91%98%e4%bc%9a%e5%ae%98%e7%bd%91&FORM=R5FD3
+                    - generic [ref=e333]:
+                      - strong [ref=e334]: 徐汇区教育
+                      - text: 委员会官网
+                  - link "徐汇区2025年义务教育" [ref=e336] [cursor=pointer]:
+                    - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba2025%e5%b9%b4%e4%b9%89%e5%8a%a1%e6%95%99%e8%82%b2&FORM=R5FD4
+                    - generic [ref=e338]:
+                      - strong [ref=e339]: 徐汇区2025
+                      - text: 年
+                      - strong [ref=e340]: 义务教育
+                  - link "徐汇区小学招生简章" [ref=e342] [cursor=pointer]:
+                    - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e5%b0%8f%e5%ad%a6%e6%8b%9b%e7%94%9f%e7%ae%80%e7%ab%a0&FORM=R5FD5
+                    - generic [ref=e344]:
+                      - strong [ref=e345]: 徐汇区
+                      - text: 小学
+                      - strong [ref=e346]: 招生
+                      - text: 简章
+                  - link "徐汇区小学入学政策" [ref=e348] [cursor=pointer]:
+                    - /url: /search?q=%e5%be%90%e6%b1%87%e5%8c%ba%e5%b0%8f%e5%ad%a6%e5%85%a5%e5%ad%a6%e6%94%bf%e7%ad%96&FORM=R5FD6
+                    - generic [ref=e350]:
+                      - strong [ref=e351]: 徐汇区
+                      - text: 小学入学政策
+                  - link "上海市徐汇区教育委员会" [ref=e353] [cursor=pointer]:
+                    - /url: /search?q=%e4%b8%8a%e6%b5%b7%e5%b8%82%e5%be%90%e6%b1%87%e5%8c%ba%e6%95%99%e8%82%b2%e5%a7%94%e5%91%98%e4%bc%9a&FORM=R5FD7
+                    - generic [ref=e355]:
+                      - text: 上海市
+                      - strong [ref=e356]: 徐汇区教育
+                      - text: 委员会
+  - contentinfo [ref=e357]:
+    - list [ref=e359]:
+      - listitem [ref=e360]:
+        - link "增值电信业务经营许可证：合字B2-20090007" [ref=e361] [cursor=pointer]:
+          - /url: https://dxzhgl.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyereport.jsp?num=caf04fa4-bd8a-4d9e-80b6-2aa1b86c1509&type=yreport
+      - listitem [ref=e362]:
+        - link "京ICP备10036305号-7" [ref=e363] [cursor=pointer]:
+          - /url: https://beian.miit.gov.cn
+      - listitem [ref=e364]:
+        - link "京公网安备11010802047360号" [ref=e365] [cursor=pointer]:
+          - /url: https://beian.mps.gov.cn/#/query/webSearch?code=11010802047360
+      - listitem [ref=e366]:
+        - link "隐私" [ref=e367] [cursor=pointer]:
+          - /url: http://go.microsoft.com/fwlink/?LinkId=521839
+      - listitem [ref=e368]:
+        - link "条款" [ref=e369] [cursor=pointer]:
+          - /url: http://go.microsoft.com/fwlink/?LinkID=246338

@@ -1,0 +1,98 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e8]: 2 公里
+    - generic [ref=e16]:
+      - text: © 2026 Baidu - GS(2025)4125号 - 甲测资字11111342 - 京ICP证030173号
+      - link "版权信息" [ref=e100] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "百度首页" [ref=e101] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "服务条款" [ref=e102] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "隐私政策" [ref=e103] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "商业合作" [ref=e104] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "地图开放平台" [ref=e105] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "品牌/商户认领" [ref=e106] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "意见建议" [ref=e107] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - text: 下载地图客户端
+      - link "新增地点" [ref=e108] [cursor=pointer]:
+        - /url: javascript:void(0);
+      - link "百度营销" [ref=e109] [cursor=pointer]:
+        - /url: javascript:void(0);
+  - generic:
+    - generic:
+      - textbox "搜地点、查公交、找路线" [active] [ref=e29]: 上海市黄浦区卢湾二中心小学
+      - button [ref=e31] [cursor=pointer]
+    - list
+    - list:
+      - listitem [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e114]:
+              - img [ref=e115]
+              - text: 登录即可一键发送地点到手机
+              - link "登录" [ref=e116] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - list [ref=e117]:
+              - listitem [ref=e118]:
+                - generic [ref=e119]:
+                  - link [ref=e121] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                  - generic [ref=e122]:
+                    - link [ref=e124] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link [ref=e126] [cursor=pointer]:
+                      - /url: ""
+                      - img [ref=e127]
+                  - generic [ref=e128]:
+                    - link "上海市黄浦区卢湾二中心小学" [ref=e131] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                    - generic [ref=e132]: 上海市黄浦区复兴中路642号
+            - generic [ref=e134]:
+              - text: 没找到想要的结果?你可以在地图上
+              - link "添加该地点" [ref=e135] [cursor=pointer]:
+                - /url: https://ugc.map.baidu.com/ifix/poiproblem/addpoipcpage?business_trigger=8&city_id=289&poi_name=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6
+            - generic [ref=e137]:
+              - text: 百度提醒您：结果有错误？请到
+              - link "百度地图投诉中心" [ref=e138] [cursor=pointer]:
+                - /url: https://help.baidu.com/newadd?prod_id=4&category=1
+              - text: 反馈。
+          - generic [ref=e141]:
+            - generic "https://j.map.baidu.com/t/aiFlQb" [ref=e142]:
+              - img [ref=e143]
+            - generic [ref=e145] [cursor=pointer]: ×
+    - list
+  - generic [ref=e54]:
+    - generic:
+      - generic [ref=e55]:
+        - generic "多云" [ref=e57]:
+          - img "天气图标" [ref=e58]
+        - link "上海市" [ref=e59] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e60]: 上海市
+          - emphasis [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e66] [cursor=pointer]: 路况
+        - generic [ref=e70] [cursor=pointer]: 地铁
+        - generic [ref=e72] [cursor=pointer]:
+          - generic [ref=e74]: 工具箱
+          - emphasis [ref=e75]
+  - generic:
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - button "逆时针转动" [ref=e81] [cursor=pointer]
+        - button "恢复正北方向" [ref=e82] [cursor=pointer]
+        - button "顺时针转动" [ref=e83] [cursor=pointer]
+      - button "倾斜" [ref=e84] [cursor=pointer]
+    - generic [ref=e86]:
+      - generic "放大一级" [ref=e87] [cursor=pointer]
+      - generic "缩小一级" [ref=e89] [cursor=pointer]
+  - generic [ref=e92] [cursor=pointer]:
+    - generic [ref=e94]: 地图
+    - generic [ref=e96]: 地球
+    - generic [ref=e98]: 全景

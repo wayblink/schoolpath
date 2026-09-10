@@ -1,0 +1,303 @@
+[
+  {
+    "ts": "2026-06-18T13:20:27.453Z",
+    "operation": "reviewed_school_correction_round9",
+    "mode": "dry-run",
+    "school_id": 4769,
+    "school_name": "浦外附中",
+    "changes": {
+      "name": {
+        "from": "浦外附中",
+        "to": "上海外国语大学附属浦东外国语学校"
+      },
+      "address": {
+        "from": null,
+        "to": "达尔文路91号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "浦外附中",
+          "上外浦外"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海外国语大学附属浦东外国语学校",
+      "rawNature": "公办",
+      "rawAddress": "达尔文路91号"
+    },
+    "note": "现有行名称为简称且缺地址/性质；本地2025浦东新区义务教育阶段学校招生入学信息公示（初中）官方缓存唯一确认上海外国语大学附属浦东外国语学校，地址达尔文路91号，性质公办。本次补全全称、地址和公办性质。",
+    "before": {
+      "id": 4769,
+      "name": "浦外附中",
+      "district": "浦东",
+      "type": "middle",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4769,
+      "name": "上海外国语大学附属浦东外国语学校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "达尔文路91号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "浦外附中",
+        "上外浦外"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T13:20:27.455Z",
+    "operation": "reviewed_school_correction_round9",
+    "mode": "dry-run",
+    "school_id": 4772,
+    "school_name": "交大二附",
+    "changes": {
+      "name": {
+        "from": "交大二附",
+        "to": "上海交通大学附属第二中学"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "闵行"
+      },
+      "address": {
+        "from": null,
+        "to": "姚安路159号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "交大二附",
+          "交大二附中"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3918,
+        "name": "上海交通大学附属第二中学",
+        "district": "闵行",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "date": "2025-04-07",
+      "matchedName": "上海交通大学附属第二中学",
+      "rawNature": "公办",
+      "rawAddress": "姚安路159号"
+    },
+    "note": "现有行 district=浦东 且名称为简称；本地2025闵行区义务教育阶段学校（初中和一贯制学校）官方缓存确认上海交通大学附属第二中学，地址姚安路159号，性质公办。本次修正全称、区属、地址和公办性质；若存在同名行仅记录重复候选，不合并删除。",
+    "before": {
+      "id": 4772,
+      "name": "交大二附",
+      "district": "浦东",
+      "type": "middle",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4772,
+      "name": "上海交通大学附属第二中学",
+      "district": "闵行",
+      "type": "middle",
+      "address": "姚安路159号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "交大二附",
+        "交大二附中"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T13:20:27.456Z",
+    "operation": "reviewed_school_correction_round9",
+    "mode": "dry-run",
+    "school_id": 5326,
+    "school_name": "九亭三小",
+    "changes": {
+      "name": {
+        "from": "九亭三小",
+        "to": "上海市松江区九亭第三小学"
+      },
+      "address": {
+        "from": null,
+        "to": "松江区九里亭街道涞坊路177号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "九亭三小",
+          "九亭第三小学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4102,
+        "name": "上海市松江区九亭第三小学",
+        "district": "松江",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+      "date": "2025",
+      "matchedName": "上海市松江区九亭第三小学",
+      "rawNature": "公办小学",
+      "rawAddress": "松江区九里亭街道涞坊路177号"
+    },
+    "note": "现有行名称为简称且缺地址/性质；本地2025松江区义务教育阶段学校规模等公示官方缓存确认上海市松江区九亭第三小学，地址松江区九里亭街道涞坊路177号，性质公办小学。本次补全全称、地址和公办性质。",
+    "before": {
+      "id": 5326,
+      "name": "九亭三小",
+      "district": "松江",
+      "type": "primary",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "school_nature": null,
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5326,
+      "name": "上海市松江区九亭第三小学",
+      "district": "松江",
+      "type": "primary",
+      "address": "松江区九里亭街道涞坊路177号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "九亭三小",
+        "九亭第三小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T13:20:27.458Z",
+    "operation": "reviewed_school_correction_round9",
+    "mode": "dry-run",
+    "school_id": 5626,
+    "school_name": "交大二附中",
+    "changes": {
+      "name": {
+        "from": "交大二附中",
+        "to": "上海交通大学附属第二中学"
+      },
+      "address": {
+        "from": null,
+        "to": "姚安路159号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "交大二附中",
+          "交大二附"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3918,
+        "name": "上海交通大学附属第二中学",
+        "district": "闵行",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "date": "2025-04-07",
+      "matchedName": "上海交通大学附属第二中学",
+      "rawNature": "公办",
+      "rawAddress": "姚安路159号"
+    },
+    "note": "现有行名称为简称且缺地址/性质；本地2025闵行区义务教育阶段学校（初中和一贯制学校）官方缓存确认上海交通大学附属第二中学，地址姚安路159号，性质公办。本次补全全称、地址和公办性质；若存在同名行仅记录重复候选，不合并删除。",
+    "before": {
+      "id": 5626,
+      "name": "交大二附中",
+      "district": "闵行",
+      "type": "middle",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5626,
+      "name": "上海交通大学附属第二中学",
+      "district": "闵行",
+      "type": "middle",
+      "address": "姚安路159号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "交大二附中",
+        "交大二附"
+      ]
+    }
+  }
+]

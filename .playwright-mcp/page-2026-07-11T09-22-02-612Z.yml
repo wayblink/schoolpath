@@ -1,0 +1,57 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "HOUSE 上海学区决策助手" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: HOUSE
+        - generic [ref=e6]: 上海学区决策助手
+      - navigation [ref=e7]:
+        - link "学校查询" [ref=e8] [cursor=pointer]:
+          - /url: /schools
+        - link "升学组合" [ref=e9] [cursor=pointer]:
+          - /url: /pathways
+        - link "地图找房" [ref=e10] [cursor=pointer]:
+          - /url: /map
+        - link "区域政策" [ref=e11] [cursor=pointer]:
+          - /url: /policies
+    - generic [ref=e12]:
+      - banner [ref=e13]:
+        - generic [ref=e14]:
+          - text: HOUSE · SCHOOL DISTRICT DATA
+          - heading "上海八区学校与学区关系" [level=1] [ref=e15]
+          - paragraph [ref=e16]: 用一张清晰、可筛选的数据表理解学校梯队、片区、评价和居委关系。
+        - generic [ref=e17]: 455来源学校2764学区关系
+      - generic [ref=e18]:
+        - strong [ref=e19]: 数据说明
+        - text: 完整保留来源原文，未匹配实体也可查询2026 快照8 个区域持续审核
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: "区域:"
+          - combobox [ref=e23]:
+            - option "全部(8区)" [selected]
+            - option "徐汇区"
+            - option "杨浦区"
+            - option "虹口区"
+            - option "长宁区"
+            - option "静安区"
+            - option "黄浦区"
+            - option "浦东新区"
+            - option "闵行区"
+          - generic [ref=e24]: "街道/片区:"
+          - combobox [ref=e25]:
+            - option "请先选择区域" [selected]
+          - generic [ref=e26]: "学校:"
+          - combobox [ref=e27]:
+            - option "请先选择区域" [selected]
+          - textbox "搜索学校/街道/居委..." [ref=e28]
+        - generic [ref=e29]:
+          - button "📚 学校索引" [ref=e30] [cursor=pointer]
+          - button "📊 学区总览" [ref=e31] [cursor=pointer]
+          - button "📍 各区详细" [ref=e32] [cursor=pointer]
+    - contentinfo [ref=e33]:
+      - text: 学区与梯队信息仅供参考，请以当年度教育主管部门官方发布为准 ·
+      - link "旧版页面" [ref=e34] [cursor=pointer]:
+        - /url: /legacy
+  - button "Open Next.js Dev Tools" [ref=e40] [cursor=pointer]:
+    - img [ref=e41]
+  - alert [ref=e44]

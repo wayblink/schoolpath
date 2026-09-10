@@ -1,0 +1,49 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e5]:
+      - link "学 学区图谱 上海学区房数据工作台 · 2025" [ref=e6] [cursor=pointer]:
+        - /url: /#map
+        - generic [ref=e7]: 学
+        - generic [ref=e8]:
+          - generic [ref=e9]: 学区图谱
+          - generic [ref=e10]: 上海学区房数据工作台 · 2025
+      - navigation "首页导航" [ref=e11]:
+        - link "地图" [ref=e12] [cursor=pointer]:
+          - /url: /#map
+          - img [ref=e13]
+          - generic [ref=e15]: 地图
+        - link "学校" [ref=e16] [cursor=pointer]:
+          - /url: /#schools
+          - img [ref=e17]
+          - generic [ref=e22]: 学校
+        - link "数据源" [ref=e23] [cursor=pointer]:
+          - /url: /#data-sources
+          - img [ref=e24]
+          - generic [ref=e27]: 数据源
+      - generic [ref=e28]:
+        - link "数据库" [ref=e29] [cursor=pointer]:
+          - /url: /db
+          - img [ref=e30]
+          - generic [ref=e34]: 数据库
+        - button "设置" [ref=e36]:
+          - img [ref=e37]
+        - link "v0.3 BETA" [ref=e41] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 数据源列表
+          - generic [ref=e47]: 记录学校官网、官方招生政策、地图与第三方目录等校验来源。
+        - generic [ref=e49]: 共 0 条
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: 类型
+          - generic [ref=e54]: 学校
+          - generic [ref=e55]: 来源
+          - generic [ref=e56]: 标题 / 证据
+          - generic [ref=e57]: 日期
+          - generic [ref=e58]: 链接
+        - generic [ref=e60]: 暂无数据源记录
+  - button "Open Next.js Dev Tools" [ref=e66] [cursor=pointer]:
+    - img [ref=e67]
+  - alert [ref=e70]

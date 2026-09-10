@@ -1,0 +1,763 @@
+[
+  {
+    "ts": "2026-06-18T09:54:46.356Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4638,
+    "school_name": "海滨二中",
+    "changes": {
+      "name": {
+        "from": "海滨二中",
+        "to": "上海市吴淞中学附属宝山实验学校（原上海市海滨第二中学）"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "宝山"
+      },
+      "address": {
+        "from": null,
+        "to": "永清路156号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "海滨二中",
+          "上海市海滨第二中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4405,
+        "name": "上海市吴淞中学附属宝山实验学校（原上海市海滨第二中学）",
+        "district": "宝山",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年宝山区义务教育阶段学校校区范围与招生计划（初中）",
+      "url": "https://www.shanghai.gov.cn/bsqywjy/20250423/497250a7552b43c59fca0a904b1eee82.html",
+      "date": "2025-04-23",
+      "matchedName": "上海市吴淞中学附属宝山实验学校（原上海市海滨第二中学）",
+      "rawNature": "公办初中",
+      "rawAddress": "永清路156号"
+    },
+    "note": "现有行 district=浦东 且缺地址坐标；2025宝山区义务教育阶段学校校区范围与招生计划（初中）列出上海市吴淞中学附属宝山实验学校（原上海市海滨第二中学），地址永清路156号。本次按官方源修正全称、区属、地址和公办性质。",
+    "before": {
+      "id": 4638,
+      "name": "海滨二中",
+      "district": "浦东",
+      "type": "middle",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4638,
+      "name": "上海市吴淞中学附属宝山实验学校（原上海市海滨第二中学）",
+      "district": "宝山",
+      "type": "middle",
+      "address": "永清路156号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "海滨二中",
+        "上海市海滨第二中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.359Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4689,
+    "school_name": "新北郊初级",
+    "changes": {
+      "name": {
+        "from": "新北郊初级",
+        "to": "上海市民办新北郊初级中学"
+      },
+      "address": {
+        "from": "上海市虹口区东体育会路429号（近玉田路）",
+        "to": "东体育会路429号"
+      },
+      "school_nature": {
+        "from": "公立",
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "新北郊初级",
+          "民办新北郊"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 5108,
+        "name": "上海市民办新北郊初级中学",
+        "district": "虹口",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段民办中小学基本情况",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/4598de7d-1bcc-4128-a18d-77828712c114/5b1f9107-1e5c-4476-8000-8af02605e94b/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E6%B0%91%E5%8A%9E%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.pdf",
+      "date": "2025",
+      "matchedName": "上海市民办新北郊初级中学",
+      "rawNature": "民办",
+      "rawAddress": "东体育会路429号"
+    },
+    "note": "现有行名称为简称且 school_nature=公立；2025虹口区义务教育阶段民办中小学基本情况确认全称上海市民办新北郊初级中学，地址东体育会路429号，性质民办。本次修正全称、地址和性质，记录重复候选但不合并删除。",
+    "before": {
+      "id": 4689,
+      "name": "新北郊初级",
+      "district": "虹口",
+      "type": "middle",
+      "address": "上海市虹口区东体育会路429号（近玉田路）",
+      "lat": 31.27872306040887,
+      "lng": 121.48685160696942,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4689,
+      "name": "上海市民办新北郊初级中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "东体育会路429号",
+      "lat": 31.27872306040887,
+      "lng": 121.48685160696942,
+      "school_nature": "私立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "新北郊初级",
+        "民办新北郊"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.360Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4691,
+    "school_name": "长青学校",
+    "changes": {
+      "name": {
+        "from": "长青学校",
+        "to": "上海市长青学校"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "虹口"
+      },
+      "address": {
+        "from": "上海市虹口区大连路975弄58号",
+        "to": "大连路975弄58号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "长青学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3622,
+        "name": "上海市长青学校",
+        "district": "虹口",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/13bebba5-5f61-49ee-8552-4fee4665e1ac/64054e0e-3738-43c8-ba40-c345b0d09b27/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%85%AC%E5%8A%9E%E5%88%9D%E4%B8%AD%E6%8B%9B%E7%94%9F%E8%AE%A1%E5%88%92%E5%92%8C%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.pdf",
+      "date": "2025",
+      "matchedName": "上海市长青学校",
+      "rawNature": "公办九年一贯制",
+      "rawAddress": "临时安置点：大连路975弄58号"
+    },
+    "note": "现有行 district=浦东 但地址和百度学校 POI 均指向虹口；2025虹口区义务教育阶段公办初中招生计划和联系方式确认上海市长青学校，临时安置点大连路975弄58号，性质公办九年一贯制。本次修正全称、区属、地址和性质。",
+    "before": {
+      "id": 4691,
+      "name": "长青学校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市虹口区大连路975弄58号",
+      "lat": 31.267093120570152,
+      "lng": 121.50475273108427,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4691,
+      "name": "上海市长青学校",
+      "district": "虹口",
+      "type": "middle",
+      "address": "大连路975弄58号",
+      "lat": 31.267093120570152,
+      "lng": 121.50475273108427,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "长青学校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.363Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4784,
+    "school_name": "五浦汇实验",
+    "changes": {
+      "name": {
+        "from": "五浦汇实验",
+        "to": "上海五浦汇实验学校"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "青浦"
+      },
+      "address": {
+        "from": "盘龙浦路500号B区",
+        "to": "上海市青浦区盘龙浦路500号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "五浦汇实验",
+          "上海五浦汇实验学校（初中）"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "青浦区教育局",
+      "title": "2025年青浦区民办初中招生计划一览表 / 2024青浦区教育机构一览表",
+      "url": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276481.html",
+      "date": "2025-04-07",
+      "matchedName": "上海五浦汇实验学校（初中）",
+      "rawNature": "民办",
+      "rawAddress": "上海市青浦区盘龙浦路500号"
+    },
+    "note": "现有行 district=浦东 但地址盘龙浦路500号位于青浦；青浦区民办初中招生计划和青浦区教育机构一览表确认全称上海五浦汇实验学校，地址上海市青浦区盘龙浦路500号，并列为民办初中招生。本次修正区属、全称、地址和性质。",
+    "before": {
+      "id": 4784,
+      "name": "五浦汇实验",
+      "district": "浦东",
+      "type": "middle",
+      "address": "盘龙浦路500号B区",
+      "lat": 31.143133354273594,
+      "lng": 121.08005906314962,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4784,
+      "name": "上海五浦汇实验学校",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区盘龙浦路500号",
+      "lat": 31.143133354273594,
+      "lng": 121.08005906314962,
+      "school_nature": "私立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "五浦汇实验",
+        "上海五浦汇实验学校（初中）"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.365Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4785,
+    "school_name": "青浦兰生",
+    "changes": {
+      "name": {
+        "from": "青浦兰生",
+        "to": "上海青浦兰生学校"
+      },
+      "address": {
+        "from": "上海市青浦区朱家角路1588号(朱家角路与港周路交汇处西北侧)",
+        "to": "上海市青浦区朱家角路1588号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "青浦兰生",
+          "上海青浦兰生学校（初中）"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "青浦区教育局",
+      "title": "2025年青浦区民办初中招生计划一览表 / 2024青浦区教育机构一览表",
+      "url": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276481.html",
+      "date": "2025-04-07",
+      "matchedName": "上海青浦兰生学校（初中）",
+      "rawNature": "民办",
+      "rawAddress": "上海市青浦区朱家角路1588号"
+    },
+    "note": "现有名称为简称；2025青浦区民办初中招生计划和青浦区教育机构一览表确认上海青浦兰生学校（初中），地址上海市青浦区朱家角路1588号，属民办初中招生。本次补全全称、规范地址和性质。",
+    "before": {
+      "id": 4785,
+      "name": "青浦兰生",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区朱家角路1588号(朱家角路与港周路交汇处西北侧)",
+      "lat": 31.126989108843606,
+      "lng": 121.06123408360155,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4785,
+      "name": "上海青浦兰生学校",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区朱家角路1588号",
+      "lat": 31.126989108843606,
+      "lng": 121.06123408360155,
+      "school_nature": "私立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "青浦兰生",
+        "上海青浦兰生学校（初中）"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.367Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4786,
+    "school_name": "青浦世外",
+    "changes": {
+      "name": {
+        "from": "青浦世外",
+        "to": "上海青浦区世外学校"
+      },
+      "address": {
+        "from": "上海市青浦区徐泾镇蟠文路455号",
+        "to": "上海市青浦区龙联路915号"
+      },
+      "lat": {
+        "from": 31.1868295925634,
+        "to": null
+      },
+      "lng": {
+        "from": 121.28596905146132,
+        "to": null
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "青浦世外",
+          "上海青浦区世外学校（初中）"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "青浦区教育局",
+      "title": "2025年青浦区民办初中招生计划一览表 / 2024青浦区教育机构一览表",
+      "url": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276481.html",
+      "date": "2025-04-07",
+      "matchedName": "上海青浦区世外学校（初中）",
+      "rawNature": "民办",
+      "rawAddress": "上海市青浦区龙联路915号"
+    },
+    "note": "现有行名称为青浦世外但地址/POI 指向上海青浦区世外高级中学；2025青浦区民办初中招生计划确认初中为上海青浦区世外学校（初中），青浦区教育机构一览表列出初中地址为龙联路915号。本次改回义务教育初中实体，并清空原高级中学坐标以待后续百度地图核验。",
+    "before": {
+      "id": 4786,
+      "name": "青浦世外",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区徐泾镇蟠文路455号",
+      "lat": 31.1868295925634,
+      "lng": 121.28596905146132,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4786,
+      "name": "上海青浦区世外学校",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区龙联路915号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "私立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "青浦世外",
+        "上海青浦区世外学校（初中）"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.369Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 5110,
+    "school_name": "虹口实验",
+    "changes": {
+      "name": {
+        "from": "虹口实验",
+        "to": "上海市虹口实验学校"
+      },
+      "address": {
+        "from": "上海市虹口区辉河路65号",
+        "to": "辉河路65号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "虹口实验",
+          "上海市虹口实验学校（初中部）"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3625,
+        "name": "上海市虹口实验学校",
+        "district": "虹口",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/13bebba5-5f61-49ee-8552-4fee4665e1ac/64054e0e-3738-43c8-ba40-c345b0d09b27/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%85%AC%E5%8A%9E%E5%88%9D%E4%B8%AD%E6%8B%9B%E7%94%9F%E8%AE%A1%E5%88%92%E5%92%8C%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.pdf",
+      "date": "2025",
+      "matchedName": "上海市虹口实验学校",
+      "rawNature": "公办九年一贯制",
+      "rawAddress": "辉河路65号"
+    },
+    "note": "现有名称为简称；2025虹口区义务教育阶段公办初中招生计划和联系方式确认上海市虹口实验学校，地址辉河路65号，性质公办九年一贯制。本次补全全称、规范地址和性质。",
+    "before": {
+      "id": 5110,
+      "name": "虹口实验",
+      "district": "虹口",
+      "type": "middle",
+      "address": "上海市虹口区辉河路65号",
+      "lat": 31.288963265902204,
+      "lng": 121.49714925367216,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5110,
+      "name": "上海市虹口实验学校",
+      "district": "虹口",
+      "type": "middle",
+      "address": "辉河路65号",
+      "lat": 31.288963265902204,
+      "lng": 121.49714925367216,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "虹口实验",
+        "上海市虹口实验学校（初中部）"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.370Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 5111,
+    "school_name": "鲁迅中学",
+    "changes": {
+      "name": {
+        "from": "鲁迅中学",
+        "to": "上海市鲁迅初级中学"
+      },
+      "address": {
+        "from": "上海市虹口区广中路132号(近中山北一路)",
+        "to": "宝安路66弄7号"
+      },
+      "lat": {
+        "from": 31.275074648261146,
+        "to": null
+      },
+      "lng": {
+        "from": 121.47731700858346,
+        "to": null
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "鲁迅中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3634,
+        "name": "上海市鲁迅初级中学",
+        "district": "虹口",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区初中“校园开放日”活动安排",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/91c5d222-bc66-445c-90f5-8f61443b6640/eb1ee30e-f750-4af0-9929-5bdc52a61758/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E5%88%9D%E4%B8%AD%E2%80%9C%E6%A0%A1%E5%9B%AD%E5%BC%80%E6%94%BE%E6%97%A5%E2%80%9D%E6%B4%BB%E5%8A%A8%E5%AE%89%E6%8E%92.pdf",
+      "date": "2025",
+      "matchedName": "上海市鲁迅初级中学",
+      "rawNature": "公办初中",
+      "rawAddress": "宝安路66弄7号"
+    },
+    "note": "现有行 type=middle 但地址/POI 指向鲁迅中学高中；2025虹口区初中校园开放日官方安排列出上海市鲁迅初级中学，开放地点宝安路66弄7号。本次按初中实体修正全称和地址，并清空原高中坐标以待后续地图核验。",
+    "before": {
+      "id": 5111,
+      "name": "鲁迅中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "上海市虹口区广中路132号(近中山北一路)",
+      "lat": 31.275074648261146,
+      "lng": 121.47731700858346,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5111,
+      "name": "上海市鲁迅初级中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "宝安路66弄7号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "鲁迅中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.371Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 5113,
+    "school_name": "北郊学校",
+    "changes": {
+      "name": {
+        "from": "北郊学校",
+        "to": "上海市北郊学校"
+      },
+      "address": {
+        "from": "上海市虹口区大连西路205弄",
+        "to": "大连西路205号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "北郊学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3623,
+        "name": "上海市北郊学校",
+        "district": "虹口",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/13bebba5-5f61-49ee-8552-4fee4665e1ac/64054e0e-3738-43c8-ba40-c345b0d09b27/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%85%AC%E5%8A%9E%E5%88%9D%E4%B8%AD%E6%8B%9B%E7%94%9F%E8%AE%A1%E5%88%92%E5%92%8C%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F.pdf",
+      "date": "2025",
+      "matchedName": "上海市北郊学校",
+      "rawNature": "公办九年一贯制",
+      "rawAddress": "大连西路205号"
+    },
+    "note": "现有名称为简称且地址只有门牌弄号；2025虹口区义务教育阶段公办初中招生计划和联系方式确认上海市北郊学校，地址大连西路205号，性质公办九年一贯制。本次补全全称、规范地址和性质。",
+    "before": {
+      "id": 5113,
+      "name": "北郊学校",
+      "district": "虹口",
+      "type": "middle",
+      "address": "上海市虹口区大连西路205弄",
+      "lat": 31.275528978696624,
+      "lng": 121.49266738801612,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5113,
+      "name": "上海市北郊学校",
+      "district": "虹口",
+      "type": "middle",
+      "address": "大连西路205号",
+      "lat": 31.275528978696624,
+      "lng": 121.49266738801612,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "北郊学校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:54:46.372Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 5648,
+    "school_name": "位育初中",
+    "changes": {
+      "name": {
+        "from": "位育初中",
+        "to": "上海市位育初级中学"
+      },
+      "district": {
+        "from": "宝山",
+        "to": "徐汇"
+      },
+      "address": {
+        "from": null,
+        "to": "总校：复兴中路1261号；北校区：长乐路455号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "website": {
+        "from": null,
+        "to": "https://wycz.xhedu.sh.cn/cms/"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "位育初中",
+          "位育初级中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4580,
+        "name": "上海市位育初级中学",
+        "district": "徐汇",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年徐汇区义务教育阶段学校（初中）办学规模、招生计划、校舍场地条件及设备配置公示汇总表",
+      "url": "https://www.shanghai.gov.cn/xhqywjy/20250411/832e8a6c9de94342b77c087100ff956c.html",
+      "date": "2025-04-11",
+      "matchedName": "上海市位育初级中学",
+      "rawNature": "公办初中",
+      "rawAddress": "总校：复兴中路1261号；北校区：长乐路455号"
+    },
+    "note": "现有行 district=宝山 且缺地址坐标；2025徐汇区义务教育阶段学校（初中）办学规模公示确认上海市位育初级中学，性质公办初中，地址为总校复兴中路1261号、北校区长乐路455号，并列出官网。本次按官方源修正全称、区属、地址、性质和官网。",
+    "before": {
+      "id": 5648,
+      "name": "位育初中",
+      "district": "宝山",
+      "type": "middle",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5648,
+      "name": "上海市位育初级中学",
+      "district": "徐汇",
+      "type": "middle",
+      "address": "总校：复兴中路1261号；北校区：长乐路455号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": "https://wycz.xhedu.sh.cn/cms/",
+      "aliases": [
+        "位育初中",
+        "位育初级中学"
+      ]
+    }
+  }
+]

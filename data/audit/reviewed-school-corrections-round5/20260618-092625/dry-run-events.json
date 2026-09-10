@@ -1,0 +1,527 @@
+[
+  {
+    "ts": "2026-06-18T09:26:25.493Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 4626,
+    "school_name": "南汇四中",
+    "changes": {
+      "name": {
+        "from": "南汇四中",
+        "to": "上海市南汇第四中学"
+      },
+      "address": {
+        "from": "惠南镇沿河泾南路18号卫生室",
+        "to": "沿河泾南路18号"
+      },
+      "lat": {
+        "from": 31.044433347647388,
+        "to": null
+      },
+      "lng": {
+        "from": 121.76163347527898,
+        "to": null
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "南汇四中"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市南汇第四中学",
+      "rawNature": "公办",
+      "rawAddress": "沿河泾南路18号"
+    },
+    "note": "2025浦东官方初中招生入学信息中南汇第四中学有本部、北校区、东校区；现有行地址为沿河泾南路18号且简称为南汇四中，和本部记录匹配。当前坐标来自 AED POI，非学校点位，故清空等待后续地图核验。",
+    "before": {
+      "id": 4626,
+      "name": "南汇四中",
+      "district": "浦东",
+      "type": "middle",
+      "address": "惠南镇沿河泾南路18号卫生室",
+      "lat": 31.044433347647388,
+      "lng": 121.76163347527898,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4626,
+      "name": "上海市南汇第四中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "沿河泾南路18号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "南汇四中"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:26:25.495Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 4629,
+    "school_name": "陆行南校",
+    "changes": {
+      "name": {
+        "from": "陆行南校",
+        "to": "上海市陆行中学南校"
+      },
+      "address": {
+        "from": "上海市浦东新区金台路96号",
+        "to": "金台路96号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "陆行南校",
+          "陆行中学南校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3705,
+        "name": "上海市陆行中学南校",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市陆行中学南校",
+      "rawNature": "公办",
+      "rawAddress": "金台路96号"
+    },
+    "note": "2025浦东官方初中招生入学信息确认上海市陆行中学南校、公办性质和金台路96号地址；现有地图 POI 也是陆行中学南校，故保留坐标并补全全称。",
+    "before": {
+      "id": 4629,
+      "name": "陆行南校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市浦东新区金台路96号",
+      "lat": 31.248767910670423,
+      "lng": 121.58535358232226,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4629,
+      "name": "上海市陆行中学南校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "金台路96号",
+      "lat": 31.248767910670423,
+      "lng": 121.58535358232226,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "陆行南校",
+        "陆行中学南校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:26:25.498Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 4630,
+    "school_name": "东昌南校",
+    "changes": {
+      "name": {
+        "from": "东昌南校",
+        "to": "华东师范大学附属东昌中学南校（潍坊校区）"
+      },
+      "address": {
+        "from": "上海市浦东新区南泉北路1020号",
+        "to": "南泉北路1020号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "东昌南校",
+          "东昌中学南校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3738,
+        "name": "华东师范大学附属东昌中学南校（潍坊校区）",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "华东师范大学附属东昌中学南校（潍坊校区）",
+      "rawNature": "公办",
+      "rawAddress": "南泉北路1020号"
+    },
+    "note": "2025浦东官方初中招生入学信息中东昌中学南校有潍坊、张江两个校区；现有地址南泉北路1020号匹配潍坊校区，地图 POI 也为东昌中学南校，故补全校区全称并保留坐标。",
+    "before": {
+      "id": 4630,
+      "name": "东昌南校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市浦东新区南泉北路1020号",
+      "lat": 31.226445713432778,
+      "lng": 121.51952111486067,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4630,
+      "name": "华东师范大学附属东昌中学南校（潍坊校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "南泉北路1020号",
+      "lat": 31.226445713432778,
+      "lng": 121.51952111486067,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "东昌南校",
+        "东昌中学南校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:26:25.500Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 4775,
+    "school_name": "建平地杰",
+    "changes": {
+      "name": {
+        "from": "建平地杰",
+        "to": "上海市建平实验地杰中学（御桥路校区）"
+      },
+      "address": {
+        "from": "上海市浦东新区御桥路1977弄",
+        "to": "御桥路1977号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "建平地杰",
+          "建平实验地杰中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3793,
+        "name": "上海市建平实验地杰中学（御桥路校区）",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市建平实验地杰中学（御桥路校区）",
+      "rawNature": "公办",
+      "rawAddress": "御桥路1977号"
+    },
+    "note": "2025浦东官方初中招生入学信息中建平实验地杰中学有御桥路、博华路两个校区；现有地址御桥路1977弄匹配御桥路校区，地图 POI 也为建平实验地杰中学，故补全校区全称。",
+    "before": {
+      "id": 4775,
+      "name": "建平地杰",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市浦东新区御桥路1977弄",
+      "lat": 31.159625030458358,
+      "lng": 121.5730868762672,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4775,
+      "name": "上海市建平实验地杰中学（御桥路校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "御桥路1977号",
+      "lat": 31.159625030458358,
+      "lng": 121.5730868762672,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "建平地杰",
+        "建平实验地杰中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:26:25.501Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 5022,
+    "school_name": "上南北校",
+    "changes": {
+      "name": {
+        "from": "上南北校",
+        "to": "上海市上南中学北校"
+      },
+      "address": {
+        "from": "上海市浦东新区周家渡街道南码头路1347号",
+        "to": "南码头路1347号"
+      },
+      "lat": {
+        "from": 31.181433110751037,
+        "to": null
+      },
+      "lng": {
+        "from": 121.5152774873217,
+        "to": null
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "上南北校",
+          "上南中学北校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3770,
+        "name": "上海市上南中学北校",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市上南中学北校",
+      "rawNature": "公办",
+      "rawAddress": "南码头路1347号"
+    },
+    "note": "2025浦东官方初中招生入学信息确认上海市上南中学北校、公办性质和南码头路1347号地址；当前坐标来自羽毛球培训店 POI，非学校点位，故清空等待后续地图核验。",
+    "before": {
+      "id": 5022,
+      "name": "上南北校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市浦东新区周家渡街道南码头路1347号",
+      "lat": 31.181433110751037,
+      "lng": 121.5152774873217,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5022,
+      "name": "上海市上南中学北校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "南码头路1347号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "上南北校",
+        "上南中学北校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:26:25.503Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 5627,
+    "school_name": "上实西校",
+    "changes": {
+      "name": {
+        "from": "上实西校",
+        "to": "上海市实验学校西校"
+      },
+      "address": {
+        "from": "上海市闵行区平吉路300号",
+        "to": "平吉路300号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "上实西校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3902,
+        "name": "上海市实验学校西校",
+        "district": "闵行",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "date": "2025-04-07",
+      "matchedName": "上海市实验学校西校",
+      "rawNature": "公办",
+      "rawAddress": "平吉路300号"
+    },
+    "note": "2025闵行官方义务教育阶段学校基本情况确认上海市实验学校西校、公办性质和地址；现有地址与地图 POI 均匹配，故补全全称并保留坐标。",
+    "before": {
+      "id": 5627,
+      "name": "上实西校",
+      "district": "闵行",
+      "type": "middle",
+      "address": "上海市闵行区平吉路300号",
+      "lat": 31.14782930074824,
+      "lng": 121.3992729718984,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5627,
+      "name": "上海市实验学校西校",
+      "district": "闵行",
+      "type": "middle",
+      "address": "平吉路300号",
+      "lat": 31.14782930074824,
+      "lng": 121.3992729718984,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "上实西校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:26:25.505Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 5633,
+    "school_name": "莘光中学",
+    "changes": {
+      "name": {
+        "from": "莘光中学",
+        "to": "上海市莘光学校"
+      },
+      "address": {
+        "from": "上海市闵行区雅致路18弄",
+        "to": "雅致路18号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "莘光中学",
+          "莘光学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3865,
+        "name": "上海市莘光学校",
+        "district": "闵行",
+        "type": "primary"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "date": "2025-04-07",
+      "matchedName": "上海市莘光学校",
+      "rawNature": "公办",
+      "rawAddress": "雅致路18号"
+    },
+    "note": "2025闵行官方义务教育阶段学校基本情况中上海市莘光学校有山花路555号和雅致路18号；现有地址雅致路18弄匹配雅致路校区，地图 POI 也为莘光学校，故补全全称和官方地址。",
+    "before": {
+      "id": 5633,
+      "name": "莘光中学",
+      "district": "闵行",
+      "type": "middle",
+      "address": "上海市闵行区雅致路18弄",
+      "lat": 31.11666261926783,
+      "lng": 121.38369690239907,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5633,
+      "name": "上海市莘光学校",
+      "district": "闵行",
+      "type": "middle",
+      "address": "雅致路18号",
+      "lat": 31.11666261926783,
+      "lng": 121.38369690239907,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "莘光中学",
+        "莘光学校"
+      ]
+    }
+  }
+]

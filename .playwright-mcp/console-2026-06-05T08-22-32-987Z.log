@@ -1,0 +1,23 @@
+[     284ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     298ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     463ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     485ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     945ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://webapi.amap.com/maps?callback=___onAPILoaded&v=2.0&key=44797665cc12a977e02cc47812c0dca7&plugin=AMap.Polygon,AMap.Marker,AMap.InfoWindow,AMap.MassMarks:0
+[  644168ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[  644278ms] [LOG] [Fast Refresh] done in 212ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[  962637ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[  962724ms] [LOG] [Fast Refresh] done in 188ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 1360867ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 1360962ms] [LOG] [Fast Refresh] done in 198ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2641290ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2641398ms] [LOG] [Fast Refresh] done in 214ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2791146ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2791232ms] [LOG] [Fast Refresh] done in 189ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2951487ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2951548ms] [LOG] [Fast Refresh] done in 163ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2995106ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 2995112ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 3436594ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 3436696ms] [LOG] [Fast Refresh] done in 205ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 3466018ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[ 3466091ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477

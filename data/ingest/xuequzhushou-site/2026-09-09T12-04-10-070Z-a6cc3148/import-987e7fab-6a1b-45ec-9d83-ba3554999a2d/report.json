@@ -1,0 +1,53 @@
+{
+  "mode": "apply",
+  "sourceComplete": false,
+  "manifestPath": "/Users/jyxc-dz-0101035/yard/house/data/ingest/xuequzhushou-site/2026-09-09T12-04-10-070Z-a6cc3148/manifest.json",
+  "fetchedResources": 10,
+  "uniqueResources": 10,
+  "failures": [
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/district_config.json",
+      "status": 404,
+      "error": "HTTP 404; data is unreachable in this run"
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%88%9D%E4%B8%AD%E6%A2%AF%E9%98%9F_cleaned.json?v=20260624m",
+      "status": 404,
+      "error": "HTTP 404; data is unreachable in this run"
+    }
+  ],
+  "rows": 30801,
+  "added": 30801,
+  "unchanged": 0,
+  "conflicts": 0,
+  "reconciled": 30801,
+  "byType": {
+    "xuequzhushou_site_v1:site_resource": 10,
+    "xuequzhushou_site_v1:site_json": 31,
+    "xuequzhushou_site_v1:map_index_entry": 1471,
+    "xuequzhushou_site_v1:map_index_member": 2691,
+    "xuequzhushou_site_v1:committee_geometry": 7255,
+    "xuequzhushou_site_v1:map_district": 8,
+    "xuequzhushou_site_v1:map_school": 320,
+    "xuequzhushou_site_v1:map_community": 14536,
+    "xuequzhushou_site_v1:map_enrollment_area": 3450,
+    "xuequzhushou_site_v1:map_feeder": 320,
+    "xuequzhushou_site_v1:map_address_group": 80,
+    "xuequzhushou_site_v1:map_address": 400,
+    "xuequzhushou_site_v1:map_road": 48,
+    "xuequzhushou_site_v1:map_middle": 178,
+    "xuequzhushou_site_v1:ring_geometry": 3
+  },
+  "runs": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+  ]
+}

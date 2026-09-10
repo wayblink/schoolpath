@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "runId": "2026-09-09T11-59-18-586Z-410ad2a1",
+  "source": "xuequzhushou.cn",
+  "provenance": "third-party",
+  "seedUrl": "https://xuequzhushou.cn/",
+  "startedAt": "2026-09-09T11:59:18.586Z",
+  "finishedAt": "2026-09-09T12:00:25.079Z",
+  "complete": false,
+  "discovery": "same-origin static links, script literals and recursive JSON filenames",
+  "limits": {
+    "maxResources": 512,
+    "maxBytes": 33554432,
+    "maxTotalBytes": 268435456,
+    "timeoutMs": 20000,
+    "delayMs": 300
+  },
+  "resources": [
+    {
+      "url": "https://xuequzhushou.cn/",
+      "finalUrl": "https://xuequzhushou.cn/%E4%B8%8A%E6%B5%B7%E5%AD%A6%E5%8C%BA%E4%BF%A1%E6%81%AF.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "86a2af13672517d35ba8daee7f0f25805fb96cb22164e101a23977d6504fc15d",
+      "file": "raw/86a2af13672517d35ba8daee7f0f25805fb96cb22164e101a23977d6504fc15d.bin",
+      "bytes": 276622,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ],
+      "parseIssues": [
+        "TLB: not a JSON literal; retained in raw resource",
+        "BP: not a JSON literal; retained in raw resource",
+        "BM: not a JSON literal; retained in raw resource"
+      ]
+    },
+    {
+      "url": "https://xuequzhushou.cn/school-district-map.html",
+      "finalUrl": "https://xuequzhushou.cn/school-district-map.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "8147e2bf832632471804614b1a579bc1956e9405805b8788883bd9ca84fc43b8",
+      "file": "raw/8147e2bf832632471804614b1a579bc1956e9405805b8788883bd9ca84fc43b8.bin",
+      "bytes": 99054,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/%E4%B8%8A%E6%B5%B7%E5%AD%A6%E5%8C%BA%E4%BF%A1%E6%81%AF.html"
+      ]
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/district_config.json",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/district_config.json",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "834cca2b44384ea38f19c6b24d5ef7e2dc5b0f91f92b6797ac0b02ca2b6b07a7",
+      "file": "raw/834cca2b44384ea38f19c6b24d5ef7e2dc5b0f91f92b6797ac0b02ca2b6b07a7.bin",
+      "bytes": 79,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/%E4%B8%8A%E6%B5%B7%E5%AD%A6%E5%8C%BA%E4%BF%A1%E6%81%AF.html",
+        "https://xuequzhushou.cn/school-district-map.html"
+      ],
+      "error": "HTTP 404; data is unreachable in this run"
+    },
+    {
+      "url": "https://xuequzhushou.cn/addr",
+      "finalUrl": "https://xuequzhushou.cn/addr",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "5ab331bf5c86ef3087cd8d6231e8d4d2e885ef4dba13034ed7fc7af12b6f94fe",
+      "file": "raw/5ab331bf5c86ef3087cd8d6231e8d4d2e885ef4dba13034ed7fc7af12b6f94fe.bin",
+      "bytes": 79,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ],
+      "error": "HTTP 404; data is unreachable in this run"
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E4%B8%8A%E6%B5%B7%E5%B1%85%E5%A7%94%E4%BC%9A%E8%BE%B9%E7%95%8C_%E7%AE%80%E5%8C%96%E7%89%88.json?v=20260624i",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E4%B8%8A%E6%B5%B7%E5%B1%85%E5%A7%94%E4%BC%9A%E8%BE%B9%E7%95%8C_%E7%AE%80%E5%8C%96%E7%89%88.json?v=20260624i",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "0e6591716011c4deb8f952d344e82db689074cb8f25c919f1f43eca26d4244ae",
+      "file": "raw/0e6591716011c4deb8f952d344e82db689074cb8f25c919f1f43eca26d4244ae.bin",
+      "bytes": 1490942,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ],
+      "partial": true,
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%AD%A6%E5%8C%BA%E5%8C%B9%E9%85%8D_%E5%9C%B0%E5%9B%BE%E7%89%88.json?v=20260628a",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%AD%A6%E5%8C%BA%E5%8C%B9%E9%85%8D_%E5%9C%B0%E5%9B%BE%E7%89%88.json?v=20260628a",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "27fc95aec30994eb79e29605c489b46fb068a6c0b19ae8712a0ce7d1e2b61f6c",
+      "file": "raw/27fc95aec30994eb79e29605c489b46fb068a6c0b19ae8712a0ce7d1e2b61f6c.bin",
+      "bytes": 770047,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ],
+      "partial": true,
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E4%B8%8A%E6%B5%B7%E7%8E%AF%E7%BA%BF_GCJ02.json",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E4%B8%8A%E6%B5%B7%E7%8E%AF%E7%BA%BF_GCJ02.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "b025d524ede0d80a2409997c4d146d7825fcca252e1838a6f0fe6fa11676bd2c",
+      "file": "raw/b025d524ede0d80a2409997c4d146d7825fcca252e1838a6f0fe6fa11676bd2c.bin",
+      "bytes": 184504,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ]
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%AD%A6%E5%8C%BA%E5%B1%85%E5%A7%94%E7%B4%A2%E5%BC%95.json?v=20260624f",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%AD%A6%E5%8C%BA%E5%B1%85%E5%A7%94%E7%B4%A2%E5%BC%95.json?v=20260624f",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "c1db74c416a31306af7cd2afd6532559b8e15dbef4e80b5955cda30cb7473bca",
+      "file": "raw/c1db74c416a31306af7cd2afd6532559b8e15dbef4e80b5955cda30cb7473bca.bin",
+      "bytes": 75203,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ]
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%B1%85%E5%A7%94%E5%90%8D%E5%88%B0GeoJSON%E6%98%A0%E5%B0%84.json?v=20260624f",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%B1%85%E5%A7%94%E5%90%8D%E5%88%B0GeoJSON%E6%98%A0%E5%B0%84.json?v=20260624f",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "e565fb375f9cca9819ab9181c65cae5f075b44d873f29294034f8083fd98a754",
+      "file": "raw/e565fb375f9cca9819ab9181c65cae5f075b44d873f29294034f8083fd98a754.bin",
+      "bytes": 57252,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ]
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%AD%A6%E5%8C%BA%E8%A1%97%E9%81%93%E6%98%A0%E5%B0%84.json",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%AD%A6%E5%8C%BA%E8%A1%97%E9%81%93%E6%98%A0%E5%B0%84.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "953c084d972153cbd82049f5fd19e2d64c3ecf8405d9c41ccde2632af9a16ea2",
+      "file": "raw/953c084d972153cbd82049f5fd19e2d64c3ecf8405d9c41ccde2632af9a16ea2.bin",
+      "bytes": 4598,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ]
+    },
+    {
+      "url": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%88%9D%E4%B8%AD%E6%A2%AF%E9%98%9F_cleaned.json?v=20260624m",
+      "finalUrl": "https://xuequzhushou.cn/%E5%AD%A6%E5%8C%BA%E6%95%B0%E6%8D%AE/%E5%88%9D%E4%B8%AD%E6%A2%AF%E9%98%9F_cleaned.json?v=20260624m",
+      "status": 404,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "eadb45e4de86981fca8381aad8caaa27d93377a23fd3bd1d1e2947683dfcfe40",
+      "file": "raw/eadb45e4de86981fca8381aad8caaa27d93377a23fd3bd1d1e2947683dfcfe40.bin",
+      "bytes": 79,
+      "discoveredFrom": [
+        "https://xuequzhushou.cn/school-district-map.html"
+      ],
+      "error": "HTTP 404; data is unreachable in this run"
+    }
+  ]
+}

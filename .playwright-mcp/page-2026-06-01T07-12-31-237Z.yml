@@ -1,0 +1,37 @@
+- generic [ref=e2]:
+  - generic [ref=e5]:
+    - searchbox "输入搜索词" [active] [ref=e6]
+    - button "Submit"
+    - generic "搜索网页" [ref=e7]:
+      - img [ref=e8]
+  - contentinfo [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: © 2026 Microsoft
+      - list [ref=e17]:
+        - listitem [ref=e18]:
+          - link "增值电信业务经营许可证：合字B2-20090007" [ref=e19] [cursor=pointer]:
+            - /url: https://dxzhgl.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyereport.jsp?num=caf04fa4-bd8a-4d9e-80b6-2aa1b86c1509&type=yreport
+        - listitem [ref=e20]:
+          - link "京ICP备10036305号-7" [ref=e21] [cursor=pointer]:
+            - /url: https://beian.miit.gov.cn
+        - listitem [ref=e22]:
+          - link "京公网安备11010802047360号" [ref=e23] [cursor=pointer]:
+            - /url: https://beian.mps.gov.cn/#/query/webSearch?code=11010802047360
+        - listitem [ref=e24]:
+          - link "隐私与 Cookie" [ref=e25] [cursor=pointer]:
+            - /url: //go.microsoft.com/fwlink/?LinkId=521839
+        - listitem [ref=e26]:
+          - link "法律声明" [ref=e27] [cursor=pointer]:
+            - /url: //go.microsoft.com/fwlink/?LinkID=246338
+        - listitem [ref=e28]:
+          - link "广告" [ref=e29] [cursor=pointer]:
+            - /url: //go.microsoft.com/fwlink/?linkid=868923
+        - listitem [ref=e30]:
+          - link "关于我们的广告" [ref=e31] [cursor=pointer]:
+            - /url: //go.microsoft.com/fwlink/?LinkID=286759
+        - listitem [ref=e32]:
+          - link "帮助" [ref=e33] [cursor=pointer]:
+            - /url: //support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f
+        - listitem [ref=e34]:
+          - link "反馈" [ref=e35] [cursor=pointer]:
+            - /url: "#"

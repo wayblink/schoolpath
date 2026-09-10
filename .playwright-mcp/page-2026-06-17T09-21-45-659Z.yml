@@ -1,0 +1,148 @@
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e39723] [cursor=pointer]:
+    - img [ref=e39724]
+  - alert [ref=e39727]
+  - main [ref=e79404]:
+    - generic [ref=e79407]:
+      - link "学 学区图谱 上海学区房数据工作台 · 2025" [ref=e79408] [cursor=pointer]:
+        - /url: /#map
+        - generic [ref=e79409]: 学
+        - generic [ref=e79410]:
+          - generic [ref=e79411]: 学区图谱
+          - generic [ref=e79412]: 上海学区房数据工作台 · 2025
+      - navigation "首页导航" [ref=e79413]:
+        - link "地图" [ref=e79414] [cursor=pointer]:
+          - /url: /#map
+          - img [ref=e79415]
+          - generic [ref=e79417]: 地图
+        - link "学校" [active] [ref=e79418] [cursor=pointer]:
+          - /url: /#schools
+          - img [ref=e79419]
+          - generic [ref=e79424]: 学校
+        - link "数据源" [ref=e79425] [cursor=pointer]:
+          - /url: /#data-sources
+          - img [ref=e79426]
+          - generic [ref=e79429]: 数据源
+      - generic [ref=e79430]:
+        - link "数据库" [ref=e79431] [cursor=pointer]:
+          - /url: /db
+          - img [ref=e79432]
+          - generic [ref=e79436]: 数据库
+        - button "设置" [ref=e79438]:
+          - img [ref=e79439]
+        - link "v0.3 BETA" [ref=e79443] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e119195]:
+      - complementary [ref=e119196]:
+        - generic [ref=e119197]:
+          - generic [ref=e119198]:
+            - generic [ref=e119199]:
+              - generic [ref=e119200]: 搜索筛选
+              - generic [ref=e119201]: 当前可见 1 / 1353 所
+            - button "小区查学校" [ref=e119202]:
+              - img [ref=e119203]
+              - generic [ref=e119206]: 小区查学校
+          - generic [ref=e119207]:
+            - generic [ref=e119208]:
+              - generic [ref=e119209]: 学校名
+              - generic [ref=e119210]:
+                - img
+                - searchbox "学校名" [ref=e119211]: 爱菊
+            - generic [ref=e119212]:
+              - generic [ref=e119213]: 区
+              - combobox "区" [ref=e119214]:
+                - option "全市" [selected]
+                - option "徐汇"
+                - option "黄浦"
+                - option "长宁"
+                - option "静安"
+                - option "普陀"
+                - option "虹口"
+                - option "杨浦"
+                - option "浦东"
+                - option "闵行"
+                - option "宝山"
+                - option "嘉定"
+                - option "金山"
+                - option "松江"
+                - option "青浦"
+                - option "奉贤"
+                - option "崇明"
+            - generic [ref=e119215]:
+              - generic [ref=e119216]: 学段
+              - generic [ref=e119217]:
+                - button "全部" [ref=e119218]
+                - button "小学" [ref=e119219]
+                - button "初中" [ref=e119220]
+            - generic [ref=e119221]:
+              - generic [ref=e119222]: 梯队
+              - generic [ref=e119223]:
+                - button "一梯队" [pressed] [ref=e119224]:
+                  - generic [ref=e119226]: 一梯队
+                - button "二梯队" [pressed] [ref=e119227]:
+                  - generic [ref=e119229]: 二梯队
+                - button "三梯队" [pressed] [ref=e119230]:
+                  - generic [ref=e119232]: 三梯队
+                - button "四梯队" [pressed] [ref=e119233]:
+                  - generic [ref=e119235]: 四梯队
+                - button "待补充" [pressed] [ref=e119236]:
+                  - generic [ref=e119238]: 待补充
+        - button "爱菊小学 小学 私立 一梯队" [ref=e119243]:
+          - generic [ref=e119245]: 爱菊小学
+          - generic [ref=e119246]: 小学
+          - generic [ref=e119247]: 私立
+          - generic [ref=e119249]: 一梯队
+      - separator "调整学校列表和地图宽度" [ref=e119250]
+      - generic [ref=e119251]:
+        - generic [ref=e119252] [cursor=pointer]:
+          - iframe [ref=e119253]:
+            
+          - generic:
+            - img
+          - generic [ref=e119256]: © 2026 AutoNavi - GS(2025)5996号
+        - generic:
+          - text: 全市·
+          - generic: 1 校
+        - generic [ref=e119257]:
+          - generic [ref=e119259]:
+            - generic [ref=e119260]:
+              - generic [ref=e119261]: 数据完备度
+              - generic [ref=e119262]: 全市 · 2025
+            - generic [ref=e119263]: 64%
+          - generic [ref=e119264]:
+            - generic [ref=e119265]:
+              - generic [ref=e119266]: 学校
+              - generic [ref=e119269]: 100%
+            - generic [ref=e119270]:
+              - generic [ref=e119271]: 梯队
+              - generic [ref=e119274]: 34%
+            - generic [ref=e119275]:
+              - generic [ref=e119276]: 性质
+              - generic [ref=e119279]: 73%
+            - generic [ref=e119280]:
+              - generic [ref=e119281]: 地点
+              - generic [ref=e119284]: 18%
+            - generic [ref=e119285]:
+              - generic [ref=e119286]: 对口小区
+              - generic [ref=e119289]: 39%
+            - generic [ref=e119290]:
+              - generic [ref=e119291]: 小区位置
+              - generic [ref=e119294]: 99%
+            - generic [ref=e119295]:
+              - generic [ref=e119296]: 坐标点
+              - generic [ref=e119299]: 84%
+          - generic [ref=e119300]:
+            - generic [ref=e119301]: 待补短板区
+            - generic [ref=e119302]:
+              - generic [ref=e119303]:
+                - generic [ref=e119304]: 松江
+                - generic [ref=e119305]: 30%
+              - generic [ref=e119306]:
+                - generic [ref=e119307]: 青浦
+                - generic [ref=e119308]: 30%
+              - generic [ref=e119309]:
+                - generic [ref=e119310]: 奉贤
+                - generic [ref=e119311]: 31%
+              - generic [ref=e119312]:
+                - generic [ref=e119313]: 金山
+                - generic [ref=e119314]: 31%

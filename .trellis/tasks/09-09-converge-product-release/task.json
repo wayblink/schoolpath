@@ -1,0 +1,28 @@
+{
+  "id": "converge-product-release",
+  "name": "converge-product-release",
+  "title": "收敛产品覆盖范围并补齐发布质量门禁",
+  "description": "修复构建与 lint 阻塞，限制产品仅覆盖上海九个指定城区并补充 CI/CD",
+  "status": "in_progress",
+  "dev_type": null,
+  "scope": null,
+  "package": null,
+  "priority": "P2",
+  "creator": "wayblink",
+  "assignee": "wayblink",
+  "createdAt": "2026-09-09",
+  "completedAt": null,
+  "branch": "main",
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [
+    "09-09-xuequzhushou-full-ingest"
+  ],
+  "parent": null,
+  "relatedFiles": [],
+  "notes": "",
+  "meta": {}
+}

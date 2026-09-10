@@ -1,0 +1,133 @@
+[
+  {
+    "ts": "2026-08-13T10:53:02.259Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 4626,
+    "school_name": "上海市南汇第四中学",
+    "changes": {
+      "lat": {
+        "from": 31.044501,
+        "to": null
+      },
+      "lng": {
+        "from": 121.761753,
+        "to": null
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市南汇第四中学",
+      "rawNature": "公办",
+      "rawAddress": "沿河泾南路18号"
+    },
+    "note": "2025浦东官方初中招生入学信息中南汇第四中学有本部、北校区、东校区；现有行地址为沿河泾南路18号且简称为南汇四中，和本部记录匹配。当前坐标来自 AED POI，非学校点位，故清空等待后续地图核验。",
+    "before": {
+      "id": 4626,
+      "name": "上海市南汇第四中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "沿河泾南路18号",
+      "lat": 31.044501,
+      "lng": 121.761753,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "南汇四中",
+        "上海市南汇第四中学"
+      ]
+    },
+    "after": {
+      "id": 4626,
+      "name": "上海市南汇第四中学",
+      "district": "浦东",
+      "type": "middle",
+      "address": "沿河泾南路18号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "南汇四中",
+        "上海市南汇第四中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T10:53:02.266Z",
+    "operation": "reviewed_school_correction_round5",
+    "mode": "dry-run",
+    "school_id": 5022,
+    "school_name": "上海市上南中学北校",
+    "changes": {
+      "lat": {
+        "from": 31.181708,
+        "to": null
+      },
+      "lng": {
+        "from": 121.515213,
+        "to": null
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3770,
+        "name": "上海市上南中学北校",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市上南中学北校",
+      "rawNature": "公办",
+      "rawAddress": "南码头路1347号"
+    },
+    "note": "2025浦东官方初中招生入学信息确认上海市上南中学北校、公办性质和南码头路1347号地址；当前坐标来自羽毛球培训店 POI，非学校点位，故清空等待后续地图核验。",
+    "before": {
+      "id": 5022,
+      "name": "上海市上南中学北校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "南码头路1347号",
+      "lat": 31.181708,
+      "lng": 121.515213,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "上南北校",
+        "上南中学北校",
+        "上海市上南中学北校"
+      ]
+    },
+    "after": {
+      "id": 5022,
+      "name": "上海市上南中学北校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "南码头路1347号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "上南北校",
+        "上南中学北校",
+        "上海市上南中学北校"
+      ]
+    }
+  }
+]

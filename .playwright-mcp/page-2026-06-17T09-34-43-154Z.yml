@@ -1,0 +1,350 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e39723] [cursor=pointer]:
+    - img [ref=e39724]
+  - alert [ref=e39727]
+  - main [ref=e119316]:
+    - generic [ref=e119319]:
+      - link "学 学区图谱 上海学区房数据工作台 · 2025" [ref=e119320] [cursor=pointer]:
+        - /url: /#map
+        - generic [ref=e119321]: 学
+        - generic [ref=e119322]:
+          - generic [ref=e119323]: 学区图谱
+          - generic [ref=e119324]: 上海学区房数据工作台 · 2025
+      - navigation "首页导航" [ref=e119325]:
+        - link "地图" [ref=e119326] [cursor=pointer]:
+          - /url: /#map
+          - img [ref=e119327]
+          - generic [ref=e119329]: 地图
+        - link "学校" [ref=e119330] [cursor=pointer]:
+          - /url: /#schools
+          - img [ref=e119331]
+          - generic [ref=e119336]: 学校
+        - link "数据源" [ref=e119337] [cursor=pointer]:
+          - /url: /#data-sources
+          - img [ref=e119338]
+          - generic [ref=e119341]: 数据源
+      - generic [ref=e119342]:
+        - link "数据库" [ref=e119343] [cursor=pointer]:
+          - /url: /db
+          - img [ref=e119344]
+          - generic [ref=e119348]: 数据库
+        - button "设置" [ref=e119350]:
+          - img [ref=e119351]
+        - link "v0.3 BETA" [ref=e119355] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e119356]:
+      - complementary [ref=e119357]:
+        - generic [ref=e120252]:
+          - generic [ref=e120254]:
+            - generic [ref=e120255]: 搜索筛选
+            - generic [ref=e120256]: 当前可见 1 / 1353 所
+          - generic [ref=e120257]:
+            - generic [ref=e120258]:
+              - generic [ref=e120259]: 学校名
+              - generic [ref=e120260]:
+                - img
+                - searchbox "学校名" [ref=e120261]: 卢湾二中心
+            - generic [ref=e120262]:
+              - generic [ref=e120263]: 区
+              - combobox "区" [ref=e120264]:
+                - option "全市" [selected]
+                - option "徐汇"
+                - option "黄浦"
+                - option "长宁"
+                - option "静安"
+                - option "普陀"
+                - option "虹口"
+                - option "杨浦"
+                - option "浦东"
+                - option "闵行"
+                - option "宝山"
+                - option "嘉定"
+                - option "金山"
+                - option "松江"
+                - option "青浦"
+                - option "奉贤"
+                - option "崇明"
+            - generic [ref=e120265]:
+              - generic [ref=e120266]: 学段
+              - generic [ref=e120267]:
+                - button "全部" [ref=e120268]
+                - button "小学" [ref=e120269]
+                - button "初中" [ref=e120270]
+            - generic [ref=e120271]:
+              - generic [ref=e120272]: 梯队
+              - generic [ref=e120273]:
+                - button "一梯队" [pressed] [ref=e120274]:
+                  - generic [ref=e120276]: 一梯队
+                - button "二梯队" [pressed] [ref=e120277]:
+                  - generic [ref=e120279]: 二梯队
+                - button "三梯队" [pressed] [ref=e120280]:
+                  - generic [ref=e120282]: 三梯队
+                - button "四梯队" [pressed] [ref=e120283]:
+                  - generic [ref=e120285]: 四梯队
+                - button "待补充" [pressed] [ref=e120286]:
+                  - generic [ref=e120288]: 待补充
+        - generic [ref=e120024]:
+          - button "上海市黄浦区卢湾二中心小学 小学 公立 一梯队" [ref=e120026]:
+            - generic [ref=e120028]: 上海市黄浦区卢湾二中心小学
+            - generic [ref=e120029]: 小学
+            - generic [ref=e120030]: 公立
+            - generic [ref=e120032]: 一梯队
+          - generic [ref=e120033]:
+            - generic [ref=e120034]:
+              - generic [ref=e120036]: 学校资讯
+              - generic [ref=e120038]:
+                - generic [ref=e120039]: 地址
+                - generic [ref=e120040]:
+                  - generic [ref=e120041]: 复兴中路642号
+                  - link "高德 ↗" [ref=e120042] [cursor=pointer]:
+                    - /url: https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6%20%E5%A4%8D%E5%85%B4%E4%B8%AD%E8%B7%AF642%E5%8F%B7
+            - generic [ref=e120043]:
+              - link "链家搜索 ↗" [ref=e120044] [cursor=pointer]:
+                - /url: https://sh.lianjia.com/ershoufang/rs%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6/
+              - link "高德搜本校位置 ↗" [ref=e120045] [cursor=pointer]:
+                - /url: https://www.amap.com/search?query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E5%8D%A2%E6%B9%BE%E4%BA%8C%E4%B8%AD%E5%BF%83%E5%B0%8F%E5%AD%A6
+              - link "查看招生政策 ↗" [ref=e120046] [cursor=pointer]:
+                - /url: https://sh.bendibao.com/
+            - generic [ref=e120047]:
+              - generic [ref=e120048]:
+                - generic [ref=e120049]: 对口居委
+                - generic [ref=e120050]: "(1 个，来源: 上海本地宝 2025-04 (sh.bendibao.com/edu/202547))"
+              - link "达标" [ref=e120053] [cursor=pointer]:
+                - /url: https://www.amap.com/search?query=%E5%BE%90%E6%B1%87%E5%8C%BA%E8%BE%BE%E6%A0%87%E5%B1%85%E5%A7%94%E4%BC%9A
+            - generic [ref=e120054]:
+              - generic [ref=e120055]:
+                - generic [ref=e120056]: 对口小区候选
+                - generic [ref=e120057]: (16 个，0 个有房价)
+              - list [ref=e120059]:
+                - listitem [ref=e120060]:
+                  - button "微领地青年社区(北虹桥国际社区) 达标 · 金园一路1280号(金运路地铁站5号口步行430米) 待采集 — 高德 ↗" [ref=e120061] [cursor=pointer]:
+                    - generic [ref=e120062]:
+                      - generic [ref=e120063]: 微领地青年社区(北虹桥国际社区)
+                      - generic [ref=e120064]: 达标 · 金园一路1280号(金运路地铁站5号口步行430米)
+                    - generic [ref=e120065]:
+                      - generic [ref=e120066]: 待采集
+                      - generic [ref=e120067]: —
+                    - link "高德 ↗" [ref=e120069]:
+                      - /url: https://www.amap.com/search?query=%E5%BE%AE%E9%A2%86%E5%9C%B0%E9%9D%92%E5%B9%B4%E7%A4%BE%E5%8C%BA(%E5%8C%97%E8%99%B9%E6%A1%A5%E5%9B%BD%E9%99%85%E7%A4%BE%E5%8C%BA)%20%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF1280%E5%8F%B7(%E9%87%91%E8%BF%90%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C430%E7%B1%B3)
+                - listitem [ref=e120070]:
+                  - button "金鹤新城金沙缘圆宝邸 达标 · 金园一路1359弄1-69号 待采集 — 高德 ↗" [ref=e120071] [cursor=pointer]:
+                    - generic [ref=e120072]:
+                      - generic [ref=e120073]: 金鹤新城金沙缘圆宝邸
+                      - generic [ref=e120074]: 达标 · 金园一路1359弄1-69号
+                    - generic [ref=e120075]:
+                      - generic [ref=e120076]: 待采集
+                      - generic [ref=e120077]: —
+                    - link "高德 ↗" [ref=e120079]:
+                      - /url: https://www.amap.com/search?query=%E9%87%91%E9%B9%A4%E6%96%B0%E5%9F%8E%E9%87%91%E6%B2%99%E7%BC%98%E5%9C%86%E5%AE%9D%E9%82%B8%20%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF1359%E5%BC%841-69%E5%8F%B7
+                - listitem [ref=e120080]:
+                  - button "金鹤新城 达标 · 江桥镇金园一路1115弄(金运路地铁站8号口步行350米) 待采集 — 高德 ↗" [ref=e120081] [cursor=pointer]:
+                    - generic [ref=e120082]:
+                      - generic [ref=e120083]: 金鹤新城
+                      - generic [ref=e120084]: 达标 · 江桥镇金园一路1115弄(金运路地铁站8号口步行350米)
+                    - generic [ref=e120085]:
+                      - generic [ref=e120086]: 待采集
+                      - generic [ref=e120087]: —
+                    - link "高德 ↗" [ref=e120089]:
+                      - /url: https://www.amap.com/search?query=%E9%87%91%E9%B9%A4%E6%96%B0%E5%9F%8E%20%E6%B1%9F%E6%A1%A5%E9%95%87%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF1115%E5%BC%84(%E9%87%91%E8%BF%90%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%998%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C350%E7%B1%B3)
+                - listitem [ref=e120090]:
+                  - button "御生活力城 达标 · 鹤望路与金运路交叉口西140米 待采集 — 高德 ↗" [ref=e120091] [cursor=pointer]:
+                    - generic [ref=e120092]:
+                      - generic [ref=e120093]: 御生活力城
+                      - generic [ref=e120094]: 达标 · 鹤望路与金运路交叉口西140米
+                    - generic [ref=e120095]:
+                      - generic [ref=e120096]: 待采集
+                      - generic [ref=e120097]: —
+                    - link "高德 ↗" [ref=e120099]:
+                      - /url: https://www.amap.com/search?query=%E5%BE%A1%E7%94%9F%E6%B4%BB%E5%8A%9B%E5%9F%8E%20%E9%B9%A4%E6%9C%9B%E8%B7%AF%E4%B8%8E%E9%87%91%E8%BF%90%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E8%A5%BF140%E7%B1%B3
+                - listitem [ref=e120100]:
+                  - button "澜茵华庭 达标 · 嘉定金园一路1519弄(金运路地铁站5号口步行380米) 待采集 — 高德 ↗" [ref=e120101] [cursor=pointer]:
+                    - generic [ref=e120102]:
+                      - generic [ref=e120103]: 澜茵华庭
+                      - generic [ref=e120104]: 达标 · 嘉定金园一路1519弄(金运路地铁站5号口步行380米)
+                    - generic [ref=e120105]:
+                      - generic [ref=e120106]: 待采集
+                      - generic [ref=e120107]: —
+                    - link "高德 ↗" [ref=e120109]:
+                      - /url: https://www.amap.com/search?query=%E6%BE%9C%E8%8C%B5%E5%8D%8E%E5%BA%AD%20%E5%98%89%E5%AE%9A%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF1519%E5%BC%84(%E9%87%91%E8%BF%90%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C380%E7%B1%B3)
+                - listitem [ref=e120110]:
+                  - button "澜茵华庭东区 达标 · 金园一路1519弄(金运路地铁站4号口步行100米) 待采集 — 高德 ↗" [ref=e120111] [cursor=pointer]:
+                    - generic [ref=e120112]:
+                      - generic [ref=e120113]: 澜茵华庭东区
+                      - generic [ref=e120114]: 达标 · 金园一路1519弄(金运路地铁站4号口步行100米)
+                    - generic [ref=e120115]:
+                      - generic [ref=e120116]: 待采集
+                      - generic [ref=e120117]: —
+                    - link "高德 ↗" [ref=e120119]:
+                      - /url: https://www.amap.com/search?query=%E6%BE%9C%E8%8C%B5%E5%8D%8E%E5%BA%AD%E4%B8%9C%E5%8C%BA%20%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF1519%E5%BC%84(%E9%87%91%E8%BF%90%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%994%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C100%E7%B1%B3)
+                - listitem [ref=e120120]:
+                  - button "金鹤新城水岸金桥苑 达标 · 鹤霞路555弄 待采集 — 高德 ↗" [ref=e120121] [cursor=pointer]:
+                    - generic [ref=e120122]:
+                      - generic [ref=e120123]: 金鹤新城水岸金桥苑
+                      - generic [ref=e120124]: 达标 · 鹤霞路555弄
+                    - generic [ref=e120125]:
+                      - generic [ref=e120126]: 待采集
+                      - generic [ref=e120127]: —
+                    - link "高德 ↗" [ref=e120129]:
+                      - /url: https://www.amap.com/search?query=%E9%87%91%E9%B9%A4%E6%96%B0%E5%9F%8E%E6%B0%B4%E5%B2%B8%E9%87%91%E6%A1%A5%E8%8B%91%20%E9%B9%A4%E9%9C%9E%E8%B7%AF555%E5%BC%84
+                - listitem [ref=e120130]:
+                  - button "金鹤新城金霞苑 达标 · 鹤霞路111弄(金运路地铁站5号口步行480米) 待采集 — 高德 ↗" [ref=e120131] [cursor=pointer]:
+                    - generic [ref=e120132]:
+                      - generic [ref=e120133]: 金鹤新城金霞苑
+                      - generic [ref=e120134]: 达标 · 鹤霞路111弄(金运路地铁站5号口步行480米)
+                    - generic [ref=e120135]:
+                      - generic [ref=e120136]: 待采集
+                      - generic [ref=e120137]: —
+                    - link "高德 ↗" [ref=e120139]:
+                      - /url: https://www.amap.com/search?query=%E9%87%91%E9%B9%A4%E6%96%B0%E5%9F%8E%E9%87%91%E9%9C%9E%E8%8B%91%20%E9%B9%A4%E9%9C%9E%E8%B7%AF111%E5%BC%84(%E9%87%91%E8%BF%90%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C480%E7%B1%B3)
+                - listitem [ref=e120140]:
+                  - button "澜茵华庭西区 达标 · 江桥镇金园一路1518弄(金运路地铁站5号口步行280米) 待采集 — 高德 ↗" [ref=e120141] [cursor=pointer]:
+                    - generic [ref=e120142]:
+                      - generic [ref=e120143]: 澜茵华庭西区
+                      - generic [ref=e120144]: 达标 · 江桥镇金园一路1518弄(金运路地铁站5号口步行280米)
+                    - generic [ref=e120145]:
+                      - generic [ref=e120146]: 待采集
+                      - generic [ref=e120147]: —
+                    - link "高德 ↗" [ref=e120149]:
+                      - /url: https://www.amap.com/search?query=%E6%BE%9C%E8%8C%B5%E5%8D%8E%E5%BA%AD%E8%A5%BF%E5%8C%BA%20%E6%B1%9F%E6%A1%A5%E9%95%87%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF1518%E5%BC%84(%E9%87%91%E8%BF%90%E8%B7%AF%E5%9C%B0%E9%93%81%E7%AB%995%E5%8F%B7%E5%8F%A3%E6%AD%A5%E8%A1%8C280%E7%B1%B3)
+                - listitem [ref=e120150]:
+                  - button "洗脸熊洗脸吧(恒久又一城店) 达标 · 上海城区金运路514号 待采集 — 高德 ↗" [ref=e120151] [cursor=pointer]:
+                    - generic [ref=e120152]:
+                      - generic [ref=e120153]: 洗脸熊洗脸吧(恒久又一城店)
+                      - generic [ref=e120154]: 达标 · 上海城区金运路514号
+                    - generic [ref=e120155]:
+                      - generic [ref=e120156]: 待采集
+                      - generic [ref=e120157]: —
+                    - link "高德 ↗" [ref=e120159]:
+                      - /url: https://www.amap.com/search?query=%E6%B4%97%E8%84%B8%E7%86%8A%E6%B4%97%E8%84%B8%E5%90%A7(%E6%81%92%E4%B9%85%E5%8F%88%E4%B8%80%E5%9F%8E%E5%BA%97)%20%E4%B8%8A%E6%B5%B7%E5%9F%8E%E5%8C%BA%E9%87%91%E8%BF%90%E8%B7%AF514%E5%8F%B7
+                - listitem [ref=e120160]:
+                  - button "江桥镇阳光家园 达标 · 鹤旋路与金运路交叉口西北200米 待采集 — 高德 ↗" [ref=e120161] [cursor=pointer]:
+                    - generic [ref=e120162]:
+                      - generic [ref=e120163]: 江桥镇阳光家园
+                      - generic [ref=e120164]: 达标 · 鹤旋路与金运路交叉口西北200米
+                    - generic [ref=e120165]:
+                      - generic [ref=e120166]: 待采集
+                      - generic [ref=e120167]: —
+                    - link "高德 ↗" [ref=e120169]:
+                      - /url: https://www.amap.com/search?query=%E6%B1%9F%E6%A1%A5%E9%95%87%E9%98%B3%E5%85%89%E5%AE%B6%E5%9B%AD%20%E9%B9%A4%E6%97%8B%E8%B7%AF%E4%B8%8E%E9%87%91%E8%BF%90%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E8%A5%BF%E5%8C%97200%E7%B1%B3
+                - listitem [ref=e120170]:
+                  - button "恒久又一城B区 达标 · 金运路与金沙江西路交叉口北160米 待采集 — 高德 ↗" [ref=e120171] [cursor=pointer]:
+                    - generic [ref=e120172]:
+                      - generic [ref=e120173]: 恒久又一城B区
+                      - generic [ref=e120174]: 达标 · 金运路与金沙江西路交叉口北160米
+                    - generic [ref=e120175]:
+                      - generic [ref=e120176]: 待采集
+                      - generic [ref=e120177]: —
+                    - link "高德 ↗" [ref=e120179]:
+                      - /url: https://www.amap.com/search?query=%E6%81%92%E4%B9%85%E5%8F%88%E4%B8%80%E5%9F%8EB%E5%8C%BA%20%E9%87%91%E8%BF%90%E8%B7%AF%E4%B8%8E%E9%87%91%E6%B2%99%E6%B1%9F%E8%A5%BF%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E5%8C%97160%E7%B1%B3
+                - listitem [ref=e120180]:
+                  - button "沪宜居酒店式公寓 达标 · 金运路580号 待采集 — 高德 ↗" [ref=e120181] [cursor=pointer]:
+                    - generic [ref=e120182]:
+                      - generic [ref=e120183]: 沪宜居酒店式公寓
+                      - generic [ref=e120184]: 达标 · 金运路580号
+                    - generic [ref=e120185]:
+                      - generic [ref=e120186]: 待采集
+                      - generic [ref=e120187]: —
+                    - link "高德 ↗" [ref=e120189]:
+                      - /url: https://www.amap.com/search?query=%E6%B2%AA%E5%AE%9C%E5%B1%85%E9%85%92%E5%BA%97%E5%BC%8F%E5%85%AC%E5%AF%93%20%E9%87%91%E8%BF%90%E8%B7%AF580%E5%8F%B7
+                - listitem [ref=e120190]:
+                  - button "嘉定美好家园 达标 · 鹤霞路与金园一路交叉口东160米 待采集 — 高德 ↗" [ref=e120191] [cursor=pointer]:
+                    - generic [ref=e120192]:
+                      - generic [ref=e120193]: 嘉定美好家园
+                      - generic [ref=e120194]: 达标 · 鹤霞路与金园一路交叉口东160米
+                    - generic [ref=e120195]:
+                      - generic [ref=e120196]: 待采集
+                      - generic [ref=e120197]: —
+                    - link "高德 ↗" [ref=e120199]:
+                      - /url: https://www.amap.com/search?query=%E5%98%89%E5%AE%9A%E7%BE%8E%E5%A5%BD%E5%AE%B6%E5%9B%AD%20%E9%B9%A4%E9%9C%9E%E8%B7%AF%E4%B8%8E%E9%87%91%E5%9B%AD%E4%B8%80%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E4%B8%9C160%E7%B1%B3
+                - listitem [ref=e120200]:
+                  - button "泰宸复兴苑 达标 · 江桥镇鹤旋路155弄 待采集 — 高德 ↗" [ref=e120201] [cursor=pointer]:
+                    - generic [ref=e120202]:
+                      - generic [ref=e120203]: 泰宸复兴苑
+                      - generic [ref=e120204]: 达标 · 江桥镇鹤旋路155弄
+                    - generic [ref=e120205]:
+                      - generic [ref=e120206]: 待采集
+                      - generic [ref=e120207]: —
+                    - link "高德 ↗" [ref=e120209]:
+                      - /url: https://www.amap.com/search?query=%E6%B3%B0%E5%AE%B8%E5%A4%8D%E5%85%B4%E8%8B%91%20%E6%B1%9F%E6%A1%A5%E9%95%87%E9%B9%A4%E6%97%8B%E8%B7%AF155%E5%BC%84
+                - listitem [ref=e120210]:
+                  - button "中铁七局生活区 达标 · 金运路与鹤霞路交叉口南120米 待采集 — 高德 ↗" [ref=e120211] [cursor=pointer]:
+                    - generic [ref=e120212]:
+                      - generic [ref=e120213]: 中铁七局生活区
+                      - generic [ref=e120214]: 达标 · 金运路与鹤霞路交叉口南120米
+                    - generic [ref=e120215]:
+                      - generic [ref=e120216]: 待采集
+                      - generic [ref=e120217]: —
+                    - link "高德 ↗" [ref=e120219]:
+                      - /url: https://www.amap.com/search?query=%E4%B8%AD%E9%93%81%E4%B8%83%E5%B1%80%E7%94%9F%E6%B4%BB%E5%8C%BA%20%E9%87%91%E8%BF%90%E8%B7%AF%E4%B8%8E%E9%B9%A4%E9%9C%9E%E8%B7%AF%E4%BA%A4%E5%8F%89%E5%8F%A3%E5%8D%97120%E7%B1%B3
+      - separator "调整学校列表和地图宽度" [ref=e119434]
+      - generic [ref=e119435]:
+        - generic [ref=e119436] [cursor=pointer]:
+          - iframe [ref=e119437]:
+            
+          - generic [ref=e119439]:
+            - generic:
+              - 'generic "微领地青年社区(北虹桥国际社区) 房价: 待采集 金园一路1280号(金运路地铁站5号口步行430米) 来自居委: 达标" [ref=e120220]'
+              - 'generic "金鹤新城金沙缘圆宝邸 房价: 待采集 金园一路1359弄1-69号 来自居委: 达标" [ref=e120222]'
+              - 'generic "金鹤新城 房价: 待采集 江桥镇金园一路1115弄(金运路地铁站8号口步行350米) 来自居委: 达标" [ref=e120224]'
+              - 'generic "御生活力城 房价: 待采集 鹤望路与金运路交叉口西140米 来自居委: 达标" [ref=e120226]'
+              - 'generic "澜茵华庭 房价: 待采集 嘉定金园一路1519弄(金运路地铁站5号口步行380米) 来自居委: 达标" [ref=e120228]'
+              - 'generic "澜茵华庭东区 房价: 待采集 金园一路1519弄(金运路地铁站4号口步行100米) 来自居委: 达标" [ref=e120230]'
+              - 'generic "金鹤新城水岸金桥苑 房价: 待采集 鹤霞路555弄 来自居委: 达标" [ref=e120232]'
+              - 'generic "金鹤新城金霞苑 房价: 待采集 鹤霞路111弄(金运路地铁站5号口步行480米) 来自居委: 达标" [ref=e120234]'
+              - 'generic "澜茵华庭西区 房价: 待采集 江桥镇金园一路1518弄(金运路地铁站5号口步行280米) 来自居委: 达标" [ref=e120236]'
+              - 'generic "洗脸熊洗脸吧(恒久又一城店) 房价: 待采集 上海城区金运路514号 来自居委: 达标" [ref=e120238]'
+              - 'generic "江桥镇阳光家园 房价: 待采集 鹤旋路与金运路交叉口西北200米 来自居委: 达标" [ref=e120240]'
+              - 'generic "恒久又一城B区 房价: 待采集 金运路与金沙江西路交叉口北160米 来自居委: 达标" [ref=e120242]'
+              - 'generic "沪宜居酒店式公寓 房价: 待采集 金运路580号 来自居委: 达标" [ref=e120244]'
+              - 'generic "嘉定美好家园 房价: 待采集 鹤霞路与金园一路交叉口东160米 来自居委: 达标" [ref=e120246]'
+              - 'generic "泰宸复兴苑 房价: 待采集 江桥镇鹤旋路155弄 来自居委: 达标" [ref=e120248]'
+              - 'generic "中铁七局生活区 房价: 待采集 金运路与鹤霞路交叉口南120米 来自居委: 达标" [ref=e120250]'
+          - generic:
+            - img
+          - generic [ref=e119441]: © 2026 AutoNavi - GS(2025)5996号
+        - generic:
+          - text: 全市·
+          - generic: 1 校 · 16 小区
+        - generic [ref=e119442]:
+          - generic [ref=e119444]:
+            - generic [ref=e119445]:
+              - generic [ref=e119446]: 数据完备度
+              - generic [ref=e119447]: 全市 · 2025
+            - generic [ref=e119448]: 64%
+          - generic [ref=e119449]:
+            - generic [ref=e119450]:
+              - generic [ref=e119451]: 学校
+              - generic [ref=e119454]: 100%
+            - generic [ref=e119455]:
+              - generic [ref=e119456]: 梯队
+              - generic [ref=e119459]: 34%
+            - generic [ref=e119460]:
+              - generic [ref=e119461]: 性质
+              - generic [ref=e119464]: 73%
+            - generic [ref=e119465]:
+              - generic [ref=e119466]: 地点
+              - generic [ref=e119469]: 18%
+            - generic [ref=e119470]:
+              - generic [ref=e119471]: 对口小区
+              - generic [ref=e119474]: 39%
+            - generic [ref=e119475]:
+              - generic [ref=e119476]: 小区位置
+              - generic [ref=e119479]: 99%
+            - generic [ref=e119480]:
+              - generic [ref=e119481]: 坐标点
+              - generic [ref=e119484]: 84%
+          - generic [ref=e119485]:
+            - generic [ref=e119486]: 待补短板区
+            - generic [ref=e119487]:
+              - generic [ref=e119488]:
+                - generic [ref=e119489]: 松江
+                - generic [ref=e119490]: 30%
+              - generic [ref=e119491]:
+                - generic [ref=e119492]: 青浦
+                - generic [ref=e119493]: 30%
+              - generic [ref=e119494]:
+                - generic [ref=e119495]: 奉贤
+                - generic [ref=e119496]: 31%
+              - generic [ref=e119497]:
+                - generic [ref=e119498]: 金山
+                - generic [ref=e119499]: 31%

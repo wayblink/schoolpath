@@ -1,0 +1,158 @@
+[
+  {
+    "ts": "2026-06-18T09:37:59.116Z",
+    "operation": "reviewed_school_correction_round6",
+    "mode": "dry-run",
+    "school_id": 4619,
+    "school_name": "建平西校",
+    "changes": {
+      "name": {
+        "from": "建平西校",
+        "to": "上海市建平中学西校（华城校区）"
+      },
+      "address": {
+        "from": "上海市浦东新区东方路1295号附近",
+        "to": "源深路383号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "建平西校",
+          "建平中学西校",
+          "华城校区"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3696,
+        "name": "上海市建平中学西校（华城校区）",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "上海市建平中学西校（华城校区（A）校区）",
+      "rawNature": "公办",
+      "rawAddress": "源深路383号"
+    },
+    "note": "2025浦东官方初中招生入学信息中建平中学西校有华城A、华城B、大唐多个校区；现有百度学校 POI 为建平中学西校(华城校区)，地址为源深路383号，匹配官方华城校区（A）。本次补全为华城校区全称并用官方地址覆盖原来的东方路附近泛地址。",
+    "before": {
+      "id": 4619,
+      "name": "建平西校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市浦东新区东方路1295号附近",
+      "lat": 31.23497628032707,
+      "lng": 121.53402153388102,
+      "school_nature": "公立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4619,
+      "name": "上海市建平中学西校（华城校区）",
+      "district": "浦东",
+      "type": "middle",
+      "address": "源深路383号",
+      "lat": 31.23497628032707,
+      "lng": 121.53402153388102,
+      "school_nature": "公立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "建平西校",
+        "建平中学西校",
+        "华城校区"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:37:59.118Z",
+    "operation": "reviewed_school_correction_round6",
+    "mode": "dry-run",
+    "school_id": 4758,
+    "school_name": "世外学校",
+    "changes": {
+      "name": {
+        "from": "世外学校",
+        "to": "上海嘉定区世外学校"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "嘉定"
+      },
+      "address": {
+        "from": "上海市嘉定区惠桂路255号",
+        "to": "嘉定区惠桂路255号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "世外学校",
+          "嘉定世外",
+          "嘉定区世外学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 4657,
+        "name": "上海嘉定区世外学校",
+        "district": "嘉定",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年嘉定区义务教育阶段民办学校基本情况",
+      "url": "https://www.shanghai.gov.cn/cmsres/b9/b967748e67074323a73ef1586db4ef32/85e9c727c4c5a019e3135337cac7b180.pdf",
+      "date": "2025",
+      "matchedName": "上海嘉定区世外学校",
+      "rawNature": "民办",
+      "rawAddress": "嘉定区惠桂路255号"
+    },
+    "note": "现有行 district=浦东 但地址和百度学校 POI 均为嘉定区惠桂路255号的上海嘉定区世外学校；2025嘉定官方义务教育阶段民办学校基本情况确认该校全称、民办性质和地址。本次按官方源纠正区属、名称、地址和性质，记录重复候选但不合并删除。",
+    "before": {
+      "id": 4758,
+      "name": "世外学校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市嘉定区惠桂路255号",
+      "lat": 31.30630433543651,
+      "lng": 121.27145444618111,
+      "school_nature": null,
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4758,
+      "name": "上海嘉定区世外学校",
+      "district": "嘉定",
+      "type": "middle",
+      "address": "嘉定区惠桂路255号",
+      "lat": 31.30630433543651,
+      "lng": 121.27145444618111,
+      "school_nature": "私立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "世外学校",
+        "嘉定世外",
+        "嘉定区世外学校"
+      ]
+    }
+  }
+]

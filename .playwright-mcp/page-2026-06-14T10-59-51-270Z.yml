@@ -1,0 +1,75 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: 学
+        - generic [ref=e7]:
+          - generic [ref=e8]: 学区图谱
+          - generic [ref=e9]: SHANGHAI · 2025
+      - generic [ref=e11]:
+        - generic [ref=e12]: 区
+        - combobox [ref=e13] [cursor=pointer]:
+          - option "全市" [selected]
+          - option "徐汇"
+          - option "黄浦"
+          - option "长宁"
+          - option "静安"
+          - option "普陀"
+          - option "虹口"
+          - option "杨浦"
+          - option "浦东"
+          - option "闵行"
+          - option "宝山"
+          - option "嘉定"
+          - option "金山"
+          - option "松江"
+          - option "青浦"
+          - option "奉贤"
+          - option "崇明"
+      - generic [ref=e14]:
+        - button "全部" [ref=e15]
+        - button "小学" [ref=e16]
+        - button "初中" [ref=e17]
+      - generic [ref=e18]:
+        - generic [ref=e19]: 当前可见
+        - generic [ref=e20]: 0 所
+      - generic [ref=e21]:
+        - generic [ref=e22]: 梯队
+        - button "一梯队" [pressed] [ref=e23]:
+          - generic [ref=e25]: 一梯队
+        - button "二梯队" [pressed] [ref=e26]:
+          - generic [ref=e28]: 二梯队
+        - button "三梯队" [pressed] [ref=e29]:
+          - generic [ref=e31]: 三梯队
+        - button "四梯队" [pressed] [ref=e32]:
+          - generic [ref=e34]: 四梯队
+        - button "待补充" [pressed] [ref=e35]:
+          - generic [ref=e37]: 待补充
+      - generic [ref=e38]:
+        - button "小区查学校 ⌘K" [ref=e39]:
+          - img [ref=e40]
+          - generic [ref=e43]: 小区查学校
+          - generic [ref=e44]: ⌘K
+        - link "数据库" [ref=e45] [cursor=pointer]:
+          - /url: /db
+          - img [ref=e46]
+          - generic [ref=e50]: 数据库
+        - button "设置" [ref=e52]:
+          - img [ref=e53]
+        - link "v0.3 BETA" [ref=e57] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e58]:
+      - generic [ref=e61]: 加载中…
+      - generic [ref=e62]:
+        - generic:
+          - text: 全市·
+          - generic: 0 校
+        - generic: 完备度加载中…
+      - separator "调整列表和地图宽度" [ref=e64]:
+        - generic [ref=e66]:
+          - button "收起左侧列表" [ref=e67]:
+            - img [ref=e68]
+          - button "收起右侧地图" [ref=e71]:
+            - img [ref=e72]
+  - button "Open Next.js Dev Tools" [ref=e80] [cursor=pointer]:
+    - img [ref=e81]

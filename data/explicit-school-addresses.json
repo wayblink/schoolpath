@@ -1,0 +1,2428 @@
+{
+  "_notes": [
+    "显式学校地址回填来源文件。原来这些映射在 scripts/backfill-school-addresses-explicit.ts 中硬编码，现在沉淀为数据文件。",
+    "脚本默认 dry-run，只回填空地址；不会覆盖已有地址，不会删除、truncate、reset 或 seed。"
+  ],
+  "items": [
+    {
+      "id": 3926,
+      "district": "嘉定",
+      "type": "primary",
+      "name": "上海市嘉定区城中路 小学（东校区）",
+      "address": "上海市嘉定区菊园新区双坪路266号",
+      "matchedName": "上海市嘉定区城中路小学（东校区）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+      "note": "official row lists west/east campuses; selected east campus address"
+    },
+    {
+      "id": 3950,
+      "district": "嘉定",
+      "type": "primary",
+      "name": "上海交通 大学附属嘉 定实验学校总部 （小学部）",
+      "address": "上海市嘉定区麦积路860号",
+      "matchedName": "上海交通大学附属嘉定实验学校总部（小学部）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3951,
+      "district": "嘉定",
+      "type": "primary",
+      "name": "上海交通大学附属嘉 定实验学校（分部） （小学部）",
+      "address": "上海市嘉定区德立路303号",
+      "matchedName": "上海交通大学附属嘉定实验学校（分部）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4000,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海交通 大学附属嘉定实验 学校总部（初中部）",
+      "address": "上海市嘉定区封周路800号",
+      "matchedName": "上海交通大学附属嘉定实验学校总部（初中部）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4001,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海交通大学附属嘉定实验 学校（分部） （初中部）",
+      "address": "上海市嘉定区德立路303号",
+      "matchedName": "上海交通大学附属嘉定实验学校（分部）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4006,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海大学附属嘉定留云中学 （古猗校区）",
+      "address": "上海市嘉定区嘉耀路1125号",
+      "matchedName": "上海大学附属嘉定留云中学（古猗校区）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4009,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市曹杨二中附属江桥实 验中学（海波校区）",
+      "address": "上海市嘉定区德园南路255号",
+      "matchedName": "上海市曹杨二中附属江桥实验中学（海波校区）",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3958,
+      "district": "嘉定",
+      "type": "primary",
+      "name": "上海世外教育附属嘉 世云翔小学",
+      "address": "上海市嘉定区惠桂路101号",
+      "matchedName": "上海世外教育附属嘉定云翔小学",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3985,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区练川实验学校 （初中部）",
+      "address": "上海市嘉定区墅沟路600号",
+      "matchedName": "上海市嘉定区练川实验学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3986,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海外国语大学嘉定外国语 学校（初中部）",
+      "address": "上海市嘉定区安亭镇墨玉北路888号",
+      "matchedName": "上海外国语大学嘉定外国语学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3996,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区戬浜学校 （初中部）",
+      "address": "上海市嘉定区嘉戬公路665号",
+      "matchedName": "上海市嘉定区戬浜学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3999,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市宋校嘉定实验学校 （初中部）",
+      "address": "上海市嘉定区康年路261号",
+      "matchedName": "上海市宋校嘉定实验学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4004,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区苏民学校 （初中部）",
+      "address": "上海市嘉定区南翔镇南华路318号",
+      "matchedName": "上海市嘉定区苏民学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4010,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区嘉二实验学校 （初中部）",
+      "address": "上海市嘉定区江桥镇乡思路200号",
+      "matchedName": "上海市嘉定区嘉二实验学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4011,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区金鹤学校 （初中部）",
+      "address": "上海市嘉定区江桥镇鹤霞路136号",
+      "matchedName": "上海市嘉定区金鹤学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4018,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区朱桥学校 （初中部）",
+      "address": "上海市嘉定区嘉朱公路1715号",
+      "matchedName": "上海市嘉定区朱桥学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4019,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区娄塘学校 （初中部）",
+      "address": "上海市嘉定区娄塘路789号",
+      "matchedName": "上海市嘉定区娄塘学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 4021,
+      "district": "嘉定",
+      "type": "middle",
+      "name": "上海市嘉定区华亭学校 （初中部）",
+      "address": "上海市嘉定区华亭镇华谊一路12号",
+      "matchedName": "上海市嘉定区华亭学校",
+      "sourceTitle": "2025年嘉定区义务教育阶段公办学校基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf"
+    },
+    {
+      "id": 3810,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区华漕学校",
+      "address": "申长路2051弄32号",
+      "matchedName": "上海市闵行区华漕学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3811,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区文来实验学校",
+      "address": "申滨路615号",
+      "matchedName": "上海市闵行区文来实验学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3863,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区诸翟学校",
+      "address": "纪翟路221号",
+      "matchedName": "上海市闵行区诸翟学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3864,
+      "district": "闵行",
+      "type": "primary",
+      "name": "华东师范大学附属闵行虹桥学校",
+      "address": "红松路81弄18号",
+      "matchedName": "华东师范大学附属闵行虹桥学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3865,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市莘光学校",
+      "address": "山花路555号；雅致路18号",
+      "matchedName": "上海市莘光学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3866,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区纪王学校",
+      "address": "纪翟路1655号",
+      "matchedName": "上海市闵行区纪王学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3867,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市马桥强恕学校",
+      "address": "北松路2258号",
+      "matchedName": "上海市马桥强恕学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3868,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市古美学校",
+      "address": "莲花路486弄25号",
+      "matchedName": "上海市古美学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3869,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海师范大学康城实验学校",
+      "address": "莘松路958弄瀑布湾道18号",
+      "matchedName": "上海师范大学康城实验学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3870,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市莘城学校",
+      "address": "普洱路158号",
+      "matchedName": "上海市莘城学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3871,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区明星学校",
+      "address": "黎安路339号",
+      "matchedName": "上海市闵行区明星学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3872,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区君莲学校",
+      "address": "沪光路120号",
+      "matchedName": "上海市闵行区君莲学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3873,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海交通大学附属闵行马桥实验学校",
+      "address": "银春路1750号",
+      "matchedName": "上海交通大学附属闵行马桥实验学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3882,
+      "district": "闵行",
+      "type": "primary",
+      "name": "华东师范大学附属闵行永德学校（小学部）",
+      "address": "剑川路408号",
+      "matchedName": "华东师范大学附属闵行永德学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3883,
+      "district": "闵行",
+      "type": "primary",
+      "name": "复旦大学附属闵行实验学校",
+      "address": "梅陇西路1566号",
+      "matchedName": "复旦大学附属闵行实验学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3884,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海世外教育附属浦江外国语学校",
+      "address": "景容路66号",
+      "matchedName": "上海世外教育附属浦江外国语学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3885,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市闵行区七宝文来学校",
+      "address": "秀涟北路588号",
+      "matchedName": "上海市闵行区七宝文来学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3886,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海交通大学附属闵行实验学校",
+      "address": "富学路99号",
+      "matchedName": "上海交通大学附属闵行实验学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3921,
+      "district": "闵行",
+      "type": "middle",
+      "name": "上师大附属中学闵行实验学校",
+      "address": "闸航路4098号",
+      "matchedName": "上海师范大学附属中学闵行实验学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250414/07f6f632feb74d9189ec183b76573d1c.html"
+    },
+    {
+      "id": 3760,
+      "district": "浦东",
+      "type": "middle",
+      "name": "上海市侨光中学（妙川路校区）",
+      "address": "妙川路959号",
+      "matchedName": "上海市侨光中学（妙川校区）",
+      "sourceTitle": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/pdxqywjy/20250410/c7d0860f34a248bd9c83b74eb2b5e0f6.html"
+    },
+    {
+      "id": 3761,
+      "district": "浦东",
+      "type": "middle",
+      "name": "上海市侨光中学（新德路校区）",
+      "address": "新德路463号",
+      "matchedName": "上海市侨光中学（新德校区）",
+      "sourceTitle": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/pdxqywjy/20250410/c7d0860f34a248bd9c83b74eb2b5e0f6.html"
+    },
+    {
+      "id": 3809,
+      "district": "浦东",
+      "type": "middle",
+      "name": "上海交通大学附属中学浦东实验学校",
+      "address": "峨山路638号",
+      "matchedName": "上海交通大学附属浦东实验中学",
+      "sourceTitle": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/pdxqywjy/20250410/c7d0860f34a248bd9c83b74eb2b5e0f6.html"
+    },
+    {
+      "id": 4166,
+      "district": "青浦",
+      "type": "primary",
+      "name": "上海政法学院附属青浦东门小学",
+      "address": "青浦区城中东路48号",
+      "matchedName": "上政附属青浦东门小学",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4169,
+      "district": "青浦",
+      "type": "primary",
+      "name": "上海政法学院附属青浦东门小学东校",
+      "address": "崧淀二路195号",
+      "matchedName": "上政附属青浦东门小学东校",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4170,
+      "district": "青浦",
+      "type": "primary",
+      "name": "上海市青浦区教师进修学院附属小学",
+      "address": "青浦区秀泽路90号",
+      "matchedName": "教育学院附属小学",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4185,
+      "district": "青浦",
+      "type": "primary",
+      "name": "上海唯实希望小学",
+      "address": "练塘镇小蒸社区 贞溪北路333号",
+      "matchedName": "唯实小学",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4201,
+      "district": "青浦",
+      "type": "middle",
+      "name": "上海市青浦区第一中学",
+      "address": "青浦区青安路126号",
+      "matchedName": "青浦一中",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4203,
+      "district": "青浦",
+      "type": "middle",
+      "name": "上海政法学院附属青浦崧淀中学",
+      "address": "赵巷镇崧淀1路60号",
+      "matchedName": "上政附属青浦崧淀中学",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4204,
+      "district": "青浦",
+      "type": "middle",
+      "name": "上海市青浦区进修学院附属中学",
+      "address": "青浦区秀源路210号",
+      "matchedName": "教育学院附属中学",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html"
+    },
+    {
+      "id": 4275,
+      "district": "崇明",
+      "type": "primary",
+      "name": "一师附小附属江帆小学",
+      "address": "城桥镇乔松路666号",
+      "matchedName": "上海市第一师范附属崇明区江帆小学",
+      "sourceTitle": "2025年崇明区义务教育招生学校基本情况（小学）",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmqywjy/20250414/bdc184c052d641bfbcfe0ed5864498c4.html"
+    },
+    {
+      "id": 4284,
+      "district": "崇明",
+      "type": "primary",
+      "name": "上实附属东滩学校",
+      "address": "陈家镇雪雁路800号",
+      "matchedName": "上海市实验学校附属东滩学校（小学）",
+      "sourceTitle": "2025年崇明区义务教育招生学校基本情况（小学）",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmqywjy/20250414/bdc184c052d641bfbcfe0ed5864498c4.html"
+    },
+    {
+      "id": 4285,
+      "district": "崇明",
+      "type": "primary",
+      "name": "世外附属汇明学校",
+      "address": "城桥镇金浪路1288号",
+      "matchedName": "上海世外教育附属崇明区汇明学校（小学）",
+      "sourceTitle": "2025年崇明区义务教育招生学校基本情况（小学）",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmqywjy/20250414/bdc184c052d641bfbcfe0ed5864498c4.html"
+    },
+    {
+      "id": 4292,
+      "district": "崇明",
+      "type": "middle",
+      "name": "上师正大中学",
+      "address": "堡镇石岛路388号",
+      "matchedName": "上海师范大学附属崇明正大中学",
+      "sourceTitle": "2025年崇明区义务教育招生学校基本情况（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmqywjy/20250417/b52947a33336407185e4622bb0793dca.html"
+    },
+    {
+      "id": 4299,
+      "district": "崇明",
+      "type": "middle",
+      "name": "向明附属江帆中学",
+      "address": "城桥镇绿海路701号",
+      "matchedName": "上海市向明初级中学附属崇明区江帆中学",
+      "sourceTitle": "2025年崇明区义务教育招生学校基本情况（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmqywjy/20250417/b52947a33336407185e4622bb0793dca.html"
+    },
+    {
+      "id": 3578,
+      "district": "静安",
+      "type": "middle",
+      "name": "上海市静安实验小学",
+      "address": "海防路429弄100号、陕西北路1168号",
+      "matchedName": "上海市静安实验小学",
+      "sourceTitle": "2025年静安区义务教育阶段公办学校教育教学设施和师资配置公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/jaqywjy/20250411/ba3c88c339c549e1bd2f71d6d6d04b0f.html"
+    },
+    {
+      "id": 3591,
+      "district": "静安",
+      "type": "middle",
+      "name": "科技学校",
+      "address": "阳泉路629号、阳曲路350弄1号",
+      "matchedName": "上海市静安区科技学校",
+      "sourceTitle": "2025年静安区义务教育阶段公办学校教育教学设施和师资配置公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/jaqywjy/20250411/ba3c88c339c549e1bd2f71d6d6d04b0f.html"
+    },
+    {
+      "id": 4023,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区教育学院附属小学",
+      "address": "石化十二村136号",
+      "matchedName": "教院附小",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4024,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区石化第一小学",
+      "address": "临潮一村47号",
+      "matchedName": "石化一小",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4025,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区石化第五小学",
+      "address": "滨海二村60号",
+      "matchedName": "石化五小",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4026,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区第二实验小学",
+      "address": "北校区：卫清西路龙凯街28号 南校区：东礁街86号",
+      "matchedName": "第二实验小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4027,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区海棠小学",
+      "address": "卫阳南路800号",
+      "matchedName": "海棠小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4028,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区前京小学",
+      "address": "龙堰路1460号",
+      "matchedName": "前京小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4030,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海师范大学附属金山龙航小学",
+      "address": "龙航路139弄8号",
+      "matchedName": "龙航小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4031,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区山阳小学",
+      "address": "海芙路1020号",
+      "matchedName": "山阳小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4032,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区龙泉学校（小学部）",
+      "address": "华山路106号",
+      "matchedName": "龙泉学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4033,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区学府小学",
+      "address": "西静路1600号",
+      "matchedName": "学府小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4034,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区金卫小学",
+      "address": "古城路500号",
+      "matchedName": "金卫小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4036,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区朱泾小学",
+      "address": "健康南路555号",
+      "matchedName": "朱泾小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4037,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区朱泾第二小学",
+      "address": "西校区：南圩路21号 东校区：浦源路118号",
+      "matchedName": "朱泾第二小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4038,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区第一实验小学",
+      "address": "金龙新街228号",
+      "matchedName": "第一实验小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4039,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区松隐小学",
+      "address": "松隐大街298号",
+      "matchedName": "松隐小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4040,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区亭林小学",
+      "address": "北校区：大慈路398号 南校区：复兴东路48号",
+      "matchedName": "亭林小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4041,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海中医药大学附属枫泾小学",
+      "address": "北大街409号",
+      "matchedName": "枫泾小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4042,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区兴塔小学",
+      "address": "润兴路28号",
+      "matchedName": "兴塔小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4043,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区朱行小学",
+      "address": "育才街88号",
+      "matchedName": "朱行小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4044,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区漕泾小学",
+      "address": "漕廊公路728号",
+      "matchedName": "漕泾小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4045,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区张堰小学",
+      "address": "东贤路558号",
+      "matchedName": "张堰小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4046,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区钱圩学校（小学部）",
+      "address": "秦弯路809弄88号",
+      "matchedName": "钱圩学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4047,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区廊下小学",
+      "address": "漕廊公路7955号",
+      "matchedName": "廊下小学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4048,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区吕巷学校（小学部）",
+      "address": "田阳路4081号",
+      "matchedName": "吕巷学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4050,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区滨海学校（小学部）",
+      "address": "板桥西路1148号",
+      "matchedName": "滨海学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4051,
+      "district": "金山",
+      "type": "primary",
+      "name": "华东师范大学第二附属中学金山实验学校（小学部）",
+      "address": "龙山路6号",
+      "matchedName": "华二金山实验学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4052,
+      "district": "金山",
+      "type": "primary",
+      "name": "上海市金山区金水湖实验学校（小学部）",
+      "address": "天工路2450号",
+      "matchedName": "金水湖实验学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4053,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区教育学院附属中学",
+      "address": "石化三村366号",
+      "matchedName": "教院附中",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4058,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海师范大学附属金山前京中学",
+      "address": "龙皓路1280号",
+      "matchedName": "前京中学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4060,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区龙泉学校(初中部)",
+      "address": "华山路106号",
+      "matchedName": "龙泉学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4065,
+      "district": "金山",
+      "type": "middle",
+      "name": "华东师范大学附属枫泾中学（初中部）",
+      "address": "白牛路188号",
+      "matchedName": "枫泾中学",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4070,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市张堰第二中学",
+      "address": "东贤路1098号",
+      "matchedName": "张堰二中",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4071,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区钱圩学校(初中部)",
+      "address": "秦弯路809弄88号",
+      "matchedName": "钱圩学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4073,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区吕巷学校(初中部)",
+      "address": "田阳路4081号",
+      "matchedName": "吕巷学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4076,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区滨海学校(初中部)",
+      "address": "板桥西路1148号",
+      "matchedName": "滨海学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4077,
+      "district": "金山",
+      "type": "middle",
+      "name": "华东师范大学第二附属中学金山实验学校(初中部)",
+      "address": "龙山路6号",
+      "matchedName": "华二金山实验学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4078,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区金水湖实验学校（初中部）",
+      "address": "天工路2450号",
+      "matchedName": "金水湖实验学校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4075,
+      "district": "金山",
+      "type": "middle",
+      "name": "上海市金山区青少年业余体育学校",
+      "address": "临桂路2470号",
+      "matchedName": "少体校",
+      "sourceTitle": "2025年金山区义务教育阶段各公办学校办学规模、校舍场地、教育教学、后勤设施设备和师资配置情况公示表",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/0c/0c5d1e78b05f41afa48a25e31f6112e8/1694460ea3a1b9ff02bd2004376e7ece.xls"
+    },
+    {
+      "id": 4093,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海立信会计金融学院附属松江 实验学校（暂名，原上海市松江 区第二实验小学）",
+      "address": "松江区龙源路100号",
+      "matchedName": "上海立信会计金融学院附属松江实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4099,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海市松江二中附属实验学校 （暂名，原上海外国语大学松江 外国语学校北部分校）",
+      "address": "松江区广富林街道丽湖路180弄1-6号",
+      "matchedName": "上海市松江二中附属实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4110,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海市松江区泗泾实验学校（上 海师范大学松江基础教育集团）",
+      "address": "松江区泗泾镇方泗公路39号",
+      "matchedName": "上海市松江区泗泾实验学校",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4114,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海市松江区洞泾外国语实验学 校（华东师范大学松江基础教育",
+      "address": "松江区洞泾镇塘乐路280弄",
+      "matchedName": "上海市松江区洞泾外国语实验学校",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4116,
+      "district": "松江",
+      "type": "primary",
+      "name": "华东师范大学第二附属中学松江 实验学校",
+      "address": "松江区洞泾镇江川南二路321弄",
+      "matchedName": "华东师范大学第二附属中学松江实验学校",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4123,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海政法学院附属松江外国语学 校（暂名，原上海市松江区佘山 外国语实验学校）",
+      "address": "松江区佘山镇石头浜路625号（小学部）",
+      "matchedName": "上海政法学院附属松江外国语学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+      "note": "official row lists separate primary and middle campuses; selected primary campus"
+    },
+    {
+      "id": 4124,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海政法学院附属松江实验学校 （暂名，原上海市松江区佘山外 国语实验学校北部分校）",
+      "address": "松江区佘山镇高家浜路215弄1-6号",
+      "matchedName": "上海政法学院附属松江实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4127,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海市松江二中附属浦南实验学 校（暂名，原上海市松江区李塔 汇学校）",
+      "address": "松江区塔汇路150号",
+      "matchedName": "上海市松江二中附属浦南实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4129,
+      "district": "松江",
+      "type": "primary",
+      "name": "东华大学附属实验学校松江小昆 山平原校区",
+      "address": "松江区小昆山镇平原街1205弄1-8号",
+      "matchedName": "东华大学附属实验学校松江小昆山平原分校",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4131,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海市松江一中附属叶榭学校 （暂名，原上海市松江区叶榭学 校）",
+      "address": "松江区叶榭镇叶校路358号",
+      "matchedName": "上海市松江一中附属叶榭学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4144,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海市松江二中附属实验学 校（暂名，原上海外国语大学 松江外国语学校北部分校）",
+      "address": "松江区广富林街道丽湖路180弄1-6号",
+      "matchedName": "上海市松江二中附属实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4149,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海科技馆 松江实验学校（暂 名，原上海市松江四中初级中 学）",
+      "address": "松江区泗泾镇城置路29号",
+      "matchedName": "上海科技馆松江实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4150,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海市松江区泗泾实验学校 （上海师范大学松江基础教 育集团）",
+      "address": "松江区泗泾镇方泗公路39号",
+      "matchedName": "上海市松江区泗泾实验学校",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4153,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海市松江区洞泾外国语实 验学校（华东师范大学松江基 础教育集团）",
+      "address": "松江区洞泾镇塘乐路280弄",
+      "matchedName": "上海市松江区洞泾外国语实验学校",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4155,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海市松江二中附属浦南实 验学校（暂名，原上海市松江 区李塔汇学校）",
+      "address": "松江区塔汇路150号",
+      "matchedName": "上海市松江二中附属浦南实验学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4156,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海政法学院附属松江外国 语学校（暂名，原上海市松江 区佘山外国语实验学校）",
+      "address": "松江区佘山镇贡嘎山路215号（中学部）",
+      "matchedName": "上海政法学院附属松江外国语学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+      "note": "official row lists separate primary and middle campuses; selected middle campus"
+    },
+    {
+      "id": 4159,
+      "district": "松江",
+      "type": "middle",
+      "name": "上海市松江一中附属叶榭学 校（暂名，原上海市松江区叶 榭学校）",
+      "address": "松江区叶榭镇叶校路358号",
+      "matchedName": "上海市松江一中附属叶榭学校（暂名）",
+      "sourceTitle": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf"
+    },
+    {
+      "id": 4195,
+      "district": "青浦",
+      "type": "primary",
+      "name": "上海市青浦区徐泾第一小学、第二小学",
+      "address": "徐泾一小：徐泾镇徐民路900号；徐泾二小：徐泾镇育才路288号",
+      "matchedName": "徐泾一小；徐泾二小",
+      "sourceTitle": "2025年青浦区义务教育阶段公办学校规模、招生计划和校舍场地条件",
+      "sourceUrl": "https://www.shanghai.gov.cn/qpqywjy/20250411/4c49402434934abf97b7d8827886f1b1.html",
+      "note": "database row combines two schools; stored both official addresses"
+    },
+    {
+      "id": 3641,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海师范大学附属杨浦滨江实验小学",
+      "address": "顺平路398号",
+      "matchedName": "上海师范大学附属杨浦滨江实验小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3642,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区平凉路第四小学",
+      "address": "平凉路2767弄5号",
+      "matchedName": "上海市杨浦区平凉路第四小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3643,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海理工大学附属小学",
+      "address": "靖宇东路158号",
+      "matchedName": "上海理工大学附属小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3644,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市昆明学校",
+      "address": "大连路854弄20号",
+      "matchedName": "上海市昆明学校（小学部）",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3645,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区工农新村小学",
+      "address": "工农三村65号",
+      "matchedName": "上海市杨浦区工农新村小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3646,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区六一小学",
+      "address": "政通路25号",
+      "matchedName": "上海市杨浦区六一小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3647,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区建设小学",
+      "address": "杭州路712号",
+      "matchedName": "上海市杨浦区建设小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3648,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区回民小学",
+      "address": "浣纱四村80号",
+      "matchedName": "上海市杨浦区回民小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3649,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市市东实验学校（上海市市东中学）",
+      "address": "辽阳路25号",
+      "matchedName": "上海市市东实验学校(上海市市东中学)(小学部)",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3650,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区中原路小学",
+      "address": "中原路710弄20号",
+      "matchedName": "上海市杨浦区中原路小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3651,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市市光学校",
+      "address": "市光三村163号",
+      "matchedName": "上海市市光学校（小学部）",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3652,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区杨浦小学分校",
+      "address": "长阳路1421号",
+      "matchedName": "上海市杨浦区杨浦小学分校",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3653,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区平凉路第三小学",
+      "address": "顺平路398号",
+      "matchedName": "上海市杨浦区平凉路第三小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3654,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区齐齐哈尔路第一小学",
+      "address": "齐齐哈尔路669号",
+      "matchedName": "上海市杨浦区齐齐哈尔路第一小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3655,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区政立路小学",
+      "address": "政立路841号",
+      "matchedName": "上海市杨浦区政立路小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3656,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "同济大学附属新江湾城实验学校",
+      "address": "政青路678号",
+      "matchedName": "同济大学附属新江湾城实验学校（小学部）",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3657,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区世界小学",
+      "address": "民府路61号",
+      "matchedName": "上海市杨浦区世界小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3658,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区杭州路第一小学",
+      "address": "沈阳路75号",
+      "matchedName": "上海市杨浦区杭州路第一小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3659,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市第二师范学校附属小学杨浦北校",
+      "address": "政立路570号",
+      "matchedName": "上海市第二师范学校附属小学杨浦北校",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3660,
+      "district": "杨浦",
+      "type": "primary",
+      "name": "上海市杨浦区怀德路第一小学",
+      "address": "许昌路227弄10号",
+      "matchedName": "上海市杨浦区怀德路第一小学",
+      "sourceTitle": "2025年杨浦区义务教育阶段公办小学基本情况公示（规模、设备、师资）及招生计划",
+      "sourceUrl": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250407/477710/d1833493558244b3ad870c206b1b43d0.pdf"
+    },
+    {
+      "id": 3600,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区霍山路小学",
+      "address": "临潼路255号",
+      "matchedName": "上海市虹口区霍山路小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3601,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区第四中心小学北外滩分校",
+      "address": "东汉阳路425号（临时门牌号）",
+      "matchedName": "上海市虹口区第四中心小学北外滩分校",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3602,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区新宏星小学",
+      "address": "沙虹路328号",
+      "matchedName": "上海市虹口区新宏星小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3603,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市华东师大一附中实验小学",
+      "address": "飞虹路320号",
+      "matchedName": "上海市华东师大一附中实验小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3604,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区第二中心小学",
+      "address": "梧州路312号",
+      "matchedName": "上海市虹口区第二中心小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3605,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区第三中心小学",
+      "address": "山阴路103号",
+      "matchedName": "上海市虹口区第三中心小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3606,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区四川北路第一小学",
+      "address": "四川北路1802号",
+      "matchedName": "上海市虹口区四川北路第一小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3607,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区中州路第一小学",
+      "address": "中州路80号",
+      "matchedName": "上海市虹口区中州路第一小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3608,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区多伦同心小学",
+      "address": "同心路157弄4号",
+      "matchedName": "上海市虹口区多伦同心小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3609,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区广灵路小学",
+      "address": "广灵一路120号",
+      "matchedName": "上海市虹口区广灵路小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3610,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海音乐学院虹口区实验小学",
+      "address": "新同心路189号",
+      "matchedName": "上海音乐学院虹口区实验小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3611,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区广中路小学",
+      "address": "广中支路140号",
+      "matchedName": "上海市虹口区广中路小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3612,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区第四中心小学",
+      "address": "东体育会路667号",
+      "matchedName": "上海市虹口区第四中心小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3613,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区曲阳第三小学",
+      "address": "赤峰路317弄17号",
+      "matchedName": "上海市虹口区曲阳第三小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3614,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区曲阳第四小学",
+      "address": "密云路471弄1号",
+      "matchedName": "上海市虹口区曲阳第四小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3615,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区红旗小学",
+      "address": "文治路101号",
+      "matchedName": "上海市虹口区红旗小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3616,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区丰镇第一小学",
+      "address": "丰镇路8号",
+      "matchedName": "上海市虹口区丰镇第一小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3617,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区外国语第一小学",
+      "address": "车站南路441号",
+      "matchedName": "上海市虹口区外国语第一小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3618,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区外国语第二小学",
+      "address": "车站北路403弄5号",
+      "matchedName": "上海市虹口区外国语第二小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3619,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区凉城第三小学",
+      "address": "车站北路641号",
+      "matchedName": "上海市虹口区凉城第三小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3620,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区凉城第四小学",
+      "address": "凉城路1201弄79号",
+      "matchedName": "上海市虹口区凉城第四小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3621,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口区复兴实验小学",
+      "address": "凉城路2233号",
+      "matchedName": "上海市虹口区复兴实验小学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3622,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市长青学校",
+      "address": "临时安置点：昆明路155弄6号",
+      "matchedName": "上海市长青学校",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf",
+      "note": "primary admission table lists temporary placement address"
+    },
+    {
+      "id": 3623,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市北郊学校",
+      "address": "大连西路205号",
+      "matchedName": "上海市北郊学校",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3624,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海世外教育附属虹口区欧阳学校",
+      "address": "四平路621弄100号",
+      "matchedName": "上海世外教育附属虹口区欧阳学校",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3625,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海市虹口实验学校",
+      "address": "邯郸路53号",
+      "matchedName": "上海市虹口实验学校",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3626,
+      "district": "虹口",
+      "type": "primary",
+      "name": "上海外国语大学附属北外滩学校",
+      "address": "昆山路111号",
+      "matchedName": "上海外国语大学附属北外滩学校",
+      "sourceTitle": "2025年虹口区义务教育阶段公办小学招生计划和联系方式",
+      "sourceUrl": "https://www.shhk.gov.cn/hkjy_nas/069fda3c-eb8b-484c-8c64-7db87d02ab45/bf55af7f-5d80-491c-a657-d29c58a2dc82/2025年虹口区义务教育阶段公办小学招生计划和联系方式.pdf"
+    },
+    {
+      "id": 3627,
+      "district": "虹口",
+      "type": "middle",
+      "name": "华东师范大学第一附属初级中学",
+      "address": "虹关路318号",
+      "matchedName": "华东师范大学第一附属初级中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3628,
+      "district": "虹口",
+      "type": "middle",
+      "name": "同济大学附属澄衷中学",
+      "address": "临时安置点：霍山路228号",
+      "matchedName": "同济大学附属澄衷中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf",
+      "note": "middle admission table lists temporary placement address"
+    },
+    {
+      "id": 3629,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市江湾初级中学",
+      "address": "奎照路528弄16号",
+      "matchedName": "上海市江湾初级中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3630,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市海南中学",
+      "address": "塘沽路484号",
+      "matchedName": "上海市海南中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3631,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市复兴实验中学",
+      "address": "汶水东路690弄73号",
+      "matchedName": "上海市复兴实验中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3632,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海师范大学附属虹口中学",
+      "address": "凉城路2236号",
+      "matchedName": "上海师范大学附属虹口中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3633,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市丰镇中学",
+      "address": "丰镇路12号",
+      "matchedName": "上海市丰镇中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3634,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市鲁迅初级中学",
+      "address": "宝安路66弄7号",
+      "matchedName": "上海市鲁迅初级中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3635,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市钟山初级中学",
+      "address": "万安路1289号",
+      "matchedName": "上海市钟山初级中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3636,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市虹口区教育学院实验中学",
+      "address": "四川北路1838号",
+      "matchedName": "上海市虹口区教育学院实验中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3637,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海音乐学院虹口区实验中学",
+      "address": "水电路285号",
+      "matchedName": "上海音乐学院虹口区实验中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3638,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市继光初级中学",
+      "address": "高阳路640号",
+      "matchedName": "上海市继光初级中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3639,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市曲阳第二中学",
+      "address": "玉田路180号",
+      "matchedName": "上海市曲阳第二中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3640,
+      "district": "虹口",
+      "type": "middle",
+      "name": "上海市第五十二中学",
+      "address": "广灵二路122号",
+      "matchedName": "上海市第五十二中学",
+      "sourceTitle": "2025年虹口区义务教育阶段公办初中招生计划和联系方式",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmsres/c5/c5a4a68677ec4daf97fac97e0154847c/cbe5709800a1413e82d48ad9d38c22db.pdf"
+    },
+    {
+      "id": 3499,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区江苏路第五小学（昭化东路校区）",
+      "address": "昭化东路81号",
+      "matchedName": "上海市长宁区江苏路第五小学（昭化东路校区）",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3500,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区江苏路第五小学（华阳路校区）",
+      "address": "华阳路255弄1号",
+      "matchedName": "上海市长宁区江苏路第五小学（华阳路校区）",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3501,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区江苏路第五小学（长宁路校区）",
+      "address": "长宁支路80号",
+      "matchedName": "上海市长宁区江苏路第五小学（长宁路校区）",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3502,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区愚园路第一小学",
+      "address": "愚园路1210弄86号",
+      "matchedName": "上海市长宁区愚园路第一小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3503,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区愚一小学向红分校",
+      "address": "愚园路718弄31号",
+      "matchedName": "上海市长宁区愚一小学向红分校",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3504,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区法华镇路第三小学",
+      "address": "法华镇路681弄4号",
+      "matchedName": "上海市长宁区法华镇路第三小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3505,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区复旦小学",
+      "address": "法华镇路186号",
+      "matchedName": "上海市长宁区复旦小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3506,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区开元小学",
+      "address": "延安西路1289弄10号",
+      "matchedName": "上海市长宁区开元小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3507,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市开元学校（小学部）",
+      "address": "武夷路528号",
+      "matchedName": "上海市开元学校",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3508,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区安顺路小学",
+      "address": "安顺路215号",
+      "matchedName": "上海市长宁区安顺路小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3509,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区长宁路小学",
+      "address": "长宁路1600弄15号",
+      "matchedName": "上海市长宁区长宁路小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3510,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区玉屏南路小学",
+      "address": "玉屏南路371号",
+      "matchedName": "上海市长宁区玉屏南路小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3511,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区古北路小学",
+      "address": "古北路211弄24号",
+      "matchedName": "上海市长宁区古北路小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3512,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市建青实验学校（小学部）",
+      "address": "古羊路900号",
+      "matchedName": "上海市建青实验学校",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3513,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区天山第一小学",
+      "address": "茅台路109号",
+      "matchedName": "上海市长宁区天山第一小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3514,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区天山第二小学",
+      "address": "天山五村170号",
+      "matchedName": "上海市长宁区天山第二小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3515,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁实验小学",
+      "address": "茅台路625号",
+      "matchedName": "上海市长宁实验小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3516,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区威宁小学",
+      "address": "安龙路829弄18号",
+      "matchedName": "上海市长宁区威宁小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3517,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区新虹桥小学",
+      "address": "虹古路377弄40号",
+      "matchedName": "上海市长宁区新虹桥小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3518,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区适存小学",
+      "address": "泉口路118号",
+      "matchedName": "上海市长宁区适存小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3519,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区绿苑小学",
+      "address": "甘溪路340号",
+      "matchedName": "上海市长宁区绿苑小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3520,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区哈密路小学",
+      "address": "程家桥路80弄36号",
+      "matchedName": "上海市长宁区哈密路小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3521,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区北新泾第二小学",
+      "address": "新泾一村130号",
+      "matchedName": "上海市长宁区北新泾第二小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3522,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区北新泾第三小学",
+      "address": "天山西路371号",
+      "matchedName": "上海市长宁区北新泾第三小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3523,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市长宁区虹桥机场小学",
+      "address": "虹桥路2550号",
+      "matchedName": "上海市长宁区虹桥机场小学",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3524,
+      "district": "长宁",
+      "type": "primary",
+      "name": "上海市西郊学校（小学部）",
+      "address": "福泉路506号",
+      "matchedName": "上海市西郊学校",
+      "sourceTitle": "2025年长宁区小学“校园开放日”情况一览表",
+      "sourceUrl": "https://zwgk.shcn.gov.cn/xxgk/ywjyzs-jyjzsgl/2025/99/77225.html"
+    },
+    {
+      "id": 3596,
+      "district": "普陀",
+      "type": "middle",
+      "name": "华外实验 小学部",
+      "address": "金汤路269号",
+      "matchedName": "上海市普陀区梅陇实验中学",
+      "sourceTitle": "2025年普陀区义务教育阶段学校教育教学、后勤设施设备和师资配置基本情况表",
+      "sourceUrl": "https://www.shanghai.gov.cn/ptqywjy/20251110/d17caa0f4c8c41d4ba91f0516f53ef12.html",
+      "note": "DB row name is from prior extraction; official source lists the corresponding school address."
+    },
+    {
+      "id": 3874,
+      "district": "闵行",
+      "type": "primary",
+      "name": "上海市民办万源城协和双语学校(公办班）",
+      "address": "平吉路509号",
+      "matchedName": "上海市民办万源城协和双语学校",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "note": "Official source lists the school as private; DB row is the public-class enrollment row."
+    },
+    {
+      "id": 3764,
+      "district": "浦东",
+      "type": "middle",
+      "name": "上海市川沙中学南校（南校区）",
+      "address": "平川路273号",
+      "matchedName": "上海市川沙中学南校（平川路校区）",
+      "sourceTitle": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "note": "DB row is a middle-school row; official middle-school source lists the corresponding campus as 平川路校区."
+    },
+    {
+      "id": 3825,
+      "district": "闵行",
+      "type": "primary",
+      "name": "华东理工大学附属闵行梅陇实验学校",
+      "address": "藤花校区：镇西路299号；镇西校区：镇西路255号；罗秀校区：罗秀路1791号",
+      "matchedName": "华东理工大学附属闵行梅陇实验学校（藤花校区/镇西校区/罗秀校区）",
+      "sourceTitle": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+      "sourceUrl": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+      "note": "Official source lists three campuses; DB row has no campus discriminator, so store the reviewed campus-address list."
+    },
+    {
+      "id": 4121,
+      "district": "松江",
+      "type": "primary",
+      "name": "上海市松江区五厍学校",
+      "address": "松江区泖港镇中厍路151号",
+      "matchedName": "上海市松江区五厍学校",
+      "sourceTitle": "松江年鉴2024",
+      "sourceUrl": "https://www.songjiang.gov.cn/shsj_main/abdc16ea-ef19-4243-8394-77d7e1229f83/bad375b0-4ac5-40fe-979b-8e36012a233a/%E6%9D%BE%E6%B1%9F%E5%B9%B4%E9%89%B42024_1.pdf",
+      "note": "Official yearbook lists the school at 中厍路151号; normalized with district and town from matching government/public records."
+    },
+    {
+      "id": 4298,
+      "district": "崇明",
+      "type": "middle",
+      "name": "崇中附属东门中学",
+      "address": "江山校区：城桥镇湄洲路388号；城东校区：候家镇南首",
+      "matchedName": "上海市崇明区东门中学（江山校区/城东校区）",
+      "sourceTitle": "2025年崇明区义务教育招生学校基本情况（初中）",
+      "sourceUrl": "https://www.shanghai.gov.cn/cmqywjy/20250417/b52947a33336407185e4622bb0793dca.html",
+      "note": "DB row has no campus discriminator; official source lists both campuses, so store the reviewed campus-address list."
+    },
+    {
+      "id": 4216,
+      "district": "奉贤",
+      "name": "解放路小学",
+      "address": "南桥镇南中路299号",
+      "matchedName": "解放路小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4217,
+      "district": "奉贤",
+      "name": "实验小学",
+      "address": "东校区：南桥镇秀南路161号； 西校区：南桥镇解放西路666号",
+      "matchedName": "实验小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4218,
+      "district": "奉贤",
+      "name": "南桥小学",
+      "address": "南桥镇南中路137号",
+      "matchedName": "南桥小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4219,
+      "district": "奉贤",
+      "name": "育贤小学",
+      "address": "南桥镇九华路1289号",
+      "matchedName": "育贤小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4220,
+      "district": "奉贤",
+      "name": "育秀小学",
+      "address": "南桥镇江海花园84号",
+      "matchedName": "育秀小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4221,
+      "district": "奉贤",
+      "name": "古华中学",
+      "address": "南桥镇曙光路89号",
+      "matchedName": "古华中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4222,
+      "district": "奉贤",
+      "name": "奉贤中学附属 南桥中学",
+      "address": "南桥镇新建中路586号",
+      "matchedName": "奉贤中学附属南桥中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4223,
+      "district": "奉贤",
+      "name": "实验中学",
+      "address": "南桥镇秀南路99号",
+      "matchedName": "实验中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4224,
+      "district": "奉贤",
+      "name": "奉贤中学附属 三官堂学校",
+      "address": "一年级：南桥镇光明社区光钱路474号 六年级：南桥镇文秀路369号",
+      "matchedName": "奉贤中学附属三官堂学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4225,
+      "district": "奉贤",
+      "name": "弘文学校",
+      "address": "南桥镇正环路389号",
+      "matchedName": "弘文学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4226,
+      "district": "奉贤",
+      "name": "阳光学校",
+      "address": "南桥镇环城西路69号",
+      "matchedName": "阳光学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4228,
+      "district": "奉贤",
+      "name": "育秀中学",
+      "address": "南桥镇古华路261号",
+      "matchedName": "育秀中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4229,
+      "district": "奉贤",
+      "name": "华亭学校",
+      "address": "南桥镇建贤路285号",
+      "matchedName": "华亭学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4230,
+      "district": "奉贤",
+      "name": "洪庙小学",
+      "address": "奉城镇洪庙社区洪运路58号",
+      "matchedName": "洪庙小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4231,
+      "district": "奉贤",
+      "name": "塘外小学",
+      "address": "奉城镇塘外文化街33号",
+      "matchedName": "塘外小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4232,
+      "district": "奉贤",
+      "name": "肇文学校",
+      "address": "奉城镇城协路1650号",
+      "matchedName": "肇文学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4234,
+      "district": "奉贤",
+      "name": "洪庙中学",
+      "address": "奉城镇洪庙社区浦东路2号",
+      "matchedName": "洪庙中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4235,
+      "district": "奉贤",
+      "name": "平安学校",
+      "address": "南校区：四团镇平安社区龙尖村778号； 北校区：四团镇平安社区四平公路1249号",
+      "matchedName": "平安学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4236,
+      "district": "奉贤",
+      "name": "邵厂学校",
+      "address": "四团镇邵厂社区东海路5号",
+      "matchedName": "邵厂学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4237,
+      "district": "奉贤",
+      "name": "四团中学",
+      "address": "四团镇文鹏路169号",
+      "matchedName": "四团中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4238,
+      "district": "奉贤",
+      "name": "柘林学校",
+      "address": "柘林镇钦林南路39号",
+      "matchedName": "柘林学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4239,
+      "district": "奉贤",
+      "name": "新寺学校",
+      "address": "柘林镇新北路166号",
+      "matchedName": "新寺学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4240,
+      "district": "奉贤",
+      "name": "邬桥学校",
+      "address": "北校区：庄行镇邬桥社区汇中路165号； 南校区：大叶公路2658号",
+      "matchedName": "邬桥学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4241,
+      "district": "奉贤",
+      "name": "尚同中学",
+      "address": "金汇镇齐贤社区农民街265号",
+      "matchedName": "尚同中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4242,
+      "district": "奉贤",
+      "name": "齐贤学校",
+      "address": "金汇镇齐贤社区文明街16号",
+      "matchedName": "齐贤学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4243,
+      "district": "奉贤",
+      "name": "金汇小学",
+      "address": "金汇镇中街186弄1号",
+      "matchedName": "金汇小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4244,
+      "district": "奉贤",
+      "name": "泰日学校",
+      "address": "金汇镇泰日社区泰青公路119弄20号",
+      "matchedName": "泰日学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4245,
+      "district": "奉贤",
+      "name": "青溪中学",
+      "address": "褚家路276号",
+      "matchedName": "青溪中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4246,
+      "district": "奉贤",
+      "name": "青村小学",
+      "address": "青村镇人民北路373号",
+      "matchedName": "青村小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4247,
+      "district": "奉贤",
+      "name": "青村中学",
+      "address": "青村南路188号",
+      "matchedName": "青村中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4248,
+      "district": "奉贤",
+      "name": "钱桥学校",
+      "address": "青村镇钱桥社区文新路1号",
+      "matchedName": "钱桥学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4249,
+      "district": "奉贤",
+      "name": "蓝湾五四学校",
+      "address": "海湾镇正旭南路985号",
+      "matchedName": "蓝湾五四学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4250,
+      "district": "奉贤",
+      "name": "待问中学",
+      "address": "奉贤区西闸公路2132号",
+      "matchedName": "待问中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4251,
+      "district": "奉贤",
+      "name": "西渡学校",
+      "address": "扶港路1150弄1号",
+      "matchedName": "西渡学校",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4252,
+      "district": "奉贤",
+      "name": "奉浦小学",
+      "address": "运河路618号",
+      "matchedName": "奉浦小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4253,
+      "district": "奉贤",
+      "name": "肖塘小学",
+      "address": "奉浦街道吴塘路880号",
+      "matchedName": "肖塘小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4254,
+      "district": "奉贤",
+      "name": "汇贤中学",
+      "address": "奉贤区运河路288号",
+      "matchedName": "汇贤中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4255,
+      "district": "奉贤",
+      "name": "奉浦中学",
+      "address": "奉贤区运河路288号",
+      "matchedName": "奉浦中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4256,
+      "district": "奉贤",
+      "name": "肖塘中学",
+      "address": "奉浦街道南虹路115号",
+      "matchedName": "肖塘中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4257,
+      "district": "奉贤",
+      "name": "崇实中学",
+      "address": "金海街道泽园路51号",
+      "matchedName": "崇实中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4258,
+      "district": "奉贤",
+      "name": "金海小学",
+      "address": "金海街道高丰路500号",
+      "matchedName": "金海小学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    },
+    {
+      "id": 4259,
+      "district": "奉贤",
+      "name": "头桥中学",
+      "address": "奉城镇头桥社区振兴路18号",
+      "matchedName": "头桥中学",
+      "sourceTitle": "2025年奉贤区义务教育阶段学校“校园开放日”信息汇总表",
+      "sourceUrl": "https://xxgk.fengxian.gov.cn/art/info/9595/i20250409-xbytajj26ptm39h2a0"
+    }
+  ]
+}

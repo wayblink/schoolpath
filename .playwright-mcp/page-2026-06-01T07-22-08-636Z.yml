@@ -1,0 +1,583 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic:
+        - link "无障碍操作说明" [ref=e4] [cursor=pointer]:
+          - /url: https://www.shanghai.gov.cn/nw2314/20240805/daf781be6f594482bf081a6e430994ec.html
+        - link "跳转到网站导航区" [ref=e5] [cursor=pointer]:
+          - /url: "#mainNav"
+        - link "跳转到主要内容区域" [ref=e6] [cursor=pointer]:
+          - /url: "#main"
+      - generic [ref=e8]:
+        - text: 
+        - generic [ref=e9]:
+          - link "一网通办" [ref=e10] [cursor=pointer]:
+            - /url: https://zwdt.sh.gov.cn/govPortals
+            - img "一网通办" [ref=e11]
+          - generic [ref=e12]:
+            - link "登录" [ref=e13] [cursor=pointer]:
+              - /url: javascript:void(0)
+            - link "注册" [ref=e14] [cursor=pointer]:
+              - /url: https://zwdtuser.sh.gov.cn/uc/register/register.html?kind=0
+          - list [ref=e15]:
+            - listitem [ref=e16]:
+              - link "简" [ref=e17] [cursor=pointer]:
+                - /url: javascript:zh_tran("s");
+            - listitem [ref=e18]:
+              - link "繁" [ref=e19] [cursor=pointer]:
+                - /url: javascript:zh_tran("t");
+            - listitem [ref=e20]:
+              - link "无障碍" [ref=e21] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e22]:
+              - link "关怀版" [ref=e23] [cursor=pointer]:
+                - /url: javascript:void(0)
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - link " ENGLISH" [ref=e27] [cursor=pointer]:
+              - /url: https://english.shanghai.gov.cn
+              - generic [ref=e28]: 
+              - text: ENGLISH
+          - listitem [ref=e29]:
+            - link "日本語" [ref=e30] [cursor=pointer]:
+              - /url: https://japanese.shanghai.gov.cn
+          - listitem [ref=e31]:
+            - link "한국어" [ref=e32] [cursor=pointer]:
+              - /url: https://korean.shanghai.gov.cn
+          - listitem [ref=e33]:
+            - link "DEUTSCH" [ref=e34] [cursor=pointer]:
+              - /url: https://german.shanghai.gov.cn/
+          - listitem [ref=e35]:
+            - link "FRANÇAIS" [ref=e36] [cursor=pointer]:
+              - /url: https://french.shanghai.gov.cn/
+          - listitem [ref=e37]:
+            - link "ESPAÑOL" [ref=e38] [cursor=pointer]:
+              - /url: https://spanish.shanghai.gov.cn/
+          - listitem [ref=e39]:
+            - link "PORTUGUÊS" [ref=e40] [cursor=pointer]:
+              - /url: https://portuguese.shanghai.gov.cn/
+          - listitem [ref=e41]:
+            - link "РУССКИЙ" [ref=e42] [cursor=pointer]:
+              - /url: https://russian.shanghai.gov.cn/
+          - listitem [ref=e43]:
+            - link "العربية" [ref=e44] [cursor=pointer]:
+              - /url: https://arabic.shanghai.gov.cn/
+          - listitem [ref=e45]:
+            - link "ITALIANO" [ref=e46] [cursor=pointer]:
+              - /url: https://italian.shanghai.gov.cn/
+      - generic [ref=e47]:
+        - navigation [ref=e50]:
+          - list [ref=e51]:
+            - listitem [ref=e52]:
+              - link "首页" [ref=e53] [cursor=pointer]:
+                - /url: https://www.shanghai.gov.cn
+            - listitem [ref=e54]:
+              - link "政务服务" [ref=e55] [cursor=pointer]:
+                - /url: https://zwdt.sh.gov.cn/govPortals
+            - listitem [ref=e56]:
+              - link "要闻动态" [ref=e57] [cursor=pointer]:
+                - /url: https://www.shanghai.gov.cn/nw2315/index.html
+            - listitem [ref=e58]:
+              - link "政务公开" [ref=e59] [cursor=pointer]:
+                - /url: https://www.shanghai.gov.cn/nw2319/index.html
+            - listitem [ref=e60]:
+              - link "政民互动" [ref=e61] [cursor=pointer]:
+                - /url: https://www.shanghai.gov.cn/nw38605/index.html
+            - listitem [ref=e62]:
+              - link "走进上海" [ref=e63] [cursor=pointer]:
+                - /url: https://www.shanghai.gov.cn/nw2318/index.html
+        - generic [ref=e65]:
+          - paragraph [ref=e66]:
+            - img "上海市人民政府" [ref=e67]
+          - heading "上海市人民政府" [level=2] [ref=e68]
+          - paragraph [ref=e69]: 海纳百川 · 追求卓越 · 开明睿智 · 大气谦和
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e74] [cursor=pointer]:
+                - generic [ref=e75]: 本站
+                - combobox "选择站点" [ref=e76]:
+                  - option "本站" [selected]
+                  - option "站群"
+              - textbox "搜索您想了解的政策/资讯/服务" [ref=e77]
+              - link "语音搜索":
+                - /url: javascript:void(0)
+            - button "搜一下" [ref=e79] [cursor=pointer]
+    - generic [ref=e80]:
+      - list [ref=e83]:
+        - listitem [ref=e84]:
+          - link "首页" [ref=e85] [cursor=pointer]:
+            - /url: /index.html
+        - listitem [ref=e86]:
+          - text: /
+          - link "政务公开" [ref=e87] [cursor=pointer]:
+            - /url: /nw2319/index.html
+        - listitem [ref=e88]:
+          - text: /
+          - link "招生入学" [ref=e89] [cursor=pointer]:
+            - /url: /jcsfbzsrx/index.html
+        - listitem [ref=e90]:
+          - text: /
+          - link "义务教育招生" [ref=e91] [cursor=pointer]:
+            - /url: /jcsfbywjyzs/index.html
+        - listitem [ref=e92]:
+          - text: /
+          - link "徐汇区" [ref=e93] [cursor=pointer]:
+            - /url: /xhqywjy/index.html
+      - generic [ref=e95]:
+        - generic [ref=e97]:
+          - heading "徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案 印发日期：2025-04-07 徐教〔2025〕3号 字号： 大 中 小" [level=2] [ref=e98]:
+            - generic [ref=e99]:
+              - text: 徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案
+              - paragraph [ref=e101]:
+                - generic [ref=e102]: 印发日期：2025-04-07
+                - generic [ref=e103]: 徐教〔2025〕3号
+              - generic [ref=e104]:
+                - generic [ref=e106]: 字号：
+                - generic [ref=e107]:
+                  - link "大" [ref=e108] [cursor=pointer]:
+                    - /url: "#"
+                  - link "中" [ref=e109] [cursor=pointer]:
+                    - /url: "#"
+                  - link "小" [ref=e110] [cursor=pointer]:
+                    - /url: "#"
+          - iframe [ref=e112]:
+            - application "media player" [ref=f2e2]:
+              - generic [ref=f2e4]:
+                - generic [ref=f2e5]: 无障碍语音播报
+                - generic [ref=f2e6]:
+                  - button "播放语音" [ref=f2e7] [cursor=pointer]: 播放
+                  - button "停止语音" [ref=f2e8] [cursor=pointer]: 停止
+                - generic [ref=f2e11]:
+                  - button "打开声音" [ref=f2e12] [cursor=pointer]
+                  - button "最大声音" [ref=f2e13] [cursor=pointer]
+                - generic [ref=f2e16]:
+                  - timer "time" [ref=f2e17]: 00:00
+                  - timer "duration" [ref=f2e18] [cursor=pointer]: 00:00
+          - generic [ref=e114]:
+            - paragraph
+            - generic [ref=e115]:
+              - paragraph [ref=e116]:
+                - strong [ref=e117]: 徐汇区关于2025年义务教育阶段学校招生入学工作的实施方案
+              - paragraph [ref=e118]: 徐教〔2025〕3号
+              - paragraph [ref=e119]: 根据《中华人民共和国义务教育法》《中共上海市委 上海市人民政府关于贯彻<中共中央 国务院关于深化教育教学改革全面提高义务教育质量的意见>的实施意见》（沪委发〔2020〕3号）、《上海市实施〈中华人民共和国义务教育法〉办法》、《上海市教育委员会关于2025年本市义务教育阶段学校招生入学工作的实施意见》（沪教委基〔2025〕11号）精神，结合义务教育优质均衡发展区创建、公建配套学校建设、紧密型学区集团建设等要求，促进依法办学、规范义务教育阶段学校招生入学工作，现就徐汇区2025年义务教育阶段学校招生入学工作提出以下实施方案。
+              - paragraph [ref=e120]:
+                - strong [ref=e121]: 一、公办小学招生
+              - paragraph [ref=e122]: （一）招生对象
+              - paragraph [ref=e123]: 2018年9月1日—2019年8月31日出生，年满6周岁的本市户籍适龄儿童和符合条件的非本市户籍适龄儿童。确因身体状况等特殊原因不能当年度入学的，可向户籍所在地教育行政部门申请推迟一年入学。上一年度因身体状况等特殊原因未入学的，可向户籍所在地教育行政部门提出入学申请。
+              - paragraph [ref=e124]: （二）招生原则
+              - paragraph [ref=e125]: 1．根据“相对就近、免试入学”的原则，继续实行对口入学的办法，统筹兼顾、合理安排，各校继续实施每户地址五年内只享有一次同校对口入学机会（多胞胎、二胎和三胎除外）。小学班额不超过45人。
+              - paragraph [ref=e126]: 2．对于本区户籍地（户主为直系亲属或儿童本人）与居住地（产权人为直系亲属或儿童本人）一致的适龄儿童，当报名人数不超过对口学校招收学额时，安排就近入学；当报名人数超过对口学校招收学额时，按照入户籍时间长短顺序安排入学，超出学额部分实行区域内统筹安排入学。
+              - paragraph [ref=e127]: 3．本市户籍人户分离适龄儿童选择居住地登记入学的，先安排户籍地与实际居住地一致的适龄儿童，再根据区域内实际情况统筹安排“人户分离”适龄儿童入学。本市集体户籍适龄儿童参照居住地登记入学办法就读，本市户籍居住廉租房的适龄儿童在廉租房所在地登记入学。
+              - paragraph [ref=e128]: 4．符合就读条件的非本市户籍适龄儿童，统筹安排进入义务教育阶段学校就读，优先安排持有积分达标的《上海市居住证》人员的子女。
+              - paragraph [ref=e129]: （三）信息登记
+              - paragraph [ref=e130]: 4月14日—4月27日，凡本区在园适龄儿童家长通过幼儿园登记孩子入学信息，未入园适龄儿童家长可在规定时间登录徐汇区教育局招生考试中心网站（网址：https://www.xuhui.gov.cn/egov/）查看《2025年徐汇区小学一年级招生通告》相关流程，登记孩子入学信息，获取《上海市小学入学信息登记表》和“入学报名告知书”，作为入学报名的重要依据。
+              - paragraph [ref=e131]: （四）报名验证
+              - paragraph [ref=e132]: 1．符合入学条件的适龄儿童家长须在“一网通办”网站（zwdt.sh.gov.cn）义务教育入学专栏或“上海市义务教育入学报名系统”（shrxbm.edu.sh.gov.cn）进行入学报名，公办小学报名时间为5月7日—5月11日。
+              - paragraph [ref=e133]: 2. 5月17日—5月20日开展本市公办小学第一批验证；5月24日—5月25日为本市公办小学第二批验证日。报名验证点主要通过集中调取“一网通办”有关信息，对已完成公办小学报名的适龄儿童以及家长的证件进行核对。“随申办”或“一网通办”网站中的电子证照与纸质证件可同等效力使用。
+              - paragraph [ref=e134]: （1）本市户籍的适龄儿童，家长须提供儿童户口簿、出生证、房产证、《上海市小学入学信息登记表》，在居住地登记就读的，还需提供有效的《本市户籍人户分离人员居住登记凭证》，并提供与登记凭证一致的本区自购房房屋产权证或《上海市住房租赁合同备案通知书》等相关居住证明。
+              - paragraph [ref=e135]: （2）外省市户籍的适龄儿童，家长须提供儿童户口簿、出生证、《上海市小学入学信息登记表》，此外根据《上海市人民政府办公厅转发市教委等四部门关于来沪人员随迁子女就读本市各级各类学校实施意见的通知》(沪府办规〔2018〕5号)等要求，2025年来沪人员适龄随迁子女需在本市接受义务教育的，适龄儿童须持有效期内《上海市居住证》或《居住登记凭证》，父母一方须持有效期内《上海市居住证》,且一年内（2024年7月1日至2025年6月30日）参加本市职工社会保险满6个月（不含补缴）或连续3年（从首次登记日起至2025年6月30日）办妥本市灵活就业登记，并提供与居住证一致的本区自购房房屋产权证或《上海市住房租赁合同备案通知书》等相关居住证明。
+              - paragraph [ref=e136]: 符合入学条件的非本市户籍适龄儿童本人的合法居住证件（含《居住登记凭证》）上的居住地址，须与父母所持居住证的居住地址，以及本区自购房房屋产权证或《上海市住房租赁合同备案通知书》上的居住地址相一致。
+              - paragraph [ref=e137]: 各报名验证点要对适龄儿童家长提供的证件进行验证，通过信息系统对适龄儿童家长参加本市职工社会保险、灵活就业登记证明进行信息比对。
+              - paragraph [ref=e138]: （3）港澳台、外籍的适龄儿童，家长须提供儿童的身份证明（《中华人民共和国港澳居民居住证》或《港澳居民来往内地通行证》、《中华人民共和国台湾居民居住证》或《台湾居民来往大陆通行证》、《外国护照》）、出生证、《上海市小学入学信息登记表》、法定监护人的身份证明（同上），《境外人员住宿登记单》，并提供与居住证（或登记单）一致的本区自购房房屋产权证或《上海市住房租赁合同备案通知书》等相关居住证明，外国人还需提供《外国人居留证》和《外国人来华工作许可证》等。
+              - paragraph [ref=e139]: 3. 5月21日起，对已验证通过的适龄儿童，陆续发送公办小学入学告知信息。未被民办小学录取的，参加公办小学第二批验证，时间为5月24日-5月25日。
+              - paragraph [ref=e140]:
+                - strong [ref=e141]: 二、公办初中招生
+              - paragraph [ref=e142]: （一）招生原则
+              - paragraph [ref=e143]: 根据“相对就近、免试入学”的原则，继续实行按学生户籍性质，采用小学对口入学、划块电脑派位入学相结合的方法，各校继续实施每户地址五年内只享有一次同校对口入学机会（多胞胎、二胎和三胎除外），对口入学和电脑派位的学生须有本区学籍三年以上。初中班额不超过50人。
+              - paragraph [ref=e144]: （二）小学毕业信息核对
+              - paragraph [ref=e145]: 4月14日—4月25日，各小学有序组织五年级学生家长对“上海市义务教育入学报名系统”中的户籍地址、居住地地址等入学关键信息进行核对，并填写监护人手机号码(作为接收初中入学信息的联系方式)，获取《上海市初中入学信息核对表》。如发现有关信息与实际情况不符的，家长应在4月25日前及时凭有效证件通过学生就读小学进行更正。4月25日为本市小学五年级学生初中入学关键信息核对、更正截止日。
+              - paragraph [ref=e146]: （三）关于非本市户籍、跨区和区内跨地块就读学生的入学
+              - paragraph [ref=e147]: 1．对外区户籍在本区就读的五年级学生，可根据实际情况选择回户籍所在区或居住地所在区就读初中或继续申请在本区就读初中。各小学应认真做好学生的户籍核查工作，确需回户籍(居住)地入学的学生，应向就读小学提出申请，由学校告知审核证件、网上申请、统筹安排等事项，家长在网上填报《本市户籍学生回户籍(居住)地就读申请表》，经核对符合条件的，由户籍(居住)地区教育行政部门统筹安排进入公办初中学校就读。徐汇区户籍在外区就读的五年级学生，若需回本区就读初中，应向就读小学提出申请并办理跨区入学的相关手续，待学生材料转入本区后，由区招生考试中心统筹安排入学。办理申请回户籍(居住)地就读手续的截止日为4月25日。
+              - paragraph [ref=e148]: 2. 对在本区外块就读的五年级学生，需回户籍所在地升学的，应在4月25日前向原就读小学提出申请，由就读小学统计汇总并报区招生考试中心。
+              - paragraph [ref=e149]: 3．在本区就读的非本市户籍的五年级学生，回外省市就读确实有困难，需继续在本区就读且符合条件的，应在4月25日前向原就读小学提出申请，由就读小学统计汇总并报区招生考试中心，经审核通过后由区招生考试中心统筹安排入学,同时须提供完成义务教育后按相关规定和政策报考本市高中阶段学校的《就读承诺书》，承诺书留存学生学籍档案。徐汇区户籍在外省市就读的小学毕业生，若需回本区就读初中，应在4月25日10：00前登录徐汇区教育局招生考试中心网站（网址：https://www.xuhui.gov.cn/egov/）查看《2025年外省市小学五年级学生到徐汇区就读六年级登记办法》相关流程，登记学生入学信息，获取《上海市初中入学信息登记表》，由区招生考试中心统筹安排入学。
+              - paragraph [ref=e150]: 4. 港澳人士、台湾籍人士子女入学，需提供《中华人民共和国港澳居民居住证》或《港澳居民来往内地通行证》、《中华人民共和国台湾居民居住证》或《台湾居民来往大陆通行证》，由区招生考试中心根据实际情况安排入学，外籍人士子女入学由区招生考试中心统筹安排。
+              - paragraph [ref=e151]: （四）关于随班就读学生的入学
+              - paragraph [ref=e152]: 五年级随班就读的学生，按市教委“随班就读”的原则，可直接升入我区相应学校的六年级继续随班就读。
+              - paragraph [ref=e153]:
+                - strong [ref=e154]: 三、民办学校招生
+              - paragraph [ref=e155]: （一）公布招生简章
+              - paragraph [ref=e156]: 本区民办学校的招生，按照《中共上海市委 上海市人民政府关于贯彻<中共中央 国务院关于深化教育教学改革全面提高义务教育质量的意见>的实施意见》（沪委发〔2020〕3号）精神，统一纳入我区招生工作实施方案，有寄宿条件的民办学校可跨区招生。严禁民办中小学计划外招生，严禁擅自以“国际部”“国际课程班”“境外班”等涉外名义招生。义务教育阶段民办学校不引进境外课程，不使用境外教材。
+              - paragraph [ref=e157]: 民办学校应在核定的招生计划与范围内招生。有寄宿条件的民办学校可适当扩大招生范围，民办学校可按走读、住宿等分类设置招生计划，民办一贯制学校一般应设置本校免试直升计划和校外招生计划。民办学校按政策规定，承接与高等院校联合办学以及符合其他相关条件的生源，可在学校招生计划中分设，具体详见各民办学校的招生简章。民办学校按招生计划实施分类报名，当报名人数超过招生计划数时实施电脑随机录取。
+              - paragraph [ref=e158]: 学校招生简章须于3月31日前向区教育局申报备案，经审核通过并向社会公布后方可实施。招生简章公开内容应包括学校办学情况、办学特色、招生计划、收费情况、“三个承诺”（不提前组织学生报名或变相报名，不举行任何测试、测评、学科练习、面试或面谈，招生录取不与任何培训机构挂钩）等。
+              - paragraph [ref=e159]: （二）实施网上报名
+              - paragraph [ref=e160]: 4月14日--4月25日，民办一贯制学校征求本校学生直升意愿。
+              - paragraph [ref=e161]: 5月7日--5月9日，报名就读民办小学的适龄儿童须在“一网通办”网站义务教育入学专栏或“上海市义务教育入学报名系统”填报志愿，每个适龄儿童填报1所民办小学参加电脑随机录取，并可填报1个民办小学调剂志愿。
+              - paragraph [ref=e162]: 5月12日--5月14日，报名就读民办初中的学生须在“一网通办”网站义务教育入学专栏或“上海市义务教育入学报名系统”填报志愿，每个学生填报1所民办初中参加电脑随机录取，并可填报1个民办初中调剂志愿。
+              - paragraph [ref=e163]: 调剂志愿分为三类：同校调剂（同校内住宿或走读等分类计划间调剂）、区内调剂（就读意愿区内其他民办学校间调剂）、集团内调剂（同一集团内外区其他民办学校间调剂），可在3类调剂类型中选择一个调剂志愿。
+              - paragraph [ref=e164]: 一旦完成报名，将不得再次报名或修改报名信息、放弃报名志愿。
+              - paragraph [ref=e165]: （三）规范录取程序
+              - paragraph [ref=e166]: 如报名人数小于或等于招生计划数的，全部录取；如报名人数超过招生计划数时实施电脑随机录取。5月6日，开展民办一贯制学校直升录取工作。5月19日--5月20日，对报名人数超过招生计划数的民办学校实施电脑随机录取。电脑随机录取使用全市统一软件，实施全程录像，向市、区两级教育行政、督导、纪检监察部门以及学校家委会代表等公开，自觉接受社会监督。电脑随机录取结果即时导入“上海市义务教育入学报名系统”，并及时向社会公布。5月21日组织验证。5月22日，安排调剂志愿录取。
+              - paragraph [ref=e167]: （四）发放入学告知
+              - paragraph [ref=e168]: 5月21日起将通过短信和“上海市义务教育入学报名系统”等渠道陆续告知相关入学信息。民办学校招生工作完成后，学校将录取名单上报区教育行政部门。学生按学校通知办理入学手续。
+              - paragraph [ref=e169]: 实施公民办学校同步招生。未被民办小学录取的适龄儿童，根据第一批公办小学验证和已分配入学的实际情况，以本区户籍人户一致优先、同类排序靠后为原则，按照有关学校招生细则安排入学；未被民办初中录取的学生，根据公办初中已分配入学的实际情况，以本区户籍人户一致优先、同类排序靠后为原则，由小学就读区教育行政部门安排进入初中就读，如已填报《本市户籍学生回户籍（居住）地就读申请表》，按照填表时所选择的户籍（居住）地，由相关区教育行政部门统筹安排进入公办初中就读。
+              - paragraph [ref=e170]:
+                - strong [ref=e171]: 四、招生纪律
+              - paragraph [ref=e172]: （一）全面落实义务教育阳光招生专项行动（2025）的各项要求，义务教育阶段学校全面取消各类特长生招生。严禁以各类考试、竞赛、培训成绩或证书等作为招生依据或参考，严禁以任何形式选拔学生；严禁拒绝具有接受普通教育能力的适龄残疾儿童或学生入学。所有学校实施均衡分班，严禁以任何形式进行文化测试选拔并按照测试成绩分班；严禁举办各类重点班、快慢班等。如有违反相关规定，责令限期改正，经查实，情节严重的，对直接负责的校长和其他相关人员依法给予处分。招生违规情况记入校长和教师信誉档案，与职称职级评定、评先评优相挂钩。
+              - paragraph [ref=e173]: （二）进一步落实主体责任，完善监督工作机制，主动接受市、区两级纪检监察部门的监督，对于发现的违规违纪问题要及时移送纪检监察部门查处。与相关部门形成工作合力，解决本地区义务教育阶段学校招生工作中出现的突出问题，确保招生入学工作规范有序进行。
+              - paragraph [ref=e174]: （三）民办学校在招生录取过程中未兑现“三个承诺”，以考试（测试）等方式选拔录取学生的，录取学生时以学生各类考试、竞赛、培训成绩或证书等为依据或参考的，或存在招收无学籍材料学生，利用招生入学违规收费，对报名的学生家长组织测评、调研等活动的，擅自在计划外招收学生等违规招生行为的，根据有关规定，责令校长或有关责任人员及时纠正，并酌情核减该校的招生计划数，核减政府专项扶持资金。
+              - paragraph [ref=e175]: （四）4月12日-4月13日，本区义务教育阶段学校均开展“校园开放日”活动。各校应提前做好“校园开放日”的设计和方案。“校园开放日”活动主要展示学校办学理念、师资水平、课程教学、课后服务、办学特色等情况，参与学区、集团建设的要展示共享共建的资源。“校园开放日”活动不得组织学生报名，不得组织任何形式的测试、测评、面试、面谈或调查等，不得收取学生任何形式的简历（包括各类证书）等材料。
+              - paragraph [ref=e176]: （五）对烈士子女、符合条件的现役军人子女、公安英模和因公牺牲伤残警察子女及其他各类符合条件的优待对象，按有关政策，妥善安排入学。
+              - paragraph [ref=e177]: （六）为切实加强对义务教育阶段学校招生入学工作的指导、监督和管理，特别要加强民办学校电脑随机录取过程和结果的监督与管理，成立区招生工作领导小组与区招生工作纪检监察小组，对违反招生政策和纪律，以权谋私、营私舞弊者，一经查实，严肃处理，确保义务教育阶段学校招生入学工作规范有序进行。
+              - paragraph [ref=e178]: （七）为积极、稳妥地推进义务教育阶段招生改革，须做好相关招生政策的宣传、解释工作，区教育局中教科、小教科和招生考试中心应做好接待工作，并及时处理好有关问题。
+              - paragraph [ref=e179]: "徐汇区教育局招生考试中心网址：https://www.xuhui.gov.cn/egov/咨询电话: 54361242 54361272 54106183"
+              - paragraph [ref=e180]:
+                - img "二维码.png" [ref=e181]
+              - paragraph [ref=e182]: 工作日：8:30--11:30 13:30--16:30 (中、高考及国定假日除外）
+              - paragraph [ref=e183]: 监督电话：54361542 64380853
+              - paragraph [ref=e184]: 线上咨询：http://zsks.xuhui.gov.cn/zxzx/
+              - paragraph [ref=e185]: 附件：2025年徐汇区义务教育阶段学校招生入学工作日程安排
+              - paragraph [ref=e186]: 上海市徐汇区教育局
+              - paragraph [ref=e187]: 2025年4月7日
+              - paragraph [ref=e188]: 附件：
+              - paragraph [ref=e189]:
+                - strong [ref=e190]: 2025年徐汇区义务教育阶段学校招生入学工作日程安排
+              - table [ref=e191]:
+                - rowgroup [ref=e192]:
+                  - row "日期 内容" [ref=e193]:
+                    - cell "日期" [ref=e194]:
+                      - paragraph [ref=e195]:
+                        - strong [ref=e197]: 日期
+                    - cell "内容" [ref=e198]:
+                      - paragraph [ref=e199]:
+                        - strong [ref=e201]: 内容
+                  - row "4月7日 公布2025年徐汇区义务教育阶段学校招生入学工作的实施方案和招生入学工作具体事项（包括：公办小学招生划片范围；公办初中入学方式等），以及按规定须向社会公布的其他有关招生入学信息。" [ref=e202]:
+                    - cell "4月7日" [ref=e203]:
+                      - paragraph [ref=e204]: 4月7日
+                    - cell "公布2025年徐汇区义务教育阶段学校招生入学工作的实施方案和招生入学工作具体事项（包括：公办小学招生划片范围；公办初中入学方式等），以及按规定须向社会公布的其他有关招生入学信息。" [ref=e205]:
+                      - paragraph [ref=e206]: 公布2025年徐汇区义务教育阶段学校招生入学工作的实施方案和招生入学工作具体事项（包括：公办小学招生划片范围；公办初中入学方式等），以及按规定须向社会公布的其他有关招生入学信息。
+                  - row "4月11日 “上海市义务教育入学报名系统”开通。" [ref=e207]:
+                    - cell "4月11日" [ref=e208]:
+                      - paragraph [ref=e209]: 4月11日
+                    - cell "“上海市义务教育入学报名系统”开通。" [ref=e210]:
+                      - paragraph [ref=e211]: “上海市义务教育入学报名系统”开通。
+                  - row "4月12日-13日 本市所有义务教育阶段学校开展“校园开放日”。" [ref=e212]:
+                    - cell "4月12日-13日" [ref=e213]:
+                      - paragraph [ref=e214]: 4月12日-13日
+                    - cell "本市所有义务教育阶段学校开展“校园开放日”。" [ref=e215]:
+                      - paragraph [ref=e216]: 本市所有义务教育阶段学校开展“校园开放日”。
+                  - row "4月14日—25日 1. 本市小学五年级学生初中入学相关信息核对、更正。 2. 民办一贯制学校征求学生直升意愿。 3. 跨区就读的本市户籍小学五年级学生，办理申请回户籍（居住）地就读手续。" [ref=e217]:
+                    - cell "4月14日—25日" [ref=e218]:
+                      - paragraph [ref=e219]: 4月14日—25日
+                    - cell "1. 本市小学五年级学生初中入学相关信息核对、更正。 2. 民办一贯制学校征求学生直升意愿。 3. 跨区就读的本市户籍小学五年级学生，办理申请回户籍（居住）地就读手续。" [ref=e220]:
+                      - paragraph [ref=e221]: 1. 本市小学五年级学生初中入学相关信息核对、更正。
+                      - paragraph [ref=e222]: 2. 民办一贯制学校征求学生直升意愿。
+                      - paragraph [ref=e223]: 3. 跨区就读的本市户籍小学五年级学生，办理申请回户籍（居住）地就读手续。
+                  - row "4月25日 1.本市小学五年级学生初中入学相关信息核对、更正截止日。 2.民办一贯制学校征求学生直升意愿截止日。 3.跨区就读的本市户籍小学五年级学生，办理申请回户籍（居住）地就读手续截止日。" [ref=e224]:
+                    - cell "4月25日" [ref=e225]:
+                      - paragraph [ref=e226]: 4月25日
+                    - cell "1.本市小学五年级学生初中入学相关信息核对、更正截止日。 2.民办一贯制学校征求学生直升意愿截止日。 3.跨区就读的本市户籍小学五年级学生，办理申请回户籍（居住）地就读手续截止日。" [ref=e227]:
+                      - paragraph [ref=e228]: 1.本市小学五年级学生初中入学相关信息核对、更正截止日。
+                      - paragraph [ref=e229]: 2.民办一贯制学校征求学生直升意愿截止日。
+                      - paragraph [ref=e230]: 3.跨区就读的本市户籍小学五年级学生，办理申请回户籍（居住）地就读手续截止日。
+                  - row "4月14日—27日 适龄儿童进行小学入学信息登记。" [ref=e231]:
+                    - cell "4月14日—27日" [ref=e232]:
+                      - paragraph [ref=e233]: 4月14日—27日
+                    - cell "适龄儿童进行小学入学信息登记。" [ref=e234]:
+                      - paragraph [ref=e235]: 适龄儿童进行小学入学信息登记。
+                  - row "4月27日 幼升小申请居住地登记入学就读手续截止日。" [ref=e236]:
+                    - cell "4月27日" [ref=e237]:
+                      - paragraph [ref=e238]: 4月27日
+                    - cell "幼升小申请居住地登记入学就读手续截止日。" [ref=e239]:
+                      - paragraph [ref=e240]: 幼升小申请居住地登记入学就读手续截止日。
+                  - row "5月6日 民办一贯制学校直升录取。" [ref=e241]:
+                    - cell "5月6日" [ref=e242]:
+                      - paragraph [ref=e243]: 5月6日
+                    - cell "民办一贯制学校直升录取。" [ref=e244]:
+                      - paragraph [ref=e245]: 民办一贯制学校直升录取。
+                  - row "5月7日—11日 小学入学网上报名，选择报名公办小学（截止到5月11日）或报名民办小学（截止到5月9日）。" [ref=e246]:
+                    - cell "5月7日—11日" [ref=e247]:
+                      - paragraph [ref=e248]: 5月7日—11日
+                    - cell "小学入学网上报名，选择报名公办小学（截止到5月11日）或报名民办小学（截止到5月9日）。" [ref=e249]:
+                      - paragraph [ref=e250]: 小学入学网上报名，选择报名公办小学（截止到5月11日）或报名民办小学（截止到5月9日）。
+                  - row "5月9日 公办初中入学电脑派位。" [ref=e251]:
+                    - cell "5月9日" [ref=e252]:
+                      - paragraph [ref=e253]: 5月9日
+                    - cell "公办初中入学电脑派位。" [ref=e254]:
+                      - paragraph [ref=e255]: 公办初中入学电脑派位。
+                  - row "5月12日—14日 民办初中网上报名。" [ref=e256]:
+                    - cell "5月12日—14日" [ref=e257]:
+                      - paragraph [ref=e258]: 5月12日—14日
+                    - cell "民办初中网上报名。" [ref=e259]:
+                      - paragraph [ref=e260]: 民办初中网上报名。
+                  - row "5月17日—20日 公办小学第一批验证。" [ref=e261]:
+                    - cell "5月17日—20日" [ref=e262]:
+                      - paragraph [ref=e263]: 5月17日—20日
+                    - cell "公办小学第一批验证。" [ref=e264]:
+                      - paragraph [ref=e265]: 公办小学第一批验证。
+                  - row "5月19日--20日 对报名人数超过招生计划数的民办学校实施电脑随机录取。" [ref=e266]:
+                    - cell "5月19日--20日" [ref=e267]:
+                      - paragraph [ref=e268]: 5月19日--20日
+                    - cell "对报名人数超过招生计划数的民办学校实施电脑随机录取。" [ref=e269]:
+                      - paragraph [ref=e270]: 对报名人数超过招生计划数的民办学校实施电脑随机录取。
+                  - row "5月21日 组织开展民办学校录取验证。" [ref=e271]:
+                    - cell "5月21日" [ref=e272]:
+                      - paragraph [ref=e273]: 5月21日
+                    - cell "组织开展民办学校录取验证。" [ref=e274]:
+                      - paragraph [ref=e275]: 组织开展民办学校录取验证。
+                  - row "5月21日起 陆续发送公办小学入学告知信息及民办学校录取告知信息。" [ref=e276]:
+                    - cell "5月21日起" [ref=e277]:
+                      - paragraph [ref=e278]: 5月21日起
+                    - cell "陆续发送公办小学入学告知信息及民办学校录取告知信息。" [ref=e279]:
+                      - paragraph [ref=e280]: 陆续发送公办小学入学告知信息及民办学校录取告知信息。
+                  - row "5月22日 民办学校调剂志愿录取。" [ref=e281]:
+                    - cell "5月22日" [ref=e282]:
+                      - paragraph [ref=e283]: 5月22日
+                    - cell "民办学校调剂志愿录取。" [ref=e284]:
+                      - paragraph [ref=e285]: 民办学校调剂志愿录取。
+                  - row "5月23日 对报名人数超过招生计划数的上汇实验学校实施电脑随机录取。" [ref=e286]:
+                    - cell "5月23日" [ref=e287]:
+                      - paragraph [ref=e288]: 5月23日
+                    - cell "对报名人数超过招生计划数的上汇实验学校实施电脑随机录取。" [ref=e289]:
+                      - paragraph [ref=e290]: 对报名人数超过招生计划数的上汇实验学校实施电脑随机录取。
+                  - row "5月24日—25日 公办小学第二批验证。" [ref=e291]:
+                    - cell "5月24日—25日" [ref=e292]:
+                      - paragraph [ref=e293]: 5月24日—25日
+                    - cell "公办小学第二批验证。" [ref=e294]:
+                      - paragraph [ref=e295]: 公办小学第二批验证。
+                  - row "8月15日前 向新生发送“入学通知书”。" [ref=e296]:
+                    - cell "8月15日前" [ref=e297]:
+                      - paragraph [ref=e298]: 8月15日前
+                    - cell "向新生发送“入学通知书”。" [ref=e299]:
+                      - paragraph [ref=e300]: 向新生发送“入学通知书”。
+            - paragraph
+          - generic:
+            - generic [ref=e302]: 分享：
+            - generic [ref=e303]:
+              - link "" [ref=e304] [cursor=pointer]:
+                - /url: javascript:;
+              - link "" [ref=e305] [cursor=pointer]:
+                - /url: http://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.shanghai.gov.cn%2Fxhqywjy%2F20250411%2F2b71e54ac4a94e8bb43eac1db0e33ddd.html&title=%E5%BE%90%E6%B1%87%E5%8C%BA%E5%85%B3%E4%BA%8E2025%E5%B9%B4%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%AD%A6%E6%A0%A1%E6%8B%9B%E7%94%9F%E5%85%A5%E5%AD%A6%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%AE%9E%E6%96%BD%E6%96%B9%E6%A1%88&pic=https%3A%2F%2Fwww.shanghai.gov.cn%2Fassets2020%2Fimg%2Flogo1020.png&appkey=
+              - link "" [ref=e306] [cursor=pointer]:
+                - /url: http://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fwww.shanghai.gov.cn%2Fxhqywjy%2F20250411%2F2b71e54ac4a94e8bb43eac1db0e33ddd.html&title=%E5%BE%90%E6%B1%87%E5%8C%BA%E5%85%B3%E4%BA%8E2025%E5%B9%B4%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%AD%A6%E6%A0%A1%E6%8B%9B%E7%94%9F%E5%85%A5%E5%AD%A6%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%AE%9E%E6%96%BD%E6%96%B9%E6%A1%88&source=%E5%BE%90%E6%B1%87%E5%8C%BA%E5%85%B3%E4%BA%8E2025%E5%B9%B4%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%AD%A6%E6%A0%A1%E6%8B%9B%E7%94%9F%E5%85%A5%E5%AD%A6%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%AE%9E%E6%96%BD%E6%96%B9%E6%A1%88&desc=&pics=https%3A%2F%2Fwww.shanghai.gov.cn%2Fassets2020%2Fimg%2Flogo1020.png
+              - link "" [ref=e307] [cursor=pointer]:
+                - /url: http://shuo.douban.com/!service/share?href=https%3A%2F%2Fwww.shanghai.gov.cn%2Fxhqywjy%2F20250411%2F2b71e54ac4a94e8bb43eac1db0e33ddd.html&name=%E5%BE%90%E6%B1%87%E5%8C%BA%E5%85%B3%E4%BA%8E2025%E5%B9%B4%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E5%AD%A6%E6%A0%A1%E6%8B%9B%E7%94%9F%E5%85%A5%E5%AD%A6%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%AE%9E%E6%96%BD%E6%96%B9%E6%A1%88&text=&image=https%3A%2F%2Fwww.shanghai.gov.cn%2Fassets2020%2Fimg%2Flogo1020.png&starid=0&aid=0&style=11
+        - generic [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e312]:
+              - list [ref=e315]:
+                - listitem [ref=e316]:
+                  - link " 市政府领导" [ref=e317] [cursor=pointer]:
+                    - /url: /nw44727/index.html
+                    - generic [ref=e318]: 
+                    - generic [ref=e319]: 市政府领导
+                - listitem [ref=e320]:
+                  - link " 市政府新闻发布" [ref=e321] [cursor=pointer]:
+                    - /url: /nw9819/index.html
+                    - generic [ref=e322]: 
+                    - generic [ref=e323]: 市政府新闻发布
+                - listitem [ref=e324]:
+                  - link " 市政府公报" [ref=e325] [cursor=pointer]:
+                    - /url: /nw2404/index.html
+                    - generic [ref=e326]: 
+                    - generic [ref=e327]: 市政府公报
+                - listitem [ref=e328]:
+                  - link " 政府信息公开和政务公开制度" [ref=e329] [cursor=pointer]:
+                    - /url: /nw22421/index.html
+                    - generic [ref=e330]: 
+                    - generic [ref=e331]: 政府信息公开和政务公开制度
+              - list [ref=e334]:
+                - listitem [ref=e335]:
+                  - link " 政府信息公开指南" [ref=e336] [cursor=pointer]:
+                    - /url: /nw11495/20200813/0001-11495_32139.html
+                    - generic [ref=e337]: 
+                    - generic [ref=e338]: 政府信息公开指南
+                - listitem [ref=e339]:
+                  - link " 政府信息公开目录" [ref=e340] [cursor=pointer]:
+                    - /url: /nw11494/index.html
+                    - generic [ref=e341]: 
+                    - generic [ref=e342]: 政府信息公开目录
+                - listitem [ref=e343]:
+                  - link " 政府信息公开年报" [ref=e344] [cursor=pointer]:
+                    - /url: /2025ndbg/index.html
+                    - generic [ref=e345]: 
+                    - generic [ref=e346]: 政府信息公开年报
+                - listitem [ref=e347]:
+                  - link " 市政府信息公开监督保障" [ref=e348] [cursor=pointer]:
+                    - /url: /nw39186/index.html
+                    - generic [ref=e349]: 
+                    - generic [ref=e350]: 市政府信息公开监督保障
+              - list [ref=e353]:
+                - listitem [ref=e354]:
+                  - link " 市政府领导" [ref=e355] [cursor=pointer]:
+                    - /url: /nw44727/index.html
+                    - generic [ref=e356]: 
+                    - generic [ref=e357]: 市政府领导
+                - listitem [ref=e358]:
+                  - link " 市政府新闻发布" [ref=e359] [cursor=pointer]:
+                    - /url: /nw9819/index.html
+                    - generic [ref=e360]: 
+                    - generic [ref=e361]: 市政府新闻发布
+                - listitem [ref=e362]:
+                  - link " 市政府公报" [ref=e363] [cursor=pointer]:
+                    - /url: /nw2404/index.html
+                    - generic [ref=e364]: 
+                    - generic [ref=e365]: 市政府公报
+                - listitem [ref=e366]:
+                  - link " 政府信息公开和政务公开制度" [ref=e367] [cursor=pointer]:
+                    - /url: /nw22421/index.html
+                    - generic [ref=e368]: 
+                    - generic [ref=e369]: 政府信息公开和政务公开制度
+              - list [ref=e372]:
+                - listitem [ref=e373]:
+                  - link " 政府信息公开指南" [ref=e374] [cursor=pointer]:
+                    - /url: /nw11495/20200813/0001-11495_32139.html
+                    - generic [ref=e375]: 
+                    - generic [ref=e376]: 政府信息公开指南
+                - listitem [ref=e377]:
+                  - link " 政府信息公开目录" [ref=e378] [cursor=pointer]:
+                    - /url: /nw11494/index.html
+                    - generic [ref=e379]: 
+                    - generic [ref=e380]: 政府信息公开目录
+                - listitem [ref=e381]:
+                  - link " 政府信息公开年报" [ref=e382] [cursor=pointer]:
+                    - /url: /2025ndbg/index.html
+                    - generic [ref=e383]: 
+                    - generic [ref=e384]: 政府信息公开年报
+                - listitem [ref=e385]:
+                  - link " 市政府信息公开监督保障" [ref=e386] [cursor=pointer]:
+                    - /url: /nw39186/index.html
+                    - generic [ref=e387]: 
+                    - generic [ref=e388]: 市政府信息公开监督保障
+              - list [ref=e391]:
+                - listitem [ref=e392]:
+                  - link " 市政府领导" [ref=e393] [cursor=pointer]:
+                    - /url: /nw44727/index.html
+                    - generic [ref=e394]: 
+                    - generic [ref=e395]: 市政府领导
+                - listitem [ref=e396]:
+                  - link " 市政府新闻发布" [ref=e397] [cursor=pointer]:
+                    - /url: /nw9819/index.html
+                    - generic [ref=e398]: 
+                    - generic [ref=e399]: 市政府新闻发布
+                - listitem [ref=e400]:
+                  - link " 市政府公报" [ref=e401] [cursor=pointer]:
+                    - /url: /nw2404/index.html
+                    - generic [ref=e402]: 
+                    - generic [ref=e403]: 市政府公报
+                - listitem [ref=e404]:
+                  - link " 政府信息公开和政务公开制度" [ref=e405] [cursor=pointer]:
+                    - /url: /nw22421/index.html
+                    - generic [ref=e406]: 
+                    - generic [ref=e407]: 政府信息公开和政务公开制度
+              - list [ref=e410]:
+                - listitem [ref=e411]:
+                  - link " 政府信息公开指南" [ref=e412] [cursor=pointer]:
+                    - /url: /nw11495/20200813/0001-11495_32139.html
+                    - generic [ref=e413]: 
+                    - generic [ref=e414]: 政府信息公开指南
+                - listitem [ref=e415]:
+                  - link " 政府信息公开目录" [ref=e416] [cursor=pointer]:
+                    - /url: /nw11494/index.html
+                    - generic [ref=e417]: 
+                    - generic [ref=e418]: 政府信息公开目录
+                - listitem [ref=e419]:
+                  - link " 政府信息公开年报" [ref=e420] [cursor=pointer]:
+                    - /url: /2025ndbg/index.html
+                    - generic [ref=e421]: 
+                    - generic [ref=e422]: 政府信息公开年报
+                - listitem [ref=e423]:
+                  - link " 市政府信息公开监督保障" [ref=e424] [cursor=pointer]:
+                    - /url: /nw39186/index.html
+                    - generic [ref=e425]: 
+                    - generic [ref=e426]: 市政府信息公开监督保障
+            - generic [ref=e427]:
+              - button [ref=e428] [cursor=pointer]
+              - button [ref=e430] [cursor=pointer]
+          - link "依申请公开" [ref=e432] [cursor=pointer]:
+            - /url: http://xxgk.sh.gov.cn/zwgk_interface/pages/zwgkfront/publicApplyDefault.html
+            - img [ref=e433]
+          - link "我要咨询" [ref=e434] [cursor=pointer]:
+            - /url: https://zwdtuser.sh.gov.cn/uc/naturalUser/jump.do?redirect_uri=https://mobile.sh12345.gov.cn:4443/ywtb/jump/index
+            - img [ref=e435]
+    - generic [ref=e438]:
+      - list [ref=e439]:
+        - listitem [ref=e440]:
+          - button "市政府部门网站" [ref=e441] [cursor=pointer]:
+            - generic [ref=e442]: 市政府部门网站
+        - listitem [ref=e444]:
+          - button "区政府网站" [ref=e445] [cursor=pointer]:
+            - generic [ref=e446]: 区政府网站
+        - listitem [ref=e448]:
+          - button "本市重要机构网站" [ref=e449] [cursor=pointer]:
+            - generic [ref=e450]: 本市重要机构网站
+        - listitem [ref=e452]:
+          - button "管委会网站" [ref=e453] [cursor=pointer]:
+            - generic [ref=e454]: 管委会网站
+        - listitem [ref=e456]:
+          - button "中央政府和国家部委网站" [ref=e457] [cursor=pointer]:
+            - generic [ref=e458]: 中央政府和国家部委网站
+        - listitem [ref=e460]:
+          - button "地方政府网站" [ref=e461] [cursor=pointer]:
+            - generic [ref=e462]: 地方政府网站
+        - listitem [ref=e464]:
+          - button "国内重要城市网站" [ref=e465] [cursor=pointer]:
+            - generic [ref=e466]: 国内重要城市网站
+        - listitem [ref=e468]:
+          - button "友情链接" [ref=e469] [cursor=pointer]: 友情链接
+      - generic [ref=e471]:
+        - generic [ref=e472]:
+          - generic "适老化无障碍服务认证标识" [ref=e473]:
+            - img "适老化无障碍服务认证标识" [ref=e474]
+          - link "党政机关" [ref=e475] [cursor=pointer]:
+            - /url: http://bszs.conac.cn/sitename?method=show&id=08E61FB166710F06E053012819AC1E62
+            - img "党政机关" [ref=e476]
+          - link "上海市互联网举报平台" [ref=e477] [cursor=pointer]:
+            - /url: https://www.12377.cn/
+            - img "上海市互联网举报平台" [ref=e478]
+          - img [ref=e480] [cursor=pointer]
+        - generic [ref=e481]:
+          - generic [ref=e482]:
+            - paragraph [ref=e483]: 主办单位：上海市人民政府办公厅
+            - paragraph [ref=e484]: 地址：上海市黄浦区人民大道200号
+            - paragraph [ref=e485]: 邮编：200003
+          - generic [ref=e486]:
+            - paragraph [ref=e487]: 联系电话：021-23111111
+            - paragraph [ref=e488]:
+              - link "上海政务服务总客服：021-12345" [ref=e489] [cursor=pointer]:
+                - /url: https://zwdtuser.sh.gov.cn/uc/naturalUser/jump.do?redirect_uri=https://zwdtuser.sh.gov.cn/uc/naturalUserComplete/getUserInfo.do
+          - generic [ref=e490]:
+            - paragraph [ref=e491]:
+              - link "沪ICP备2021016245号-1沪ICP备2021016245号-1" [ref=e492] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn
+                - img "沪ICP备2021016245号-1" [ref=e493]
+                - text: 沪ICP备2021016245号-1
+            - paragraph [ref=e494]:
+              - link "沪公网安备 31010102004544号沪公网安备 31010102004544号" [ref=e495] [cursor=pointer]:
+                - /url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102004544
+                - img "沪公网安备 31010102004544号" [ref=e496]
+                - text: 沪公网安备 31010102004544号
+            - paragraph [ref=e497]: 政府网站标识码：3100000044
+      - generic [ref=e498]: 为确保最佳浏览效果，建议您使用以下浏览器版本：IE浏览器9.0版本及以上； Google Chrome浏览器 63版本及以上； 360浏览器9.1版本及以上，且IE内核9.0及以上。
+    - list [ref=e500]:
+      - listitem [ref=e501] [cursor=pointer]:
+        - link "“中国上海”微信公众号" [ref=e502]:
+          - /url: javascript:void(0)
+          - generic [ref=e503]: 
+          - text: 公众号
+      - listitem [ref=e504] [cursor=pointer]:
+        - link "政务邮箱" [ref=e505]:
+          - /url: http://mail.shanghai.gov.cn/
+          - generic [ref=e506]: 
+          - text: 政务邮箱
+      - listitem [ref=e507] [cursor=pointer]:
+        - link "中国上海移动端二维码" [ref=e508]:
+          - /url: javascript:void(0)
+          - generic [ref=e509]: 
+          - text: 随申办
+      - listitem [ref=e510] [cursor=pointer]:
+        - link "订阅" [ref=e511]:
+          - /url: javascript:void(0)
+          - generic [ref=e512]: 
+          - text: 订阅
+      - listitem [ref=e513] [cursor=pointer]:
+        - link "分享" [ref=e514]:
+          - /url: javascript:void(0)
+          - generic [ref=e515]: 
+          - text: 分享
+        - text:    
+      - listitem [ref=e516] [cursor=pointer]:
+        - link "智能客服" [ref=e517]:
+          - /url: https://zwdtuser.sh.gov.cn/uc/naturalUser/jumpSendTo.do?redirect_uri=https%3A%2F%2Fzwdt.sh.gov.cn%2Fsmzy%2Fshspace%2Floginsso%2Fin%3Ftype%3Dbsgrfr%26callback%3Dhttps%253A%252F%252Fzwdt.sh.gov.cn%252Fsmzy%252Fqa%252Ftourist%252Fguide%252Fqa%253Ffrom%253Dzwgk
+          - generic [ref=e518]: 智能客服
+  - img [ref=e520]
+  - text:               

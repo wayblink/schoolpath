@@ -1,0 +1,162 @@
+{
+  "type": "FeatureCollection",
+  "_note": "PLACEHOLDER 学区边界数据。9 个 features 覆盖 6 所小学校区 + 3 所初中校区。所有 polygon 均为占位矩形，需手工在 https://geojson.io 上按教育局发布的招生范围（对口居委）重新绘制。",
+  "_workflow": [
+    "1. 在 schools.json 里查看每个校区的 matching_committees / feeder_schools",
+    "2. 在百度地图 / 高德地图上查找这些居委的实际地理范围",
+    "3. 用 https://geojson.io 沿真实街道边界绘制 polygon",
+    "4. 替换下面对应 feature 的 geometry 字段",
+    "5. 跑 pnpm db:seed 重新灌库"
+  ],
+  "_dataSources": [
+    "徐教〔2025〕3号: https://www.shanghai.gov.cn/xhqywjy/20250411/2b71e54ac4a94e8bb43eac1db0e33ddd.html",
+    "对口居委表: https://sh.bendibao.com/edu/202547/296230.shtm",
+    "初中入学方式: https://www.shijiancn.com/zhengcezixun/63627.html"
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇区高安路第一小学（宛平校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4320, 31.1985], [121.4395, 31.1985],
+          [121.4395, 31.1940], [121.4320, 31.1940],
+          [121.4320, 31.1985]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇区高安路第一小学（华展校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4440, 31.1510], [121.4520, 31.1510],
+          [121.4520, 31.1450], [121.4440, 31.1450],
+          [121.4440, 31.1510]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇区汇师小学（徐虹校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4410, 31.1925], [121.4490, 31.1925],
+          [121.4490, 31.1875], [121.4410, 31.1875],
+          [121.4410, 31.1925]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇区汇师小学（中城校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4250, 31.1850], [121.4320, 31.1850],
+          [121.4320, 31.1790], [121.4250, 31.1790],
+          [121.4250, 31.1850]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇区上海小学（本部校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4260, 31.1830], [121.4340, 31.1830],
+          [121.4340, 31.1770], [121.4260, 31.1770],
+          [121.4260, 31.1830]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇区上海小学（龙川校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4360, 31.1780], [121.4440, 31.1780],
+          [121.4440, 31.1720], [121.4360, 31.1720],
+          [121.4360, 31.1780]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市位育初级中学（北校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4410, 31.1910], [121.4490, 31.1910],
+          [121.4490, 31.1850], [121.4410, 31.1850],
+          [121.4410, 31.1910]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇中学（蒲汇塘校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4390, 31.2010], [121.4470, 31.2010],
+          [121.4470, 31.1950], [121.4390, 31.1950],
+          [121.4390, 31.2010]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "school": "上海市徐汇中学（南校区）",
+        "year": 2025,
+        "verified": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [121.4460, 31.1500], [121.4540, 31.1500],
+          [121.4540, 31.1440], [121.4460, 31.1440],
+          [121.4460, 31.1500]
+        ]]
+      }
+    }
+  ]
+}

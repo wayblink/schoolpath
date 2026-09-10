@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: 学
+        - generic [ref=e6]:
+          - generic [ref=e7]: 学区图谱
+          - generic [ref=e8]: SHANGHAI · 2025
+      - generic [ref=e10]:
+        - generic [ref=e11]: 区
+        - combobox [ref=e12] [cursor=pointer]:
+          - option "全市" [selected]
+          - option "徐汇"
+          - option "黄浦"
+          - option "长宁"
+          - option "静安"
+          - option "普陀"
+          - option "虹口"
+          - option "杨浦"
+          - option "浦东"
+          - option "闵行"
+          - option "宝山"
+          - option "嘉定"
+          - option "金山"
+          - option "松江"
+          - option "青浦"
+          - option "奉贤"
+          - option "崇明"
+      - generic [ref=e13]:
+        - button "全部" [ref=e14]
+        - button "小学" [ref=e15]
+        - button "初中" [ref=e16]
+      - generic [ref=e17]:
+        - generic [ref=e18]: 当前可见
+        - generic [ref=e19]: 0 所
+      - generic [ref=e20]:
+        - generic [ref=e21]: 梯队
+        - button "一梯队" [pressed] [ref=e22]:
+          - generic [ref=e24]: 一梯队
+        - button "二梯队" [pressed] [ref=e25]:
+          - generic [ref=e27]: 二梯队
+        - button "三梯队" [pressed] [ref=e28]:
+          - generic [ref=e30]: 三梯队
+        - button "四梯队" [pressed] [ref=e31]:
+          - generic [ref=e33]: 四梯队
+        - button "待补充" [pressed] [ref=e34]:
+          - generic [ref=e36]: 待补充
+      - generic [ref=e37]:
+        - button "小区查学校 ⌘K" [ref=e38]:
+          - img [ref=e39]
+          - generic [ref=e42]: 小区查学校
+          - generic [ref=e43]: ⌘K
+        - button "设置" [ref=e45]:
+          - img [ref=e46]
+        - link "v0.3 BETA" [ref=e49] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e50]:
+      - generic [ref=e52]: 加载中…
+      - generic [ref=e53]:
+        - generic:
+          - text: 全市·
+          - generic: 0 校
+        - generic: 完备度加载中…
+      - separator "调整列表和地图宽度" [ref=e55]:
+        - generic [ref=e57]:
+          - button "收起左侧列表" [ref=e58]:
+            - img [ref=e59]
+          - button "收起右侧地图" [ref=e62]:
+            - img [ref=e63]
+  - alert [ref=e66]

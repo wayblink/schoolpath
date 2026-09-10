@@ -1,0 +1,209 @@
+[
+  {
+    "ts": "2026-08-13T09:02:55.752Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4305,
+    "school_name": "上海市宝山区第一中心小学",
+    "action": "skip-existing-tier",
+    "current_tier": "一梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.756Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4310,
+    "school_name": "上海市宝山区和衷小学",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.758Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4317,
+    "school_name": "上海市宝山区第三中心小学",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.762Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4318,
+    "school_name": "上海市宝山区实验小学",
+    "action": "skip-existing-tier",
+    "current_tier": "一梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.764Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4337,
+    "school_name": "上海市宝山区大华小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.766Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4340,
+    "school_name": "上海市宝山区行知小学",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.768Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4347,
+    "school_name": "上海市宝山区第二中心小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.769Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4353,
+    "school_name": "上海市宝山区杨行中心校",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.772Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4399,
+    "school_name": "上海宝山区世外学校（小学部）",
+    "action": "skip-existing-tier",
+    "current_tier": "一梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.773Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3922,
+    "school_name": "上海市嘉定区普通小学",
+    "action": "skip-existing-tier",
+    "current_tier": "一梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.774Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3923,
+    "school_name": "上海市嘉定区疁城实验学校（小学部）",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.775Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3925,
+    "school_name": "上海市嘉定区城中路小学",
+    "action": "skip-existing-tier",
+    "current_tier": "一梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.776Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3930,
+    "school_name": "上海市嘉定区迎园小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.778Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3933,
+    "school_name": "上海市嘉定区安亭小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.780Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3935,
+    "school_name": "上海同济黄渡小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.782Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3953,
+    "school_name": "上海市嘉定区南翔小学",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.783Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 3959,
+    "school_name": "上海市嘉定区江桥小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.785Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4079,
+    "school_name": "上海市松江区岳阳小学",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.786Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4080,
+    "school_name": "上海市松江区实验小学",
+    "action": "skip-existing-tier",
+    "current_tier": "一梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.787Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4082,
+    "school_name": "上海市松江区中山小学",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.788Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4087,
+    "school_name": "上海市松江区仓桥学校",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.789Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4094,
+    "school_name": "东华大学附属实验学校",
+    "action": "skip-existing-tier",
+    "current_tier": "二梯队"
+  },
+  {
+    "ts": "2026-08-13T09:02:55.789Z",
+    "operation": "reviewed_school_tier_correction_round2",
+    "mode": "dry-run",
+    "school_id": 4106,
+    "school_name": "上海市松江区泗泾小学",
+    "action": "skip-existing-tier",
+    "current_tier": "三梯队"
+  }
+]

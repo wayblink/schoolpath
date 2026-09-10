@@ -1,0 +1,646 @@
+{
+  "summary": {
+    "mode": "dry-run",
+    "changed": 4,
+    "skipped": 0,
+    "reportDir": "/Users/jyxc-dz-0101035/yard/house/data/audit/reviewed-school-corrections-round12/20260813T095539Z"
+  },
+  "events": [
+    {
+      "ts": "2026-08-13T09:55:39.912Z",
+      "operation": "reviewed_school_correction_round12",
+      "mode": "dry-run",
+      "school_id": 4661,
+      "school_name": "上海外国语大学嘉定外国语学校（小学部）",
+      "changes": {
+        "aliases": [
+          "上外嘉定外国语学校（小学部）",
+          "上外嘉定外国语学校",
+          "上海外国语大学嘉定外国语学校"
+        ]
+      },
+      "source": {
+        "type": "official_school_info",
+        "name": "上海市人民政府/区教育局",
+        "title": "2025年嘉定区义务教育阶段公办学校基本情况",
+        "url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+        "date": "2025",
+        "matchedName": "上海外国语大学嘉定外国语学校",
+        "rawNature": "公办",
+        "rawAddress": "上海市嘉定区安亭镇墨玉北路888号"
+      },
+      "note": "2025年嘉定区公办学校基本情况唯一列出上海外国语大学嘉定外国语学校，地址为安亭镇墨玉北路888号、性质为公办。当前小学部行仅缺地址且名称为简称，本次补全规范名、地址和官方别名，不改写既有梯队。",
+      "before": {
+        "id": 4661,
+        "name": "上海外国语大学嘉定外国语学校（小学部）",
+        "district": "嘉定",
+        "type": "primary",
+        "address": "上海市嘉定区安亭镇墨玉北路888号",
+        "schoolNature": "公立",
+        "aliases": [
+          "上外嘉定外国语学校（小学部）",
+          "上外嘉定外国语学校",
+          "上海外国语大学嘉定外国语学校"
+        ],
+        "lat": null,
+        "lng": null,
+        "tier": "二梯队",
+        "website": null,
+        "attrs": {
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_last_note": "69ef17db0000000035023d80",
+          "xhs_first_note": "69ef17db0000000035023d80",
+          "xhs_last_query": "闵行 初中 梯队",
+          "xhs_first_query": "上海市西南位育附属实验学校 梯队",
+          "official_school_info_source": {
+            "note": "2025年嘉定区公办学校基本情况唯一列出上海外国语大学嘉定外国语学校，地址为安亭镇墨玉北路888号、性质为公办。当前小学部行仅缺地址且名称为简称，本次补全规范名、地址和官方别名，不改写既有梯队。",
+            "raw_nature": "公办",
+            "source_url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+            "raw_address": "上海市嘉定区安亭镇墨玉北路888号",
+            "reviewed_at": "2026-08-13T07:41:31.922Z",
+            "source_date": "2025",
+            "source_name": "上海市人民政府/区教育局",
+            "source_type": "official_school_info",
+            "matched_name": "上海外国语大学嘉定外国语学校",
+            "source_title": "2025年嘉定区义务教育阶段公办学校基本情况"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年嘉定区公办学校基本情况唯一列出上海外国语大学嘉定外国语学校，地址为安亭镇墨玉北路888号、性质为公办。当前小学部行仅缺地址且名称为简称，本次补全规范名、地址和官方别名，不改写既有梯队。",
+              "raw_nature": "公办",
+              "source_url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+              "raw_address": "上海市嘉定区安亭镇墨玉北路888号",
+              "reviewed_at": "2026-08-13T07:41:31.922Z",
+              "source_date": "2025",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海外国语大学嘉定外国语学校",
+              "source_title": "2025年嘉定区义务教育阶段公办学校基本情况"
+            }
+          ]
+        }
+      },
+      "after": {
+        "id": 4661,
+        "name": "上海外国语大学嘉定外国语学校（小学部）",
+        "district": "嘉定",
+        "type": "primary",
+        "address": "上海市嘉定区安亭镇墨玉北路888号",
+        "schoolNature": "公立",
+        "aliases": [
+          "上外嘉定外国语学校（小学部）",
+          "上外嘉定外国语学校",
+          "上海外国语大学嘉定外国语学校"
+        ],
+        "lat": null,
+        "lng": null,
+        "tier": "二梯队",
+        "website": null,
+        "attrs": {
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_last_note": "69ef17db0000000035023d80",
+          "xhs_first_note": "69ef17db0000000035023d80",
+          "xhs_last_query": "闵行 初中 梯队",
+          "xhs_first_query": "上海市西南位育附属实验学校 梯队",
+          "official_school_info_source": {
+            "source_type": "official_school_info",
+            "source_name": "上海市人民政府/区教育局",
+            "source_title": "2025年嘉定区义务教育阶段公办学校基本情况",
+            "source_url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+            "source_date": "2025",
+            "matched_name": "上海外国语大学嘉定外国语学校",
+            "raw_nature": "公办",
+            "raw_address": "上海市嘉定区安亭镇墨玉北路888号",
+            "reviewed_at": "2026-08-13T09:55:39.912Z",
+            "note": "2025年嘉定区公办学校基本情况唯一列出上海外国语大学嘉定外国语学校，地址为安亭镇墨玉北路888号、性质为公办。当前小学部行仅缺地址且名称为简称，本次补全规范名、地址和官方别名，不改写既有梯队。"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年嘉定区公办学校基本情况唯一列出上海外国语大学嘉定外国语学校，地址为安亭镇墨玉北路888号、性质为公办。当前小学部行仅缺地址且名称为简称，本次补全规范名、地址和官方别名，不改写既有梯队。",
+              "raw_nature": "公办",
+              "source_url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+              "raw_address": "上海市嘉定区安亭镇墨玉北路888号",
+              "reviewed_at": "2026-08-13T07:41:31.922Z",
+              "source_date": "2025",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海外国语大学嘉定外国语学校",
+              "source_title": "2025年嘉定区义务教育阶段公办学校基本情况"
+            },
+            {
+              "source_type": "official_school_info",
+              "source_name": "上海市人民政府/区教育局",
+              "source_title": "2025年嘉定区义务教育阶段公办学校基本情况",
+              "source_url": "https://www.shanghai.gov.cn/cmsres/36/363881f703f146b6b50547142c3255e4/0e579ab9fa85681dd7fc712bc74f99a6.pdf",
+              "source_date": "2025",
+              "matched_name": "上海外国语大学嘉定外国语学校",
+              "raw_nature": "公办",
+              "raw_address": "上海市嘉定区安亭镇墨玉北路888号",
+              "reviewed_at": "2026-08-13T09:55:39.912Z",
+              "note": "2025年嘉定区公办学校基本情况唯一列出上海外国语大学嘉定外国语学校，地址为安亭镇墨玉北路888号、性质为公办。当前小学部行仅缺地址且名称为简称，本次补全规范名、地址和官方别名，不改写既有梯队。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ts": "2026-08-13T09:55:39.914Z",
+      "operation": "reviewed_school_correction_round12",
+      "mode": "dry-run",
+      "school_id": 5638,
+      "school_name": "上海中医药大学附属闵行晶城中学",
+      "changes": {
+        "aliases": [
+          "中医晶城中学",
+          "闵行晶城中学"
+        ]
+      },
+      "source": {
+        "type": "official_school_info",
+        "name": "上海市人民政府/区教育局",
+        "title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+        "url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+        "date": "2025-04-07",
+        "matchedName": "上海中医药大学附属闵行晶城中学",
+        "rawNature": "公办",
+        "rawAddress": "朱行路16号"
+      },
+      "note": "2025年闵行区初中和一贯制学校基本情况唯一列出上海中医药大学附属闵行晶城中学，地址为朱行路16号、性质为公办。当前行是同区同学段简称且地址和性质为空，本次补全官方全称、地址、性质和别名。",
+      "before": {
+        "id": 5638,
+        "name": "上海中医药大学附属闵行晶城中学",
+        "district": "闵行",
+        "type": "middle",
+        "address": "朱行路16号",
+        "schoolNature": "公立",
+        "aliases": [
+          "中医晶城中学",
+          "闵行晶城中学"
+        ],
+        "lat": null,
+        "lng": null,
+        "tier": "三梯队",
+        "website": null,
+        "attrs": {
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_last_note": "688b2b56000000000400564d",
+          "xhs_first_note": "688b2b56000000000400564d",
+          "xhs_last_query": "闵行 民办初中 梯队",
+          "xhs_first_query": "闵行 民办初中 梯队",
+          "official_school_info_source": {
+            "note": "2025年闵行区初中和一贯制学校基本情况唯一列出上海中医药大学附属闵行晶城中学，地址为朱行路16号、性质为公办。当前行是同区同学段简称且地址和性质为空，本次补全官方全称、地址、性质和别名。",
+            "raw_nature": "公办",
+            "source_url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+            "raw_address": "朱行路16号",
+            "reviewed_at": "2026-08-13T07:41:31.937Z",
+            "source_date": "2025-04-07",
+            "source_name": "上海市人民政府/区教育局",
+            "source_type": "official_school_info",
+            "matched_name": "上海中医药大学附属闵行晶城中学",
+            "source_title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年闵行区初中和一贯制学校基本情况唯一列出上海中医药大学附属闵行晶城中学，地址为朱行路16号、性质为公办。当前行是同区同学段简称且地址和性质为空，本次补全官方全称、地址、性质和别名。",
+              "raw_nature": "公办",
+              "source_url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+              "raw_address": "朱行路16号",
+              "reviewed_at": "2026-08-13T07:41:31.937Z",
+              "source_date": "2025-04-07",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海中医药大学附属闵行晶城中学",
+              "source_title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况"
+            }
+          ]
+        }
+      },
+      "after": {
+        "id": 5638,
+        "name": "上海中医药大学附属闵行晶城中学",
+        "district": "闵行",
+        "type": "middle",
+        "address": "朱行路16号",
+        "schoolNature": "公立",
+        "aliases": [
+          "中医晶城中学",
+          "闵行晶城中学"
+        ],
+        "lat": null,
+        "lng": null,
+        "tier": "三梯队",
+        "website": null,
+        "attrs": {
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_last_note": "688b2b56000000000400564d",
+          "xhs_first_note": "688b2b56000000000400564d",
+          "xhs_last_query": "闵行 民办初中 梯队",
+          "xhs_first_query": "闵行 民办初中 梯队",
+          "official_school_info_source": {
+            "source_type": "official_school_info",
+            "source_name": "上海市人民政府/区教育局",
+            "source_title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+            "source_url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+            "source_date": "2025-04-07",
+            "matched_name": "上海中医药大学附属闵行晶城中学",
+            "raw_nature": "公办",
+            "raw_address": "朱行路16号",
+            "reviewed_at": "2026-08-13T09:55:39.914Z",
+            "note": "2025年闵行区初中和一贯制学校基本情况唯一列出上海中医药大学附属闵行晶城中学，地址为朱行路16号、性质为公办。当前行是同区同学段简称且地址和性质为空，本次补全官方全称、地址、性质和别名。"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年闵行区初中和一贯制学校基本情况唯一列出上海中医药大学附属闵行晶城中学，地址为朱行路16号、性质为公办。当前行是同区同学段简称且地址和性质为空，本次补全官方全称、地址、性质和别名。",
+              "raw_nature": "公办",
+              "source_url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+              "raw_address": "朱行路16号",
+              "reviewed_at": "2026-08-13T07:41:31.937Z",
+              "source_date": "2025-04-07",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海中医药大学附属闵行晶城中学",
+              "source_title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况"
+            },
+            {
+              "source_type": "official_school_info",
+              "source_name": "上海市人民政府/区教育局",
+              "source_title": "2025年闵行区义务教育阶段学校（初中和一贯制学校）教育教学、校舍场地条件、后勤设施设备和师资配置基本情况",
+              "source_url": "https://www.shanghai.gov.cn/mhqywjy/20250407/ff191ff43156426081990035cf99e39d.html",
+              "source_date": "2025-04-07",
+              "matched_name": "上海中医药大学附属闵行晶城中学",
+              "raw_nature": "公办",
+              "raw_address": "朱行路16号",
+              "reviewed_at": "2026-08-13T09:55:39.914Z",
+              "note": "2025年闵行区初中和一贯制学校基本情况唯一列出上海中医药大学附属闵行晶城中学，地址为朱行路16号、性质为公办。当前行是同区同学段简称且地址和性质为空，本次补全官方全称、地址、性质和别名。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ts": "2026-08-13T09:55:39.915Z",
+      "operation": "reviewed_school_correction_round12",
+      "mode": "dry-run",
+      "school_id": 5367,
+      "school_name": "上海外国语大学松江外国语学校（初中部）",
+      "changes": {
+        "aliases": [
+          "上外松江外国语",
+          "上海外国语大学松江外国语学校"
+        ]
+      },
+      "source": {
+        "type": "official_school_info",
+        "name": "上海市人民政府/区教育局",
+        "title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+        "url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+        "date": "2025",
+        "matchedName": "上海外国语大学松江外国语学校",
+        "rawNature": "公办九年一贯制",
+        "rawAddress": "松江区梅家浜路1701号"
+      },
+      "note": "2025年松江区义务教育阶段学校公示唯一列出上海外国语大学松江外国语学校，标注为公办九年一贯制，地址为梅家浜路1701号。当前行是同区初中投影且地址为空；本次只补同一九年一贯制学校的初中部规范名、地址和公办性质，不据此新增或合并其他校区。",
+      "before": {
+        "id": 5367,
+        "name": "上海外国语大学松江外国语学校（初中部）",
+        "district": "松江",
+        "type": "middle",
+        "address": "松江区梅家浜路1701号",
+        "schoolNature": "公立",
+        "aliases": [
+          "上外松江外国语",
+          "上海外国语大学松江外国语学校"
+        ],
+        "lat": null,
+        "lng": null,
+        "tier": "一梯队",
+        "website": null,
+        "attrs": {
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_first_note": "6825e055000000000303ae61",
+          "xhs_first_query": "松江 初中 梯队",
+          "official_school_info_source": {
+            "note": "2025年松江区义务教育阶段学校公示唯一列出上海外国语大学松江外国语学校，标注为公办九年一贯制，地址为梅家浜路1701号。当前行是同区初中投影且地址为空；本次只补同一九年一贯制学校的初中部规范名、地址和公办性质，不据此新增或合并其他校区。",
+            "raw_nature": "公办九年一贯制",
+            "source_url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+            "raw_address": "松江区梅家浜路1701号",
+            "reviewed_at": "2026-08-13T07:41:31.941Z",
+            "source_date": "2025",
+            "source_name": "上海市人民政府/区教育局",
+            "source_type": "official_school_info",
+            "matched_name": "上海外国语大学松江外国语学校",
+            "source_title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年松江区义务教育阶段学校公示唯一列出上海外国语大学松江外国语学校，标注为公办九年一贯制，地址为梅家浜路1701号。当前行是同区初中投影且地址为空；本次只补同一九年一贯制学校的初中部规范名、地址和公办性质，不据此新增或合并其他校区。",
+              "raw_nature": "公办九年一贯制",
+              "source_url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+              "raw_address": "松江区梅家浜路1701号",
+              "reviewed_at": "2026-08-13T07:41:31.941Z",
+              "source_date": "2025",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海外国语大学松江外国语学校",
+              "source_title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示"
+            }
+          ]
+        }
+      },
+      "after": {
+        "id": 5367,
+        "name": "上海外国语大学松江外国语学校（初中部）",
+        "district": "松江",
+        "type": "middle",
+        "address": "松江区梅家浜路1701号",
+        "schoolNature": "公立",
+        "aliases": [
+          "上外松江外国语",
+          "上海外国语大学松江外国语学校"
+        ],
+        "lat": null,
+        "lng": null,
+        "tier": "一梯队",
+        "website": null,
+        "attrs": {
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_first_note": "6825e055000000000303ae61",
+          "xhs_first_query": "松江 初中 梯队",
+          "official_school_info_source": {
+            "source_type": "official_school_info",
+            "source_name": "上海市人民政府/区教育局",
+            "source_title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+            "source_url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+            "source_date": "2025",
+            "matched_name": "上海外国语大学松江外国语学校",
+            "raw_nature": "公办九年一贯制",
+            "raw_address": "松江区梅家浜路1701号",
+            "reviewed_at": "2026-08-13T09:55:39.915Z",
+            "note": "2025年松江区义务教育阶段学校公示唯一列出上海外国语大学松江外国语学校，标注为公办九年一贯制，地址为梅家浜路1701号。当前行是同区初中投影且地址为空；本次只补同一九年一贯制学校的初中部规范名、地址和公办性质，不据此新增或合并其他校区。"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年松江区义务教育阶段学校公示唯一列出上海外国语大学松江外国语学校，标注为公办九年一贯制，地址为梅家浜路1701号。当前行是同区初中投影且地址为空；本次只补同一九年一贯制学校的初中部规范名、地址和公办性质，不据此新增或合并其他校区。",
+              "raw_nature": "公办九年一贯制",
+              "source_url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+              "raw_address": "松江区梅家浜路1701号",
+              "reviewed_at": "2026-08-13T07:41:31.941Z",
+              "source_date": "2025",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海外国语大学松江外国语学校",
+              "source_title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示"
+            },
+            {
+              "source_type": "official_school_info",
+              "source_name": "上海市人民政府/区教育局",
+              "source_title": "2025年松江区义务教育阶段学校规模、招生计划、校舍场地条件、教育教学、后勤设施设备和师资配置基本情况公示",
+              "source_url": "https://www.shanghai.gov.cn/cmsres/90/901088067bed467382785e3076498c44/6a224298ebd26d6b2a03e14b75f56c5c.pdf",
+              "source_date": "2025",
+              "matched_name": "上海外国语大学松江外国语学校",
+              "raw_nature": "公办九年一贯制",
+              "raw_address": "松江区梅家浜路1701号",
+              "reviewed_at": "2026-08-13T09:55:39.915Z",
+              "note": "2025年松江区义务教育阶段学校公示唯一列出上海外国语大学松江外国语学校，标注为公办九年一贯制，地址为梅家浜路1701号。当前行是同区初中投影且地址为空；本次只补同一九年一贯制学校的初中部规范名、地址和公办性质，不据此新增或合并其他校区。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ts": "2026-08-13T09:55:39.916Z",
+      "operation": "reviewed_school_correction_round12",
+      "mode": "dry-run",
+      "school_id": 4652,
+      "school_name": "上海市新和中学",
+      "changes": {
+        "aliases": [
+          "新和中学"
+        ]
+      },
+      "source": {
+        "type": "official_school_info",
+        "name": "上海市人民政府/区教育局",
+        "title": "2025年静安区义务教育阶段民办学校教育教学设施和师资配置公示表",
+        "url": "https://www.shanghai.gov.cn/jaqywjy/20250407/3ba46a7afd384d72a690425b8667ddf9.html",
+        "date": "2025-04-07",
+        "matchedName": "上海市民办新和中学",
+        "rawNature": "",
+        "rawAddress": "原平路128号"
+      },
+      "note": "2025年静安区民办学校教育教学设施和师资配置公示表唯一列出上海市民办新和中学，地址为原平路128号。当前字段已完整，本次仅补登记官方来源，不覆盖现有名称、地址、性质或梯队。",
+      "before": {
+        "id": 4652,
+        "name": "上海市新和中学",
+        "district": "静安",
+        "type": "middle",
+        "address": "上海市静安区原平路128号",
+        "schoolNature": "私立",
+        "aliases": [
+          "新和中学"
+        ],
+        "lat": 31.28278107979608,
+        "lng": 121.43302286767374,
+        "tier": "四梯队",
+        "website": null,
+        "attrs": {
+          "aliases": [
+            "新和中学"
+          ],
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_last_note": "69ef17db0000000035023d80",
+          "xhs_first_note": "69ef17db0000000035023d80",
+          "xhs_last_query": "闵行 初中 梯队",
+          "xhs_first_query": "上海市西南位育附属实验学校 梯队",
+          "school_data_cleanup": [
+            {
+              "kind": "rename_short_school_name_round3",
+              "reason": "新和中学补足上海市前缀",
+              "source": "静安区义务教育阶段学校公开信息",
+              "new_name": "上海市新和中学",
+              "detected_at": "2026-06-18T07:37:54.086Z",
+              "previous_name": "新和中学"
+            }
+          ],
+          "official_school_info_source": {
+            "note": "2025年静安区民办学校教育教学设施和师资配置公示表唯一列出上海市民办新和中学，地址为原平路128号。当前字段已完整，本次仅补登记官方来源，不覆盖现有名称、地址、性质或梯队。",
+            "raw_nature": "",
+            "source_url": "https://www.shanghai.gov.cn/jaqywjy/20250407/3ba46a7afd384d72a690425b8667ddf9.html",
+            "raw_address": "原平路128号",
+            "reviewed_at": "2026-08-13T07:41:31.946Z",
+            "source_date": "2025-04-07",
+            "source_name": "上海市人民政府/区教育局",
+            "source_type": "official_school_info",
+            "matched_name": "上海市民办新和中学",
+            "source_title": "2025年静安区义务教育阶段民办学校教育教学设施和师资配置公示表"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年静安区民办学校教育教学设施和师资配置公示表唯一列出上海市民办新和中学，地址为原平路128号。当前字段已完整，本次仅补登记官方来源，不覆盖现有名称、地址、性质或梯队。",
+              "raw_nature": "",
+              "source_url": "https://www.shanghai.gov.cn/jaqywjy/20250407/3ba46a7afd384d72a690425b8667ddf9.html",
+              "raw_address": "原平路128号",
+              "reviewed_at": "2026-08-13T07:41:31.946Z",
+              "source_date": "2025-04-07",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海市民办新和中学",
+              "source_title": "2025年静安区义务教育阶段民办学校教育教学设施和师资配置公示表"
+            }
+          ],
+          "baidu_mobile_school_address_match": {
+            "uid": "cd9a3388680302649d95de85",
+            "score": 357,
+            "filled": {
+              "lat": false,
+              "lng": false,
+              "address": true
+            },
+            "source": "baidu_mobile_detail_page",
+            "poi_name": "上海市新和中学",
+            "poi_type": "教育培训;中学",
+            "provider": "baidu_mobile",
+            "fetched_at": "2026-06-17T05:40:09.997Z",
+            "suggestion_name": "上海市新和中学"
+          },
+          "baidu_browser_school_location_match": {
+            "uid": "cd9a3388680302649d95de85",
+            "bd09": {
+              "lat": 31.28870112413724,
+              "lng": 121.43952744076287
+            },
+            "score": 287,
+            "filled": {
+              "lat": true,
+              "lng": true,
+              "address": false
+            },
+            "source": "baidu_map_browser_search",
+            "address": "上海市静安区原平路128号",
+            "poi_name": "上海市新和中学",
+            "poi_type": "教育培训 中学 完全中学",
+            "provider": "baidu_browser",
+            "fetched_at": "2026-06-17T16:12:44.175Z",
+            "coordinate_source": "baidu_diPoint_bd09mc_converted_to_gcj02"
+          }
+        }
+      },
+      "after": {
+        "id": 4652,
+        "name": "上海市新和中学",
+        "district": "静安",
+        "type": "middle",
+        "address": "上海市静安区原平路128号",
+        "schoolNature": "私立",
+        "aliases": [
+          "新和中学"
+        ],
+        "lat": 31.28278107979608,
+        "lng": 121.43302286767374,
+        "tier": "四梯队",
+        "website": null,
+        "attrs": {
+          "aliases": [
+            "新和中学"
+          ],
+          "verified": false,
+          "data_source": "xhs-flush",
+          "xhs_last_note": "69ef17db0000000035023d80",
+          "xhs_first_note": "69ef17db0000000035023d80",
+          "xhs_last_query": "闵行 初中 梯队",
+          "xhs_first_query": "上海市西南位育附属实验学校 梯队",
+          "school_data_cleanup": [
+            {
+              "kind": "rename_short_school_name_round3",
+              "reason": "新和中学补足上海市前缀",
+              "source": "静安区义务教育阶段学校公开信息",
+              "new_name": "上海市新和中学",
+              "detected_at": "2026-06-18T07:37:54.086Z",
+              "previous_name": "新和中学"
+            }
+          ],
+          "official_school_info_source": {
+            "source_type": "official_school_info",
+            "source_name": "上海市人民政府/区教育局",
+            "source_title": "2025年静安区义务教育阶段民办学校教育教学设施和师资配置公示表",
+            "source_url": "https://www.shanghai.gov.cn/jaqywjy/20250407/3ba46a7afd384d72a690425b8667ddf9.html",
+            "source_date": "2025-04-07",
+            "matched_name": "上海市民办新和中学",
+            "raw_nature": "",
+            "raw_address": "原平路128号",
+            "reviewed_at": "2026-08-13T09:55:39.916Z",
+            "note": "2025年静安区民办学校教育教学设施和师资配置公示表唯一列出上海市民办新和中学，地址为原平路128号。当前字段已完整，本次仅补登记官方来源，不覆盖现有名称、地址、性质或梯队。"
+          },
+          "official_school_info_sources": [
+            {
+              "note": "2025年静安区民办学校教育教学设施和师资配置公示表唯一列出上海市民办新和中学，地址为原平路128号。当前字段已完整，本次仅补登记官方来源，不覆盖现有名称、地址、性质或梯队。",
+              "raw_nature": "",
+              "source_url": "https://www.shanghai.gov.cn/jaqywjy/20250407/3ba46a7afd384d72a690425b8667ddf9.html",
+              "raw_address": "原平路128号",
+              "reviewed_at": "2026-08-13T07:41:31.946Z",
+              "source_date": "2025-04-07",
+              "source_name": "上海市人民政府/区教育局",
+              "source_type": "official_school_info",
+              "matched_name": "上海市民办新和中学",
+              "source_title": "2025年静安区义务教育阶段民办学校教育教学设施和师资配置公示表"
+            },
+            {
+              "source_type": "official_school_info",
+              "source_name": "上海市人民政府/区教育局",
+              "source_title": "2025年静安区义务教育阶段民办学校教育教学设施和师资配置公示表",
+              "source_url": "https://www.shanghai.gov.cn/jaqywjy/20250407/3ba46a7afd384d72a690425b8667ddf9.html",
+              "source_date": "2025-04-07",
+              "matched_name": "上海市民办新和中学",
+              "raw_nature": "",
+              "raw_address": "原平路128号",
+              "reviewed_at": "2026-08-13T09:55:39.916Z",
+              "note": "2025年静安区民办学校教育教学设施和师资配置公示表唯一列出上海市民办新和中学，地址为原平路128号。当前字段已完整，本次仅补登记官方来源，不覆盖现有名称、地址、性质或梯队。"
+            }
+          ],
+          "baidu_mobile_school_address_match": {
+            "uid": "cd9a3388680302649d95de85",
+            "score": 357,
+            "filled": {
+              "lat": false,
+              "lng": false,
+              "address": true
+            },
+            "source": "baidu_mobile_detail_page",
+            "poi_name": "上海市新和中学",
+            "poi_type": "教育培训;中学",
+            "provider": "baidu_mobile",
+            "fetched_at": "2026-06-17T05:40:09.997Z",
+            "suggestion_name": "上海市新和中学"
+          },
+          "baidu_browser_school_location_match": {
+            "uid": "cd9a3388680302649d95de85",
+            "bd09": {
+              "lat": 31.28870112413724,
+              "lng": 121.43952744076287
+            },
+            "score": 287,
+            "filled": {
+              "lat": true,
+              "lng": true,
+              "address": false
+            },
+            "source": "baidu_map_browser_search",
+            "address": "上海市静安区原平路128号",
+            "poi_name": "上海市新和中学",
+            "poi_type": "教育培训 中学 完全中学",
+            "provider": "baidu_browser",
+            "fetched_at": "2026-06-17T16:12:44.175Z",
+            "coordinate_source": "baidu_diPoint_bd09mc_converted_to_gcj02"
+          }
+        }
+      }
+    }
+  ]
+}

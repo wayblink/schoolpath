@@ -1,0 +1,129 @@
+[
+  {
+    "ts": "2026-08-13T16:42:43.372Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 4786,
+    "school_name": "上海青浦区世外学校",
+    "changes": {
+      "lat": {
+        "from": 31.190249,
+        "to": null
+      },
+      "lng": {
+        "from": 121.282071,
+        "to": null
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "青浦区教育局",
+      "title": "2025年青浦区民办初中招生计划一览表 / 2024青浦区教育机构一览表",
+      "url": "https://www.shqp.gov.cn/edu/eduzwgk/lm/jy/zs/cz/20250407/1276481.html",
+      "date": "2025-04-07",
+      "matchedName": "上海青浦区世外学校（初中）",
+      "rawNature": "民办",
+      "rawAddress": "上海市青浦区龙联路915号"
+    },
+    "note": "现有行名称为青浦世外但地址/POI 指向上海青浦区世外高级中学；2025青浦区民办初中招生计划确认初中为上海青浦区世外学校（初中），青浦区教育机构一览表列出初中地址为龙联路915号。本次改回义务教育初中实体，并清空原高级中学坐标以待后续百度地图核验。",
+    "before": {
+      "id": 4786,
+      "name": "上海青浦区世外学校",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区龙联路915号",
+      "lat": 31.190249,
+      "lng": 121.282071,
+      "school_nature": "私立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "青浦世外",
+        "上海青浦区世外学校（初中）"
+      ]
+    },
+    "after": {
+      "id": 4786,
+      "name": "上海青浦区世外学校",
+      "district": "青浦",
+      "type": "middle",
+      "address": "上海市青浦区龙联路915号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "私立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "青浦世外",
+        "上海青浦区世外学校（初中）"
+      ]
+    }
+  },
+  {
+    "ts": "2026-08-13T16:42:43.373Z",
+    "operation": "reviewed_school_correction_round8",
+    "mode": "dry-run",
+    "school_id": 5111,
+    "school_name": "上海市鲁迅初级中学",
+    "changes": {
+      "lat": {
+        "from": 31.264141,
+        "to": null
+      },
+      "lng": {
+        "from": 121.487148,
+        "to": null
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3634,
+        "name": "上海市鲁迅初级中学",
+        "district": "虹口",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区初中“校园开放日”活动安排",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/91c5d222-bc66-445c-90f5-8f61443b6640/eb1ee30e-f750-4af0-9929-5bdc52a61758/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E5%88%9D%E4%B8%AD%E2%80%9C%E6%A0%A1%E5%9B%AD%E5%BC%80%E6%94%BE%E6%97%A5%E2%80%9D%E6%B4%BB%E5%8A%A8%E5%AE%89%E6%8E%92.pdf",
+      "date": "2025",
+      "matchedName": "上海市鲁迅初级中学",
+      "rawNature": "公办初中",
+      "rawAddress": "宝安路66弄7号"
+    },
+    "note": "现有行 type=middle 但地址/POI 指向鲁迅中学高中；2025虹口区初中校园开放日官方安排列出上海市鲁迅初级中学，开放地点宝安路66弄7号。本次按初中实体修正全称和地址，并清空原高中坐标以待后续地图核验。",
+    "before": {
+      "id": 5111,
+      "name": "上海市鲁迅初级中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "宝安路66弄7号",
+      "lat": 31.264141,
+      "lng": 121.487148,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "鲁迅中学"
+      ]
+    },
+    "after": {
+      "id": 5111,
+      "name": "上海市鲁迅初级中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "宝安路66弄7号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "鲁迅中学"
+      ]
+    }
+  }
+]

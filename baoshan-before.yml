@@ -1,0 +1,58 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: 学
+        - generic [ref=e6]
+      - generic [ref=e10]:
+        - generic [ref=e11]: 区
+        - combobox [ref=e12] [cursor=pointer]
+      - generic [ref=e13]:
+        - button "全部" [ref=e14]
+        - button "小学" [ref=e15]
+        - button "初中" [ref=e16]
+      - generic [ref=e17]: 24 所
+      - generic [ref=e18]:
+        - generic [ref=e19]: 一梯队
+        - generic [ref=e21]: 二梯队
+        - generic [ref=e23]: 三梯队
+        - generic [ref=e25]: 四梯队
+        - generic [ref=e27]: 待补充
+      - generic [ref=e29]:
+        - button "🔍 小区查学校 ⌘K" [ref=e30]
+        - link "v0.3 BETA" [ref=e34] [cursor=pointer]:
+          - /url: https://github.com
+    - generic [ref=e35]:
+      - generic [ref=e37]:
+        - button "上海师范大学第三附属实验学校 小学 公办 二梯队" [ref=e39]
+        - button "上海市徐汇区康健外国语实验小学 小学 公办 二梯队" [ref=e47]
+        - button "上海市西南位育附属实验学校 小学 公办 未入榜/待补充" [ref=e55]
+        - button "复旦大学附属徐汇实验学校 小学 公办 未入榜/待补充" [ref=e63]
+        - button "上海市中国中学 初中 公办 三梯队" [ref=e71]
+        - button "上海市徐汇区上海小学（本部校区 ） 小学 公办 二梯队" [ref=e79]
+        - button "上海市徐汇区上海小学（龙川校区 ） 小学 公办 二梯队" [ref=e87]
+        - button "上海市徐汇区园南小学 小学 公办 二梯队" [ref=e95]
+        - button "上海市徐汇区教育学院附属实验小学 小学 公办 三梯队" [ref=e103]
+        - button "上海市徐汇区向阳育才小学 小学 公办 一梯队" [ref=e111]
+        - button "上海市徐汇区龙华小学 小学 公办 未入榜/待补充" [ref=e119]
+        - button "上海市康健外国语实验中学 初中 公办 未入榜/待补充" [ref=e127]
+        - button "上海市龙苑中学 初中 公办 未入榜/待补充" [ref=e135]
+        - button "上海市徐汇区教育学院附属实验中学 初中 公办 二梯队" [ref=e143]
+        - button "上海市园南中学（总校 ） 初中 公办 三梯队" [ref=e151]
+        - button "上海市园南中学（北校 ） 初中 公办 三梯队" [ref=e159]
+        - button "上海市汾阳中学 初中 公办 未入榜/待补充" [ref=e167]
+        - button "上海市徐汇区教育学院 附属实验中学南部分校 初中 公办 未入榜/待补充" [ref=e175]
+        - button "华东理工大学附属中学 初中 公办 未入榜/待补充" [ref=e183]
+        - button "上海市梅园中学 初中 公办 未入榜/待补充" [ref=e191]
+        - button "上海市徐汇中学（南校区 ） 初中 公办 二梯队" [ref=e199]
+        - button "上海师范大学第三附属实验学校（初中） 初中 公办 三梯队" [ref=e207]
+        - button "复旦大学附属徐汇实验学校 （初中 ） 初中 公办 未入榜/待补充" [ref=e215]
+        - button "上海市西南位育附属实验学校 （初中 ） 初中 公办 未入榜/待补充" [ref=e223]
+      - generic [ref=e230]:
+        - generic [ref=e231] [cursor=pointer]
+        - generic
+      - separator "调整列表和地图宽度" [ref=e232]:
+        - generic [ref=e234]
+  - button "Open Next.js Dev Tools" [ref=e248] [cursor=pointer]:
+    - img [ref=e249]
+  - alert [ref=e252]

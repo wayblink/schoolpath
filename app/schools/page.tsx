@@ -1,0 +1,1 @@
+import {ProductShell} from "@/components/product/ProductShell";import {XuequReplica} from "@/components/product/XuequReplica";export default function Page(){return <ProductShell active="/schools"><XuequReplica/></ProductShell>}

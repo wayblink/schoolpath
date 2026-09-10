@@ -1,0 +1,55 @@
+[     143ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     158ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     392ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     746ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://webapi.amap.com/maps?callback=___onAPILoaded&v=2.0&key=44797665cc12a977e02cc47812c0dca7&plugin=AMap.Polygon,AMap.Marker,AMap.InfoWindow,AMap.MassMarks:0
+[   73060ms] [LOG] [Fast Refresh] done in 72837ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10460637ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10461055ms] [LOG] [Fast Refresh] done in 520ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10461208ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10461401ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10461569ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10462197ms] [LOG] [Fast Refresh] done in 729ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10464046ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10464163ms] [LOG] [Fast Refresh] done in 186ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10464344ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10464488ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10464591ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10465238ms] [LOG] [Fast Refresh] done in 352ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10526336ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10526491ms] [LOG] [Fast Refresh] done in 202ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10526614ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10526718ms] [LOG] [Fast Refresh] done in 204ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10526821ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10526940ms] [LOG] [Fast Refresh] done in 221ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10557232ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10557276ms] [LOG] [Fast Refresh] done in 117ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10557391ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10557427ms] [LOG] [Fast Refresh] done in 137ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10557546ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10557833ms] [LOG] [Fast Refresh] done in 389ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10669470ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10735150ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10735168ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10735502ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10735505ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/districts?district=%E5%BE%90%E6%B1%87&year=2025:0
+[10735622ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/schools?district=%E5%BE%90%E6%B1%87:0
+[10735739ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://webapi.amap.com/maps?callback=___onAPILoaded&v=2.0&key=44797665cc12a977e02cc47812c0dca7&plugin=AMap.Polygon,AMap.Marker,AMap.InfoWindow,AMap.MassMarks:0
+[10736010ms] [LOG] [Fast Refresh] done in 608ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10736601ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/districts?district=%E5%BE%90%E6%B1%87&year=2025:0
+[10736689ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/schools?district=%E5%BE%90%E6%B1%87:0
+[10738679ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/districts?district=%E5%BE%90%E6%B1%87&year=2025:0
+[10738759ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/schools?district=%E5%BE%90%E6%B1%87:0
+[10742763ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/districts?district=%E5%BE%90%E6%B1%87&year=2025:0
+[10742832ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/schools?district=%E5%BE%90%E6%B1%87:0
+[10747092ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[10812237ms] [LOG] [Fast Refresh] done in 13ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[11267948ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11268950ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11269952ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11270954ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11271956ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11276960ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11281965ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11286976ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11292020ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[11537106ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=pY1C6KswurRDkaVOksYSq' failed: WebSocket opening handshake timed out @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322

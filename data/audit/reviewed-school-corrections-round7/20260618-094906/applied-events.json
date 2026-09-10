@@ -1,0 +1,860 @@
+[
+  {
+    "ts": "2026-06-18T09:49:06.711Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 4672,
+    "school_name": "上音实验",
+    "changes": {
+      "name": {
+        "from": "上音实验",
+        "to": "上海音乐学院实验学校"
+      },
+      "address": {
+        "from": "上海市杨浦区民庆路333号",
+        "to": "杨浦区政和路359号"
+      },
+      "website": {
+        "from": null,
+        "to": "http://www.zysy.edu.sh.cn/"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "上音实验",
+          "上海音乐学院实验学校（初中部）"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2024年杨浦区义务教育阶段学校“校园开放日”活动汇总（初中）",
+      "url": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-czzs/20240410/452191/57185e4d1a754809bbefececd1df85e3.pdf",
+      "date": "2024-04-10",
+      "matchedName": "上海音乐学院实验学校（初中部）",
+      "rawNature": "公办",
+      "rawAddress": "政和路359号"
+    },
+    "note": "现有简称为“上音实验”，且地址为民庆路333号；上海市教委公办初中清单和杨浦区开放日官方汇总均确认全称为上海音乐学院实验学校（初中部），地址政和路359号，性质公办，并列出学校网址。本次按官方源修正简称、地址、性质和官网。",
+    "before": {
+      "id": 4672,
+      "name": "上音实验",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "上海市杨浦区民庆路333号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4672,
+      "name": "上海音乐学院实验学校",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "杨浦区政和路359号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": "http://www.zysy.edu.sh.cn/",
+      "aliases": [
+        "上音实验",
+        "上海音乐学院实验学校（初中部）"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.718Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 4684,
+    "school_name": "敬业中学",
+    "changes": {
+      "name": {
+        "from": "敬业中学",
+        "to": "上海市敬业初级中学"
+      },
+      "address": {
+        "from": "上海市黄浦区蓬莱路345号",
+        "to": "尚文路73号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "敬业中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年黄浦区初中阶段学校办学基本情况公示",
+      "url": "https://www.shanghai.gov.cn/hpqywjy/20250416/5f05ce5edb724d40aa297cd684e50df6.html",
+      "date": "2025-04-16",
+      "matchedName": "上海市敬业初级中学",
+      "rawNature": "公办初中",
+      "rawAddress": "尚文路73号"
+    },
+    "note": "现有行 type=middle 但名称和地址指向敬业高中；2025黄浦官方初中阶段学校办学基本情况公示确认初中全称为上海市敬业初级中学，地址尚文路73号，性质公办初中。本次按初中官方源修正名称与地址，原简称进入别名。",
+    "before": {
+      "id": 4684,
+      "name": "敬业中学",
+      "district": "黄浦",
+      "type": "middle",
+      "address": "上海市黄浦区蓬莱路345号",
+      "lat": 31.21675856119581,
+      "lng": 121.48812768981811,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4684,
+      "name": "上海市敬业初级中学",
+      "district": "黄浦",
+      "type": "middle",
+      "address": "尚文路73号",
+      "lat": 31.21675856119581,
+      "lng": 121.48812768981811,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "敬业中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.722Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 4751,
+    "school_name": "民办兰生",
+    "changes": {
+      "name": {
+        "from": "民办兰生",
+        "to": "上海民办兰生中学"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "杨浦"
+      },
+      "address": {
+        "from": "上海市杨浦区国和路1039号",
+        "to": "杨浦区世界路8号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "website": {
+        "from": null,
+        "to": "http://lansheng.fdfz.cn/"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "民办兰生",
+          "上海民办兰生复旦中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年上海民办兰生中学招生简章",
+      "url": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-czzs/20250408/477867.html",
+      "date": "2025-04-08",
+      "matchedName": "上海民办兰生中学",
+      "rawNature": "民办",
+      "rawAddress": "杨浦区世界路8号"
+    },
+    "note": "现有行 district=浦东 但地址和学校均指向杨浦兰生；2025杨浦官方招生简章及学校官网确认全称上海民办兰生中学，原名上海民办兰生复旦中学，校址世界路8号，并列出学校网址。本次纠正区属、名称、地址、性质和官网。",
+    "before": {
+      "id": 4751,
+      "name": "民办兰生",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市杨浦区国和路1039号",
+      "lat": 31.31771828607779,
+      "lng": 121.52893710197509,
+      "school_nature": null,
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4751,
+      "name": "上海民办兰生中学",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "杨浦区世界路8号",
+      "lat": 31.31771828607779,
+      "lng": 121.52893710197509,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": "http://lansheng.fdfz.cn/",
+      "aliases": [
+        "民办兰生",
+        "上海民办兰生复旦中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.726Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 4770,
+    "school_name": "华二前滩",
+    "changes": {
+      "name": {
+        "from": "华二前滩",
+        "to": "华东师范大学第二附属中学前滩学校"
+      },
+      "address": {
+        "from": "上海市浦东新区春朓路245号",
+        "to": "晴雪路28号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "华二前滩",
+          "华二附属前滩学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 3807,
+        "name": "华东师范大学第二附属中学前滩学校",
+        "district": "浦东",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年浦东新区义务教育阶段学校招生入学信息公示（初中）",
+      "url": "https://www.shanghai.gov.cn/pdxqywjy/20250507/57ff6e427b4c4846b03a5d414c820531.html",
+      "date": "2025-05-07",
+      "matchedName": "华东师范大学第二附属中学前滩学校",
+      "rawNature": "公办",
+      "rawAddress": "晴雪路28号"
+    },
+    "note": "现有简称“华二前滩”且百度 POI 为 AED，不是学校主 POI；2025浦东官方义务教育阶段初中信息确认全称华东师范大学第二附属中学前滩学校，性质公办，地址晴雪路28号。本次用官方源覆盖简称、地址和性质。",
+    "before": {
+      "id": 4770,
+      "name": "华二前滩",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市浦东新区春朓路245号",
+      "lat": 31.147660381723593,
+      "lng": 121.47261667149697,
+      "school_nature": null,
+      "tier": "四梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 4770,
+      "name": "华东师范大学第二附属中学前滩学校",
+      "district": "浦东",
+      "type": "middle",
+      "address": "晴雪路28号",
+      "lat": 31.147660381723593,
+      "lng": 121.47261667149697,
+      "school_nature": "公立",
+      "tier": "四梯队",
+      "website": null,
+      "aliases": [
+        "华二前滩",
+        "华二附属前滩学校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.730Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5107,
+    "school_name": "民办迅行",
+    "changes": {
+      "name": {
+        "from": "民办迅行",
+        "to": "上海市民办迅行中学"
+      },
+      "address": {
+        "from": "上海市虹口区玉田路211号(近曲阳路)",
+        "to": "玉田路211号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "民办迅行",
+          "迅行中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段民办中小学基本情况",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/4598de7d-1bcc-4128-a18d-77828712c114/5b1f9107-1e5c-4476-8000-8af02605e94b/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E6%B0%91%E5%8A%9E%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.pdf",
+      "date": "2025",
+      "matchedName": "上海市民办迅行中学",
+      "rawNature": "民办",
+      "rawAddress": "玉田路211号"
+    },
+    "note": "现有简称为“民办迅行”；2025虹口区义务教育阶段民办中小学基本情况确认全称上海市民办迅行中学、地址玉田路211号。本次补全学校全称和民办性质，保留简称为别名，不合并任何重复候选。",
+    "before": {
+      "id": 5107,
+      "name": "民办迅行",
+      "district": "虹口",
+      "type": "middle",
+      "address": "上海市虹口区玉田路211号(近曲阳路)",
+      "lat": null,
+      "lng": null,
+      "school_nature": null,
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5107,
+      "name": "上海市民办迅行中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "玉田路211号",
+      "lat": null,
+      "lng": null,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "民办迅行",
+        "迅行中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.733Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5108,
+    "school_name": "民办新北郊",
+    "changes": {
+      "name": {
+        "from": "民办新北郊",
+        "to": "上海市民办新北郊初级中学"
+      },
+      "address": {
+        "from": "上海市虹口区东体育会路429号（近玉田路）",
+        "to": "东体育会路429号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "民办新北郊",
+          "新北郊初级"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段民办中小学基本情况",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/4598de7d-1bcc-4128-a18d-77828712c114/5b1f9107-1e5c-4476-8000-8af02605e94b/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E6%B0%91%E5%8A%9E%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.pdf",
+      "date": "2025",
+      "matchedName": "上海市民办新北郊初级中学",
+      "rawNature": "民办",
+      "rawAddress": "东体育会路429号"
+    },
+    "note": "现有简称为“民办新北郊”；2025虹口区义务教育阶段民办中小学基本情况确认全称上海市民办新北郊初级中学、地址东体育会路429号。本次补全全称、地址和民办性质，保留简称为别名，不合并任何重复候选。",
+    "before": {
+      "id": 5108,
+      "name": "民办新北郊",
+      "district": "虹口",
+      "type": "middle",
+      "address": "上海市虹口区东体育会路429号（近玉田路）",
+      "lat": 31.27872306040887,
+      "lng": 121.48685160696942,
+      "school_nature": null,
+      "tier": "二梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5108,
+      "name": "上海市民办新北郊初级中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "东体育会路429号",
+      "lat": 31.27872306040887,
+      "lng": 121.48685160696942,
+      "school_nature": "私立",
+      "tier": "二梯队",
+      "website": null,
+      "aliases": [
+        "民办新北郊",
+        "新北郊初级"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.737Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5161,
+    "school_name": "惠民中学",
+    "changes": {
+      "name": {
+        "from": "惠民中学",
+        "to": "上海市惠民中学"
+      },
+      "address": {
+        "from": "上海市杨浦区平凉路街道怀德路568号(平凉路地铁站4号口旁)",
+        "to": "怀德路568号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "公立"
+      },
+      "website": {
+        "from": null,
+        "to": "http://www.hmzx.edu.sh.cn/"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "惠民中学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2024年杨浦区义务教育阶段学校“校园开放日”活动汇总（初中）",
+      "url": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-czzs/20240410/452191/57185e4d1a754809bbefececd1df85e3.pdf",
+      "date": "2024-04-10",
+      "matchedName": "上海市惠民中学",
+      "rawNature": "公办",
+      "rawAddress": "怀德路568号"
+    },
+    "note": "现有名称为简称“惠民中学”；上海市教委公办初中清单确认全称上海市惠民中学、地址怀德路568号、性质公办，杨浦区开放日官方汇总列出同一学校网址。本次补全全称、地址、性质和官网。",
+    "before": {
+      "id": 5161,
+      "name": "惠民中学",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "上海市杨浦区平凉路街道怀德路568号(平凉路地铁站4号口旁)",
+      "lat": 31.258775023612035,
+      "lng": 121.5258315786636,
+      "school_nature": null,
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5161,
+      "name": "上海市惠民中学",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "怀德路568号",
+      "lat": 31.258775023612035,
+      "lng": 121.5258315786636,
+      "school_nature": "公立",
+      "tier": "三梯队",
+      "website": "http://www.hmzx.edu.sh.cn/",
+      "aliases": [
+        "惠民中学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.740Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5170,
+    "school_name": "长阳实验",
+    "changes": {
+      "name": {
+        "from": "长阳实验",
+        "to": "上海市长阳实验学校"
+      },
+      "address": {
+        "from": "上海市杨浦区怀德路1000号",
+        "to": "怀德路1000号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "website": {
+        "from": null,
+        "to": "http://fwpt.yp.edu.sh.cn/kjmb/"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "长阳实验",
+          "上海市长阳实验学校（初中部）",
+          "上海控江中学附属民办学校"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年上海市长阳实验学校初中部招生简章",
+      "url": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-czzs/20250408/477872.html",
+      "date": "2025-04-08",
+      "matchedName": "上海市长阳实验学校",
+      "rawNature": "民办",
+      "rawAddress": "怀德路1000号"
+    },
+    "note": "现有名称为简称“长阳实验”；2025/2026杨浦区政府招生简章确认全称上海市长阳实验学校（初中部）、地址怀德路1000号、官网，并归于民办招生。本次补全全称、性质、地址和官网。",
+    "before": {
+      "id": 5170,
+      "name": "长阳实验",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "上海市杨浦区怀德路1000号",
+      "lat": 31.264681314707726,
+      "lng": 121.5217653481618,
+      "school_nature": null,
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5170,
+      "name": "上海市长阳实验学校",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "怀德路1000号",
+      "lat": 31.264681314707726,
+      "lng": 121.5217653481618,
+      "school_nature": "私立",
+      "tier": "三梯队",
+      "website": "http://fwpt.yp.edu.sh.cn/kjmb/",
+      "aliases": [
+        "长阳实验",
+        "上海市长阳实验学校（初中部）",
+        "上海控江中学附属民办学校"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.742Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5266,
+    "school_name": "迅行中学",
+    "changes": {
+      "name": {
+        "from": "迅行中学",
+        "to": "上海市民办迅行中学"
+      },
+      "district": {
+        "from": "杨浦",
+        "to": "虹口"
+      },
+      "address": {
+        "from": "上海市虹口区玉田路211号(近曲阳路)",
+        "to": "玉田路211号"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "迅行中学",
+          "民办迅行"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [
+      {
+        "id": 5107,
+        "name": "上海市民办迅行中学",
+        "district": "虹口",
+        "type": "middle"
+      }
+    ],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段民办中小学基本情况",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/4598de7d-1bcc-4128-a18d-77828712c114/5b1f9107-1e5c-4476-8000-8af02605e94b/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E6%B0%91%E5%8A%9E%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.pdf",
+      "date": "2025",
+      "matchedName": "上海市民办迅行中学",
+      "rawNature": "民办",
+      "rawAddress": "玉田路211号"
+    },
+    "note": "现有行 district=杨浦 但地址和学校 POI 均为虹口玉田路211号；2025虹口区义务教育阶段民办中小学基本情况确认全称上海市民办迅行中学、地址玉田路211号。本次纠正区属和全称，不合并重复候选。",
+    "before": {
+      "id": 5266,
+      "name": "迅行中学",
+      "district": "杨浦",
+      "type": "middle",
+      "address": "上海市虹口区玉田路211号(近曲阳路)",
+      "lat": 31.278414078966538,
+      "lng": 121.4937869398102,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5266,
+      "name": "上海市民办迅行中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "玉田路211号",
+      "lat": 31.278414078966538,
+      "lng": 121.4937869398102,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "迅行中学",
+        "民办迅行"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.745Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5552,
+    "school_name": "新华初",
+    "changes": {
+      "name": {
+        "from": "新华初",
+        "to": "上海市民办新华初级中学"
+      },
+      "district": {
+        "from": "浦东",
+        "to": "虹口"
+      },
+      "address": {
+        "from": "上海市虹口区四川北路街道中州路102号",
+        "to": "中州路102号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "新华初",
+          "新华初级"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年虹口区义务教育阶段民办中小学基本情况",
+      "url": "https://www.shhk.gov.cn/hkjy_nas/4598de7d-1bcc-4128-a18d-77828712c114/5b1f9107-1e5c-4476-8000-8af02605e94b/2025%E5%B9%B4%E8%99%B9%E5%8F%A3%E5%8C%BA%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E9%98%B6%E6%AE%B5%E6%B0%91%E5%8A%9E%E4%B8%AD%E5%B0%8F%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.pdf",
+      "date": "2025",
+      "matchedName": "上海市民办新华初级中学",
+      "rawNature": "民办",
+      "rawAddress": "中州路102号"
+    },
+    "note": "现有行 district=浦东 但地址和学校 POI 均为虹口中州路102号；2025虹口区义务教育阶段民办中小学基本情况确认全称上海市民办新华初级中学、地址中州路102号。本次纠正区属、全称、地址和民办性质。",
+    "before": {
+      "id": 5552,
+      "name": "新华初",
+      "district": "浦东",
+      "type": "middle",
+      "address": "上海市虹口区四川北路街道中州路102号",
+      "lat": 31.2526287376034,
+      "lng": 121.48178575621439,
+      "school_nature": null,
+      "tier": "三梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5552,
+      "name": "上海市民办新华初级中学",
+      "district": "虹口",
+      "type": "middle",
+      "address": "中州路102号",
+      "lat": 31.2526287376034,
+      "lng": 121.48178575621439,
+      "school_nature": "私立",
+      "tier": "三梯队",
+      "website": null,
+      "aliases": [
+        "新华初",
+        "新华初级"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.747Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5688,
+    "school_name": "新世纪小学",
+    "changes": {
+      "name": {
+        "from": "新世纪小学",
+        "to": "上海市民办新世纪小学"
+      },
+      "address": {
+        "from": "上海市长宁区兴国路374弄2号(近淮海西路)",
+        "to": "上海市长宁区兴国路374弄2号(近淮海中路)"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "新世纪小学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "上海市民办新世纪小学2025学年秋季招生简章",
+      "url": "https://zwgk.shcn.gov.cn/xxgk/xxrxks-zsks/2025/97/77175.html",
+      "date": "2025-04-07",
+      "matchedName": "上海市民办新世纪小学",
+      "rawNature": "民办",
+      "rawAddress": "上海市长宁区兴国路374弄2号(近淮海中路)"
+    },
+    "note": "现有名称为简称“新世纪小学”；2025长宁区教育局招生简章确认全称上海市民办新世纪小学、位于兴国路374弄2号，并列入民办小学招生计划。本次补全全称、地址和民办性质。",
+    "before": {
+      "id": 5688,
+      "name": "新世纪小学",
+      "district": "长宁",
+      "type": "primary",
+      "address": "上海市长宁区兴国路374弄2号(近淮海西路)",
+      "lat": 31.205043770254,
+      "lng": 121.43705577878809,
+      "school_nature": null,
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5688,
+      "name": "上海市民办新世纪小学",
+      "district": "长宁",
+      "type": "primary",
+      "address": "上海市长宁区兴国路374弄2号(近淮海中路)",
+      "lat": 31.205043770254,
+      "lng": 121.43705577878809,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": null,
+      "aliases": [
+        "新世纪小学"
+      ]
+    }
+  },
+  {
+    "ts": "2026-06-18T09:49:06.749Z",
+    "operation": "reviewed_school_correction_round7",
+    "mode": "apply",
+    "school_id": 5741,
+    "school_name": "阳浦小学",
+    "changes": {
+      "name": {
+        "from": "阳浦小学",
+        "to": "上海市民办阳浦小学"
+      },
+      "address": {
+        "from": "上海市杨浦区河间路379号(宁国路地铁站2号口步行480米)",
+        "to": "上海市杨浦区河间路379号"
+      },
+      "school_nature": {
+        "from": null,
+        "to": "私立"
+      },
+      "website": {
+        "from": null,
+        "to": "http://www.ypxx.edu.sh.cn/"
+      },
+      "aliases": {
+        "from": [],
+        "to": [
+          "阳浦小学",
+          "民办阳浦小学"
+        ]
+      }
+    },
+    "duplicate_existing_rows": [],
+    "source": {
+      "type": "official_school_info",
+      "name": "上海市人民政府/区教育局",
+      "title": "2025年上海市民办阳浦小学招生简章",
+      "url": "https://www.shyp.gov.cn/shypq/yqyw-wb-jyjzl-ypzs-xxzs/20250408/477860.html",
+      "date": "2025-04-08",
+      "matchedName": "上海市民办阳浦小学",
+      "rawNature": "民办",
+      "rawAddress": "上海市杨浦区河间路379号"
+    },
+    "note": "现有名称为简称“阳浦小学”；2025杨浦区政府招生简章确认全称上海市民办阳浦小学，地址河间路379号，官网为 ypxx.edu.sh.cn，并归于民办小学招生。本次补全全称、地址、性质和官网。",
+    "before": {
+      "id": 5741,
+      "name": "阳浦小学",
+      "district": "杨浦",
+      "type": "primary",
+      "address": "上海市杨浦区河间路379号(宁国路地铁站2号口步行480米)",
+      "lat": 31.2671784899173,
+      "lng": 121.53654277955252,
+      "school_nature": null,
+      "tier": "一梯队",
+      "website": null,
+      "aliases": []
+    },
+    "after": {
+      "id": 5741,
+      "name": "上海市民办阳浦小学",
+      "district": "杨浦",
+      "type": "primary",
+      "address": "上海市杨浦区河间路379号",
+      "lat": 31.2671784899173,
+      "lng": 121.53654277955252,
+      "school_nature": "私立",
+      "tier": "一梯队",
+      "website": "http://www.ypxx.edu.sh.cn/",
+      "aliases": [
+        "阳浦小学",
+        "民办阳浦小学"
+      ]
+    }
+  }
+]

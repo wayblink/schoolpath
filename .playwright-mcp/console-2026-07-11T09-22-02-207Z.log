@@ -1,0 +1,12 @@
+[     260ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     277ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     422ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[     561ms] [LOG] [Fast Refresh] done in 239ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[   42130ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[   42153ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[  149979ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=YvkXBvCrbF81z7MHC7ttl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[  150982ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=YvkXBvCrbF81z7MHC7ttl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[  151983ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=YvkXBvCrbF81z7MHC7ttl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/01vs_next_dist_client_10-2.sc._.js:13322
+[  153197ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[  236865ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
+[  236903ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
