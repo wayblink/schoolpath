@@ -47,8 +47,8 @@ test("school product page does not render removed placeholder counts", () => {
   assert.doesNotMatch(source, /relations\.length\|\|3272/);
 });
 
-test("map product mode requests bounded legacy-compatible data endpoints", () => {
-  const app = readFileSync("components/legacy/LegacyApp.tsx", "utf8");
+test("map product mode requests bounded data endpoints", () => {
+  const app = readFileSync("components/map/MapWorkspace.tsx", "utf8");
   const schoolsRoute = readFileSync("app/api/schools/route.ts", "utf8");
   const districtsRoute = readFileSync("app/api/districts/route.ts", "utf8");
   assert.match(app, /if \(mapOnly\) query\.set\("product", "1"\)/);

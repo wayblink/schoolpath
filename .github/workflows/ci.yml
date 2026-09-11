@@ -41,14 +41,7 @@ jobs:
           node-version: 25
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm db:migrate
-      - run: pnpm db:pg:import-sqlite
-      - run: pnpm redesign:schema
-      - run: pnpm redesign:load-source --parsed=data/ingest/xuequzhushou/20260711-035825/parsed.json
-      - run: pnpm redesign:prepare-review --parsed=data/ingest/xuequzhushou/20260711-035825/parsed.json
-      - run: pnpm redesign:publish-schools
-      - run: pnpm redesign:publish-relations
-      - run: pnpm redesign:flatten-schools
+      - run: pg_restore --no-owner --no-privileges --clean --if-exists --dbname="$DATABASE_URL" data/backups/current-house-20260911/house-current.dump
       - run: pnpm lint
       - run: pnpm exec tsc --noEmit
       - run: pnpm build

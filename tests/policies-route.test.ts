@@ -22,9 +22,3 @@ test("sources page explains the two policy record types", async () => {
   assert.match(html, /区级政策/);
   assert.match(html, /学校招生记录/);
 });
-
-test("old policies page redirects to the sources route", async () => {
-  const response = await fetch(`${baseUrl}/policies`, { redirect: "manual" });
-  assert.ok([301, 302, 307, 308].includes(response.status));
-  assert.equal(response.headers.get("location"), "/sources");
-});

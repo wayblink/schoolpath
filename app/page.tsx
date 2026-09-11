@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { House, MessagesSquare, School, TrendingUp } from "lucide-react";
+import { MessagesSquare, School, TrendingUp } from "lucide-react";
 import { ProductShell } from "@/components/product/ProductShell";
 import { getOverview } from "@/lib/product/queries";
 
@@ -14,7 +14,7 @@ const entries=[
 
 const roadmap = [
   {icon: <TrendingUp size={22} aria-hidden="true" />, title: '升学变化趋势', description: '持续整理升学路径与招生变化，辅助判断学校选择。'},
-  {icon: <House size={22} aria-hidden="true" />, title: '学区房价格趋势', description: '结合小区与区域信息，逐步观察学区房价格变化。'},
+  {icon: <School size={22} aria-hidden="true" />, title: '学区房价格趋势', description: '结合小区与区域信息，逐步观察学区房价格变化。'},
   {icon: <School size={22} aria-hidden="true" />, title: '学校风评画像', description: '汇总可追溯的学校信息，形成更完整的比较视角。'},
   {icon: <MessagesSquare size={22} aria-hidden="true" />, title: '教育舆情分析', description: '后续分析公开教育讨论，识别值得继续核对的信号。'},
 ];

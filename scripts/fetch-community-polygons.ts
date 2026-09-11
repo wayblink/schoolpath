@@ -18,7 +18,7 @@
  */
 import { readFileSync, existsSync } from "node:fs";
 import path from "node:path";
-import { eq, and, sql, or } from "drizzle-orm";
+import { eq, sql, or } from "drizzle-orm";
 import * as turf from "@turf/turf";
 import type { Feature, Polygon } from "geojson";
 import { db, schema } from "../lib/db/client";

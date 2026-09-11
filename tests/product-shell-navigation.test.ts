@@ -35,10 +35,3 @@ for (const route of ["/ops", "/db"]) {
     assert.doesNotMatch(html, /学区与梯队信息仅供参考/);
   });
 }
-
-test("map route renders the promoted legacy map mode", async () => {
-  const response = await fetch(`${baseUrl}/map`);
-  assert.equal(response.status, 200);
-  const html = await response.text();
-  assert.match(html, /HOUSE/);
-});

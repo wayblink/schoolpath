@@ -1,11 +1,11 @@
 import { ProductShell } from "@/components/product/ProductShell";
-import LegacyApp from "@/components/legacy/LegacyApp";
+import MapWorkspace from "@/components/map/MapWorkspace";
 
 export default function Page() {
   return (
     <ProductShell active="/map">
-      <div className="legacy-map-shell">
-        <LegacyApp mode="map" />
+      <div className="map-shell">
+        <MapWorkspace mode="map" />
       </div>
     </ProductShell>
   );

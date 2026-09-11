@@ -48,6 +48,7 @@ next-env.d.ts
 
 # scratch / login profiles / scraped UGC payloads
 /.tmp/
+/.playwright-mcp/
 /data/xhs/
 /data/baidu/
 /data/sogou/

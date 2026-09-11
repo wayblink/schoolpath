@@ -44,6 +44,16 @@ not be presented as authoritative citywide coverage.
 
 ## Verification
 
+`/map` is a current product feature. `ProductShell active="/map"` must emit
+`product-map-app`; its matching CSS constrains the shell to the viewport.
+`map-shell` and its flex children must keep `min-height: 0` and scrolling inside
+the school list. Removing only the shell class can stretch the AMap canvas to
+over 100,000 pixels after the full list loads. `tests/map-route.test.ts` checks
+rendered canvas height and page overflow at desktop and mobile widths.
+Names containing `legacy` do not by themselves establish that code is unused.
+Keep school-list/detail map links and the `/db` school-location maintenance
+panel, API, and `backfill-school-locations-baidu-browser.ts` runtime dependency.
+
 `tests/xuequ-replica-route.test.ts` checks the route and vocabulary.
 `tests/schools-workspace-browser.test.ts` checks both viewport sizes, collapsed
 groups, SVG map links, search state, no school lists in the default overview,

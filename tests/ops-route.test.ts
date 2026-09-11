@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import test from "node:test";
 
 const baseUrl = process.env.HOUSE_TEST_BASE_URL ?? "http://127.0.0.1:3000";
@@ -13,15 +12,12 @@ test("ops route keeps the admin dashboard and relation review surface", async ()
   assert.match(html, /ops-page/);
 });
 
-test("ops owns the expandable completeness details and tag filters", () => {
-  const ops = readFileSync("components/product/OpsDashboard.tsx", "utf8");
-  const legacy = readFileSync("components/legacy/LegacyApp.tsx", "utf8");
+test("ops owns the expandable completeness details and tag filters", async () => {
+  const ops = await import("node:fs/promises").then((fs) => fs.readFile("components/product/OpsDashboard.tsx", "utf8"));
   assert.match(ops, /数据完备度/);
   assert.match(ops, /按缺失标签过滤/);
   assert.match(ops, /<details/);
   assert.match(ops, /missingTags/);
-  assert.doesNotMatch(legacy, /CompletenessCard/);
-  assert.doesNotMatch(legacy, /\/api\/completeness/);
 });
 
 test("completeness API exposes school details with filterable quality tags", async () => {

@@ -26,7 +26,7 @@ const { Client } = pg;
 
 loadLocalEnv();
 
-// ---------- CLI helpers (沿用 backfill-school-tiers 习惯) ----------
+// ---------- CLI helpers ----------
 function valueArg(name: string): string | undefined {
   const inline = process.argv.find((arg) => arg.startsWith(`${name}=`));
   if (inline) return inline.slice(name.length + 1).trim();

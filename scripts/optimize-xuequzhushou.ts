@@ -70,7 +70,7 @@ async function main() {
     districts: parsed.districtOrder,
     contentHash: parsed.contentHash,
     stats: parsed.stats,
-    nextStep: "Run redesign:load-source with this parsed.json to create ingest/audit candidates.",
+    nextStep: "Run data:import:xuequzhushou-homepage with this snapshot after reviewing the dry-run report.",
   }, null, 2));
   console.log(JSON.stringify({ outputDir, sourceUrl: SOURCE_URL, districts: parsed.districtOrder, stats: parsed.stats }, null, 2));
 }

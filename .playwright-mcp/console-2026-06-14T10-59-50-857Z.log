@@ -1,7 +1,0 @@
-[     276ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
-[     318ms] [LOG] [HMR] connected @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
-[     434ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
-[     463ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
-[     719ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
-[    1731ms] [LOG] [Fast Refresh] done in 1268ms @ http://localhost:3001/_next/static/chunks/01vs_next_dist_0z7rf41._.js:2477
-[    2646ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://webapi.amap.com/maps?callback=___onAPILoaded&v=2.0&key=44797665cc12a977e02cc47812c0dca7&plugin=AMap.Polygon,AMap.Marker,AMap.InfoWindow,AMap.MassMarks:0
