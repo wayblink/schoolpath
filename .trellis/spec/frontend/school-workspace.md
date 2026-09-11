@@ -54,6 +54,15 @@ Names containing `legacy` do not by themselves establish that code is unused.
 Keep school-list/detail map links and the `/db` school-location maintenance
 panel, API, and `backfill-school-locations-baidu-browser.ts` runtime dependency.
 
+`/map?school=<id>` is the contract behind the school detail page's map link.
+`MapWorkspace` applies it in an effect that runs after the schools query
+resolves, and only when the id is present in the loaded product list, so
+unknown, non-numeric and zero values stay unselected. Reading the parameter in a
+`useState` initializer is not enough: on client-side navigation from the detail
+page `window.location.search` still holds the previous route at mount time.
+Selection alone must drive the sidebar highlight, the school marker label and
+the map fitView; do not duplicate that state.
+
 `tests/xuequ-replica-route.test.ts` checks the route and vocabulary.
 `tests/schools-workspace-browser.test.ts` checks both viewport sizes, collapsed
 groups, SVG map links, search state, no school lists in the default overview,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ExternalLink, Search } from "lucide-react";
 import { ALL_DISTRICTS, TIER_FILTERS, useSelection, type TierFilter, type TypeFilter } from "@/lib/store";
@@ -990,6 +990,14 @@ type MapWorkspaceProps = {
   mode?: "workspace" | "map";
 };
 
+// 只在浏览器已提交导航后调用，挂载瞬间 window.location 可能还是上一个路由
+function parseSchoolQueryParam(): number | null {
+  if (typeof window === "undefined") return null;
+  const raw = new URLSearchParams(window.location.search).get("school");
+  const id = raw === null ? NaN : Number(raw);
+  return Number.isInteger(id) && id > 0 ? id : null;
+}
+
 export default function MapWorkspace({ mode = "workspace" }: MapWorkspaceProps) {
   const mapOnly = mode === "map";
   const district = useSelection((s) => s.selectedDistrict);
@@ -1002,6 +1010,8 @@ export default function MapWorkspace({ mode = "workspace" }: MapWorkspaceProps) 
   const [leftWidth, setLeftWidth] = useState(420);
   const [schoolNameQuery, setSchoolNameQuery] = useState("");
   const [mapFocusRequest, setMapFocusRequest] = useState(0);
+  const setSelectedSchool = useSelection((s) => s.setSelectedSchool);
+  const deepLinkAppliedRef = useRef(false);
   const selectedDistrictParam = district === ALL_DISTRICTS ? "" : district;
   const districtOptions = mapOnly ? [ALL_DISTRICTS, ...PRODUCT_DISTRICTS] : DISTRICTS;
 
@@ -1027,6 +1037,19 @@ export default function MapWorkspace({ mode = "workspace" }: MapWorkspaceProps) 
         : rows;
     },
   });
+
+  // 学校详情页的"在地图中查看"会带上 ?school=<id>；这里在数据到达时读取，
+  // 覆盖首次加载和详情页客户端跳转两种情况
+  useEffect(() => {
+    if (deepLinkAppliedRef.current) return;
+    const schools = schoolsQuery.data;
+    if (!schools) return;
+    deepLinkAppliedRef.current = true;
+    const schoolId = parseSchoolQueryParam();
+    if (schoolId != null && schools.some((school) => school.id === schoolId)) {
+      setSelectedSchool(schoolId);
+    }
+  }, [schoolsQuery.data, setSelectedSchool]);
 
   const districtsQuery = useQuery({
     queryKey: ["districts", selectedDistrictParam, year],
