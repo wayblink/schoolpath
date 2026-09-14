@@ -181,13 +181,13 @@ export async function importXuequzhushou(
       await client.query("select pg_advisory_xact_lock(hashtext('xuequzhushou-full-import'))");
       // Prevent concurrent editors from making the canonical digest inconclusive.
       await client.query("LOCK TABLE public.schools IN SHARE MODE");
-      await client.query("LOCK TABLE catalog.source_schools,catalog.school_district_relations IN SHARE ROW EXCLUSIVE MODE");
+      await client.query("LOCK TABLE catalog.source_schools,catalog.relations IN SHARE ROW EXCLUSIVE MODE");
     }
     report.canonicalBefore = await canonicalDigest(client);
     const publicSchools = (await client.query("select id,name,district,type,aliases from public.schools")).rows as PublicSchool[];
     const sourceSchools = (await client.query("select * from catalog.source_schools")).rows;
     const existingSchools = new Map(sourceSchools.map(row => [String(row.source_key), row]));
-    const existingRelations = (await client.query("select * from catalog.school_district_relations where source_name=$1", [SOURCE_NAME])).rows;
+    const existingRelations = (await client.query("select * from catalog.relations where source_name=$1", [SOURCE_NAME])).rows;
     const relationKeys = new Map(existingRelations.map(row => [relationIdentity(row), row]));
     const runResult = await client.query(`select r.id from ingest.crawl_runs r join ingest.sources s on s.id=r.source_id
       where s.source_key='xuequzhushou' and r.content_hash=$1`, [plan.parsed.contentHash]);
@@ -311,7 +311,7 @@ export async function importXuequzhushou(
       if (apply) {
         const recordId = rawIds.get(relation.recordKey);
         if (!recordId) throw new Error(`Raw reconciliation missing relation: ${relation.recordKey}`);
-        await client.query(`insert into catalog.school_district_relations(source_record_id,source_name,source_url,source_year,
+        await client.query(`insert into catalog.relations(source_record_id,source_name,source_url,source_year,
           district,school_name,school_type,committee_name,area,street,school_id,school_match_score,
           community_match_score,match_status,review_status,verified,attrs)
           values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,0,$13,'provisional',false,$14::jsonb)`,
@@ -345,7 +345,7 @@ export async function importXuequzhushou(
           if (!isDeepStrictEqual(object(actual.attrs)[key], value)) throw new Error(`Existing source school attrs changed: ${prior.source_key}:${key}`);
         }
       }
-      const afterRelations = (await client.query("select * from catalog.school_district_relations where source_name=$1", [SOURCE_NAME])).rows;
+      const afterRelations = (await client.query("select * from catalog.relations where source_name=$1", [SOURCE_NAME])).rows;
       if (afterRelations.length !== existingRelations.length + report.relations.added) throw new Error("Relation reconciliation count mismatch");
       const afterRelationsById = new Map(afterRelations.map(row => [String(row.id), row]));
       for (const prior of existingRelations) {

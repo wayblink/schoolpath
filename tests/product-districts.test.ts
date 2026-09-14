@@ -38,7 +38,7 @@ test("product school queries reject malformed numeric filters and detail ids", (
   const source = readFileSync("lib/product/queries.ts", "utf8");
   assert.match(source, /Number\.isInteger\(tier\)/);
   assert.match(source, /if \(!Number\.isInteger\(id\) \|\| id <= 0\) return null/);
-  assert.match(source, /p\.district is null or .*p\.district.*s\.district/);
+  assert.match(source, /p\.public_school_id=s\.id and \(d\.canonical_name is null or d\.canonical_name = [\s\S]*?s\.district\)/);
 });
 
 test("school product page does not render removed placeholder counts", () => {

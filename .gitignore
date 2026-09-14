@@ -53,3 +53,6 @@ next-env.d.ts
 /data/baidu/
 /data/sogou/
 /data/zhihu/
+
+# migration snapshots (contain local db dumps)
+/data/migrations/

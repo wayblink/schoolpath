@@ -115,7 +115,7 @@ function transactionDatabase() {
       { id: 10, name: "同名", district: "黄浦", type: "primary", aliases: [] },
     ]);
     if (sql === "select * from catalog.source_schools") return rows(state.schools);
-    if (sql.startsWith("select * from catalog.school_district_relations")) return rows(state.relations);
+    if (sql.startsWith("select * from catalog.relations")) return rows(state.relations);
     if (sql.startsWith("select r.id from ingest.crawl_runs")) return rows(state.run ? [{ id: "1" }] : []);
     if (sql.startsWith("select record_type")) {
       const raw = state.raw.map(({ recordType, sourceKey, district, raw }) => ({ recordType, sourceKey, district, raw }));
@@ -148,7 +148,7 @@ function transactionDatabase() {
     if (sql.startsWith("select id,source_key from ingest.extracted_records")) {
       return rows(state.raw.filter(row => row.recordType === "committee_link").map(row => ({ id: row.id, source_key: row.sourceKey })));
     }
-    if (sql.startsWith("insert into catalog.school_district_relations")) {
+    if (sql.startsWith("insert into catalog.relations")) {
       const columns = ["source_record_id", "source_name", "source_url", "source_year", "district", "school_name", "school_type",
         "committee_name", "area", "street", "school_id", "school_match_score", "match_status", "attrs"];
       state.relations.push({ id: String(state.relations.length + 1), verified: false, review_status: "provisional", catalog_community_id: null,
@@ -230,7 +230,7 @@ test("late raw reconciliation failure rolls back every inserted row", async () =
   db.corruptRaw();
   const before = structuredClone(db.state());
   await assert.rejects(importXuequzhushou(db.client, buildXuequzhushouImport(fixture()), { apply: true }), /reconciliation/);
-  assert.ok(db.statements.some(sql => sql.startsWith("insert into catalog.school_district_relations")));
+  assert.ok(db.statements.some(sql => sql.startsWith("insert into catalog.relations")));
   assert.deepEqual(db.state(), before);
   assert.equal(db.statements.at(-1), "ROLLBACK");
   assert.ok(!db.statements.includes("COMMIT"));

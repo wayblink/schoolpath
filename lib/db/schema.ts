@@ -5,12 +5,15 @@ import {
   integer,
   jsonb,
   pgEnum,
+  pgSchema,
   pgTable,
   serial,
   text,
   timestamp,
   uniqueIndex,
 } from "drizzle-orm/pg-core";
+
+export const catalogSchema = pgSchema("catalog");
 
 export const schoolType = pgEnum("school_type", ["primary", "middle", "nine_year"]);
 export const schoolNature = pgEnum("school_nature", ["公立", "私立"]);
@@ -64,18 +67,8 @@ export const districtBoundaries = pgTable("district_boundaries", {
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
 });
 
-export const policies = pgTable("policies", {
-  id: serial("id").primaryKey(),
-  schoolId: integer("school_id").references(() => schools.id),
-  scope: policyScope("scope").notNull(),
-  district: text("district"),
-  year: integer("year").notNull(),
-  title: text("title").notNull(),
-  sourceUrl: text("source_url"),
-  content: text("content").notNull(),
-  changeSummary: text("change_summary"),
-  fetchedAt: timestamp("fetched_at", { withTimezone: true }).defaultNow(),
-});
+// public.policies 已收敛删除（2026-09-14 迁移 B7）：政策唯一真源为 catalog.policy_documents，
+// 由 lib/product/queries.ts getPolicies() 直连 SQL 读取，不再有 drizzle 定义。
 
 export const schoolInfo = pgTable(
   "school_info",
@@ -102,7 +95,7 @@ export const schoolInfo = pgTable(
 export type School = typeof schools.$inferSelect;
 export type NewSchool = typeof schools.$inferInsert;
 export type DistrictBoundary = typeof districtBoundaries.$inferSelect;
-export type Policy = typeof policies.$inferSelect;
+// Policy 类型已随 public.policies 删除（2026-09-14 B7）；产品层用 lib/product/queries.ts 的 ProductPolicy
 export type SchoolInfo = typeof schoolInfo.$inferSelect;
 export type NewSchoolInfo = typeof schoolInfo.$inferInsert;
 
@@ -156,41 +149,28 @@ export const schoolCommunities = pgTable(
   }),
 );
 
-export const schoolCommunityCandidates = pgTable(
-  "school_community_candidates",
-  {
-    id: serial("id").primaryKey(),
-    schoolId: integer("school_id").references(() => schools.id),
-    schoolNameRaw: text("school_name_raw").notNull(),
-    district: text("district").notNull(),
-    year: integer("year").notNull(),
-    communityId: integer("community_id").references(() => communities.id),
-    communityNameRaw: text("community_name_raw").notNull(),
-    committeeNameRaw: text("committee_name_raw"),
-    sourceUrl: text("source_url"),
-    sourceTitle: text("source_title").notNull(),
-    sourceDate: text("source_date"),
-    sourceQuote: text("source_quote").notNull(),
-    confidence: text("confidence").notNull().default("medium"),
-    status: text("status").notNull().default("pending"),
-    reviewNotes: text("review_notes"),
-    raw: jsonb("raw").$type<Record<string, unknown>>(),
-    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-    updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
-  },
-  (t) => ({
-    schoolIdIdx: index("school_community_candidates_school_id_idx").on(t.schoolId),
-    yearDistrictIdx: index("school_community_candidates_year_district_idx").on(t.year, t.district),
-    statusIdx: index("school_community_candidates_status_idx").on(t.status),
-    uniqIdx: uniqueIndex("school_community_candidates_uniq_idx").on(
-      t.year,
-      t.district,
-      t.schoolNameRaw,
-      t.communityNameRaw,
-      t.sourceUrl,
-    ),
-  }),
-);
+// 官方原始候选池（2026-09-14 迁移 B6 从 public 迁入 catalog 并改名 candidates）。
+// MapWorkspace 经 /api/school-community-candidates 消费。
+export const candidates = catalogSchema.table("candidates", {
+  id: serial("id").primaryKey(),
+  schoolId: integer("school_id").references(() => schools.id),
+  schoolNameRaw: text("school_name_raw").notNull(),
+  district: text("district").notNull(),
+  year: integer("year").notNull(),
+  communityId: integer("community_id").references(() => communities.id),
+  communityNameRaw: text("community_name_raw").notNull(),
+  committeeNameRaw: text("committee_name_raw"),
+  sourceUrl: text("source_url"),
+  sourceTitle: text("source_title").notNull(),
+  sourceDate: text("source_date"),
+  sourceQuote: text("source_quote").notNull(),
+  confidence: text("confidence").notNull().default("medium"),
+  status: text("status").notNull().default("pending"),
+  reviewNotes: text("review_notes"),
+  raw: jsonb("raw").$type<Record<string, unknown>>(),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
+});
 
 export const communityPriceSnapshots = pgTable(
   "community_price_snapshots",
@@ -260,8 +240,8 @@ export const webDataSource = pgTable(
 
 export type Community = typeof communities.$inferSelect;
 export type SchoolCommunity = typeof schoolCommunities.$inferSelect;
-export type SchoolCommunityCandidate = typeof schoolCommunityCandidates.$inferSelect;
-export type NewSchoolCommunityCandidate = typeof schoolCommunityCandidates.$inferInsert;
+export type SchoolCommunityCandidate = typeof candidates.$inferSelect;
+export type NewSchoolCommunityCandidate = typeof candidates.$inferInsert;
 export type CommunityPriceSnapshot = typeof communityPriceSnapshots.$inferSelect;
 export type CommunityPriceSource = typeof communityPriceSources.$inferSelect;
 export type WebDataSource = typeof webDataSource.$inferSelect;
