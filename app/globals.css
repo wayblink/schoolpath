@@ -385,7 +385,7 @@ html[data-theme="notion"] .app-header {
 @media(min-width:761px){.ops-page .ops-review{padding:20px}.ops-page .ops-review-list{max-height:680px;padding-right:8px}.ops-page .ops-review-row{min-width:760px}.ops-page .ops-review-actions{justify-content:flex-end}}
 
 /* Admin surfaces use the same readable product canvas as the user-facing pages. */
-.ops-page{background:#f4f7fb;color:#14213d}
+.ops-page{background:#f4f7fb;color:#14213d;width:min(100%,1180px);margin:0 auto;padding:40px clamp(18px,4vw,40px)}
 .ops-header{border-bottom-color:#dce5ef}
 .ops-header span{color:#23728b}
 .ops-header h1{color:#153f67}
