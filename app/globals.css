@@ -569,3 +569,26 @@ html[data-theme="notion"] .app-header {
 .ops-manual-submit{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:0;border-radius:7px;background:#1f8aa2;color:#fff;font-weight:700;font-size:11px;cursor:pointer}
 .ops-manual-submit:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:760px){.ops-manual-form{grid-template-columns:1fr}}
+
+/* ── Ops 采集批次分组（重构）── */
+.ops-run-group{margin-bottom:8px;border:1px solid #e2ebf0;border-radius:10px;background:#fbfdfe;overflow:hidden}
+.ops-run-group>summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 14px;cursor:pointer;list-style:none}
+.ops-run-group>summary::-webkit-details-marker{display:none}
+.ops-run-group>summary:hover{background:#f2f9fb}
+.ops-run-group[open]>summary{border-bottom:1px solid #e2ebf0;background:#f6fafc}
+.ops-run-group-main{display:flex;align-items:center;gap:8px;min-width:0}
+.ops-run-group-main b{color:#153f67;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ops-run-group-meta{display:flex;align-items:center;gap:12px;flex-shrink:0;color:#718398;font-size:10px;font-family:var(--font-geist-mono)}
+.ops-run-group-meta time{white-space:nowrap}
+.ops-run-group-body{max-height:420px;overflow:auto}
+.ops-run-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 14px;border-bottom:1px solid #eef4f8}
+.ops-run-item:last-child{border-bottom:0}
+.ops-run-item-main{display:grid;gap:2px;min-width:0}
+.ops-run-item-main b{color:#27425e;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ops-run-item-main time{color:#9aaaba;font-size:9px;font-family:var(--font-geist-mono)}
+.ops-run-item-meta{display:flex;align-items:center;gap:12px;flex-shrink:0;font-size:10px}
+.ops-run-item-meta span{color:#718398;font-family:var(--font-geist-mono)}
+.ops-run-item-meta a{color:#23728b;text-decoration:none;font-weight:700;white-space:nowrap}
+.ops-run-item-meta a:hover{text-decoration:underline}
+.ops-run-more{padding:9px 14px;color:#8a9baa;font-size:10px;background:#f8fbfd}
+@media(max-width:760px){.ops-run-group>summary{flex-direction:column;align-items:flex-start;gap:6px}.ops-run-item{flex-direction:column;align-items:flex-start;gap:4px}}

@@ -7,9 +7,30 @@ import { ReleaseBatches } from "@/components/ops/ReleaseBatches";
 import { ManualEntry } from "@/components/ops/ManualEntry";
 import { CompletenessPanel } from "@/components/ops/CompletenessPanel";
 
+type CrawlRunRow = {
+  id: number;
+  sourceKey: string;
+  sourceName: string;
+  sourceKind: string;
+  fetchedAt: string;
+  pageTitle: string;
+  recordCount: number;
+  stats: Record<string, unknown> | null;
+};
+type SourceGroup = {
+  sourceKey: string;
+  sourceName: string;
+  sourceKind: string;
+  runCount: number;
+  recordCount: number;
+  latestAt: string;
+  runs: CrawlRunRow[];
+};
+
 type OpsSummary = {
   overview: Record<string, number>;
-  runs: Array<{ id: number; name: string; fetchedAt: string; pageTitle: string; contentHash: string; stats: Record<string, number> | null }>;
+  sourceGroups: SourceGroup[];
+  totalRuns: number;
   matches: Array<{ status: string; count: number }>;
   conflicts: Array<{ fieldName: string; status: string; count: number }>;
   relationStatuses: Array<{ status: string; count: number }>;
@@ -103,25 +124,45 @@ export function OpsDashboard() {
             <div>
               <span className="ops-section-kicker">SOURCE RUNS</span>
               <h2>采集批次</h2>
-              <p>最近一次同步的来源与覆盖范围。</p>
+              <p>按来源分组。展开查看每批次抓了什么、多少条记录。</p>
             </div>
             <Database size={18} />
           </div>
-          {data.runs.map((run) => (
-            <article className="ops-row" key={run.id}>
-              <div>
-                <b>{run.name}</b>
-                <span className="ops-status success">
-                  <Check size={11} /> 已完成
-                </span>
+          {data.sourceGroups.map((group) => (
+            <details className="ops-run-group" key={group.sourceKey}>
+              <summary>
+                <div className="ops-run-group-main">
+                  <b>{group.sourceName}</b>
+                  <span className="ops-status success">
+                    <Check size={11} /> 已完成
+                  </span>
+                </div>
+                <div className="ops-run-group-meta">
+                  <span>{group.runCount.toLocaleString()} 个批次</span>
+                  <span>{group.recordCount.toLocaleString()} 条候选记录</span>
+                  <time>{new Date(group.latestAt).toLocaleString("zh-CN")}</time>
+                </div>
+              </summary>
+              <div className="ops-run-group-body">
+                {group.runs.map((run) => (
+                  <article className="ops-run-item" key={run.id}>
+                    <div className="ops-run-item-main">
+                      <b>{run.pageTitle || `批次 #${run.id}`}</b>
+                      <time>{new Date(run.fetchedAt).toLocaleString("zh-CN")}</time>
+                    </div>
+                    <div className="ops-run-item-meta">
+                      <span>{run.recordCount.toLocaleString()} 条记录</span>
+                      <a href={`/db?schema=ingest&name=extracted_records&filters=${encodeURIComponent(JSON.stringify({ crawl_run_id: String(run.id) }))}`} target="_blank" rel="noreferrer">
+                        /db 查看 →
+                      </a>
+                    </div>
+                  </article>
+                ))}
+                {group.runCount > group.runs.length && (
+                  <div className="ops-run-more">仅显示最近 {group.runs.length} / {group.runCount.toLocaleString()} 个批次，完整记录见 /db 的 ingest.crawl_runs</div>
+                )}
               </div>
-              <time>{new Date(run.fetchedAt).toLocaleString("zh-CN")}</time>
-              <small>{run.pageTitle}</small>
-              <span className="ops-run-stats">
-                覆盖 {run.stats?.districtCount ?? 0} 个区域 · {run.stats?.committeeRelationCount ?? 0} 条关系 · {run.stats?.coordinateCount ?? 0} 个坐标
-              </span>
-              <code>{run.contentHash.slice(0, 16)}…</code>
-            </article>
+            </details>
           ))}
         </section>
         <section>

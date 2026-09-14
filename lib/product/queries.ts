@@ -225,15 +225,48 @@ export async function getPolicies() {
   `, [PRODUCT_DISTRICTS]);
 }
 
+export type CrawlRunRow = {
+  id:number;sourceName:string;sourceKey:string;sourceKind:string;
+  fetchedAt:string;pageTitle:string;recordCount:number;stats:Record<string, unknown>|null;
+};
+export type SourceGroup = {
+  sourceKey:string;sourceName:string;sourceKind:string;
+  runCount:number;recordCount:number;latestAt:string;runs:CrawlRunRow[];
+};
+
 export async function getOpsSummary() {
-  const [overview,runs,matches,conflicts,relationStatuses]=await Promise.all([
+  const [overview,runRows,matches,conflicts,relationStatuses]=await Promise.all([
     getFullOverview(),
-    query(`select r.id,s.name,r.fetched_at "fetchedAt",r.page_title "pageTitle",r.content_hash "contentHash",r.stats from ingest.crawl_runs r join ingest.sources s on s.id=r.source_id order by r.id desc limit 20`),
+    query<CrawlRunRow>(`
+      select r.id,s.source_key "sourceKey",s.name "sourceName",s.source_kind "sourceKind",
+        r.fetched_at "fetchedAt",r.page_title "pageTitle",r.stats,
+        (select count(*)::int from ingest.extracted_records e where e.crawl_run_id=r.id) "recordCount"
+      from ingest.crawl_runs r join ingest.sources s on s.id=r.source_id
+      order by s.id,r.id desc`),
     query(`select status,count(*)::int from catalog.entity_match_candidates group by status order by status`),
     query(`select field_name "fieldName",status,count(*)::int from catalog.field_conflicts group by field_name,status order by field_name,status`),
     query(`select review_status "status",count(*)::int from catalog.relations group by review_status order by review_status`),
   ]);
-  return {overview,runs,matches,conflicts,relationStatuses};
+  // 按来源聚合（前端分组展示，避免 800 个 shgov run 平铺刷屏）
+  const groups = new Map<string, SourceGroup>();
+  for (const run of runRows) {
+    let g = groups.get(run.sourceKey);
+    if (!g) {
+      g = { sourceKey: run.sourceKey, sourceName: run.sourceName, sourceKind: run.sourceKind, runCount: 0, recordCount: 0, latestAt: run.fetchedAt, runs: [] };
+      groups.set(run.sourceKey, g);
+    }
+    g.runCount++;
+    g.recordCount += run.recordCount;
+    // runs 已按 id desc 排序，第一条即最新
+    if (run.fetchedAt > g.latestAt) g.latestAt = run.fetchedAt;
+    if (g.runs.length < 30) g.runs.push(run);
+  }
+  return {
+    overview,
+    sourceGroups: [...groups.values()].sort((a, b) => (a.latestAt < b.latestAt ? 1 : -1)),
+    totalRuns: runRows.length,
+    matches,conflicts,relationStatuses,
+  };
 }
 
 export async function getRelationReviewCandidates(filters:{status?:string;district?:string;page?:number;pageSize?:number}={}) {
