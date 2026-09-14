@@ -248,7 +248,7 @@ const steps: Step[] = [
         "catalog.schools": 2044,
         "catalog.communities": 30638,
         "catalog.policy_documents": 832,
-        "catalog.candidates": 23070,
+        "catalog.official_enrollment_areas": 23070, // 原 catalog.candidates，2026-09-14 改名
         "catalog.entity_match_candidates": 455,
         "catalog.field_conflicts": 130,
         "catalog.release_batches": 0,

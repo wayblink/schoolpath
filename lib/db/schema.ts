@@ -149,9 +149,9 @@ export const schoolCommunities = pgTable(
   }),
 );
 
-// 官方原始候选池（2026-09-14 迁移 B6 从 public 迁入 catalog 并改名 candidates）。
-// MapWorkspace 经 /api/school-community-candidates 消费。
-export const candidates = catalogSchema.table("candidates", {
+// 官方对口地段原文（2026-09-14 迁移 B6 从 public.school_community_candidates 迁入 catalog；
+// 2026-09-14 由含义不明的 candidates 改名 official_enrollment_areas）。MapWorkspace 经 /api/school-community-candidates 消费。
+export const officialEnrollmentAreas = catalogSchema.table("official_enrollment_areas", {
   id: serial("id").primaryKey(),
   schoolId: integer("school_id").references(() => schools.id),
   schoolNameRaw: text("school_name_raw").notNull(),
@@ -240,8 +240,8 @@ export const webDataSource = pgTable(
 
 export type Community = typeof communities.$inferSelect;
 export type SchoolCommunity = typeof schoolCommunities.$inferSelect;
-export type SchoolCommunityCandidate = typeof candidates.$inferSelect;
-export type NewSchoolCommunityCandidate = typeof candidates.$inferInsert;
+export type OfficialEnrollmentArea = typeof officialEnrollmentAreas.$inferSelect;
+export type NewOfficialEnrollmentArea = typeof officialEnrollmentAreas.$inferInsert;
 export type CommunityPriceSnapshot = typeof communityPriceSnapshots.$inferSelect;
 export type CommunityPriceSource = typeof communityPriceSources.$inferSelect;
 export type WebDataSource = typeof webDataSource.$inferSelect;
