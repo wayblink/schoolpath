@@ -171,7 +171,7 @@ export function XuequReplica() {
   }
 
   return (
-    <div className="house-school-page school-workspace">
+    <div className="schoolpath-page school-workspace">
       <header className="sw-hero">
         <h1>上海学校与学区关系</h1>
         <span>九区学校目录</span>

@@ -106,7 +106,7 @@ out geom;`;
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
-            "User-Agent": "house-mapper/0.1",
+            "User-Agent": "schoolpath-mapper/0.1",
           },
           body: `data=${encodeURIComponent(q)}`,
         },
@@ -159,7 +159,7 @@ out geom;`;
         url,
         {
           method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "house-mapper/0.1" },
+          headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "schoolpath-mapper/0.1" },
           body: `data=${encodeURIComponent(q)}`,
         },
         60_000,

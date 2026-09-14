@@ -11,7 +11,7 @@ RUN pnpm install --frozen-lockfile
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV DATABASE_URL=postgres://house:house_dev_password@postgres:5432/house
+ENV DATABASE_URL=postgres://schoolpath:schoolpath_dev_password@postgres:5432/schoolpath
 RUN pnpm build
 
 FROM node:25-alpine AS runner

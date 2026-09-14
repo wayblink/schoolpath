@@ -3,7 +3,7 @@ import fs from "node:fs";
 import test from "node:test";
 import path from "node:path";
 
-const baseUrl = process.env.HOUSE_TEST_BASE_URL ?? "http://127.0.0.1:3000";
+const baseUrl = process.env.SCHOOLPATH_TEST_BASE_URL ?? "http://127.0.0.1:3000";
 
 test("map school cards expose an in-app school detail link", () => {
   const source = fs.readFileSync(path.join(process.cwd(), "components/table/SchoolTable.tsx"), "utf8");

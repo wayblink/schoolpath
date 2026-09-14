@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-const baseUrl = process.env.HOUSE_TEST_BASE_URL ?? "http://127.0.0.1:3000";
+const baseUrl = process.env.SCHOOLPATH_TEST_BASE_URL ?? "http://127.0.0.1:3000";
 
 test("product navigation keeps the database console discoverable", async () => {
   const response = await fetch(`${baseUrl}/`);

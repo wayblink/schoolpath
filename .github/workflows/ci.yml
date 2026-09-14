@@ -16,21 +16,21 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_DB: house
-          POSTGRES_USER: house
-          POSTGRES_PASSWORD: house_dev_password
+          POSTGRES_DB: schoolpath
+          POSTGRES_USER: schoolpath
+          POSTGRES_PASSWORD: schoolpath_dev_password
         ports:
           - 5432:5432
         options: >-
-          --health-cmd "pg_isready -U house -d house"
+          --health-cmd "pg_isready -U schoolpath -d schoolpath"
           --health-interval 5s
           --health-timeout 5s
           --health-retries 20
     env:
-      DATABASE_URL: postgres://house:house_dev_password@127.0.0.1:5432/house
+      DATABASE_URL: postgres://schoolpath:schoolpath_dev_password@127.0.0.1:5432/schoolpath
       NEXT_PUBLIC_AMAP_KEY: ""
       NEXT_PUBLIC_AMAP_SECURITY_CODE: ""
-      HOUSE_TEST_BASE_URL: http://127.0.0.1:3000
+      SCHOOLPATH_TEST_BASE_URL: http://127.0.0.1:3000
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -41,7 +41,7 @@ jobs:
           node-version: 25
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pg_restore --no-owner --no-privileges --clean --if-exists --dbname="$DATABASE_URL" data/backups/current-house-20260911/house-current.dump
+      - run: pg_restore --no-owner --no-privileges --clean --if-exists --dbname="$DATABASE_URL" data/backups/current-schoolpath-20260911/schoolpath-current.dump
       - run: pnpm lint
       - run: pnpm exec tsc --noEmit
       - run: pnpm build
@@ -52,7 +52,7 @@ jobs:
           cp -r public .next/standalone/public
           mkdir -p .next/standalone/.next
           cp -r .next/static .next/standalone/.next/static
-          node .next/standalone/server.js >"$RUNNER_TEMP/house-next.log" 2>&1 &
+          node .next/standalone/server.js >"$RUNNER_TEMP/schoolpath-next.log" 2>&1 &
           server_pid=$!
           cleanup() {
             kill "$server_pid" 2>/dev/null || true
@@ -61,14 +61,14 @@ jobs:
           trap cleanup EXIT
 
           for attempt in {1..30}; do
-            if curl --fail --silent "$HOUSE_TEST_BASE_URL/" >/dev/null; then
+            if curl --fail --silent "$SCHOOLPATH_TEST_BASE_URL/" >/dev/null; then
               break
             fi
             if ! kill -0 "$server_pid" 2>/dev/null; then
-              cat "$RUNNER_TEMP/house-next.log"
+              cat "$RUNNER_TEMP/schoolpath-next.log"
               exit 1
             fi
             sleep 2
           done
-          curl --fail --silent "$HOUSE_TEST_BASE_URL/" >/dev/null
+          curl --fail --silent "$SCHOOLPATH_TEST_BASE_URL/" >/dev/null
           pnpm test

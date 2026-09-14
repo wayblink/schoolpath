@@ -6,4 +6,4 @@ For source collection, raw archives, catalog imports or database explorer change
 
 ## Quality Check
 
-Run focused importer/crawler tests, `pnpm test`, `pnpm exec tsc --noEmit` and `pnpm lint`. Source apply requires a dry-run and JSON reconciliation inside the transaction. Verify idempotence against PostgreSQL. When serving code changes, build, restart only the House process and smoke the source tables through the running API.
+Run focused importer/crawler tests, `pnpm test`, `pnpm exec tsc --noEmit` and `pnpm lint`. Source apply requires a dry-run and JSON reconciliation inside the transaction. Verify idempotence against PostgreSQL. When serving code changes, build, restart only the Schoolpath process and smoke the source tables through the running API.

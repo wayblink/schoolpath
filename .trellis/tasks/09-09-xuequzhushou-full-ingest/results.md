@@ -90,7 +90,7 @@ The source school/community datasets omit Putuo. GeoJSON has 7,255 features acro
 
 ## Repeat Workflow
 
-Use the repository `house-data-optimizer` Skill. Run full-site collection, inspect failures, dry-run both importers, apply with existing authorization, then repeat and reconcile. The Skill does not run as a background scheduler; each invocation is an explicit optimization iteration.
+Use the repository `schoolpath-data-optimizer` Skill. Run full-site collection, inspect failures, dry-run both importers, apply with existing authorization, then repeat and reconcile. The Skill does not run as a background scheduler; each invocation is an explicit optimization iteration.
 
 ## Reviewer Recheck (2026-09-10)
 

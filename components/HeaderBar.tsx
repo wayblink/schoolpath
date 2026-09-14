@@ -104,7 +104,7 @@ export function HeaderBar({ visibleSchools, totalSchools, activeView, onViewChan
   }, []);
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("house-theme") as ThemeValue | null;
+    const saved = window.localStorage.getItem("schoolpath-theme") as ThemeValue | null;
     if (!saved || !THEME_OPTIONS.some((item) => item.value === saved)) return;
     const frame = window.requestAnimationFrame(() => setTheme(saved));
     return () => window.cancelAnimationFrame(frame);
@@ -115,7 +115,7 @@ export function HeaderBar({ visibleSchools, totalSchools, activeView, onViewChan
     if (theme === "fresh") root.removeAttribute("data-theme");
     else root.dataset.theme = theme;
     root.style.colorScheme = "light";
-    window.localStorage.setItem("house-theme", theme);
+    window.localStorage.setItem("schoolpath-theme", theme);
   }, [theme]);
 
   return (

@@ -267,7 +267,7 @@ export async function collectXuequzhushouSite(options: SiteCollectOptions) {
       while (true) {
         if (requests >= limits.maxResources) throw new Error("Request limit reached during redirect");
         requests++;
-        response = await fetchImpl(currentUrl, { redirect: "manual", signal, headers: { "user-agent": "HouseSourceArchive/1.0 (bounded research crawl)", accept: "*/*" } });
+        response = await fetchImpl(currentUrl, { redirect: "manual", signal, headers: { "user-agent": "SchoolpathSourceArchive/1.0 (bounded research crawl)", accept: "*/*" } });
         gotResponse = true;
         resource.finalUrl = currentUrl;
         resource.status = response.status;

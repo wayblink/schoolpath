@@ -36,7 +36,7 @@ class ArchiveClient implements ImportClient {
 }
 
 function fixture() {
-  const dir = mkdtempSync(path.join(tmpdir(), "house-site-import-"));
+  const dir = mkdtempSync(path.join(tmpdir(), "schoolpath-site-import-"));
   const body = JSON.stringify({ districts: { "黄浦区": [{ n: "school", c: [{ n: "same", extra: 1 }, { n: "same", extra: 2 }] }] } });
   const hash = createHash("sha256").update(body).digest("hex");
   writeFileSync(path.join(dir, "data.json"), body);

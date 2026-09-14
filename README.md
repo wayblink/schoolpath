@@ -2,7 +2,7 @@
 
 把分散在市教委 / 各区教育局 / 各学校通告 / 链家 / 小红书的学区信息合并成一张可联动的视图。
 
-**当前状态**: 九区产品版本。新版产品页面和 `/api/v2/*` 只展示黄浦、静安、长宁、虹口、杨浦、徐汇、闵行、浦东、普陀；当前 PostgreSQL 数据库是唯一运行数据版本，数据库快照保存在 `data/backups/current-house-20260911/`。学校、关系和政策仍按来源和审核状态持续补充，不能替代正式招生文件。
+**当前状态**: 九区产品版本。新版产品页面和 `/api/v2/*` 只展示黄浦、静安、长宁、虹口、杨浦、徐汇、闵行、浦东、普陀；当前 PostgreSQL 数据库是唯一运行数据版本，数据库快照保存在 `data/backups/current-schoolpath-20260911/`。学校、关系和政策仍按来源和审核状态持续补充，不能替代正式招生文件。
 
 ## 产品范围
 
@@ -31,12 +31,12 @@ pnpm dev
 
 打开 http://localhost:3000
 
-正式数据更新直接使用当前 PostgreSQL 数据库和受审计的数据采集入口；不要运行历史 seed、迁移或重灌库流程。数据库恢复基线是 `data/backups/current-house-20260911/house-current.dump`。
+正式数据更新直接使用当前 PostgreSQL 数据库和受审计的数据采集入口；不要运行历史 seed、迁移或重灌库流程。数据库恢复基线是 `data/backups/current-schoolpath-20260911/schoolpath-current.dump`。
 
 服务：
 
 - App: http://localhost:3000
-- PostgreSQL: `postgres://house:house_dev_password@localhost:15432/house`
+- PostgreSQL: `postgres://schoolpath:schoolpath_dev_password@localhost:15432/schoolpath`
 
 如果本机已有 3000 端口服务，先停掉旧服务或调整 `docker-compose.yml` 里的 app 端口映射。
 
@@ -90,7 +90,7 @@ lib/
 ├── store.ts                   # Zustand 选中状态
 └── utils.ts                   # cn() 工具
 
-data/backups/current-house-20260911/house-current.dump # 当前数据库快照
+data/backups/current-schoolpath-20260911/schoolpath-current.dump # 当前数据库快照
 ```
 
 ## 重要决策（来自 design doc）

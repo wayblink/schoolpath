@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-const baseUrl=process.env.HOUSE_TEST_BASE_URL??"http://127.0.0.1:3000";
+const baseUrl=process.env.SCHOOLPATH_TEST_BASE_URL??"http://127.0.0.1:3000";
 test("district relations API links published records to public schools",async()=>{const response=await fetch(`${baseUrl}/api/v2/district-relations?district=徐汇区&limit=20`);assert.equal(response.status,200);const body=await response.json();assert.ok(body.summary.total>=2764);assert.ok(body.relations.length>0);assert.ok(body.relations.every((row:{schoolName:string;committeeName:string;schoolId:number|null})=>row.schoolName&&row.committeeName&&Number.isInteger(Number(row.schoolId))));});
 
 test("district relations API rejects an out-of-scope district without leaking rows",async()=>{

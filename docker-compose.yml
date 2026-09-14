@@ -1,18 +1,18 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: house-postgres
+    container_name: schoolpath-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: house
-      POSTGRES_USER: house
-      POSTGRES_PASSWORD: house_dev_password
+      POSTGRES_DB: schoolpath
+      POSTGRES_USER: schoolpath
+      POSTGRES_PASSWORD: schoolpath_dev_password
     ports:
       - "15432:5432"
     volumes:
-      - house_pg_data:/var/lib/postgresql/data
+      - schoolpath_pg_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U house -d house"]
+      test: ["CMD-SHELL", "pg_isready -U schoolpath -d schoolpath"]
       interval: 5s
       timeout: 5s
       retries: 20
@@ -21,18 +21,18 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: house-app
+    container_name: schoolpath-app
     restart: unless-stopped
     depends_on:
       postgres:
         condition: service_healthy
     environment:
       NODE_ENV: production
-      DATABASE_URL: postgres://house:house_dev_password@postgres:5432/house
+      DATABASE_URL: postgres://schoolpath:schoolpath_dev_password@postgres:5432/schoolpath
       NEXT_PUBLIC_AMAP_KEY: ${NEXT_PUBLIC_AMAP_KEY:-}
       NEXT_PUBLIC_AMAP_SECURITY_CODE: ${NEXT_PUBLIC_AMAP_SECURITY_CODE:-}
     ports:
       - "3000:3000"
 
 volumes:
-  house_pg_data:
+  schoolpath_pg_data:

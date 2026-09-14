@@ -1,4 +1,4 @@
-.house-school-page.school-workspace {
+.schoolpath-page.school-workspace {
   min-width: 0;
   min-height: calc(100vh - 68px);
   background: var(--color-bg-elev);
@@ -137,9 +137,9 @@
 .school-workspace .sw-scope { margin: 0 0 0 auto; }
 .school-workspace .sw-empty { padding: 36px 0; color: var(--color-text-dim); text-align: center; }
 
-.house-school-page.school-workspace .sw-school-group { margin: 0; }
-.house-school-page.school-workspace .sw-school-group h2 { margin: 0; padding: 0; border: 0; font-size: 16px; }
-.house-school-page.school-workspace .xq-section-toggle {
+.schoolpath-page.school-workspace .sw-school-group { margin: 0; }
+.schoolpath-page.school-workspace .sw-school-group h2 { margin: 0; padding: 0; border: 0; font-size: 16px; }
+.schoolpath-page.school-workspace .xq-section-toggle {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -153,19 +153,19 @@
   color: var(--color-text);
   text-align: left;
 }
-.house-school-page.school-workspace .xq-section-toggle:hover { background: var(--color-bg); }
+.schoolpath-page.school-workspace .xq-section-toggle:hover { background: var(--color-bg); }
 .school-workspace .sw-group-title { min-width: 0; overflow-wrap: anywhere; font-weight: 600; }
 .school-workspace .sw-admission { min-width: 0; color: var(--color-text-dim); font-size: 14px; font-weight: 400; }
 .school-workspace .sw-group-count { margin-left: auto; flex-shrink: 0; color: var(--color-text-dim); font-size: 14px; font-weight: 400; }
-.house-school-page.school-workspace .xq-section-chevron { position: static; color: var(--color-text-dim); }
-.house-school-page.school-workspace .xq-table-wrap { max-width: 100%; min-width: 0; overflow-x: auto; border-radius: 0; box-shadow: none; }
-.house-school-page.school-workspace .xq-table { min-width: 720px; font-size: 14px; }
-.house-school-page.school-workspace .xq-table th { background: var(--color-bg); color: var(--color-text-dim); font-size: 14px; font-weight: 500; }
-.house-school-page.school-workspace .xq-table td { padding: 14px 12px; overflow-wrap: anywhere; }
-.house-school-page.school-workspace .xq-school-name { font-size: 14px; font-weight: 600; }
-.house-school-page.school-workspace .xq-tier,
-.house-school-page.school-workspace .xq-tag { font-size: 12px; border-radius: 4px; }
-.house-school-page.school-workspace .xq-map-btn { width: 36px; height: 36px; border-radius: 6px; }
+.schoolpath-page.school-workspace .xq-section-chevron { position: static; color: var(--color-text-dim); }
+.schoolpath-page.school-workspace .xq-table-wrap { max-width: 100%; min-width: 0; overflow-x: auto; border-radius: 0; box-shadow: none; }
+.schoolpath-page.school-workspace .xq-table { min-width: 720px; font-size: 14px; }
+.schoolpath-page.school-workspace .xq-table th { background: var(--color-bg); color: var(--color-text-dim); font-size: 14px; font-weight: 500; }
+.schoolpath-page.school-workspace .xq-table td { padding: 14px 12px; overflow-wrap: anywhere; }
+.schoolpath-page.school-workspace .xq-school-name { font-size: 14px; font-weight: 600; }
+.schoolpath-page.school-workspace .xq-tier,
+.schoolpath-page.school-workspace .xq-tag { font-size: 12px; border-radius: 4px; }
+.schoolpath-page.school-workspace .xq-map-btn { width: 36px; height: 36px; border-radius: 6px; }
 
 .school-workspace .sw-district { min-width: 0; padding: 24px 0 32px; border-top: 1px solid var(--color-border); }
 .school-workspace .sw-district-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
@@ -249,7 +249,7 @@
   .school-workspace .sw-select { max-width: none; }
   .school-workspace .sw-scope { margin-left: 0; }
   .school-workspace .sw-admission { display: none; }
-  .house-school-page.school-workspace .xq-section-toggle { gap: 8px; min-height: 58px; font-size: 14px; }
+  .schoolpath-page.school-workspace .xq-section-toggle { gap: 8px; min-height: 58px; font-size: 14px; }
   .school-workspace .sw-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .school-workspace .sw-metrics dd { font-size: 26px; }
   .school-workspace .sw-relation-counts { grid-template-columns: minmax(0, 1fr); }
@@ -262,5 +262,5 @@
 @media (prefers-reduced-motion: reduce) {
   .school-workspace .sw-search,
   .school-workspace .sw-street-toggle svg,
-  .house-school-page.school-workspace .xq-section-chevron { transition: none; }
+  .schoolpath-page.school-workspace .xq-section-chevron { transition: none; }
 }

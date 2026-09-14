@@ -1,11 +1,11 @@
 ---
-name: house-data-optimizer
-description: Iteratively improve House's Shanghai nine-district school and community data using auditable source snapshots, candidate matching, conflict review, and explicit publishing.
+name: schoolpath-data-optimizer
+description: Iteratively improve Schoolpath's Shanghai nine-district school and community data using auditable source snapshots, candidate matching, conflict review, and explicit publishing.
 ---
 
-# House Data Optimizer
+# Schoolpath Data Optimizer
 
-Use this skill for incremental data coverage work in `/Users/jyxc-dz-0101035/yard/house`.
+Use this skill for incremental data coverage work in `/Users/jyxc-dz-0101035/yard/schoolpath`.
 
 ## Scope
 

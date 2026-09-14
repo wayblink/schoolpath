@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { chromium } from "playwright";
 
-const baseUrl = process.env.HOUSE_TEST_BASE_URL ?? "http://127.0.0.1:3000";
+const baseUrl = process.env.SCHOOLPATH_TEST_BASE_URL ?? "http://127.0.0.1:3000";
 
 test("map canvas stays within the viewport after the school list loads", async () => {
   const browser = await chromium.launch({ headless: true });
