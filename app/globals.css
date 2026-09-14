@@ -585,10 +585,24 @@ html[data-theme="notion"] .app-header {
 .ops-run-item:last-child{border-bottom:0}
 .ops-run-item-main{display:grid;gap:2px;min-width:0}
 .ops-run-item-main b{color:#27425e;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ops-run-item-main time{color:#9aaaba;font-size:9px;font-family:var(--font-geist-mono)}
+.ops-run-item-main time{color:#5a6f83;font-size:9px;font-family:var(--font-geist-mono)}
 .ops-run-item-meta{display:flex;align-items:center;gap:12px;flex-shrink:0;font-size:10px}
 .ops-run-item-meta span{color:#718398;font-family:var(--font-geist-mono)}
 .ops-run-item-meta a{color:#23728b;text-decoration:none;font-weight:700;white-space:nowrap}
 .ops-run-item-meta a:hover{text-decoration:underline}
 .ops-run-more{padding:9px 14px;color:#8a9baa;font-size:10px;background:#f8fbfd}
 @media(max-width:760px){.ops-run-group>summary{flex-direction:column;align-items:flex-start;gap:6px}.ops-run-item{flex-direction:column;align-items:flex-start;gap:4px}}
+
+/* ── Ops 采集批次/质量队列：卡片样式统一（对齐其他区块）── */
+.ops-columns{gap:14px}
+.ops-columns>section{padding:20px;border:1px solid #dce5ef;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(19,50,82,.05)}
+.ops-columns>section>.ops-panel-head:first-child{margin-top:0}
+.ops-run-group{border-radius:12px}
+.ops-run-item:hover{background:#f6fafc}
+.ops-row.compact{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 12px;margin:2px -12px;border-radius:8px}
+.ops-row.compact:hover{background:#f6fafc}
+.ops-row.compact b{color:#27425e;font-size:12px}
+.ops-row.compact strong{color:#153f67;font:700 16px var(--font-geist-mono)}
+.ops-row.compact span{color:#5c7185;font-size:10px}
+.ops-columns .ops-subhead{margin:16px 0 6px}
+.ops-columns .ops-subhead:first-of-type{margin-top:4px}
