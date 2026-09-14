@@ -50,7 +50,7 @@ export async function getOverview() {
       (select count(*)::int from public.schools s where ${districtExpression("s.district")} = any($1::text[])) schools,
       (select count(*)::int from catalog.communities c join catalog.districts d on d.id=c.district_id where d.canonical_name = any($1::text[])) communities,
       (select count(*)::int from public.school_communities a join public.schools s on s.id=a.school_id where ${districtExpression("s.district")} = any($1::text[])) assignments,
-      (select count(*)::int from catalog.policy_documents p left join catalog.districts d on d.id=p.district_id left join public.schools s on s.id=p.public_school_id where coalesce(d.canonical_name,${districtExpression("s.district")}) = any($1::text[]) and (s.id is null or ${districtExpression("s.district")} = any($1::text[]))) policies,
+      (select count(*)::int from public.policy_documents p left join catalog.districts d on d.id=p.district_id left join public.schools s on s.id=p.public_school_id where coalesce(d.canonical_name,${districtExpression("s.district")}) = any($1::text[]) and (s.id is null or ${districtExpression("s.district")} = any($1::text[]))) policies,
       (select count(*)::int from catalog.entity_match_candidates c join public.schools s on s.id=c.public_school_id where c.status='pending' and ${districtExpression("s.district")} = any($1::text[])) pending_matches,
       (select count(*)::int from catalog.field_conflicts f join catalog.entity_match_candidates c on c.id=f.match_candidate_id join public.schools s on s.id=c.public_school_id where f.status='pending' and ${districtExpression("s.district")} = any($1::text[])) conflicts,
       (select count(*)::int from catalog.relations r where r.review_status='pending' and ${districtExpression("r.district")} = any($1::text[])) pending_relations,
@@ -65,7 +65,7 @@ async function getFullOverview() {
       (select count(*)::int from public.schools) schools,
       (select count(*)::int from catalog.communities) communities,
       (select count(*)::int from public.school_communities) assignments,
-      (select count(*)::int from catalog.policy_documents) policies,
+      (select count(*)::int from public.policy_documents) policies,
       (select count(*)::int from catalog.entity_match_candidates where status='pending') pending_matches,
       (select count(*)::int from catalog.field_conflicts where status='pending') conflicts,
       (select count(*)::int from catalog.relations where review_status='pending') pending_relations,
@@ -94,7 +94,7 @@ export async function getSchools(filters: {district?:string;type?:string;tier?:s
       coalesce(s.tags,'[]'::jsonb) tags,s.source_name "sourceName",s.source_url "sourceUrl",s.source_year "sourceYear",
       (select count(*)::int from catalog.relations r where r.school_id=s.id and ${districtExpression("r.district")} = any($1::text[])) "relationCount",
       (select count(*)::int from public.school_communities a where a.school_id=s.id) "communityCount",
-      (select count(*)::int from catalog.policy_documents p left join catalog.districts d on d.id=p.district_id where p.public_school_id=s.id and (d.canonical_name is null or d.canonical_name = ${districtExpression("s.district")})) "policyCount"
+      (select count(*)::int from public.policy_documents p left join catalog.districts d on d.id=p.district_id where p.public_school_id=s.id and (d.canonical_name is null or d.canonical_name = ${districtExpression("s.district")})) "policyCount"
     from public.schools s
     ${where.length?`where ${where.join(" and ")}`:""}
     order by s.district,s.type,s.source_tier nulls last,s.name
@@ -111,7 +111,7 @@ export async function getSchoolById(id:number){
     coalesce(s.tags,'[]'::jsonb) tags,s.source_name "sourceName",s.source_url "sourceUrl",s.source_year "sourceYear",
     (select count(*)::int from catalog.relations r where r.school_id=s.id and ${districtExpression("r.district")} = any($2::text[])) "relationCount",
     (select count(*)::int from public.school_communities a where a.school_id=s.id) "communityCount",
-    (select count(*)::int from catalog.policy_documents p left join catalog.districts d on d.id=p.district_id where p.public_school_id=s.id and (d.canonical_name is null or d.canonical_name = ${districtExpression("s.district")})) "policyCount"
+    (select count(*)::int from public.policy_documents p left join catalog.districts d on d.id=p.district_id where p.public_school_id=s.id and (d.canonical_name is null or d.canonical_name = ${districtExpression("s.district")})) "policyCount"
   from public.schools s where s.id=$1 and ${districtExpression("s.district")} = any($2::text[])`,[id,PRODUCT_DISTRICTS]);return rows[0]??null
 }
 
@@ -216,7 +216,7 @@ export async function getPolicies() {
       s.type::text "schoolType",
       p.source_url "sourceUrl",
       p.content
-    from catalog.policy_documents p
+    from public.policy_documents p
     left join catalog.districts d on d.id=p.district_id
     left join public.schools s on s.id=p.public_school_id
     where ${districtExpression("coalesce(d.canonical_name,s.district)")} = any($1::text[])
