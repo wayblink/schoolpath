@@ -599,12 +599,12 @@ html[data-theme="notion"] .app-header {
 .ops-columns>section>.ops-panel-head:first-child{margin-top:0}
 .ops-run-group{border-radius:8px}
 .ops-run-item:hover{background:#f6fafc}
-.ops-row.compact{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 12px;margin:2px -12px;border-radius:8px}
+.ops-row.compact{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 12px;margin:0 -12px 4px;border-radius:8px}
 .ops-row.compact:hover{background:#f6fafc}
 .ops-row.compact b{color:#27425e;font-size:12px}
 .ops-row.compact strong{color:#153f67;font:700 16px var(--font-geist-mono)}
 .ops-row.compact span{color:#5c7185;font-size:10px}
-.ops-columns .ops-subhead{margin:16px 0 6px}
+.ops-columns .ops-subhead{margin:12px 0 6px}.ops-columns .ops-subhead+.ops-row.compact{margin-top:0}.ops-row.compact:last-child{margin-bottom:0}
 .ops-columns .ops-subhead:first-of-type{margin-top:4px}
 
 /* ── Ops 全页统一收尾：空状态呼吸感 + 间距节奏 ── */
