@@ -121,14 +121,18 @@ export async function publishReleaseBatch(id: number): Promise<ReleaseBatchDetai
     const publishable = entries.rows.filter((r) => r.schoolId != null && r.catalogCommunityId != null);
     const skipped = entries.rowCount! - publishable.length;
     let upserted = 0;
+    // id 空间映射：relations.school_id/catalog_community_id 是 public.schools.id / catalog.communities.id，
+    // 而 school_communities 的 community_id 是 public.communities.id——必须经 catalog.communities.legacy_id 转换
     for (let offset = 0; offset < publishable.length; offset += 200) {
       const batchRows = publishable.slice(offset, offset + 200);
       const res = await client.query(
         `insert into public.school_communities(school_id,community_id,committee_name,year,source_name,source_url,source_date,verified,release_batch_id)
-         select r."schoolId",r."catalogCommunityId",r."committeeName",coalesce(r."sourceYear",2026),r."sourceName",r."sourceUrl",
+         select r."schoolId",pc.id,r."committeeName",coalesce(r."sourceYear",2026),r."sourceName",r."sourceUrl",
            coalesce(r."sourceYear",2026)::text,false,$1
          from jsonb_to_recordset($2::jsonb)
          as r("schoolId" int,"catalogCommunityId" int,"committeeName" text,"sourceYear" int,"sourceName" text,"sourceUrl" text)
+         join catalog.communities cc on cc.id=r."catalogCommunityId"
+         join public.communities pc on pc.id=cc.legacy_id
          on conflict(school_id,community_id) do nothing`,
         [id, JSON.stringify(batchRows)],
       );

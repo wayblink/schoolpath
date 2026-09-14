@@ -2,6 +2,7 @@
 // 只写 ingest 候选池（ingest.sources / ingest.crawl_runs / ingest.extracted_records），
 // 绝不写 catalog 或 public——进产品必须走 Ops 发布批次。
 // 幂等键：extracted_records 唯一索引 (crawl_run_id, record_type, source_key)。
+import { createHash } from "node:crypto";
 import pg from "pg";
 
 export type IngestRecord = { recordType: string; sourceKey: string; district?: string | null; raw: unknown };
@@ -47,7 +48,7 @@ export async function ingestRecords(payload: unknown): Promise<IngestResult> {
       [payload.sourceKey, payload.sourceName, `push://${payload.sourceKey}`, sourceKind],
     );
     // 2) 登记采集批次：按内容 hash 复用同一 run（同批次重复推送不产生新 run）
-    const contentHash = require("node:crypto").createHash("sha256")
+    const contentHash = createHash("sha256")
       .update(JSON.stringify(payload.records.map((r) => [r.recordType, r.sourceKey])))
       .digest("hex");
     let runId = (

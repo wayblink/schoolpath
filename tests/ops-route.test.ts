@@ -13,7 +13,8 @@ test("ops route keeps the admin dashboard and relation review surface", async ()
 });
 
 test("ops owns the expandable completeness details and tag filters", async () => {
-  const ops = await import("node:fs/promises").then((fs) => fs.readFile("components/product/OpsDashboard.tsx", "utf8"));
+  // 完备度面板在拆分后位于 components/ops/CompletenessPanel.tsx
+  const ops = await import("node:fs/promises").then((fs) => fs.readFile("components/ops/CompletenessPanel.tsx", "utf8"));
   assert.match(ops, /数据完备度/);
   assert.match(ops, /按缺失标签过滤/);
   assert.match(ops, /<details/);

@@ -507,3 +507,65 @@ html[data-theme="notion"] .app-header {
 .product-page:not(.home-page),.entry-section,.trust-section{padding-left:clamp(32px,4vw,64px);padding-right:clamp(32px,4vw,64px)}
 .home-page>.product-hero,.home-page>.entry-section,.home-page>.home-section{padding-left:clamp(32px,4vw,64px);padding-right:clamp(32px,4vw,64px)}
 @media(max-width:680px){.product-content,.product-page,.entry-section,.trust-section{width:100%}.product-page:not(.home-page),.entry-section,.trust-section{padding-left:16px;padding-right:16px}.home-page>.product-hero,.home-page>.entry-section,.home-page>.home-section{padding-left:16px;padding-right:16px}}
+
+/* ── Ops 流水线图示（R1）── */
+.ops-pipeline{margin:0 0 18px;padding:18px 20px;border:1px solid #dce5ef;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(19,50,82,.05)}
+.ops-pipeline-head{margin-bottom:14px}.ops-pipeline-head h2{margin:5px 0 3px;color:#153f67;font-size:18px}.ops-pipeline-head p{margin:0;color:#718398;font-size:11px}
+.ops-pipeline-steps{display:flex;align-items:stretch;gap:0;list-style:none;margin:0;padding:0;overflow-x:auto}
+.ops-pipeline-step{display:flex;align-items:center;flex:1;min-width:0}
+.ops-pipeline-card{display:grid;gap:4px;flex:1;min-width:0;padding:12px 10px;border:1px solid #e2ebf0;border-radius:10px;background:#fbfdfe;text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
+.ops-pipeline-card:hover{border-color:#9fc8d4;background:#f2f9fb}
+.ops-pipeline-card-top{display:flex;align-items:center;justify-content:space-between}
+.ops-pipeline-index{color:#9aaaba;font:700 9px var(--font-geist-mono);letter-spacing:.08em}
+.ops-pipeline-dot{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:999px}
+.ops-pipeline-step.is-ok .ops-pipeline-dot{background:#e8f7ee;color:#18753d}
+.ops-pipeline-step.is-pending .ops-pipeline-dot{background:#fdf4e3;color:#a06a12}
+.ops-pipeline-step.is-broken .ops-pipeline-dot{background:#fdeaea;color:#b3261e}
+.ops-pipeline-card strong{color:#153f67;font-size:12px}
+.ops-pipeline-card b{color:#23728b;font:700 16px var(--font-geist-mono)}
+.ops-pipeline-card small{color:#8a9baa;font-size:9px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ops-pipeline-step.is-broken .ops-pipeline-card{border-color:#f0c4c0;background:#fef7f6}
+.ops-pipeline-arrow{display:grid;place-items:center;flex:0 0 18px;color:#b9cad8}
+@media(max-width:1100px){.ops-pipeline-steps{flex-wrap:wrap;gap:8px}.ops-pipeline-step{flex:1 1 30%}.ops-pipeline-arrow{display:none}}
+
+/* ── Ops 发布批次（R4）── */
+.ops-release{margin-top:18px;padding:20px;border:1px solid #dce5ef;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(19,50,82,.05)}
+.ops-release-create{display:flex;flex-wrap:wrap;align-items:end;gap:12px;margin:6px 0 14px;padding:14px;border:1px solid #e2ebf0;border-radius:9px;background:#f8fbfd}
+.ops-release-create label{display:grid;gap:5px;min-width:150px;color:#718398;font-size:10px}
+.ops-release-create input,.ops-release-create select{padding:8px 10px;border:1px solid #d4dee9;border-radius:7px;background:#fff;color:#27425e;font-size:12px}
+.ops-release-check{display:flex!important;align-items:center;gap:7px!important;min-width:auto!important}
+.ops-release-create-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:0;border-radius:7px;background:#1f8aa2;color:#fff;font-weight:700;font-size:11px;cursor:pointer}
+.ops-release-create-btn:disabled{opacity:.5;cursor:not-allowed}
+.ops-release-list{border-top:1px solid #e7ecf2}
+.ops-release-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #e7ecf2}
+.ops-release-row-main{display:grid;gap:3px;min-width:0}
+.ops-release-row-main b{color:#153f67;font-size:13px}
+.ops-release-row-main small{color:#718398;font-size:10px}
+.ops-badge{display:inline-flex;align-items:center;justify-self:start;padding:2px 8px;border-radius:999px;font-size:9px;font-weight:700}
+.ops-badge.is-draft{background:#eef3f7;color:#52677e}
+.ops-badge.is-published{background:#e8f7ee;color:#18753d}
+.ops-badge.is-rolled_back{background:#fdeaea;color:#b3261e}
+.ops-release-actions{display:flex;gap:6px;flex-shrink:0}
+.ops-release-actions button{display:inline-flex;align-items:center;gap:5px;padding:7px 10px;border:0;border-radius:6px;background:#1f8aa2;color:#fff;font-weight:700;font-size:10px;cursor:pointer}
+.ops-release-actions button:disabled{opacity:.35;cursor:not-allowed}
+.ops-release-actions .reject{background:#e8eef4;color:#52677e}
+@media(max-width:760px){.ops-release-row{flex-direction:column;align-items:flex-start}}
+
+/* ── Ops 人工录入（R5）── */
+.ops-manual{margin-top:18px;padding:20px;border:1px solid #dce5ef;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(19,50,82,.05)}
+.ops-manual-form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:6px}
+.ops-manual-form label{display:grid;gap:5px;color:#718398;font-size:10px}
+.ops-manual-form input,.ops-manual-form select,.ops-manual-form textarea{padding:8px 10px;border:1px solid #d4dee9;border-radius:7px;background:#fff;color:#27425e;font-size:12px;font-family:inherit}
+.ops-manual-form textarea{resize:vertical}
+.ops-manual-school{position:relative}
+.ops-manual-search{display:flex;align-items:center;gap:6px;padding:0 10px;border:1px solid #d4dee9;border-radius:7px;background:#fff;color:#9aaaba}
+.ops-manual-search input{flex:1;border:0;padding:8px 0;background:transparent;color:#27425e;font-size:12px}
+.ops-manual-search input:focus{outline:none}
+.ops-manual-options{position:absolute;top:100%;left:0;right:0;z-index:5;max-height:180px;overflow:auto;margin:4px 0 0;padding:0;list-style:none;border:1px solid #d4dee9;border-radius:8px;background:#fff;box-shadow:0 12px 28px rgba(19,50,82,.14)}
+.ops-manual-options button{width:100%;padding:8px 10px;border:0;background:transparent;color:#27425e;font-size:12px;text-align:left;cursor:pointer}
+.ops-manual-options button:hover{background:#eef6f9}
+.ops-manual-options small{color:#8a9baa;font-size:10px;margin-left:6px}
+.ops-manual-evidence{grid-column:1/-1}
+.ops-manual-submit{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:0;border-radius:7px;background:#1f8aa2;color:#fff;font-weight:700;font-size:11px;cursor:pointer}
+.ops-manual-submit:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:760px){.ops-manual-form{grid-template-columns:1fr}}
