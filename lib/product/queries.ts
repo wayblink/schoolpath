@@ -39,7 +39,7 @@ function addProductDistrictFilter(
   where.push(`${districtExpression(column)} = any($${values.length}::text[])`);
 }
 
-async function query<T extends QueryResultRow>(text: string, values: unknown[] = []) {
+export async function query<T extends QueryResultRow>(text: string, values: unknown[] = []) {
   const pool = new pg.Pool({ connectionString: databaseUrl(), max: 4 });
   try { return (await pool.query<T>(text, values)).rows; } finally { await pool.end(); }
 }
