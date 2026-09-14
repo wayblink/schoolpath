@@ -6,6 +6,7 @@ import { CandidateReview } from "@/components/ops/CandidateReview";
 import { ReleaseBatches } from "@/components/ops/ReleaseBatches";
 import { ManualEntry } from "@/components/ops/ManualEntry";
 import { CompletenessPanel } from "@/components/ops/CompletenessPanel";
+import { QualityQueue } from "@/components/ops/QualityQueue";
 
 type CrawlRunRow = {
   id: number;
@@ -52,9 +53,6 @@ const overviewGroups = [
   { label: "待处理事项", keys: ["pending_matches", "conflicts"], icon: AlertTriangle },
   { label: "关系审核", keys: ["pending_relations", "matched_relations"], icon: ShieldCheck },
 ] as const;
-const relationStatuses: Record<string, string> = { pending: "待处理", suggested: "待建议", accepted: "已接受", rejected: "已拒绝" };
-const conflictFields: Record<string, string> = { coordinates: "坐标", tier: "梯队" };
-
 export function OpsDashboard() {
   const [data, setData] = useState<OpsSummary>();
   const [completeness, setCompleteness] = useState<Completeness>();
@@ -165,31 +163,7 @@ export function OpsDashboard() {
             </details>
           ))}
         </section>
-        <section>
-          <div className="ops-panel-head">
-            <div>
-              <span className="ops-section-kicker">DATA QUALITY</span>
-              <h2>质量队列</h2>
-              <p>需要人工确认或补充的数据。</p>
-            </div>
-            <AlertTriangle size={18} />
-          </div>
-          <h3 className="ops-subhead">实体匹配</h3>
-          {data.matches.map((row) => (
-            <article className="ops-row compact" key={row.status}>
-              <b>{relationStatuses[row.status] || row.status}</b>
-              <strong>{Number(row.count).toLocaleString()}</strong>
-            </article>
-          ))}
-          <h3 className="ops-subhead">字段冲突</h3>
-          {data.conflicts.map((row) => (
-            <article className="ops-row compact" key={`${row.fieldName}-${row.status}`}>
-              <b>{conflictFields[row.fieldName] || row.fieldName}</b>
-              <span>{relationStatuses[row.status] || row.status}</span>
-              <strong>{Number(row.count).toLocaleString()}</strong>
-            </article>
-          ))}
-        </section>
+        <QualityQueue matches={data.matches} conflicts={data.conflicts} />
       </div>
 
       <CandidateReview />
