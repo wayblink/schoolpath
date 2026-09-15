@@ -3,12 +3,12 @@ import test from "node:test";
 
 const baseUrl = process.env.SCHOOLPATH_TEST_BASE_URL ?? "http://127.0.0.1:3000";
 
-test("ops route keeps the admin dashboard and relation review surface", async () => {
+test("ops route keeps the admin dashboard and table CRUD surface", async () => {
   const response = await fetch(`${baseUrl}/ops`);
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /数据采集与学区审计监控/);
+  assert.match(html, /数据控制台/);
   assert.match(html, /ops-page/);
 });
 

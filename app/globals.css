@@ -648,3 +648,46 @@ html[data-theme="notion"] .app-header {
 .ops-quality-list::-webkit-scrollbar{width:8px}
 .ops-quality-list::-webkit-scrollbar-thumb{border-radius:8px;background:#cfdee8}
 .ops-quality-list::-webkit-scrollbar-track{background:#f4f8fb}
+
+/* ===== Ops 数据控制台（9 表 CRUD）===== */
+.ops-console{display:grid;grid-template-columns:230px minmax(0,1fr);gap:18px;align-items:start}
+.ops-console-nav{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:10px;position:sticky;top:80px;display:flex;flex-direction:column;gap:2px}
+.ops-console-nav-group{display:flex;flex-direction:column;gap:2px}
+.ops-console-nav-group>span{font-size:11px;color:#7189a3;letter-spacing:.08em;padding:8px 10px 4px}
+.ops-console-nav-item{display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border:none;background:transparent;border-radius:8px;font-size:13px;color:#33475e;cursor:pointer;text-align:left}
+.ops-console-nav-item:hover{background:#eef3f9}
+.ops-console-nav-item.active{background:#e2edf9;color:#1c5b8a;font-weight:600}
+.ops-console-nav-item small{margin-left:auto;color:#8aa0b6;font-size:11px}
+.ops-console-main{min-width:0}
+.ops-console-hint{color:#667b91;font-size:12.5px;padding:10px 2px}
+.ops-console-overview{padding-top:4px}
+.ops-table-explorer{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:14px 16px}
+.ops-table-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.ops-table-toolbar form{display:flex;gap:8px;align-items:center}
+.ops-table-toolbar label{display:flex;align-items:center;gap:6px;background:#f2f6fa;border:1px solid #dce5ef;border-radius:8px;padding:6px 10px;color:#7189a3}
+.ops-table-toolbar input{border:none;background:transparent;outline:none;font-size:13px;width:200px;color:#22374d}
+.ops-table-toolbar-actions{display:flex;gap:8px}
+.ops-table-scroll{overflow:auto;max-height:60vh;border:1px solid #e4ebf3;border-radius:8px}
+.ops-table{border-collapse:collapse;width:100%;font-size:12.5px}
+.ops-table th{position:sticky;top:0;background:#f4f8fb;text-align:left;padding:8px 10px;color:#4a617a;font-weight:600;border-bottom:1px solid #e4ebf3;white-space:nowrap;z-index:1}
+.ops-table td{padding:7px 10px;border-bottom:1px solid #eef3f8;max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#2c4258}
+.ops-table tr:hover td{background:#f8fbfd}
+.ops-table-actions{display:flex;gap:6px}
+.ops-table-actions button{border:1px solid #dce5ef;background:#fff;border-radius:6px;padding:4px 7px;cursor:pointer;color:#4a617a;display:inline-flex}
+.ops-table-actions button:hover{background:#eef3f9}
+.ops-table-actions button.reject:hover{background:#fdecec;color:#b33636;border-color:#f0c9c9}
+.ops-modal-mask{position:fixed;inset:0;background:rgba(20,35,55,.45);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px}
+.ops-modal{background:#fff;border-radius:14px;width:min(680px,100%);max-height:86vh;display:flex;flex-direction:column;box-shadow:0 18px 50px rgba(15,30,50,.25)}
+.ops-modal-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 12px;border-bottom:1px solid #e4ebf3}
+.ops-modal-head h3{margin:0;font-size:16px;color:#1c3a58}
+.ops-modal-head button{border:none;background:transparent;cursor:pointer;color:#7189a3}
+.ops-modal-body{padding:14px 20px;overflow:auto;display:flex;flex-direction:column;gap:12px}
+.ops-modal-foot{display:flex;justify-content:flex-end;gap:10px;padding:12px 20px 16px;border-top:1px solid #e4ebf3}
+.ops-field{display:grid;grid-template-columns:210px minmax(0,1fr);gap:10px;align-items:center}
+.ops-field>span{font-size:12.5px;color:#3d546d;display:flex;flex-direction:column;gap:2px}
+.ops-field>span small{color:#93a7bd;font-size:11px}
+.ops-field input[type="text"],.ops-field input[type="number"],.ops-field textarea{border:1px solid #d5e0ec;border-radius:7px;padding:7px 10px;font-size:13px;font-family:inherit;width:100%;box-sizing:border-box;color:#22374d}
+.ops-field input:focus,.ops-field textarea:focus{outline:2px solid #b8d4ee;border-color:#7fb0dd}
+.ops-field input[type="checkbox"]{width:16px;height:16px}
+.ops-message{background:#eef6fd;border:1px solid #cfe3f5;color:#1c5b8a;border-radius:8px;padding:8px 12px;font-size:12.5px;margin:4px 0}
+@media(max-width:760px){.ops-console{grid-template-columns:1fr}.ops-console-nav{position:static;flex-direction:row;flex-wrap:wrap}.ops-console-nav-item small{margin-left:6px}.ops-field{grid-template-columns:1fr}}
