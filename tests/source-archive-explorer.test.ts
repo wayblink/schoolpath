@@ -12,10 +12,9 @@ test("source snapshots and source catalogs are browsable in the database console
   assert.deepEqual(tables.map(t => t.name).sort(), ["crawl_runs", "extracted_records", "sources"]);
   const detail = await getTableDetail("ingest", "extracted_records");
   assert.ok(detail.columns.some(c => c.name === "raw" && c.dataType === "jsonb"));
-  const catalog = await listTables("catalog");
-  const catalogNames = catalog.map(t => t.name).sort();
-  assert.ok(catalogNames.includes("school_communities"), `catalog 表应含 school_communities，实际 ${catalogNames.join(",")}`);
-  assert.ok(catalogNames.includes("source_schools"));
+  const publicTables = (await listTables("public")).map(t => t.name);
+  assert.ok(publicTables.includes("pending_school_communities"), `public 表应含 pending_school_communities（原 catalog.school_communities，2026-09-15 迁入），实际 ${publicTables.join(",")}`);
+  assert.ok(publicTables.includes("source_schools"));
 });
 
 test("source archives cannot be accidentally edited through generic row controls", async () => {

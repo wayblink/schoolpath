@@ -97,7 +97,6 @@ export class ReadOnlyViolation extends DatabaseExplorerError {
 const SYSTEM_SCHEMAS = new Set(["information_schema", "pg_catalog", "pg_toast"]);
 const BROWSABLE_RELATIONS = new Map<string, Set<string>>([
   ["ingest", new Set(["sources", "crawl_runs", "extracted_records"])],
-  ["catalog", new Set(["source_schools", "school_communities", "entity_match_candidates", "field_conflicts", "release_batches", "schools", "communities", "districts", "school_aliases", "school_feeder_relations"])],
   [
     "public",
     new Set([
@@ -110,6 +109,16 @@ const BROWSABLE_RELATIONS = new Map<string, Set<string>>([
       "community_price_sources",
       "policy_documents",
       "web_data_source",
+      "pending_school_communities",
+      "districts",
+      "source_schools",
+      "entity_match_candidates",
+      "field_conflicts",
+      "release_batches",
+      "schools_archived",
+      "communities_archived",
+      "official_enrollment_areas_archived",
+      "relations_archived",
     ]),
   ],
 ]);

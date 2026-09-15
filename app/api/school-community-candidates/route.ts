@@ -31,7 +31,7 @@ export async function GET(request: Request) {
   const years = parseYears(url.searchParams.get("years"));
 
   const exists = await db.execute<{ table_name: string | null }>(
-    sql`SELECT to_regclass('catalog.school_communities') AS table_name`,
+    sql`SELECT to_regclass('public.pending_school_communities') AS table_name`,
   );
   if (!exists.rows[0]?.table_name) {
     return NextResponse.json({
@@ -54,9 +54,10 @@ export async function GET(request: Request) {
       confidence,
       count(*)::int AS count,
       count(DISTINCT school_id) FILTER (WHERE school_id IS NOT NULL)::int AS matched_schools
-    FROM catalog.school_communities
+    FROM public.pending_school_communities
     WHERE year IN (${sql.join(years.map((year) => sql`${year}`), sql`, `)})
-      AND source_name = 'official'
+      -- design D4：官方系口径用前缀匹配，未来新增 official_* 来源不会被静默排除
+      AND source_name LIKE 'official%'
     GROUP BY year, district, review_status, confidence
     ORDER BY year DESC, district, review_status, confidence
   `);

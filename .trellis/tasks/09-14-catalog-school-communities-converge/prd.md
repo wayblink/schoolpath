@@ -36,6 +36,7 @@
 ## Acceptance Criteria
 
 - [ ] `catalog.school_communities` 存在，行数 = 23,070 + 2,764 − 合并去重差异（脚本输出精确对账，含来源分布表）
+- [ ] **迁移后用户决策（2026-09-15）**：官方系 pending 9,027 行全部放弃删除（社区匹配为 0、无审核价值；快照 `data/migrations/2026-09-15-school-communities-converge/pending-abandoned-20260915.csv`）。迁移基线 25,834 是**迁移完成时**口径；此后预期总行 **16,807 = accepted 2,764（学区助手）+ published 14,043（官方已进产品层）**。check 阶段不得以迁移基线为由恢复 pending 行
 - [ ] 唯一索引 (school_id, community_id) 建成；新表 community_id 非空值全部有效（FK 通过）
 - [ ] 治理后：public.communities 官方系实体中重名 175 个合并完成（冲突行处置有计数）；914 个 entity_kind='official_area'；8,288 个保持 entity_kind='community'；对账报告含抽样 20 条人工核验记录
 - [ ] 全仓库 grep 无活跃代码直读 catalog.official_enrollment_areas / catalog.relations（归档/迁移脚本除外）；pipeline.ts、queries.ts、release.ts、xuequzhushou-import.ts、ops/relations API 均改指新表或 public

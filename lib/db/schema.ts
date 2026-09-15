@@ -6,7 +6,6 @@ import {
   integer,
   jsonb,
   pgEnum,
-  pgSchema,
   pgTable,
   serial,
   text,
@@ -14,7 +13,6 @@ import {
   uniqueIndex,
 } from "drizzle-orm/pg-core";
 
-export const catalogSchema = pgSchema("catalog");
 
 export const schoolType = pgEnum("school_type", ["primary", "middle", "nine_year"]);
 export const schoolNature = pgEnum("school_nature", ["公立", "私立"]);
@@ -128,13 +126,12 @@ export const schoolCommunities = pgTable(
   }),
 );
 
-// catalog.school_communities：待审的学校-地点关系总表，与 public.school_communities 同构（共享列同名同义），
-// 以 source_name 区分来源（official=官方公示系 / 学区助手 / 未来来源）。2026-09-15 收敛自
-// catalog.official_enrollment_areas（原 candidates，23,070 行）与 catalog.relations 学区助手系（2,764 行）；
-// school_id/community_id 均指向 public 空间（迁移时 relations.catalog_community_id 已做 legacy_id 转换）。
-// MapWorkspace 经 /api/school-community-candidates 读 official 系聚合，ops 的 CandidateReview 经
-// /api/v2/ops/relations 读全表审核，发布批次（release.ts）读 accepted 行组成批次。
-export const catalogSchoolCommunities = catalogSchema.table("school_communities", {
+// public.pending_school_communities：待审的学校-地点关系总表，与 public.school_communities 同构
+// （共享列同名同义），以 source_name 区分来源。2026-09-15 由 catalog 收敛迁入 public
+// （catalog schema 已 DROP；源自 candidates 23,070 行 + relations 学区助手系 2,764 行；
+// pending 9,027 行经用户决策放弃）。MapWorkspace 经 /api/school-community-candidates 读 official 系
+// 聚合，ops 的 CandidateReview 经 /api/v2/ops/relations 读全表审核，发布批次（release.ts）读 accepted 行。
+export const pendingSchoolCommunities = pgTable("pending_school_communities", {
   id: serial("id").primaryKey(),
   schoolId: integer("school_id").references(() => schools.id),
   schoolNameRaw: text("school_name_raw"),
@@ -224,8 +221,8 @@ export const webDataSource = pgTable(
 
 export type Community = typeof communities.$inferSelect;
 export type SchoolCommunity = typeof schoolCommunities.$inferSelect;
-export type CatalogSchoolCommunity = typeof catalogSchoolCommunities.$inferSelect;
-export type NewCatalogSchoolCommunity = typeof catalogSchoolCommunities.$inferInsert;
+export type PendingSchoolCommunity = typeof pendingSchoolCommunities.$inferSelect;
+export type NewPendingSchoolCommunity = typeof pendingSchoolCommunities.$inferInsert;
 export type CommunityPriceSnapshot = typeof communityPriceSnapshots.$inferSelect;
 export type CommunityPriceSource = typeof communityPriceSources.$inferSelect;
 export type WebDataSource = typeof webDataSource.$inferSelect;

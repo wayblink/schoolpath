@@ -4,7 +4,7 @@
 // 干跑（默认）只执行不提交并回滚，--apply 才提交并随执行写入 rollback.sql。
 // 用法：DATABASE_URL=... npx tsx scripts/migration/converge-school-communities.ts [--apply] [--from=S1] [--to=S8]
 import pg from "pg";
-import { appendFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const RUN_DIR = path.resolve("data/migrations/2026-09-15-school-communities-converge");
@@ -198,7 +198,7 @@ const steps: Step[] = [
       `);
       const got = Number((await c.query(`select count(*) c from catalog.school_communities where source_name <> 'official'`)).rows[0].c);
       const conv = Number((await c.query(`select count(*) c from catalog.school_communities where source_name <> 'official' and community_id is not null`)).rows[0].c);
-      console.log(`  S4: 迁入 ${ins.rowCount} 行，其中 community_id 转换成功 ${conv} 行（基线 263）`);
+      console.log(`  S4: 迁入 ${ins.rowCount} 行，新表学区助手系 ${got} 行，其中 community_id 转换成功 ${conv} 行（基线 263）`);
       if (ins.rowCount !== total - mirrored) throw new Error("S4 行数不符");
       if (conv !== 263) console.log(`  S4 警告：legacy_id 转换 ${conv} ≠ 基线 263，请人工确认`);
       return [`DELETE FROM catalog.school_communities WHERE source_name <> 'official';`];
@@ -435,8 +435,17 @@ async function main() {
   if (APPLY) {
     mkdirSync(RUN_DIR, { recursive: true });
     // 分段 apply 时不清空已有回滚语句（累积模式），仅首次写 header
-    if (fromStep === "S0") {
-      writeFileSync(ROLLBACK, "-- 回滚脚本（迁移失败时按序执行）\n-- 生成于 " + new Date().toISOString() + "\n");
+    // S1 的 entity_kind 列回滚是常量 DDL，随 header 一起落盘——否则 --from=S2 起跑时
+    // rollback.sql 会缺这一段，回滚后 public.communities 残留 entity_kind 列（design D6 要求 drop）。
+    if (fromStep === "S0" || !existsSync(ROLLBACK)) {
+      writeFileSync(ROLLBACK, [
+        "-- 回滚脚本（迁移失败时按序执行）",
+        "-- 生成于 " + new Date().toISOString(),
+        "",
+        "-- === S1: public.communities 加 entity_kind 列 ===",
+        "ALTER TABLE public.communities DROP COLUMN IF EXISTS entity_kind;",
+        "",
+      ].join("\n"));
     }
   }
   for (const step of selected) {

@@ -28,3 +28,22 @@ test("pathways API provides source school ids when either endpoint has an exact 
   assert.ok(body.pathways.every((pathway) => pathway.primaryId === null || Number.isInteger(Number(pathway.primaryId))));
   assert.ok(body.pathways.every((pathway) => pathway.middleId === null || Number.isInteger(Number(pathway.middleId))));
 });
+
+// 回归：详情页经 getSchoolRelationsByName(district, school.name) 读 catalog.school_communities。
+// 该函数曾按已收敛掉的 school_name 列过滤 → PG 42703 → 整个 /schools/[id] 页 500。
+test("school detail page renders for a school that has converged catalog relations", async () => {
+  // 从 district-relations 取一个确有 catalog 行的 schoolId（学区助手系行必带 school_id）
+  const list = await fetch(`${baseUrl}/api/v2/district-relations?limit=50`);
+  assert.equal(list.status, 200);
+  const listBody = await list.json() as { relations: Array<{ schoolId: number | null }> };
+  const schoolId = listBody.relations.find((row) => row.schoolId != null)?.schoolId;
+  assert.ok(Number.isInteger(Number(schoolId)), "district-relations 应返回带 schoolId 的行");
+
+  const page = await fetch(`${baseUrl}/schools/${schoolId}`);
+  assert.equal(page.status, 200, "详情页不应因审核池列收敛而 500");
+  const html = await page.text();
+  assert.match(html, /学校区域关系/);
+  // 该校确有 catalog 行 → 关系列表应渲染出条目（school_name_raw 与产品校名不一致，须经 school_id 关联）
+  const items = html.match(/<strong>/g) ?? [];
+  assert.ok(items.length > 0, "详情页关系列表应为空以外的内容");
+});

@@ -114,8 +114,8 @@ function transactionDatabase() {
     if (sql === "select id,name,district,type,aliases from public.schools") return rows([
       { id: 10, name: "同名", district: "黄浦", type: "primary", aliases: [] },
     ]);
-    if (sql === "select * from catalog.source_schools") return rows(state.schools);
-    if (sql.startsWith("select * from catalog.school_communities")) return rows(state.relations);
+    if (sql === "select * from public.source_schools") return rows(state.schools);
+    if (sql.startsWith("select * from public.pending_school_communities")) return rows(state.relations);
     if (sql.startsWith("select r.id from ingest.crawl_runs")) return rows(state.run ? [{ id: "1" }] : []);
     if (sql.startsWith("select record_type")) {
       const raw = state.raw.map(({ recordType, sourceKey, district, raw }) => ({ recordType, sourceKey, district, raw }));
@@ -132,7 +132,7 @@ function transactionDatabase() {
       }
       return rows([]);
     }
-    if (sql.startsWith("insert into catalog.source_schools")) {
+    if (sql.startsWith("insert into public.source_schools")) {
       const columns = ["source_key", "source_name", "source_url", "source_year", "district", "school_name", "school_type",
         "tier", "area", "street", "feeder_middle_school", "middle_school_tier", "evaluation", "admission_mode",
         "class_count", "tags", "lng", "lat", "public_school_id", "attrs"];
@@ -140,7 +140,7 @@ function transactionDatabase() {
         column === "tags" || column === "attrs" ? JSON.parse(String(values[i])) : values[i]])));
       return rows([]);
     }
-    if (sql.startsWith("update catalog.source_schools")) {
+    if (sql.startsWith("update public.source_schools")) {
       const row = state.schools.find(row => row.source_key === values[0])!;
       row.attrs = JSON.parse(String(values[1]));
       return rows([]);
@@ -148,7 +148,7 @@ function transactionDatabase() {
     if (sql.startsWith("select id,source_key from ingest.extracted_records")) {
       return rows(state.raw.filter(row => row.recordType === "committee_link").map(row => ({ id: row.id, source_key: row.sourceKey })));
     }
-    if (sql.startsWith("insert into catalog.school_communities")) {
+    if (sql.startsWith("insert into public.pending_school_communities")) {
       // SQL 里 review_status='pending'/verified=false 为字面量，values 仅 $1-$8 + $9(notes) 共 9 个
       const columns = ["source_record_id", "source_name", "source_url", "year", "district", "school_name_raw",
         "committee_name", "school_id", "notes"];
@@ -231,7 +231,7 @@ test("late raw reconciliation failure rolls back every inserted row", async () =
   db.corruptRaw();
   const before = structuredClone(db.state());
   await assert.rejects(importXuequzhushou(db.client, buildXuequzhushouImport(fixture()), { apply: true }), /reconciliation/);
-  assert.ok(db.statements.some(sql => sql.startsWith("insert into catalog.school_communities")));
+  assert.ok(db.statements.some(sql => sql.startsWith("insert into public.pending_school_communities")));
   assert.deepEqual(db.state(), before);
   assert.equal(db.statements.at(-1), "ROLLBACK");
   assert.ok(!db.statements.includes("COMMIT"));

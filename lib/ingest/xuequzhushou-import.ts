@@ -184,13 +184,13 @@ export async function importXuequzhushou(
       await client.query("select pg_advisory_xact_lock(hashtext('xuequzhushou-full-import'))");
       // Prevent concurrent editors from making the canonical digest inconclusive.
       await client.query("LOCK TABLE public.schools IN SHARE MODE");
-      await client.query("LOCK TABLE catalog.source_schools,catalog.school_communities IN SHARE ROW EXCLUSIVE MODE");
+      await client.query("LOCK TABLE public.source_schools,public.pending_school_communities IN SHARE ROW EXCLUSIVE MODE");
     }
     report.canonicalBefore = await canonicalDigest(client);
     const publicSchools = (await client.query("select id,name,district,type,aliases from public.schools")).rows as PublicSchool[];
-    const sourceSchools = (await client.query("select * from catalog.source_schools")).rows;
+    const sourceSchools = (await client.query("select * from public.source_schools")).rows;
     const existingSchools = new Map(sourceSchools.map(row => [String(row.source_key), row]));
-    const existingRelations = (await client.query("select * from catalog.school_communities where source_name=$1", [SOURCE_NAME])).rows;
+    const existingRelations = (await client.query("select * from public.pending_school_communities where source_name=$1", [SOURCE_NAME])).rows;
     const relationKeys = new Map(existingRelations.map(row => [relationIdentity(row), row]));
     const runResult = await client.query(`select r.id from ingest.crawl_runs r join ingest.sources s on s.id=r.source_id
       where s.source_key='xuequzhushou' and r.content_hash=$1`, [plan.parsed.contentHash]);
@@ -256,7 +256,7 @@ export async function importXuequzhushou(
         }
         if (prior.source_name === SOURCE_NAME && priorAttrs.rawSchool === undefined) {
           report.schools.changed++;
-          if (apply) await client.query(`update catalog.source_schools set attrs=$2::jsonb,updated_at=now() where source_key=$1`,
+          if (apply) await client.query(`update public.source_schools set attrs=$2::jsonb,updated_at=now() where source_key=$1`,
             [occurrence.catalogKey, JSON.stringify({ ...attrs, ...priorAttrs, rawSchool: occurrence.school })]);
           reconcileSchools.push({ key: occurrence.catalogKey, raw: occurrence.school, publicSchoolId: prior.public_school_id });
         } else {
@@ -272,7 +272,7 @@ export async function importXuequzhushou(
         }
         report.schools.added++;
         if (apply) {
-          await client.query(`insert into catalog.source_schools(source_key,source_name,source_url,source_year,district,
+          await client.query(`insert into public.source_schools(source_key,source_name,source_url,source_year,district,
             school_name,school_type,tier,area,street,feeder_middle_school,middle_school_tier,evaluation,admission_mode,
             class_count,tags,lng,lat,public_school_id,attrs)
             values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16::jsonb,$17,$18,$19,$20::jsonb)`,
@@ -314,7 +314,7 @@ export async function importXuequzhushou(
       if (apply) {
         const recordId = rawIds.get(relation.recordKey);
         if (!recordId) throw new Error(`Raw reconciliation missing relation: ${relation.recordKey}`);
-        await client.query(`insert into catalog.school_communities(source_record_id,source_name,source_url,year,
+        await client.query(`insert into public.pending_school_communities(source_record_id,source_name,source_url,year,
           district,school_name_raw,committee_name,school_id,review_status,verified,notes)
           values($1,$2,$3,$4,$5,$6,$7,$8,'pending',false,$9)`,
         [recordId, SOURCE_NAME, plan.parsed.sourceUrl, plan.sourceYear, occurrence.district,
@@ -330,7 +330,7 @@ export async function importXuequzhushou(
 
     if (apply) {
       reconcileRawRecords(plan.records, await loadRecords(client, report.runId));
-      const afterSchools = (await client.query("select * from catalog.source_schools")).rows;
+      const afterSchools = (await client.query("select * from public.source_schools")).rows;
       const afterByKey = new Map(afterSchools.map(row => [String(row.source_key), row]));
       if (afterSchools.length !== sourceSchools.length + report.schools.added) throw new Error("Source school reconciliation count mismatch");
       for (const expected of reconcileSchools) {
@@ -349,7 +349,7 @@ export async function importXuequzhushou(
           if (!isDeepStrictEqual(object(actual.attrs)[key], value)) throw new Error(`Existing source school attrs changed: ${prior.source_key}:${key}`);
         }
       }
-      const afterRelations = (await client.query("select * from catalog.school_communities where source_name=$1", [SOURCE_NAME])).rows;
+      const afterRelations = (await client.query("select * from public.pending_school_communities where source_name=$1", [SOURCE_NAME])).rows;
       if (afterRelations.length !== existingRelations.length + report.relations.added) throw new Error("Relation reconciliation count mismatch");
       const afterRelationsById = new Map(afterRelations.map(row => [String(row.id), row]));
       for (const prior of existingRelations) {
