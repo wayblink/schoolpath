@@ -65,10 +65,10 @@ export const districtBoundaries = pgTable("district_boundaries", {
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
 });
 
-// 政策唯一真源：public.policy_documents（2026-09-14 由 catalog 迁入 public——
-// 政策是已发布事实，无"待审核政策"态，按 public=线上/catalog=采集待审核的边界归位；
-// FK 仍指向 catalog.schools/catalog.districts）。由 lib/product/queries.ts
-// getPolicies() 直连 SQL 读取，无 drizzle 定义。
+// 政策唯一真源：public.policy_documents（2026-09-14 由 catalog 迁入 public，
+// FK 已一并重指 public.schools/public.districts——政策是已发布事实，无待审核态）。
+// 由 lib/product/queries.ts getPolicies() 直连 SQL 读取，无 drizzle 定义。
+// 本文件其余定义仅作类型来源；实际查询走 lib/db/crud.ts 与 lib/product/queries.ts 的裸 SQL。
 
 export type School = typeof schools.$inferSelect;
 export type NewSchool = typeof schools.$inferInsert;

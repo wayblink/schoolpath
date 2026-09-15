@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files/.
 
 # dependencies
 /node_modules
@@ -30,8 +30,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (.env.example 是唯一入库的模板，其余本地变量一律忽略)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -40,19 +41,18 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local sqlite (regenerate from `pnpm db:migrate && pnpm db:seed`)
-/data/*.sqlite
-/data/*.sqlite-journal
-/data/*.sqlite-wal
-/data/*.sqlite-shm
-
-# scratch / login profiles / scraped UGC payloads
+# 数据快照与本地运行产物（不进版本库；磁盘保留，恢复基线见 data/backups/README.md）
 /.tmp/
 /.playwright-mcp/
+/data/audit/
+/data/ingest/
+/data/migrations/
+/data/backups/*.dump
 /data/xhs/
 /data/baidu/
 /data/sogou/
 /data/zhihu/
 
-# migration snapshots (contain local db dumps)
-/data/migrations/
+# 迁移脚本生成的回滚 SQL（本地产物）
+/rollback.sql
+/scripts/rollback.sql
