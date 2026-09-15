@@ -83,8 +83,9 @@ function aggregateAreas(schools: School[], relations: Relation[]) {
 
 export function XuequReplica() {
   const [schools, setSchools] = useState<School[]>([]);
-  const [relations, setRelations] = useState<Relation[]>([]);
   const [summaries, setSummaries] = useState<DistrictSummary[]>([]);
+  // 待审关系池已下线：relations 恒空（区域概览仅展示学校聚合）
+  const relations: Relation[] = [];
   const [tab, setTab] = useState<Tab>("index");
   const [district, setDistrict] = useState("");
   const [area, setArea] = useState("");
@@ -98,16 +99,13 @@ export function XuequReplica() {
     const controller = new AbortController();
     async function load() {
       try {
-        const responses = await Promise.all([
-          fetch("/api/v2/schools?limit=2000", { signal: controller.signal }),
-          fetch("/api/v2/district-relations?limit=5000", { signal: controller.signal }),
-        ]);
-        if (responses.some((response) => !response.ok)) throw new Error("学校数据加载失败，请刷新重试。");
-        const [schoolData, relationData] = await Promise.all(responses.map((response) => response.json()));
+        const response = await fetch("/api/v2/schools?limit=2000", { signal: controller.signal });
+        if (!response.ok) throw new Error("学校数据加载失败，请刷新重试。");
+        const schoolData = await response.json();
         if (controller.signal.aborted) return;
         setSchools(schoolData.schools);
         setSummaries(schoolData.districts);
-        setRelations(relationData.relations);
+        // 待审关系池已下线（2026-09-15 用户决策 B）：relations 恒空，区域概览仅展示学校聚合
       } catch (cause) {
         if (!controller.signal.aborted) setError(cause instanceof Error ? cause.message : "学校数据加载失败，请刷新重试。");
       } finally {

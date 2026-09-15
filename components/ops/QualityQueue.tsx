@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import { Check, ChevronDown, Layers, TriangleAlert, X } from "lucide-react";
+import { Check, ChevronDown, TriangleAlert, X } from "lucide-react";
 
 type MatchCandidate = {
   id: number;

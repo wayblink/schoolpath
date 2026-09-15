@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { MapPin, Navigation, School, Users } from "lucide-react";
 import { ProductShell } from "@/components/product/ProductShell";
 import { BackButton } from "@/components/product/BackButton";
-import { getSchoolById, getSchoolRelationsByName } from "@/lib/product/queries";
+import { getSchoolById } from "@/lib/product/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +11,6 @@ export default async function SchoolDetailPage({ params }: { params: Promise<{ i
   const { id } = await params;
   const school = await getSchoolById(Number(id));
   if (!school) notFound();
-  const relations = await getSchoolRelationsByName(school.district, school.name);
   const typeLabel = school.type === "middle" ? "初中" : "小学";
   const location = school.street || school.area || "地址待补充";
   const coordinates = school.lng != null && school.lat != null ? `${school.lng}, ${school.lat}` : "坐标待补充";
@@ -38,18 +37,7 @@ export default async function SchoolDetailPage({ params }: { params: Promise<{ i
           <article className="school-detail-content"><div className="school-detail-section-head"><span>PROFILE</span><h2>学校信息</h2></div><dl><div><dt>所在区域</dt><dd>{school.district || "待补充"}</dd></div><div><dt>地址 / 街道</dt><dd>{location}</dd></div><div><dt>地图坐标</dt><dd>{coordinates}</dd></div></dl></article>
           <article className="school-detail-content school-detail-next"><div className="school-detail-section-head"><span>PATHWAY</span><h2>升学与对口</h2></div><div className="school-detail-feeder"><span>对口初中</span><strong>{school.feederMiddleSchool || "暂无明确对口初中"}</strong></div><Link href={`/map?school=${school.id}`} className="school-detail-map-link"><MapPin size={16} />在地图中查看</Link></article>
         </section>
-        <section className="school-detail-content school-detail-relations" aria-label="学校区域关系">
-          <div className="school-detail-section-head"><span>RELATIONS</span><h2>学校区域关系</h2></div>
-          <p className="school-detail-relation-note">官方招生区域、住宅小区关系和来源收录关系分开展示；官方招生区域仍待核验。</p>
-          {relations.length > 0 ? <ul>{relations.map((relation) => {
-            const label = relation.officialAreaLevel === "administrative_or_enrollment_area"
-              ? "官方招生区域（待核验）"
-              : relation.residentialPoi === true
-                ? "住宅小区关系"
-                : "来源收录关系";
-            return <li key={relation.id}><strong>{relation.committeeName}</strong><span>{label}</span></li>;
-          })}</ul> : <p>暂无已收录关系。</p>}
-        </section>
+
       </main>
     </ProductShell>
   );

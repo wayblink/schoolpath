@@ -1,7 +1,7 @@
 import pg from "pg";
 import type { QueryResultRow } from "pg";
-import { PRODUCT_DISTRICTS, displayProductDistrict, normalizeProductDistrict } from "./districts";
-export { PRODUCT_DISTRICTS, displayProductDistrict, normalizeProductDistrict } from "./districts";
+import { PRODUCT_DISTRICTS, normalizeProductDistrict } from "./districts";
+export { PRODUCT_DISTRICTS, normalizeProductDistrict } from "./districts";
 export type { ProductDistrict } from "./districts";
 
 function databaseUrl() {
@@ -45,22 +45,20 @@ export async function query<T extends QueryResultRow>(text: string, values: unkn
 }
 
 export async function getOverview() {
-  const rows = await query<{schools:number;communities:number;assignments:number;policies:number;pending_matches:number;conflicts:number;pending_relations:number;matched_relations:number}>(`
+  const rows = await query<{schools:number;communities:number;assignments:number;policies:number;pending_matches:number;conflicts:number}>(`
     select
       (select count(*)::int from public.schools s where ${districtExpression("s.district")} = any($1::text[])) schools,
       (select count(*)::int from public.communities c where ${districtExpression("c.district")} = any($1::text[])) communities,
       (select count(*)::int from public.school_communities a join public.schools s on s.id=a.school_id where ${districtExpression("s.district")} = any($1::text[])) assignments,
       (select count(*)::int from public.policy_documents p left join public.districts d on d.id=p.district_id left join public.schools s on s.id=p.public_school_id where coalesce(d.canonical_name,${districtExpression("s.district")}) = any($1::text[]) and (s.id is null or ${districtExpression("s.district")} = any($1::text[]))) policies,
       (select count(*)::int from public.entity_match_candidates c join public.schools s on s.id=c.public_school_id where c.status='pending' and ${districtExpression("s.district")} = any($1::text[])) pending_matches,
-      (select count(*)::int from public.field_conflicts f join public.entity_match_candidates c on c.id=f.match_candidate_id join public.schools s on s.id=c.public_school_id where f.status='pending' and ${districtExpression("s.district")} = any($1::text[])) conflicts,
-      (select count(*)::int from public.pending_school_communities r where r.review_status='pending' and ${districtExpression("r.district")} = any($1::text[])) pending_relations,
-      (select count(*)::int from public.pending_school_communities r where r.school_id is not null and r.community_id is not null and ${districtExpression("r.district")} = any($1::text[])) matched_relations
+      (select count(*)::int from public.field_conflicts f join public.entity_match_candidates c on c.id=f.match_candidate_id join public.schools s on s.id=c.public_school_id where f.status='pending' and ${districtExpression("s.district")} = any($1::text[])) conflicts
   `, [PRODUCT_DISTRICTS]);
   return rows[0];
 }
 
 async function getFullOverview() {
-  const rows = await query<{schools:number;communities:number;assignments:number;policies:number;pending_matches:number;conflicts:number;pending_relations:number;matched_relations:number}>(`
+  const rows = await query<{schools:number;communities:number;assignments:number;policies:number;pending_matches:number;conflicts:number}>(`
     select
       (select count(*)::int from public.schools) schools,
       (select count(*)::int from public.communities) communities,
@@ -68,8 +66,6 @@ async function getFullOverview() {
       (select count(*)::int from public.policy_documents) policies,
       (select count(*)::int from public.entity_match_candidates where status='pending') pending_matches,
       (select count(*)::int from public.field_conflicts where status='pending') conflicts,
-      (select count(*)::int from public.pending_school_communities where review_status='pending') pending_relations,
-      (select count(*)::int from public.pending_school_communities where school_id is not null and community_id is not null) matched_relations
   `);
   return rows[0];
 }
@@ -130,46 +126,6 @@ export type SchoolDistrictRelation = {
   matchStatus:string;reviewStatus:string;verified:boolean;sourceYear:number|null;sourceName:string;
   sourceUrl:string|null;officialAreaLevel:string|null;residentialPoi:boolean|null;
 };
-export async function getSchoolDistrictRelations(filters:{district?:string;area?:string;q?:string;schoolName?:string;schoolType?:string;limit?:number}={}) {
-  const values:unknown[]=[];const where:string[]=[];
-  addProductDistrictFilter(where, values, "district", filters.district);
-  where.push(`(school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[])))`);
-  // area/street 随列收敛并入 notes（D2），school_name 改名 school_name_raw——过滤条件须同步改列名，
-  // 否则引用不存在的列会直接抛 42703（详情页 /schools/[id] 与 district-relations API 500）
-  if(filters.area){values.push(filters.area);where.push(`substring(notes from 'area=([^;]*)')=$${values.length}`)}
-  // school_name_raw 是公示原文校名，与产品层 public.schools.name 常有差异（"向阳小学" vs "上海市徐汇区向阳小学"），
-  // 故两种口径都匹配：原文相等，或该行 school_id 已关联到同名产品学校
-  if(filters.schoolName){values.push(filters.schoolName,filters.schoolName);const raw=values.length-1,product=values.length;
-    where.push(`(school_name_raw=$${raw} or exists(select 1 from public.schools ls where ls.id=school_id and ls.name=$${product}))`)}
-  if(filters.schoolType){values.push(filters.schoolType);where.push(`notes like '%school_type=' || $${values.length} || '%'`)}
-  if(filters.q){values.push(filters.q);where.push(`(school_name_raw ilike '%'||$${values.length}||'%' or committee_name ilike '%'||$${values.length}||'%' or coalesce(notes,'') ilike '%'||$${values.length}||'%')`)}
-  values.push(boundedLimit(filters.limit,500,5000));
-  return query<SchoolDistrictRelation>(`
-    select id,${displayDistrictExpression("district")} district,school_name_raw "schoolName",NULL::text "schoolType",committee_name "committeeName",
-      NULL::text area,NULL::text street,school_id "schoolId",NULL::int "catalogSchoolId",community_id "catalogCommunityId",
-      NULL::text "matchStatus",review_status "reviewStatus",verified,year "sourceYear",
-      source_name "sourceName",source_url "sourceUrl",
-      NULL::text "officialAreaLevel",
-      NULL::boolean "residentialPoi"
-    from public.pending_school_communities
-    ${where.length?`where ${where.join(" and ")}`:""}
-    order by district,committee_name,school_name_raw
-    limit $${values.length}
-  `,values);
-}
-
-export async function getSchoolRelationsByName(district: string, schoolName: string) {
-  return getSchoolDistrictRelations({ district, schoolName, limit: 5000 });
-}
-
-export async function getSchoolDistrictRelationFacets() {
-  const [areas,summary]=await Promise.all([
-    query<{district:string;area:string}>(`select distinct ${displayDistrictExpression("district")} district,'' area from public.pending_school_communities where ${districtExpression("district")} = any($1::text[]) and (school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[]))) and false order by district,area`,[PRODUCT_DISTRICTS]),
-    query<{total:number;districts:number;schools:number;committees:number;matched:number;officialAreas:number;sourceRelations:number}>(`select count(*)::int total,count(distinct ${districtExpression("district")})::int districts,count(distinct (${districtExpression("district")},school_name_raw))::int schools,count(distinct (${districtExpression("district")},committee_name))::int committees,count(*) filter(where school_id is not null and community_id is not null)::int matched,count(*) filter(where source_name='official')::int "officialAreas",count(*) filter(where source_name<>'official')::int "sourceRelations" from public.pending_school_communities where ${districtExpression("district")} = any($1::text[]) and (school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[])))`,[PRODUCT_DISTRICTS]),
-  ]);
-  return {districts:PRODUCT_DISTRICTS.map((district) => displayProductDistrict(district)),areas:areas.map(a=>({district:a.district,area:a.area})),summary:summary[0]};
-}
-
 export async function getPathways(filters:{district?:string;limit?:number}={}) {
   const values:unknown[]=[];
   const where:string[]=[`sp.feeder_middle_school is not null`,`trim(sp.feeder_middle_school)<>''`];
@@ -231,13 +187,12 @@ export async function getPolicies() {
 }
 
 export async function getOpsSummary() {
-  const [overview,matches,conflicts,relationStatuses]=await Promise.all([
+  const [overview,matches,conflicts]=await Promise.all([
     getFullOverview(),
     query(`select status,count(*)::int from public.entity_match_candidates group by status order by status`),
     query(`select field_name "fieldName",status,count(*)::int from public.field_conflicts group by field_name,status order by field_name,status`),
-    query(`select review_status "status",count(*)::int from public.pending_school_communities group by review_status order by review_status`),
   ]);
-  return { overview, matches, conflicts, relationStatuses };
+  return { overview, matches, conflicts };
 }
 
 // ── 质量队列：实体匹配候选（R3）──
@@ -344,62 +299,3 @@ export async function reviewFieldConflict(id:number,action:"keep_current"|"take_
   } catch(error) {await client.query("rollback").catch(()=>{});throw error} finally {client.release();await pool.end()}
 }
 
-export async function getRelationReviewCandidates(filters:{status?:string;district?:string;page?:number;pageSize?:number}={}) {
-  const values:unknown[]=[];const where:string[]=[];
-  if(filters.status){values.push(filters.status);where.push(`r.review_status=$${values.length}`)}
-  if(filters.district){values.push(filters.district);where.push(`r.district=$${values.length}`)}
-  const pageSize=Math.min(Math.max(filters.pageSize??30,1),100);
-  const page=Math.max(filters.page??1,1);
-  const offset=(page-1)*pageSize;
-  values.push(pageSize);
-  const limitParam=values.length;
-  values.push(offset);
-  const offsetParam=values.length;
-  type RelationReviewCandidate = {
-    id:number;district:string;schoolName:string;committeeName:string;area:string|null;street:string|null;
-    schoolMatchScore:number|null;communityMatchMethod:string|null;communityMatchScore:number|null;
-    reviewStatus:string;catalogSchoolId:number|null;catalogSchoolName:string|null;
-    catalogCommunityId:number|null;catalogCommunityName:string|null;catalogCommitteeName:string|null;totalCount:number;
-  };
-  const rows=await query<RelationReviewCandidate>(`
-    select r.id,r.district,r.school_name_raw "schoolName",r.committee_name "committeeName",NULL::text area,NULL::text street,
-      NULL::float "schoolMatchScore",NULL::text "communityMatchMethod",
-      NULL::float "communityMatchScore",r.review_status "reviewStatus",
-      r.school_id "catalogSchoolId",s.name "catalogSchoolName",
-      r.community_id "catalogCommunityId",c.name "catalogCommunityName",NULL::text "catalogCommitteeName",
-      count(*) over()::int "totalCount"
-    from public.pending_school_communities r
-    left join public.schools s on s.id=r.school_id
-    left join public.communities c on c.id=r.community_id
-    ${where.length?`where ${where.join(" and ")}`:""}
-    order by (r.school_id is not null and r.community_id is not null) desc,r.district,r.school_name_raw,r.committee_name
-    limit $${limitParam} offset $${offsetParam}
-  `,values);
-  return { relations: rows, total: rows[0]?.totalCount ?? 0, page, pageSize };
-}
-
-export async function reviewRelationCandidate(id:number,action:"accept"|"reject",note?:string) {
-  const pool = new pg.Pool({ connectionString: databaseUrl(), max: 1 });
-  const client = await pool.connect();
-  try {
-    await client.query("begin");
-    const {rows}=await client.query(`select * from public.pending_school_communities where id=$1 for update`,[id]);
-    const current=rows[0];
-    if(!current){await client.query("rollback");return null}
-    if(current.review_status!=="pending") throw new Error("candidate was already reviewed");
-    if(action==="accept" && (!current.school_id || !current.community_id)) {
-      throw new Error("accept requires both school and community matches");
-    }
-    // 新表无 attrs 列，审计信息追加进 notes（reviewedAt 每次更新、resolutionNote 有值时追加）
-    const {rows:updated}=await client.query(
-      `update public.pending_school_communities
-       set review_status=$2,
-           notes = concat_ws('; ', notes, 'reviewedAt=' || now()::text, nullif('resolutionNote=' || $3, 'resolutionNote='))
-       where id=$1
-       returning id,review_status "reviewStatus",NULL::text "resolutionNote",NULL::text "reviewedAt"`,
-      [id,action==="accept"?"accepted":"rejected",note??null],
-    );
-    await client.query("commit");
-    return updated[0];
-  } catch(error) {await client.query("rollback");throw error} finally {client.release();await pool.end()}
-}

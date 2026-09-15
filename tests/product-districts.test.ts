@@ -18,8 +18,6 @@ test("product queries apply the scope to list, detail, relations, pathways and p
     "getSchools",
     "getSchoolById",
     "getSchoolDistrictSummary",
-    "getSchoolDistrictRelations",
-    "getSchoolDistrictRelationFacets",
     "getPathways",
     "getPolicies",
   ]) assert.match(source, new RegExp(`(?:export )?(?:async )?function ${marker}`));

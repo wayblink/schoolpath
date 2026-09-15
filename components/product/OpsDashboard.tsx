@@ -2,7 +2,6 @@
 import { Activity, AlertTriangle, Database, ShieldCheck } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { PipelineDiagram } from "@/components/ops/PipelineDiagram";
-import { CandidateReview } from "@/components/ops/CandidateReview";
 import { ManualEntry } from "@/components/ops/ManualEntry";
 import { CompletenessPanel } from "@/components/ops/CompletenessPanel";
 import { QualityQueue } from "@/components/ops/QualityQueue";
@@ -95,7 +94,6 @@ export function OpsDashboard() {
 
       <QualityQueue matches={data.matches} conflicts={data.conflicts} />
 
-      <CandidateReview />
       <ManualEntry />
     </>
   );

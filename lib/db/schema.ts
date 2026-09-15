@@ -1,5 +1,4 @@
 import {
-  bigint,
   boolean,
   doublePrecision,
   index,
@@ -126,31 +125,6 @@ export const schoolCommunities = pgTable(
   }),
 );
 
-// public.pending_school_communities：待审的学校-地点关系总表，与 public.school_communities 同构
-// （共享列同名同义），以 source_name 区分来源。2026-09-15 由 catalog 收敛迁入 public
-// （catalog schema 已 DROP；源自 candidates 23,070 行 + relations 学区助手系 2,764 行；
-// pending 9,027 行经用户决策放弃）。MapWorkspace 经 /api/school-community-candidates 读 official 系
-// 聚合，ops 的 CandidateReview 经 /api/v2/ops/relations 读全表审核。
-export const pendingSchoolCommunities = pgTable("pending_school_communities", {
-  id: serial("id").primaryKey(),
-  schoolId: integer("school_id").references(() => schools.id),
-  schoolNameRaw: text("school_name_raw"),
-  district: text("district"),
-  communityId: integer("community_id").references(() => communities.id),
-  committeeName: text("committee_name"),
-  year: integer("year"),
-  sourceName: text("source_name").notNull(),
-  sourceRecordId: bigint("source_record_id", { mode: "number" }),
-  sourceUrl: text("source_url"),
-  sourceQuote: text("source_quote"),
-  sourceDate: text("source_date"),
-  confidence: text("confidence"),
-  reviewStatus: text("review_status").notNull().default("pending"),
-  verified: boolean("verified").notNull().default(false),
-  notes: text("notes"),
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
-});
 
 export const communityPriceSnapshots = pgTable(
   "community_price_snapshots",
@@ -220,8 +194,6 @@ export const webDataSource = pgTable(
 
 export type Community = typeof communities.$inferSelect;
 export type SchoolCommunity = typeof schoolCommunities.$inferSelect;
-export type PendingSchoolCommunity = typeof pendingSchoolCommunities.$inferSelect;
-export type NewPendingSchoolCommunity = typeof pendingSchoolCommunities.$inferInsert;
 export type CommunityPriceSnapshot = typeof communityPriceSnapshots.$inferSelect;
 export type CommunityPriceSource = typeof communityPriceSources.$inferSelect;
 export type WebDataSource = typeof webDataSource.$inferSelect;

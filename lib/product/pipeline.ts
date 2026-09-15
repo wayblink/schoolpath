@@ -12,30 +12,17 @@ export type PipelineStage = {
 
 export async function getPipelineStats() {
   const rows = await query<{
-    relations: number;
     pendingMatches: number;
     pendingConflicts: number;
-    acceptedRelations: number;
-    provisionalRelations: number;
     productRows: number;
   }>(`
     select
-      (select count(*)::int from public.pending_school_communities) relations,
       (select count(*)::int from public.entity_match_candidates where status='pending') "pendingMatches",
       (select count(*)::int from public.field_conflicts where status='pending') "pendingConflicts",
-      (select count(*)::int from public.pending_school_communities where review_status='accepted') "acceptedRelations",
-      (select count(*)::int from public.pending_school_communities where review_status='pending') "provisionalRelations",
       (select count(*)::int from public.school_communities) "productRows"
   `);
   const d = rows[0];
   const stages: PipelineStage[] = [
-    {
-      key: "source",
-      label: "结构化",
-      count: d.relations,
-      status: "ok",
-      hint: `${d.relations.toLocaleString()} 条待审关系（官方+第三方来源）`,
-    },
     {
       key: "match",
       label: "匹配",
@@ -45,13 +32,6 @@ export async function getPipelineStats() {
         d.pendingMatches + d.pendingConflicts > 0
           ? `${d.pendingMatches} 待匹配学校 · ${d.pendingConflicts} 待处理冲突`
           : "无待处理匹配与冲突",
-    },
-    {
-      key: "review",
-      label: "审核",
-      count: d.acceptedRelations + d.provisionalRelations,
-      status: "ok",
-      hint: `${d.acceptedRelations} 已接受 · ${d.provisionalRelations} 待审核`,
     },
     {
       key: "visible",
