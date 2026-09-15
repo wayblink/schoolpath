@@ -40,16 +40,16 @@ export default async function SchoolDetailPage({ params }: { params: Promise<{ i
           <article><div className="school-detail-stat-icon violet"><MapPin size={17} /></div><small>所属片区</small><b>{school.area || school.street || "待补充"}</b></article>
         </section>
         <section className="school-detail-columns">
-          <article className="school-detail-content"><div className="school-detail-section-head"><span>PROFILE</span><h2>学校信息</h2></div><dl><div><dt>所在区域</dt><dd>{school.district || "待补充"}</dd></div><div><dt>地址 / 街道</dt><dd>{location}</dd></div><div><dt>地图坐标</dt><dd>{coordinates}</dd></div></dl></article>
+          <article className="school-detail-content"><div className="school-detail-section-head"><span>PROFILE</span><h2>学校信息</h2></div><dl><div><dt>所在区域</dt><dd>{school.district || "待补充"}</dd></div><div><dt>地址 / 街道</dt><dd>{location}</dd></div><div><dt>学校评价</dt><dd>{school.evaluation || "暂无评价"}</dd></div><div><dt>地图坐标</dt><dd>{coordinates}</dd></div></dl><Link href={`/map?school=${school.id}`} className="school-detail-map-link"><MapPin size={16} />在地图中查看</Link></article>
           <article className="school-detail-content school-detail-next"><div className="school-detail-section-head"><span>PATHWAY</span><h2>升学与对口</h2></div>{isPrimary ? (
             downstreamPaths.length ? (
-              <div className="school-detail-feeder"><span>对口初中（{downstreamPaths.length}）</span><div className="school-detail-feeder-list">{downstreamPaths.map((p) => <strong key={p.id}>{pathwayLabel(p)}</strong>)}</div></div>
+              <div className="school-detail-feeder"><span>对口初中（{downstreamPaths.length}）</span><div className="school-detail-feeder-list">{downstreamPaths.map((p) => <Link key={p.id} className="school-detail-feeder-row" href={`/schools/${p.middleId}`}>{pathwayLabel(p)}</Link>)}</div></div>
             ) : <div className="school-detail-feeder"><span>对口初中</span><strong>暂无明确对口初中</strong></div>
           ) : (
             upstreamPaths.length ? (
-              <div className="school-detail-feeder"><span>生源小学（{upstreamPaths.length}）</span><div className="school-detail-feeder-list">{upstreamPaths.map((p) => <strong key={p.id}>{p.primaryName}（{p.modeLabel}）</strong>)}</div></div>
+              <div className="school-detail-feeder"><span>生源小学（{upstreamPaths.length}）</span><div className="school-detail-feeder-list">{upstreamPaths.map((p) => <Link key={p.id} className="school-detail-feeder-row" href={`/schools/${p.primaryId}`}>{p.primaryName}（{p.modeLabel}）</Link>)}</div></div>
             ) : <div className="school-detail-feeder"><span>生源小学</span><strong>暂无收录生源小学</strong></div>
-          )}<Link href={`/map?school=${school.id}`} className="school-detail-map-link"><MapPin size={16} />在地图中查看</Link></article>
+          )}</article>
         </section>
 
       </main>
