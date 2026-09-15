@@ -258,7 +258,6 @@ const steps: Step[] = [
         "public.district_boundaries": 211,
         "public.community_price_snapshots": 31,
         "public.community_price_sources": 37,
-        "public.school_info": 0,
         "ingest.sources": 2,
         "ingest.crawl_runs": 810,
         "ingest.extracted_records": 38438,

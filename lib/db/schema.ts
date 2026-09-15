@@ -73,34 +73,10 @@ export const districtBoundaries = pgTable("district_boundaries", {
 // FK 仍指向 catalog.schools/catalog.districts）。由 lib/product/queries.ts
 // getPolicies() 直连 SQL 读取，无 drizzle 定义。
 
-export const schoolInfo = pgTable(
-  "school_info",
-  {
-    id: serial("id").primaryKey(),
-    schoolId: integer("school_id").notNull().references(() => schools.id),
-    category: text("category").notNull(),
-    title: text("title"),
-    content: text("content"),
-    year: integer("year"),
-    sourceName: text("source_name").notNull(),
-    sourceUrl: text("source_url"),
-    sourceDate: text("source_date"),
-    verified: boolean("verified").notNull().default(false),
-    raw: jsonb("raw").$type<Record<string, unknown>>(),
-    fetchedAt: timestamp("fetched_at", { withTimezone: true }).defaultNow(),
-    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
-  },
-  (t) => ({
-    schoolIdIdx: index("school_info_school_id_idx").on(t.schoolId),
-  }),
-);
-
 export type School = typeof schools.$inferSelect;
 export type NewSchool = typeof schools.$inferInsert;
 export type DistrictBoundary = typeof districtBoundaries.$inferSelect;
 // Policy 类型已随 public.policies 删除（2026-09-14 B7）；产品层用 lib/product/queries.ts 的 ProductPolicy
-export type SchoolInfo = typeof schoolInfo.$inferSelect;
-export type NewSchoolInfo = typeof schoolInfo.$inferInsert;
 
 export const communities = pgTable(
   "communities",

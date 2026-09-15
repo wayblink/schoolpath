@@ -24,7 +24,6 @@ const SNAPSHOT_TABLES = [
   "public.school_community_candidates",
   "public.policies",
   "public.web_data_source",
-  "public.school_info",
   "public.district_boundaries",
   "public.community_price_snapshots",
   "public.community_price_sources",

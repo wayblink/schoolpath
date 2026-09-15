@@ -103,7 +103,7 @@ const BROWSABLE_RELATIONS = new Map<string, Set<string>>([
     new Set([
       "schools",
       "district_boundaries",
-      "school_info",
+
       "communities",
       "school_communities",
       "community_price_snapshots",
