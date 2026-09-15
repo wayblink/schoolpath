@@ -12,6 +12,7 @@ export const OPS_TABLES = [
   { key: "community_price_snapshots", label: "小区价格快照", icon: "price" },
   { key: "community_price_sources", label: "小区价格来源", icon: "price" },
   { key: "district_boundaries", label: "学区边界", icon: "boundary" },
+  { key: "school_pathways", label: "升学路径", icon: "pathway" },
 ] as const;
 
 export type OpsTableKey = (typeof OPS_TABLES)[number]["key"];
@@ -25,6 +26,8 @@ const FK_DISPLAY: Record<string, { table: string; column: string; label: string 
   community_id: { table: "communities", column: "name", label: "小区" },
   district_id: { table: "districts", column: "canonical_name", label: "区县" },
   public_school_id: { table: "schools", column: "name", label: "学校" },
+  primary_school_id: { table: "schools", column: "name", label: "小学" },
+  middle_school_id: { table: "schools", column: "name", label: "初中" },
 };
 
 export type ColumnMeta = {

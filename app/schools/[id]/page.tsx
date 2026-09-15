@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { MapPin, Navigation, School, Users } from "lucide-react";
 import { ProductShell } from "@/components/product/ProductShell";
 import { BackButton } from "@/components/product/BackButton";
-import { getSchoolById } from "@/lib/product/queries";
+import { getSchoolById, getSchoolPathways } from "@/lib/product/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +14,12 @@ export default async function SchoolDetailPage({ params }: { params: Promise<{ i
   const typeLabel = school.type === "middle" ? "初中" : "小学";
   const location = school.street || school.area || "地址待补充";
   const coordinates = school.lng != null && school.lat != null ? `${school.lng}, ${school.lat}` : "坐标待补充";
+  const { downstream, upstream } = await getSchoolPathways(school.id);
+  const pathwayLabel = (p: { middleName: string | null; middleTier: number | null; modeLabel: string }) =>
+    p.middleTier ? `${p.middleName}（${p.middleTier}梯 · ${p.modeLabel}）` : `${p.middleName}（${p.modeLabel}）`;
+  const isPrimary = school.type === "primary";
+  const downstreamPaths = downstream.filter((p) => p.middleId);
+  const upstreamPaths = upstream.filter((p) => p.middleId);
   return (
     <ProductShell active="/schools">
       <main className="school-detail-page">
@@ -35,7 +41,15 @@ export default async function SchoolDetailPage({ params }: { params: Promise<{ i
         </section>
         <section className="school-detail-columns">
           <article className="school-detail-content"><div className="school-detail-section-head"><span>PROFILE</span><h2>学校信息</h2></div><dl><div><dt>所在区域</dt><dd>{school.district || "待补充"}</dd></div><div><dt>地址 / 街道</dt><dd>{location}</dd></div><div><dt>地图坐标</dt><dd>{coordinates}</dd></div></dl></article>
-          <article className="school-detail-content school-detail-next"><div className="school-detail-section-head"><span>PATHWAY</span><h2>升学与对口</h2></div><div className="school-detail-feeder"><span>对口初中</span><strong>{school.feederMiddleSchool || "暂无明确对口初中"}</strong></div><Link href={`/map?school=${school.id}`} className="school-detail-map-link"><MapPin size={16} />在地图中查看</Link></article>
+          <article className="school-detail-content school-detail-next"><div className="school-detail-section-head"><span>PATHWAY</span><h2>升学与对口</h2></div>{isPrimary ? (
+            downstreamPaths.length ? (
+              <div className="school-detail-feeder"><span>对口初中（{downstreamPaths.length}）</span><div className="school-detail-feeder-list">{downstreamPaths.map((p) => <strong key={p.id}>{pathwayLabel(p)}</strong>)}</div></div>
+            ) : <div className="school-detail-feeder"><span>对口初中</span><strong>暂无明确对口初中</strong></div>
+          ) : (
+            upstreamPaths.length ? (
+              <div className="school-detail-feeder"><span>生源小学（{upstreamPaths.length}）</span><div className="school-detail-feeder-list">{upstreamPaths.map((p) => <strong key={p.id}>{p.primaryName}（{p.modeLabel}）</strong>)}</div></div>
+            ) : <div className="school-detail-feeder"><span>生源小学</span><strong>暂无收录生源小学</strong></div>
+          )}<Link href={`/map?school=${school.id}`} className="school-detail-map-link"><MapPin size={16} />在地图中查看</Link></article>
         </section>
 
       </main>

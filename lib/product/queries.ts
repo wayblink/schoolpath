@@ -124,30 +124,51 @@ export type SchoolDistrictRelation = {
   matchStatus:string;reviewStatus:string;verified:boolean;sourceYear:number|null;sourceName:string;
   sourceUrl:string|null;officialAreaLevel:string|null;residentialPoi:boolean|null;
 };
-export async function getPathways(filters:{district?:string;limit?:number}={}) {
+export type SchoolPathway = {
+  id:number;primaryId:number;primaryName:string;primaryTier:number|null;
+  middleId:number|null;middleName:string|null;middleTier:number|null;
+  district:string;area:string|null;admissionMode:string;modeLabel:string;
+  rawText:string|null;sourceName:string|null;
+};
+const MODE_LABELS:Record<string,string>={assign:"对口",placement:"派位",direct:"直升",partial:"部分对口",unknown:"待识别"};
+export async function getPathways(filters:{district?:string;mode?:string;limit?:number}={}) {
   const values:unknown[]=[];
-  const where:string[]=[`sp.feeder_middle_school is not null`,`trim(sp.feeder_middle_school)<>''`];
-  addProductDistrictFilter(where, values, "sp.district", filters.district);
-  const districtParam = values.length;
-  where.push(`(sm.id is null or ${districtExpression("sm.district")} = any($${districtParam}::text[]))`);
+  const where:string[]=[];
+  addProductDistrictFilter(where, values, "p.district", filters.district);
+  if(filters.mode){values.push(filters.mode);where.push(`w.admission_mode=$${values.length}`);}
   values.push(boundedLimit(filters.limit,300,1000));
-  return query<{primaryId:number|null;primaryName:string;primaryTier:number|null;middleId:number|null;middleName:string;middleTier:number|null;district:string;area:string|null;mode:string|null;reviewStatus:string|null;catalogSchoolId:number|null}>(`
-    select sp.id "primaryId",sp.name "primaryName",sp.source_tier "primaryTier",sm.id "middleId",
-      sp.feeder_middle_school "middleName",sm.source_tier "middleTier",
-      ${displayDistrictExpression("sp.district")} district,sp.area,sp.admission_mode mode,
-      NULL::text "reviewStatus",sp.id "catalogSchoolId"
-    from public.schools sp
-    left join lateral (
-      select school.id,school.district,school.source_tier from public.schools school
-      where school.district=${districtExpression("sp.district")}
-        and school.name=sp.feeder_middle_school
-      order by (school.source_key is not null) desc,school.id
-      limit 1
-    ) sm on true
+  return query<SchoolPathway>(`
+    select w.id,p.id "primaryId",p.name "primaryName",p.source_tier "primaryTier",
+      m.id "middleId",m.name "middleName",m.source_tier "middleTier",
+      ${displayDistrictExpression("p.district")} district,p.area,w.admission_mode "admissionMode",
+      w.raw_text "rawText",w.source_name "sourceName"
+    from public.school_pathways w
+    join public.schools p on p.id=w.primary_school_id
+    left join public.schools m on m.id=w.middle_school_id
     where ${where.join(" and ")}
-    order by ${districtExpression("sp.district")},sp.source_tier nulls last,sp.name
+    order by ${districtExpression("p.district")},p.source_tier nulls last,p.name,w.admission_mode,m.name
     limit $${values.length}
-  `,values);
+  `,values).then(rows=>rows.map(r=>({...r,modeLabel:MODE_LABELS[r.admissionMode]??r.admissionMode})));
+}
+
+/** 学校详情页双向查询：小学查下游初中，初中查上游生源小学。 */
+export async function getSchoolPathways(schoolId:number) {
+  if (!Number.isInteger(schoolId) || schoolId <= 0) return { downstream: [], upstream: [] };
+  const rows = await query<Omit<SchoolPathway,"district"|"area"|"modeLabel">>(`
+    select w.id,p.id "primaryId",p.name "primaryName",p.source_tier "primaryTier",
+      m.id "middleId",m.name "middleName",m.source_tier "middleTier",
+      w.admission_mode "admissionMode",w.raw_text "rawText",w.source_name "sourceName"
+    from public.school_pathways w
+    join public.schools p on p.id=w.primary_school_id
+    left join public.schools m on m.id=w.middle_school_id
+    where w.primary_school_id=$1 or w.middle_school_id=$1
+    order by w.admission_mode,m.name
+  `,[schoolId]);
+  const map = (r: typeof rows[number]) => ({...r, modeLabel: MODE_LABELS[r.admissionMode]??r.admissionMode});
+  return {
+    downstream: rows.filter(r=>r.primaryId===schoolId).map(map),
+    upstream: rows.filter(r=>r.middleId===schoolId).map(map),
+  };
 }
 
 export type ProductPolicy = {
