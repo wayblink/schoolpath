@@ -6,19 +6,6 @@ import test from "node:test";
 // 且与其他并行测试竞争 relations 认领）。完整状态机 E2E 已人工验证（杨浦 186 条发布→回滚）。
 const baseUrl = process.env.SCHOOLPATH_TEST_BASE_URL ?? "http://127.0.0.1:3000";
 
-test("pipeline API returns the two stages with health status", async () => {
-  const response = await fetch(`${baseUrl}/api/v2/ops/pipeline`);
-  assert.equal(response.status, 200);
-  const body = await response.json();
-  const keys = (body.stages as Array<{ key: string }>).map((s) => s.key);
-  assert.deepEqual(keys, ["match", "visible"]);
-  for (const stage of body.stages as Array<{ key: string; count: number; status: string; hint: string }>) {
-    assert.ok(Number.isInteger(stage.count), `${stage.key} count must be integer`);
-    assert.ok(["ok", "pending", "broken"].includes(stage.status), `${stage.key} status invalid`);
-    assert.ok(stage.hint.length > 0, `${stage.key} hint missing`);
-  }
-});
-
 test("ingest endpoint rejects requests without a configured token", async () => {
   const response = await fetch(`${baseUrl}/api/ingest/records`, {
     method: "POST",
@@ -34,14 +21,8 @@ test("ops summary API returns 200 with all overview fields", async () => {
   // 而现有测试只打页面 HTML 不打 API 数据——补 API 级冒烟。
   const response = await fetch(`${baseUrl}/api/v2/ops`);
   assert.equal(response.status, 200);
-  const body = await response.json() as {
-    overview: Record<string, number>;
-    matches: Array<{ status: string; count: number }>;
-    conflicts: Array<{ fieldName: string; status: string; count: number }>;
-  };
-  for (const key of ["schools", "communities", "assignments", "policies", "pending_matches", "conflicts"]) {
+  const body = await response.json() as { overview: Record<string, number> };
+  for (const key of ["schools", "communities", "assignments", "policies"]) {
     assert.ok(Number.isInteger(body.overview[key]), `overview.${key} must be integer, got ${body.overview[key]}`);
   }
-  assert.ok(Array.isArray(body.matches));
-  assert.ok(Array.isArray(body.conflicts));
 });

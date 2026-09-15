@@ -109,8 +109,6 @@ const BROWSABLE_RELATIONS = new Map<string, Set<string>>([
       "policy_documents",
       "web_data_source",
       "districts",
-      "entity_match_candidates",
-      "field_conflicts",
     ]),
   ],
 ]);
