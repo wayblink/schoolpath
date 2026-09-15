@@ -111,9 +111,9 @@ export function CandidateReview() {
                   <span><ArrowRight size={12} /> {relation.committeeName}</span>
                 </div>
                 <div>
-                  <small>学校候选{relation.schoolMatchScore > 0 ? ` · 相似度 ${(relation.schoolMatchScore * 100).toFixed(0)}%` : ""}</small>
+                  <small>学校候选{relation.schoolMatchScore ? ` · 相似度 ${(relation.schoolMatchScore * 100).toFixed(0)}%` : ""}</small>
                   <b>{relation.catalogSchoolName ?? "未找到候选"}</b>
-                  <small>小区候选 · {relation.communityMatchMethod.replaceAll("_", " ")}</small>
+                  <small>小区候选{relation.communityMatchMethod ? ` · ${relation.communityMatchMethod.replaceAll("_", " ")}` : ""}</small>
                   <span>
                     {relation.catalogCommunityName ?? "未唯一匹配"}
                     {relation.catalogCommitteeName ? ` · ${relation.catalogCommitteeName}` : ""}
