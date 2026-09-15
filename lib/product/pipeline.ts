@@ -12,7 +12,6 @@ export type PipelineStage = {
 
 export async function getPipelineStats() {
   const rows = await query<{
-    sourceSchools: number;
     relations: number;
     pendingMatches: number;
     pendingConflicts: number;
@@ -24,7 +23,6 @@ export async function getPipelineStats() {
     productRows: number;
   }>(`
     select
-      (select count(*)::int from public.source_schools) "sourceSchools",
       (select count(*)::int from public.pending_school_communities) relations,
       (select count(*)::int from public.entity_match_candidates where status='pending') "pendingMatches",
       (select count(*)::int from public.field_conflicts where status='pending') "pendingConflicts",
@@ -40,9 +38,9 @@ export async function getPipelineStats() {
     {
       key: "source",
       label: "结构化",
-      count: d.sourceSchools + d.relations,
+      count: d.relations,
       status: "ok",
-      hint: `${d.sourceSchools} 条来源学校 · ${d.relations} 条来源关系`,
+      hint: `${d.relations.toLocaleString()} 条待审关系（官方+第三方来源）`,
     },
     {
       key: "match",

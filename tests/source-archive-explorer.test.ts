@@ -10,7 +10,7 @@ test("source snapshots and source catalogs are browsable in the database console
   const { listTables } = await explorer;
   const publicTables = (await listTables("public")).map(t => t.name);
   assert.ok(publicTables.includes("pending_school_communities"), `public 表应含 pending_school_communities（原 catalog.school_communities，2026-09-15 迁入），实际 ${publicTables.join(",")}`);
-  assert.ok(publicTables.includes("source_schools"));
+
 });
 
 test("removed ingest schema is no longer browsable or writable through generic row controls", async () => {
