@@ -385,7 +385,7 @@ html[data-theme="notion"] .app-header {
 @media(min-width:761px){.ops-page .ops-review{padding:20px}.ops-page .ops-review-list{max-height:680px;padding-right:8px}.ops-page .ops-review-row{min-width:760px}.ops-page .ops-review-actions{justify-content:flex-end}}
 
 /* Admin surfaces use the same readable product canvas as the user-facing pages. */
-.ops-page{background:#f4f7fb;color:#14213d;width:min(100%,1180px);margin:0 auto;padding:40px clamp(18px,4vw,40px)}
+.ops-page{background:#f4f7fb;color:#14213d;width:min(100%,1320px);margin:0 auto;padding:40px clamp(18px,4vw,40px)}
 .ops-header{border-bottom-color:#dce5ef}
 .ops-header span{color:#23728b}
 .ops-header h1{color:#153f67}
@@ -650,8 +650,8 @@ html[data-theme="notion"] .app-header {
 .ops-quality-list::-webkit-scrollbar-track{background:#f4f8fb}
 
 /* ===== Ops 数据控制台（9 表 CRUD）===== */
-.ops-console{display:grid;grid-template-columns:230px minmax(0,1fr);gap:18px;align-items:start}
-.ops-console-nav{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:10px;position:sticky;top:80px;display:flex;flex-direction:column;gap:2px}
+.ops-console{display:grid;grid-template-columns:230px minmax(0,1fr);background:#fff;border:1px solid #dce5ef;border-radius:12px;overflow:hidden}
+.ops-console-nav{background:#f8fafd;border-right:1px solid #e4ebf3;padding:10px;display:flex;flex-direction:column;gap:2px;align-self:stretch}
 .ops-console-nav-group{display:flex;flex-direction:column;gap:2px}
 .ops-console-nav-group>span{font-size:11px;color:#7189a3;letter-spacing:.08em;padding:8px 10px 4px}
 .ops-console-nav-item{display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border:none;background:transparent;border-radius:8px;font-size:13px;color:#33475e;cursor:pointer;text-align:left}
@@ -661,7 +661,7 @@ html[data-theme="notion"] .app-header {
 .ops-console-main{min-width:0}
 .ops-console-hint{color:#667b91;font-size:12.5px;padding:10px 2px}
 .ops-console-overview{padding-top:4px}
-.ops-table-explorer{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:14px 16px}
+.ops-table-explorer{padding:14px 16px}
 .ops-table-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
 .ops-table-toolbar form{display:flex;gap:8px;align-items:center}
 .ops-table-toolbar label{display:flex;align-items:center;gap:6px;background:#f2f6fa;border:1px solid #dce5ef;border-radius:8px;padding:6px 10px;color:#7189a3}
@@ -690,4 +690,4 @@ html[data-theme="notion"] .app-header {
 .ops-field input:focus,.ops-field textarea:focus{outline:2px solid #b8d4ee;border-color:#7fb0dd}
 .ops-field input[type="checkbox"]{width:16px;height:16px}
 .ops-message{background:#eef6fd;border:1px solid #cfe3f5;color:#1c5b8a;border-radius:8px;padding:8px 12px;font-size:12.5px;margin:4px 0}
-@media(max-width:760px){.ops-console{grid-template-columns:1fr}.ops-console-nav{position:static;flex-direction:row;flex-wrap:wrap}.ops-console-nav-item small{margin-left:6px}.ops-field{grid-template-columns:1fr}}
+@media(max-width:760px){.ops-console{grid-template-columns:1fr}.ops-console-nav{border-right:0;border-bottom:1px solid #e4ebf3;flex-direction:row;flex-wrap:wrap}.ops-console-nav-item small{margin-left:6px}.ops-field{grid-template-columns:1fr}}
