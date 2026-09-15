@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { ingestRecords } from "@/lib/ingest/push";
+import { ingestRecords } from "@/lib/import/push";
 
 export const runtime = "nodejs";
 

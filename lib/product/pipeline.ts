@@ -12,9 +12,6 @@ export type PipelineStage = {
 
 export async function getPipelineStats() {
   const rows = await query<{
-    crawlRuns: number;
-    extracted: number;
-    sources: number;
     sourceSchools: number;
     relations: number;
     pendingMatches: number;
@@ -27,9 +24,6 @@ export async function getPipelineStats() {
     productRows: number;
   }>(`
     select
-      (select count(*)::int from ingest.crawl_runs) "crawlRuns",
-      (select count(*)::int from ingest.extracted_records) extracted,
-      (select count(*)::int from ingest.sources) sources,
       (select count(*)::int from public.source_schools) "sourceSchools",
       (select count(*)::int from public.pending_school_communities) relations,
       (select count(*)::int from public.entity_match_candidates where status='pending') "pendingMatches",
@@ -43,20 +37,6 @@ export async function getPipelineStats() {
   `);
   const d = rows[0];
   const stages: PipelineStage[] = [
-    {
-      key: "collect",
-      label: "采集",
-      count: d.crawlRuns,
-      status: "ok",
-      hint: `${d.crawlRuns} 个采集批次 · ${d.sources} 个来源注册`,
-    },
-    {
-      key: "import",
-      label: "导入",
-      count: d.extracted,
-      status: "ok",
-      hint: `${d.extracted.toLocaleString()} 条候选记录（固定接口或脚本写入）`,
-    },
     {
       key: "source",
       label: "结构化",

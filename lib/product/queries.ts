@@ -171,26 +171,27 @@ export async function getSchoolDistrictRelationFacets() {
 }
 
 export async function getPathways(filters:{district?:string;limit?:number}={}) {
-  const values:unknown[]=[];const where:string[]=["e.raw->>'对口初中' is not null","trim(e.raw->>'对口初中')<>''"];
-  addProductDistrictFilter(where, values, "e.district", filters.district);
+  const values:unknown[]=[];
+  const where:string[]=[`sp.feeder_middle_school is not null`,`trim(sp.feeder_middle_school)<>''`];
+  addProductDistrictFilter(where, values, "sp.district", filters.district);
   const districtParam = values.length;
-  where.push(`(sp.id is null or ${districtExpression("sp.district")} = any($${districtParam}::text[]))`);
   where.push(`(sm.id is null or ${districtExpression("sm.district")} = any($${districtParam}::text[]))`);
   values.push(boundedLimit(filters.limit,300,1000));
-  return query<{sourceRecordId:number;primaryId:number|null;primaryName:string;primaryTier:number|null;middleId:number|null;middleName:string;middleTier:number|null;district:string;area:string|null;mode:string|null;reviewStatus:string;catalogSchoolId:number|null}>(`
-    select e.id "sourceRecordId",sp.id "primaryId",e.raw->>'名称' "primaryName",nullif(e.raw->>'梯队','')::int "primaryTier",sm.id "middleId",e.raw->>'对口初中' "middleName",nullif(e.raw->>'初中梯队','')::int "middleTier",${displayDistrictExpression("e.district")} district,coalesce(e.raw->>'街道',e.raw->>'片区') area,e.raw->>'入学方式' mode,m.status "reviewStatus",sp.id "catalogSchoolId"
-    from ingest.extracted_records e
-    join public.entity_match_candidates m on m.source_record_id=e.id
-    left join public.schools sp on sp.id=m.public_school_id
+  return query<{primaryId:number|null;primaryName:string;primaryTier:number|null;middleId:number|null;middleName:string;middleTier:number|null;district:string;area:string|null;mode:string|null;reviewStatus:string|null;catalogSchoolId:number|null}>(`
+    select sp.id "primaryId",sp.name "primaryName",sp.source_tier "primaryTier",sm.id "middleId",
+      sp.feeder_middle_school "middleName",sm.source_tier "middleTier",
+      ${displayDistrictExpression("sp.district")} district,sp.area,sp.admission_mode mode,
+      NULL::text "reviewStatus",sp.id "catalogSchoolId"
+    from public.schools sp
     left join lateral (
-      select school.id,school.district from public.schools school
-      where school.district=replace(replace(e.district,'浦东新区','浦东'),'区','')
-        and school.name=e.raw->>'对口初中'
+      select school.id,school.district,school.source_tier from public.schools school
+      where school.district=${districtExpression("sp.district")}
+        and school.name=sp.feeder_middle_school
       order by (school.source_key is not null) desc,school.id
       limit 1
     ) sm on true
-    where e.record_type='school' and e.raw->>'sourceSchoolType'='primary' and ${where.join(" and ")}
-    order by e.district,nullif(e.raw->>'梯队','')::int nulls last,e.raw->>'名称'
+    where ${where.join(" and ")}
+    order by ${districtExpression("sp.district")},sp.source_tier nulls last,sp.name
     limit $${values.length}
   `,values);
 }
@@ -229,48 +230,14 @@ export async function getPolicies() {
   `, [PRODUCT_DISTRICTS]);
 }
 
-export type CrawlRunRow = {
-  id:number;sourceName:string;sourceKey:string;sourceKind:string;
-  fetchedAt:string;pageTitle:string;recordCount:number;stats:Record<string, unknown>|null;
-};
-export type SourceGroup = {
-  sourceKey:string;sourceName:string;sourceKind:string;
-  runCount:number;recordCount:number;latestAt:string;runs:CrawlRunRow[];
-};
-
 export async function getOpsSummary() {
-  const [overview,runRows,matches,conflicts,relationStatuses]=await Promise.all([
+  const [overview,matches,conflicts,relationStatuses]=await Promise.all([
     getFullOverview(),
-    query<CrawlRunRow>(`
-      select r.id,s.source_key "sourceKey",s.name "sourceName",s.source_kind "sourceKind",
-        r.fetched_at "fetchedAt",r.page_title "pageTitle",r.stats,
-        (select count(*)::int from ingest.extracted_records e where e.crawl_run_id=r.id) "recordCount"
-      from ingest.crawl_runs r join ingest.sources s on s.id=r.source_id
-      order by s.id,r.id desc`),
     query(`select status,count(*)::int from public.entity_match_candidates group by status order by status`),
     query(`select field_name "fieldName",status,count(*)::int from public.field_conflicts group by field_name,status order by field_name,status`),
     query(`select review_status "status",count(*)::int from public.pending_school_communities group by review_status order by review_status`),
   ]);
-  // 按来源聚合（前端分组展示，避免 800 个 shgov run 平铺刷屏）
-  const groups = new Map<string, SourceGroup>();
-  for (const run of runRows) {
-    let g = groups.get(run.sourceKey);
-    if (!g) {
-      g = { sourceKey: run.sourceKey, sourceName: run.sourceName, sourceKind: run.sourceKind, runCount: 0, recordCount: 0, latestAt: run.fetchedAt, runs: [] };
-      groups.set(run.sourceKey, g);
-    }
-    g.runCount++;
-    g.recordCount += run.recordCount;
-    // runs 已按 id desc 排序，第一条即最新
-    if (run.fetchedAt > g.latestAt) g.latestAt = run.fetchedAt;
-    if (g.runs.length < 30) g.runs.push(run);
-  }
-  return {
-    overview,
-    sourceGroups: [...groups.values()].sort((a, b) => (a.latestAt < b.latestAt ? 1 : -1)),
-    totalRuns: runRows.length,
-    matches,conflicts,relationStatuses,
-  };
+  return { overview, matches, conflicts, relationStatuses };
 }
 
 // ── 质量队列：实体匹配候选（R3）──
