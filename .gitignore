@@ -47,7 +47,7 @@ next-env.d.ts
 /data/audit/
 /data/ingest/
 /data/migrations/
-/data/backups/*.dump
+/data/backups/**/*.dump
 /data/xhs/
 /data/baidu/
 /data/sogou/
