@@ -53,8 +53,8 @@ export async function getOverview() {
       (select count(*)::int from public.policy_documents p left join catalog.districts d on d.id=p.district_id left join public.schools s on s.id=p.public_school_id where coalesce(d.canonical_name,${districtExpression("s.district")}) = any($1::text[]) and (s.id is null or ${districtExpression("s.district")} = any($1::text[]))) policies,
       (select count(*)::int from catalog.entity_match_candidates c join public.schools s on s.id=c.public_school_id where c.status='pending' and ${districtExpression("s.district")} = any($1::text[])) pending_matches,
       (select count(*)::int from catalog.field_conflicts f join catalog.entity_match_candidates c on c.id=f.match_candidate_id join public.schools s on s.id=c.public_school_id where f.status='pending' and ${districtExpression("s.district")} = any($1::text[])) conflicts,
-      (select count(*)::int from catalog.relations r where r.review_status='pending' and ${districtExpression("r.district")} = any($1::text[])) pending_relations,
-      (select count(*)::int from catalog.relations r where r.school_id is not null and r.catalog_community_id is not null and ${districtExpression("r.district")} = any($1::text[])) matched_relations
+      (select count(*)::int from catalog.school_communities r where r.review_status='pending' and ${districtExpression("r.district")} = any($1::text[])) pending_relations,
+      (select count(*)::int from catalog.school_communities r where r.school_id is not null and r.community_id is not null and ${districtExpression("r.district")} = any($1::text[])) matched_relations
   `, [PRODUCT_DISTRICTS]);
   return rows[0];
 }
@@ -68,8 +68,8 @@ async function getFullOverview() {
       (select count(*)::int from public.policy_documents) policies,
       (select count(*)::int from catalog.entity_match_candidates where status='pending') pending_matches,
       (select count(*)::int from catalog.field_conflicts where status='pending') conflicts,
-      (select count(*)::int from catalog.relations where review_status='pending') pending_relations,
-      (select count(*)::int from catalog.relations where school_id is not null and catalog_community_id is not null) matched_relations
+      (select count(*)::int from catalog.school_communities where review_status='pending') pending_relations,
+      (select count(*)::int from catalog.school_communities where school_id is not null and community_id is not null) matched_relations
   `);
   return rows[0];
 }
@@ -92,7 +92,7 @@ export async function getSchools(filters: {district?:string;type?:string;tier?:s
       s.source_tier tier,s.tier "tierLabel",s.address,s.lat,s.lng,s.area,s.street,s.feeder_middle_school "feederMiddleSchool",
       s.middle_school_tier "middleSchoolTier",s.evaluation,s.admission_mode "admissionMode",s.class_count "classCount",
       coalesce(s.tags,'[]'::jsonb) tags,s.source_name "sourceName",s.source_url "sourceUrl",s.source_year "sourceYear",
-      (select count(*)::int from catalog.relations r where r.school_id=s.id and ${districtExpression("r.district")} = any($1::text[])) "relationCount",
+      (select count(*)::int from public.school_communities a where a.school_id=s.id) "relationCount",
       (select count(*)::int from public.school_communities a where a.school_id=s.id) "communityCount",
       (select count(*)::int from public.policy_documents p left join catalog.districts d on d.id=p.district_id where p.public_school_id=s.id and (d.canonical_name is null or d.canonical_name = ${districtExpression("s.district")})) "policyCount"
     from public.schools s
@@ -109,7 +109,7 @@ export async function getSchoolById(id:number){
     s.source_tier tier,s.tier "tierLabel",s.address,s.lat,s.lng,s.area,s.street,s.feeder_middle_school "feederMiddleSchool",
     s.middle_school_tier "middleSchoolTier",s.evaluation,s.admission_mode "admissionMode",s.class_count "classCount",
     coalesce(s.tags,'[]'::jsonb) tags,s.source_name "sourceName",s.source_url "sourceUrl",s.source_year "sourceYear",
-    (select count(*)::int from catalog.relations r where r.school_id=s.id and ${districtExpression("r.district")} = any($2::text[])) "relationCount",
+    (select count(*)::int from public.school_communities a where a.school_id=s.id) "relationCount",
     (select count(*)::int from public.school_communities a where a.school_id=s.id) "communityCount",
     (select count(*)::int from public.policy_documents p left join catalog.districts d on d.id=p.district_id where p.public_school_id=s.id and (d.canonical_name is null or d.canonical_name = ${districtExpression("s.district")})) "policyCount"
   from public.schools s where s.id=$1 and ${districtExpression("s.district")} = any($2::text[])`,[id,PRODUCT_DISTRICTS]);return rows[0]??null
@@ -120,7 +120,7 @@ export async function getSchoolDistrictSummary(){return query<{district:string;a
     (array_agg(s.attrs->>'districtAdmissionSystem') filter(where s.attrs->>'districtAdmissionSystem' is not null))[1] "admissionSystem",
     count(*)::int "schoolCount",count(*) filter(where s.type='primary')::int "primaryCount",
     count(*) filter(where s.type='middle')::int "middleCount",count(*) filter(where s.source_tier=1)::int "tierOneCount",
-    (select count(*)::int from catalog.relations r where r.school_id in (select x.id from public.schools x where ${districtExpression("x.district")} = ${districtExpression("s.district")}) and ${districtExpression("r.district")} = any($1::text[])) "relationCount",
+    (select count(*)::int from public.school_communities a where a.school_id in (select x.id from public.schools x where ${districtExpression("x.district")} = ${districtExpression("s.district")})) "relationCount",
     count(*) filter(where s.lng is not null and s.lat is not null)::int "coordinateCount"
   from public.schools s where ${districtExpression("s.district")} = any($1::text[]) group by s.district order by s.district`,[PRODUCT_DISTRICTS])}
 
@@ -137,19 +137,19 @@ export async function getSchoolDistrictRelations(filters:{district?:string;area?
   where.push(`(school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[])))`);
   if(filters.area)add("coalesce(street,area)=?",filters.area);
   if(filters.schoolName)add("school_name=?",filters.schoolName);
-  if(filters.schoolType)add("school_type=?",filters.schoolType);
-  if(filters.q){values.push(filters.q);where.push(`(school_name ilike '%'||$${values.length}||'%' or committee_name ilike '%'||$${values.length}||'%' or coalesce(street,area,'') ilike '%'||$${values.length}||'%')`)}
+  if(filters.schoolType){values.push(filters.schoolType);where.push(`notes like '%school_type=' || $${values.length} || '%'`)}
+  if(filters.q){values.push(filters.q);where.push(`(school_name_raw ilike '%'||$${values.length}||'%' or committee_name ilike '%'||$${values.length}||'%' or coalesce(notes,'') ilike '%'||$${values.length}||'%')`)}
   values.push(boundedLimit(filters.limit,500,5000));
   return query<SchoolDistrictRelation>(`
-    select id,${displayDistrictExpression("district")} district,school_name "schoolName",school_type "schoolType",committee_name "committeeName",
-      area,street,school_id "schoolId",catalog_school_id "catalogSchoolId",catalog_community_id "catalogCommunityId",
-      match_status "matchStatus",review_status "reviewStatus",verified,source_year "sourceYear",
+    select id,${displayDistrictExpression("district")} district,school_name_raw "schoolName",NULL::text "schoolType",committee_name "committeeName",
+      NULL::text area,NULL::text street,school_id "schoolId",NULL::int "catalogSchoolId",community_id "catalogCommunityId",
+      NULL::text "matchStatus",review_status "reviewStatus",verified,year "sourceYear",
       source_name "sourceName",source_url "sourceUrl",
-      attrs->>'official_area_level' "officialAreaLevel",
-      CASE WHEN jsonb_typeof(attrs->'residential_poi')='boolean' THEN (attrs->>'residential_poi')::boolean ELSE NULL END "residentialPoi"
-    from catalog.relations
+      NULL::text "officialAreaLevel",
+      NULL::boolean "residentialPoi"
+    from catalog.school_communities
     ${where.length?`where ${where.join(" and ")}`:""}
-    order by district,coalesce(street,area),school_name,committee_name
+    order by district,committee_name,school_name_raw
     limit $${values.length}
   `,values);
 }
@@ -160,10 +160,10 @@ export async function getSchoolRelationsByName(district: string, schoolName: str
 
 export async function getSchoolDistrictRelationFacets() {
   const [areas,summary]=await Promise.all([
-    query<{district:string;area:string}>(`select distinct ${displayDistrictExpression("district")} district,coalesce(street,area) area from catalog.relations where ${districtExpression("district")} = any($1::text[]) and (school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[]))) and coalesce(street,area) is not null order by district,area`,[PRODUCT_DISTRICTS]),
-    query<{total:number;districts:number;schools:number;committees:number;matched:number;officialAreas:number;sourceRelations:number}>(`select count(*)::int total,count(distinct ${districtExpression("district")})::int districts,count(distinct (${districtExpression("district")},school_name))::int schools,count(distinct (${districtExpression("district")},committee_name))::int committees,count(*) filter(where school_id is not null and catalog_community_id is not null)::int matched,count(*) filter(where attrs->>'official_area_level'='administrative_or_enrollment_area')::int "officialAreas",count(*) filter(where attrs->>'official_area_level' is null)::int "sourceRelations" from catalog.relations where ${districtExpression("district")} = any($1::text[]) and (school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[])))`,[PRODUCT_DISTRICTS]),
+    query<{district:string;area:string}>(`select distinct ${displayDistrictExpression("district")} district,'' area from catalog.school_communities where ${districtExpression("district")} = any($1::text[]) and (school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[]))) and false order by district,area`,[PRODUCT_DISTRICTS]),
+    query<{total:number;districts:number;schools:number;committees:number;matched:number;officialAreas:number;sourceRelations:number}>(`select count(*)::int total,count(distinct ${districtExpression("district")})::int districts,count(distinct (${districtExpression("district")},school_name_raw))::int schools,count(distinct (${districtExpression("district")},committee_name))::int committees,count(*) filter(where school_id is not null and community_id is not null)::int matched,count(*) filter(where source_name='official')::int "officialAreas",count(*) filter(where source_name<>'official')::int "sourceRelations" from catalog.school_communities where ${districtExpression("district")} = any($1::text[]) and (school_id is null or exists (select 1 from public.schools linked where linked.id=school_id and ${districtExpression("linked.district")} = any($1::text[])))`,[PRODUCT_DISTRICTS]),
   ]);
-  return {districts:PRODUCT_DISTRICTS.map((district) => displayProductDistrict(district)),areas,summary:summary[0]};
+  return {districts:PRODUCT_DISTRICTS.map((district) => displayProductDistrict(district)),areas:areas.map(a=>({district:a.district,area:a.area})),summary:summary[0]};
 }
 
 export async function getPathways(filters:{district?:string;limit?:number}={}) {
@@ -245,7 +245,7 @@ export async function getOpsSummary() {
       order by s.id,r.id desc`),
     query(`select status,count(*)::int from catalog.entity_match_candidates group by status order by status`),
     query(`select field_name "fieldName",status,count(*)::int from catalog.field_conflicts group by field_name,status order by field_name,status`),
-    query(`select review_status "status",count(*)::int from catalog.relations group by review_status order by review_status`),
+    query(`select review_status "status",count(*)::int from catalog.school_communities group by review_status order by review_status`),
   ]);
   // 按来源聚合（前端分组展示，避免 800 个 shgov run 平铺刷屏）
   const groups = new Map<string, SourceGroup>();
@@ -391,17 +391,17 @@ export async function getRelationReviewCandidates(filters:{status?:string;distri
     catalogCommunityId:number|null;catalogCommunityName:string|null;catalogCommitteeName:string|null;totalCount:number;
   };
   const rows=await query<RelationReviewCandidate>(`
-    select r.id,r.district,r.school_name "schoolName",r.committee_name "committeeName",r.area,r.street,
-      r.school_match_score::float "schoolMatchScore",r.attrs->>'communityMatchMethod' "communityMatchMethod",
-      r.community_match_score::float "communityMatchScore",r.review_status "reviewStatus",
+    select r.id,r.district,r.school_name_raw "schoolName",r.committee_name "committeeName",NULL::text area,NULL::text street,
+      NULL::float "schoolMatchScore",NULL::text "communityMatchMethod",
+      NULL::float "communityMatchScore",r.review_status "reviewStatus",
       r.school_id "catalogSchoolId",s.name "catalogSchoolName",
-      r.catalog_community_id "catalogCommunityId",c.name "catalogCommunityName",c.committee_name "catalogCommitteeName",
+      r.community_id "catalogCommunityId",c.name "catalogCommunityName",NULL::text "catalogCommitteeName",
       count(*) over()::int "totalCount"
-    from catalog.relations r
+    from catalog.school_communities r
     left join public.schools s on s.id=r.school_id
-    left join catalog.communities c on c.id=r.catalog_community_id
+    left join public.communities c on c.id=r.community_id
     ${where.length?`where ${where.join(" and ")}`:""}
-    order by (r.school_id is not null and r.catalog_community_id is not null) desc,r.district,r.school_name,r.committee_name
+    order by (r.school_id is not null and r.community_id is not null) desc,r.district,r.school_name_raw,r.committee_name
     limit $${limitParam} offset $${offsetParam}
   `,values);
   return { relations: rows, total: rows[0]?.totalCount ?? 0, page, pageSize };
@@ -412,23 +412,20 @@ export async function reviewRelationCandidate(id:number,action:"accept"|"reject"
   const client = await pool.connect();
   try {
     await client.query("begin");
-    const {rows}=await client.query(`select * from catalog.relations where id=$1 for update`,[id]);
+    const {rows}=await client.query(`select * from catalog.school_communities where id=$1 for update`,[id]);
     const current=rows[0];
     if(!current){await client.query("rollback");return null}
     if(current.review_status!=="pending") throw new Error("candidate was already reviewed");
-    if(action==="accept" && (!current.school_id || !current.catalog_community_id)) {
+    if(action==="accept" && (!current.school_id || !current.community_id)) {
       throw new Error("accept requires both school and community matches");
     }
-    // relations 表无 resolution_note/reviewed_at 列，审计信息并入 attrs（与 B7 回填的 attrs.reviewedAt 一致）
+    // 新表无 attrs 列，审计信息追加进 notes（reviewedAt 每次更新、resolutionNote 有值时追加）
     const {rows:updated}=await client.query(
-      `update catalog.relations
+      `update catalog.school_communities
        set review_status=$2,
-           attrs = attrs || jsonb_build_object(
-             'resolutionNote', coalesce($3, attrs->>'resolutionNote'),
-             'reviewedAt', now()
-           )
+           notes = concat_ws('; ', notes, 'reviewedAt=' || now()::text, nullif('resolutionNote=' || $3, 'resolutionNote='))
        where id=$1
-       returning id,review_status "reviewStatus",attrs->>'resolutionNote' "resolutionNote",attrs->>'reviewedAt' "reviewedAt"`,
+       returning id,review_status "reviewStatus",NULL::text "resolutionNote",NULL::text "reviewedAt"`,
       [id,action==="accept"?"accepted":"rejected",note??null],
     );
     await client.query("commit");

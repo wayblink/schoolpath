@@ -147,7 +147,10 @@ function schoolFields(plan: XuequzhushouImportPlan, occurrence: SchoolOccurrence
 }
 
 function relationIdentity(row: Record<string, unknown>) {
-  return JSON.stringify([normalizeDistrict(String(row.district)), row.school_type ?? "primary", row.school_name, row.committee_name]);
+  // 新表无 school_type/school_name 列（school_name_raw + notes.school_type），构造对象仍传原字段名——双源兼容
+  const stage = row.school_type ?? String(row.notes ?? "").match(/school_type=([^;]*)/)?.[1] ?? "primary";
+  const schoolName = row.school_name_raw ?? row.school_name;
+  return JSON.stringify([normalizeDistrict(String(row.district)), stage, schoolName, row.committee_name]);
 }
 
 async function canonicalDigest(client: ImportClient) {
@@ -181,13 +184,13 @@ export async function importXuequzhushou(
       await client.query("select pg_advisory_xact_lock(hashtext('xuequzhushou-full-import'))");
       // Prevent concurrent editors from making the canonical digest inconclusive.
       await client.query("LOCK TABLE public.schools IN SHARE MODE");
-      await client.query("LOCK TABLE catalog.source_schools,catalog.relations IN SHARE ROW EXCLUSIVE MODE");
+      await client.query("LOCK TABLE catalog.source_schools,catalog.school_communities IN SHARE ROW EXCLUSIVE MODE");
     }
     report.canonicalBefore = await canonicalDigest(client);
     const publicSchools = (await client.query("select id,name,district,type,aliases from public.schools")).rows as PublicSchool[];
     const sourceSchools = (await client.query("select * from catalog.source_schools")).rows;
     const existingSchools = new Map(sourceSchools.map(row => [String(row.source_key), row]));
-    const existingRelations = (await client.query("select * from catalog.relations where source_name=$1", [SOURCE_NAME])).rows;
+    const existingRelations = (await client.query("select * from catalog.school_communities where source_name=$1", [SOURCE_NAME])).rows;
     const relationKeys = new Map(existingRelations.map(row => [relationIdentity(row), row]));
     const runResult = await client.query(`select r.id from ingest.crawl_runs r join ingest.sources s on s.id=r.source_id
       where s.source_key='xuequzhushou' and r.content_hash=$1`, [plan.parsed.contentHash]);
@@ -311,16 +314,17 @@ export async function importXuequzhushou(
       if (apply) {
         const recordId = rawIds.get(relation.recordKey);
         if (!recordId) throw new Error(`Raw reconciliation missing relation: ${relation.recordKey}`);
-        await client.query(`insert into catalog.relations(source_record_id,source_name,source_url,source_year,
-          district,school_name,school_type,committee_name,area,street,school_id,school_match_score,
-          community_match_score,match_status,review_status,verified,attrs)
-          values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,0,$13,'provisional',false,$14::jsonb)`,
+        await client.query(`insert into catalog.school_communities(source_record_id,source_name,source_url,year,
+          district,school_name_raw,committee_name,school_id,review_status,verified,notes)
+          values($1,$2,$3,$4,$5,$6,$7,$8,'pending',false,$9)`,
         [recordId, SOURCE_NAME, plan.parsed.sourceUrl, plan.sourceYear, occurrence.district,
-          occurrence.school.名称, occurrence.stage, relation.committee, stringValue(occurrence.school.片区),
-          stringValue(occurrence.school.街道), publicSchoolId, publicSchoolId == null ? 0 : 1,
-          publicSchoolId == null ? "raw" : "school_matched", JSON.stringify({ sourceKind: "third_party",
-            sourceRecordKey: relation.recordKey, sourceSchoolKey: occurrence.catalogKey, sourceContentHash: plan.parsed.contentHash,
-            relationLevel: "source_committee", rawSchool: occurrence.school })]);
+          occurrence.school.名称, relation.committee, publicSchoolId,
+          [
+            `match=${publicSchoolId == null ? "raw" : "school_matched"}`,
+            `area=${stringValue(occurrence.school.片区) ?? ""}`,
+            `street=${stringValue(occurrence.school.街道) ?? ""}`,
+            `school_type=${occurrence.stage}`,
+          ].join("; ")]);
       }
     }
 
@@ -345,7 +349,7 @@ export async function importXuequzhushou(
           if (!isDeepStrictEqual(object(actual.attrs)[key], value)) throw new Error(`Existing source school attrs changed: ${prior.source_key}:${key}`);
         }
       }
-      const afterRelations = (await client.query("select * from catalog.relations where source_name=$1", [SOURCE_NAME])).rows;
+      const afterRelations = (await client.query("select * from catalog.school_communities where source_name=$1", [SOURCE_NAME])).rows;
       if (afterRelations.length !== existingRelations.length + report.relations.added) throw new Error("Relation reconciliation count mismatch");
       const afterRelationsById = new Map(afterRelations.map(row => [String(row.id), row]));
       for (const prior of existingRelations) {
@@ -354,9 +358,9 @@ export async function importXuequzhushou(
       const afterRelationsByRecord = new Map(afterRelations.map(row => [String(row.source_record_id), row]));
       for (const relation of newRelations) {
         const actual = afterRelationsByRecord.get(rawIds.get(relation.recordKey)!);
-        if (!actual || actual.verified !== false || actual.review_status !== "provisional"
-          || actual.catalog_community_id != null || actual.school_id !== schoolIds.get(relation.school.recordKey)
-          || actual.committee_name !== relation.committee || actual.source_year !== plan.sourceYear) {
+        if (!actual || actual.verified !== false || actual.review_status !== "pending"
+          || actual.community_id != null || actual.school_id !== schoolIds.get(relation.school.recordKey)
+          || actual.committee_name !== relation.committee || actual.year !== plan.sourceYear) {
           throw new Error(`Relation reconciliation mismatch: ${relation.recordKey}`);
         }
       }

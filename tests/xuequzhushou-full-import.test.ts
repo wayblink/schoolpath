@@ -115,7 +115,7 @@ function transactionDatabase() {
       { id: 10, name: "同名", district: "黄浦", type: "primary", aliases: [] },
     ]);
     if (sql === "select * from catalog.source_schools") return rows(state.schools);
-    if (sql.startsWith("select * from catalog.relations")) return rows(state.relations);
+    if (sql.startsWith("select * from catalog.school_communities")) return rows(state.relations);
     if (sql.startsWith("select r.id from ingest.crawl_runs")) return rows(state.run ? [{ id: "1" }] : []);
     if (sql.startsWith("select record_type")) {
       const raw = state.raw.map(({ recordType, sourceKey, district, raw }) => ({ recordType, sourceKey, district, raw }));
@@ -148,11 +148,12 @@ function transactionDatabase() {
     if (sql.startsWith("select id,source_key from ingest.extracted_records")) {
       return rows(state.raw.filter(row => row.recordType === "committee_link").map(row => ({ id: row.id, source_key: row.sourceKey })));
     }
-    if (sql.startsWith("insert into catalog.relations")) {
-      const columns = ["source_record_id", "source_name", "source_url", "source_year", "district", "school_name", "school_type",
-        "committee_name", "area", "street", "school_id", "school_match_score", "match_status", "attrs"];
-      state.relations.push({ id: String(state.relations.length + 1), verified: false, review_status: "provisional", catalog_community_id: null,
-        ...Object.fromEntries(columns.map((column, i) => [column, column === "attrs" ? JSON.parse(String(values[i])) : values[i]])) });
+    if (sql.startsWith("insert into catalog.school_communities")) {
+      // SQL 里 review_status='pending'/verified=false 为字面量，values 仅 $1-$8 + $9(notes) 共 9 个
+      const columns = ["source_record_id", "source_name", "source_url", "year", "district", "school_name_raw",
+        "committee_name", "school_id", "notes"];
+      state.relations.push({ id: String(state.relations.length + 1), verified: false, review_status: "pending", community_id: null,
+        ...Object.fromEntries(columns.map((column, i) => [column, values[i]])) });
       return rows([]);
     }
     throw new Error(`Unexpected SQL in test: ${sql}`);
@@ -186,9 +187,9 @@ test("apply in transaction double preserves duplicates, maps exact identities an
   assert.equal(db.state().schools[0].public_school_id, 10);
   assert.equal(db.state().schools[1].public_school_id, 10);
   assert.equal(db.state().schools[2].public_school_id, null);
-  assert.equal(db.state().relations[0].review_status, "provisional");
+  assert.equal(db.state().relations[0].review_status, "pending");
   assert.equal(db.state().relations[0].verified, false);
-  assert.equal(db.state().relations[0].catalog_community_id, null);
+  assert.equal(db.state().relations[0].community_id, null);
   const before = structuredClone(db.state());
   const second = await importXuequzhushou(db.client, plan, { apply: true });
   assert.equal(second.records.added, 0);
@@ -230,7 +231,7 @@ test("late raw reconciliation failure rolls back every inserted row", async () =
   db.corruptRaw();
   const before = structuredClone(db.state());
   await assert.rejects(importXuequzhushou(db.client, buildXuequzhushouImport(fixture()), { apply: true }), /reconciliation/);
-  assert.ok(db.statements.some(sql => sql.startsWith("insert into catalog.relations")));
+  assert.ok(db.statements.some(sql => sql.startsWith("insert into catalog.school_communities")));
   assert.deepEqual(db.state(), before);
   assert.equal(db.statements.at(-1), "ROLLBACK");
   assert.ok(!db.statements.includes("COMMIT"));

@@ -31,7 +31,7 @@ export async function GET(request: Request) {
   const years = parseYears(url.searchParams.get("years"));
 
   const exists = await db.execute<{ table_name: string | null }>(
-    sql`SELECT to_regclass('catalog.official_enrollment_areas') AS table_name`,
+    sql`SELECT to_regclass('catalog.school_communities') AS table_name`,
   );
   if (!exists.rows[0]?.table_name) {
     return NextResponse.json({
@@ -50,14 +50,15 @@ export async function GET(request: Request) {
     SELECT
       year,
       district,
-      status,
+      review_status AS status,
       confidence,
       count(*)::int AS count,
       count(DISTINCT school_id) FILTER (WHERE school_id IS NOT NULL)::int AS matched_schools
-    FROM catalog.official_enrollment_areas
+    FROM catalog.school_communities
     WHERE year IN (${sql.join(years.map((year) => sql`${year}`), sql`, `)})
-    GROUP BY year, district, status, confidence
-    ORDER BY year DESC, district, status, confidence
+      AND source_name = 'official'
+    GROUP BY year, district, review_status, confidence
+    ORDER BY year DESC, district, review_status, confidence
   `);
 
   const summaries = result.rows.map((row) => ({

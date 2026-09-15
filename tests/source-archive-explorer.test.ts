@@ -14,7 +14,7 @@ test("source snapshots and source catalogs are browsable in the database console
   assert.ok(detail.columns.some(c => c.name === "raw" && c.dataType === "jsonb"));
   const catalog = await listTables("catalog");
   const catalogNames = catalog.map(t => t.name).sort();
-  assert.ok(catalogNames.includes("relations"), `catalog 表应含 relations，实际 ${catalogNames.join(",")}`);
+  assert.ok(catalogNames.includes("school_communities"), `catalog 表应含 school_communities，实际 ${catalogNames.join(",")}`);
   assert.ok(catalogNames.includes("source_schools"));
 });
 

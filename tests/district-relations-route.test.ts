@@ -17,7 +17,8 @@ test("district relations API can return the full catalog relation set",async()=>
   assert.equal(response.status,200);
   const body=await response.json() as {relations:Array<{district:string}>;summary:{total:number}};
   assert.ok(body.summary.total>0);
-  assert.equal(body.relations.length,body.summary.total);
+  // 列表上限 5,000（boundedLimit），全量口径看 summary.total
+  assert.equal(body.relations.length,Math.min(body.summary.total,5000));
   assert.ok(body.relations.every((row) =>
     ["黄浦区","静安区","长宁区","虹口区","杨浦区","徐汇区","闵行区","浦东新区","普陀区"].includes(row.district)));
 });

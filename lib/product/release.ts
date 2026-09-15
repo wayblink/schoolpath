@@ -1,4 +1,4 @@
-// 发布批次（R4）：Ops 管理员把 catalog.relations 中 accepted 的条目组成批次，
+// 发布批次（R4）：Ops 管理员把 catalog.school_communities 中 accepted 的条目组成批次，
 // 事务内 upsert 到 public.school_communities（幂等，靠唯一索引 uq_school_communities_pair），
 // 回写来源层 published_at/release_batch_id，catalog.release_batches 记账。
 // 状态机：draft → published → rolled_back。
@@ -31,7 +31,7 @@ export async function listReleaseBatches(): Promise<ReleaseBatchDetail[]> {
   try {
     const rows = await p.query<ReleaseBatchDetail & { entryCount: string }>(
       `select b.id,b.name,b.status,b.summary,b.created_at "createdAt",b.published_at "publishedAt",b.rolled_back_at "rolledBackAt",
-         (select count(*)::int from catalog.relations r where r.release_batch_id=b.id) "entryCount"
+         (select count(*)::int from catalog.school_communities r where r.release_batch_id=b.id) "entryCount"
        from catalog.release_batches b order by b.id desc limit 100`,
     );
     return rows.rows;
@@ -47,7 +47,7 @@ export async function createReleaseBatch(input: CreateBatchInput): Promise<Relea
   if (!input.name || !input.name.trim()) throw new Error("name is required");
   // where 片段同时用于 SELECT（带 r 别名）与 UPDATE（无别名）——别名由调用方提供
   const conditions = ["review_status='accepted'"];
-  if (!input.includeUnmatched) conditions.push("school_id is not null and catalog_community_id is not null");
+  if (!input.includeUnmatched) conditions.push("school_id is not null and community_id is not null");
   const values: unknown[] = [];
   if (input.district) {
     values.push(input.district);
@@ -66,7 +66,7 @@ export async function createReleaseBatch(input: CreateBatchInput): Promise<Relea
   const client = await p.connect();
   try {
     await client.query("begin");
-    const count = Number((await client.query(`select count(*) c from catalog.relations r where ${where}`, values)).rows[0].c);
+    const count = Number((await client.query(`select count(*) c from catalog.school_communities r where ${where}`, values)).rows[0].c);
     if (count === 0) throw new Error("no accepted relations match the filters");
     const filters: Record<string, unknown> = {};
     if (input.district) filters.district = input.district;
@@ -80,12 +80,12 @@ export async function createReleaseBatch(input: CreateBatchInput): Promise<Relea
     );
     const batchId = inserted.rows[0].id;
     await client.query(
-      `update catalog.relations set release_batch_id=$${values.length + 1} where ${where} and release_batch_id is null`,
+      `update catalog.school_communities set release_batch_id=$${values.length + 1} where ${where} and release_batch_id is null`,
       [...values, batchId],
     );
     const row = await client.query<ReleaseBatchDetail & { entryCount: string }>(
       `select id,name,status,summary,created_at "createdAt",published_at "publishedAt",rolled_back_at "rolledBackAt",
-         (select count(*)::int from catalog.relations r where r.release_batch_id=$1) "entryCount"
+         (select count(*)::int from catalog.school_communities r where r.release_batch_id=$1) "entryCount"
        from catalog.release_batches where id=$1`,
       [batchId],
     );
@@ -112,27 +112,24 @@ export async function publishReleaseBatch(id: number): Promise<ReleaseBatchDetai
     const batch = (await client.query<ReleaseBatch>(`select ${BATCH_COLUMNS} from catalog.release_batches where id=$1`, [id])).rows[0];
     if (!batch) throw new Error("batch not found");
     if (batch.status !== "draft") throw new Error(`batch is ${batch.status}, only draft can be published`);
-    const entries = await client.query<{ schoolId: number | null; catalogCommunityId: number | null; committeeName: string | null; sourceYear: number | null; sourceName: string; sourceUrl: string | null; id: number }>(
-      `select id,school_id "schoolId",catalog_community_id "catalogCommunityId",committee_name "committeeName",
+    const entries = await client.query<{ schoolId: number | null; communityId: number | null; committeeName: string | null; sourceYear: number | null; sourceName: string; sourceUrl: string | null; id: number }>(
+      `select id,school_id "schoolId",community_id "communityId",committee_name "committeeName",
          source_year "sourceYear",source_name "sourceName",source_url "sourceUrl"
-       from catalog.relations where release_batch_id=$1`,
+       from catalog.school_communities where release_batch_id=$1`,
       [id],
     );
-    const publishable = entries.rows.filter((r) => r.schoolId != null && r.catalogCommunityId != null);
+    const publishable = entries.rows.filter((r) => r.schoolId != null && r.communityId != null);
     const skipped = entries.rowCount! - publishable.length;
     let upserted = 0;
-    // id 空间映射：relations.school_id/catalog_community_id 是 public.schools.id / catalog.communities.id，
-    // 而 school_communities 的 community_id 是 public.communities.id——必须经 catalog.communities.legacy_id 转换
+    // 新表 community_id 直指 public.communities（迁移时已做 legacy_id 转换），发布无需 id 空间映射
     for (let offset = 0; offset < publishable.length; offset += 200) {
       const batchRows = publishable.slice(offset, offset + 200);
       const res = await client.query(
         `insert into public.school_communities(school_id,community_id,committee_name,year,source_name,source_url,source_date,verified,release_batch_id)
-         select r."schoolId",pc.id,r."committeeName",coalesce(r."sourceYear",2026),r."sourceName",r."sourceUrl",
+         select r."schoolId",r."communityId",r."committeeName",coalesce(r."sourceYear",2026),r."sourceName",r."sourceUrl",
            coalesce(r."sourceYear",2026)::text,false,$1
          from jsonb_to_recordset($2::jsonb)
-         as r("schoolId" int,"catalogCommunityId" int,"committeeName" text,"sourceYear" int,"sourceName" text,"sourceUrl" text)
-         join catalog.communities cc on cc.id=r."catalogCommunityId"
-         join public.communities pc on pc.id=cc.legacy_id
+         as r("schoolId" int,"communityId" int,"committeeName" text,"sourceYear" int,"sourceName" text,"sourceUrl" text)
          on conflict(school_id,community_id) do nothing`,
         [id, JSON.stringify(batchRows)],
       );
@@ -146,7 +143,7 @@ export async function publishReleaseBatch(id: number): Promise<ReleaseBatchDetai
        )
        select done.id,done.name,done.status,done.summary,done.created_at "createdAt",done.published_at "publishedAt",
          done.rolled_back_at "rolledBackAt",
-         (select count(*)::int from catalog.relations r where r.release_batch_id=done.id) "entryCount"
+         (select count(*)::int from catalog.school_communities r where r.release_batch_id=done.id) "entryCount"
        from done`,
       [id, upserted, skipped],
     );
@@ -175,12 +172,12 @@ export async function rollbackReleaseBatch(id: number): Promise<ReleaseBatchDeta
     if (batch.status !== "published") throw new Error(`batch is ${batch.status}, only published can be rolled back`);
     const removed = await client.query(`delete from public.school_communities where release_batch_id=$1`, [id]);
     // published_at 是 NOT NULL（建表 default now()），回滚不清空时间戳，只解除批次归属（可重新组成新批次）
-    await client.query(`update catalog.relations set release_batch_id=null where release_batch_id=$1`, [id]);
+    await client.query(`update catalog.school_communities set release_batch_id=null where release_batch_id=$1`, [id]);
     const updated = await client.query<ReleaseBatchDetail & { entryCount: string }>(
       `update catalog.release_batches set status='rolled_back',rolled_back_at=now(),
          summary = summary || jsonb_build_object('removedRows',$2::int)
        where id=$1 returning id,name,status,summary,created_at "createdAt",published_at "publishedAt",rolled_back_at "rolledBackAt",
-         (select count(*)::int from catalog.relations r where r.release_batch_id=catalog.release_batches.id) "entryCount"`,
+         (select count(*)::int from catalog.school_communities r where r.release_batch_id=catalog.release_batches.id) "entryCount"`,
       [id, removed.rowCount ?? 0],
     );
     await client.query("commit");

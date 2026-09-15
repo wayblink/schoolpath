@@ -1,4 +1,5 @@
 import {
+  bigint,
   boolean,
   doublePrecision,
   index,
@@ -151,25 +152,30 @@ export const schoolCommunities = pgTable(
   }),
 );
 
-// 官方对口地段原文（2026-09-14 迁移 B6 从 public.school_community_candidates 迁入 catalog；
-// 2026-09-14 由含义不明的 candidates 改名 official_enrollment_areas）。MapWorkspace 经 /api/school-community-candidates 消费。
-export const officialEnrollmentAreas = catalogSchema.table("official_enrollment_areas", {
+// catalog.school_communities：待审的学校-地点关系总表，与 public.school_communities 同构（共享列同名同义），
+// 以 source_name 区分来源（official=官方公示系 / 学区助手 / 未来来源）。2026-09-15 收敛自
+// catalog.official_enrollment_areas（原 candidates，23,070 行）与 catalog.relations 学区助手系（2,764 行）；
+// school_id/community_id 均指向 public 空间（迁移时 relations.catalog_community_id 已做 legacy_id 转换）。
+// MapWorkspace 经 /api/school-community-candidates 读 official 系聚合，ops 的 CandidateReview 经
+// /api/v2/ops/relations 读全表审核，发布批次（release.ts）读 accepted 行组成批次。
+export const catalogSchoolCommunities = catalogSchema.table("school_communities", {
   id: serial("id").primaryKey(),
   schoolId: integer("school_id").references(() => schools.id),
-  schoolNameRaw: text("school_name_raw").notNull(),
-  district: text("district").notNull(),
-  year: integer("year").notNull(),
+  schoolNameRaw: text("school_name_raw"),
+  district: text("district"),
   communityId: integer("community_id").references(() => communities.id),
-  communityNameRaw: text("community_name_raw").notNull(),
-  committeeNameRaw: text("committee_name_raw"),
+  committeeName: text("committee_name"),
+  year: integer("year"),
+  sourceName: text("source_name").notNull(),
+  sourceRecordId: bigint("source_record_id", { mode: "number" }),
   sourceUrl: text("source_url"),
-  sourceTitle: text("source_title").notNull(),
+  sourceQuote: text("source_quote"),
   sourceDate: text("source_date"),
-  sourceQuote: text("source_quote").notNull(),
-  confidence: text("confidence").notNull().default("medium"),
-  status: text("status").notNull().default("pending"),
-  reviewNotes: text("review_notes"),
-  raw: jsonb("raw").$type<Record<string, unknown>>(),
+  confidence: text("confidence"),
+  reviewStatus: text("review_status").notNull().default("pending"),
+  verified: boolean("verified").notNull().default(false),
+  notes: text("notes"),
+  releaseBatchId: bigint("release_batch_id", { mode: "number" }),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
 });
@@ -242,8 +248,8 @@ export const webDataSource = pgTable(
 
 export type Community = typeof communities.$inferSelect;
 export type SchoolCommunity = typeof schoolCommunities.$inferSelect;
-export type OfficialEnrollmentArea = typeof officialEnrollmentAreas.$inferSelect;
-export type NewOfficialEnrollmentArea = typeof officialEnrollmentAreas.$inferInsert;
+export type CatalogSchoolCommunity = typeof catalogSchoolCommunities.$inferSelect;
+export type NewCatalogSchoolCommunity = typeof catalogSchoolCommunities.$inferInsert;
 export type CommunityPriceSnapshot = typeof communityPriceSnapshots.$inferSelect;
 export type CommunityPriceSource = typeof communityPriceSources.$inferSelect;
 export type WebDataSource = typeof webDataSource.$inferSelect;
