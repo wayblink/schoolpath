@@ -17,9 +17,6 @@ export async function getPipelineStats() {
     pendingConflicts: number;
     acceptedRelations: number;
     provisionalRelations: number;
-    unreleasedRelations: number;
-    batches: number;
-    publishedBatches: number;
     productRows: number;
   }>(`
     select
@@ -28,9 +25,6 @@ export async function getPipelineStats() {
       (select count(*)::int from public.field_conflicts where status='pending') "pendingConflicts",
       (select count(*)::int from public.pending_school_communities where review_status='accepted') "acceptedRelations",
       (select count(*)::int from public.pending_school_communities where review_status='pending') "provisionalRelations",
-      (select count(*)::int from public.pending_school_communities where review_status='accepted' and release_batch_id is null) "unreleasedRelations",
-      (select count(*)::int from public.release_batches) batches,
-      (select count(*)::int from public.release_batches where status='published') "publishedBatches",
       (select count(*)::int from public.school_communities) "productRows"
   `);
   const d = rows[0];
@@ -58,16 +52,6 @@ export async function getPipelineStats() {
       count: d.acceptedRelations + d.provisionalRelations,
       status: "ok",
       hint: `${d.acceptedRelations} 已接受 · ${d.provisionalRelations} 待审核`,
-    },
-    {
-      key: "publish",
-      label: "发布",
-      count: d.batches,
-      status: d.unreleasedRelations > 0 && d.batches === 0 ? "broken" : d.unreleasedRelations > 0 ? "pending" : "ok",
-      hint:
-        d.batches === 0
-          ? `${d.unreleasedRelations} 条已审核关系等待发布（尚未创建任何批次）`
-          : `${d.batches} 个批次（${d.publishedBatches} 已发布） · ${d.unreleasedRelations} 条待发布`,
     },
     {
       key: "visible",

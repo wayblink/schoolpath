@@ -130,7 +130,7 @@ export const schoolCommunities = pgTable(
 // （共享列同名同义），以 source_name 区分来源。2026-09-15 由 catalog 收敛迁入 public
 // （catalog schema 已 DROP；源自 candidates 23,070 行 + relations 学区助手系 2,764 行；
 // pending 9,027 行经用户决策放弃）。MapWorkspace 经 /api/school-community-candidates 读 official 系
-// 聚合，ops 的 CandidateReview 经 /api/v2/ops/relations 读全表审核，发布批次（release.ts）读 accepted 行。
+// 聚合，ops 的 CandidateReview 经 /api/v2/ops/relations 读全表审核。
 export const pendingSchoolCommunities = pgTable("pending_school_communities", {
   id: serial("id").primaryKey(),
   schoolId: integer("school_id").references(() => schools.id),
@@ -148,7 +148,6 @@ export const pendingSchoolCommunities = pgTable("pending_school_communities", {
   reviewStatus: text("review_status").notNull().default("pending"),
   verified: boolean("verified").notNull().default(false),
   notes: text("notes"),
-  releaseBatchId: bigint("release_batch_id", { mode: "number" }),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow(),
 });

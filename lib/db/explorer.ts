@@ -112,7 +112,6 @@ const BROWSABLE_RELATIONS = new Map<string, Set<string>>([
       "districts",
       "entity_match_candidates",
       "field_conflicts",
-      "release_batches",
     ]),
   ],
 ]);
