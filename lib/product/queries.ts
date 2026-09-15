@@ -65,7 +65,7 @@ async function getFullOverview() {
       (select count(*)::int from public.school_communities) assignments,
       (select count(*)::int from public.policy_documents) policies,
       (select count(*)::int from public.entity_match_candidates where status='pending') pending_matches,
-      (select count(*)::int from public.field_conflicts where status='pending') conflicts,
+      (select count(*)::int from public.field_conflicts where status='pending') conflicts
   `);
   return rows[0];
 }
