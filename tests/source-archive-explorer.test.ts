@@ -7,16 +7,15 @@ const explorer = import("../lib/db/explorer");
 after(async () => { const { pool } = await import("../lib/db/client"); await pool.end(); });
 
 test("source snapshots and source catalogs are browsable in the database console", async () => {
-  const { listTables, getTableDetail } = await explorer;
-  const tables = await listTables("ingest");
-  assert.deepEqual(tables.map(t => t.name).sort(), ["crawl_runs", "extracted_records", "sources"]);
-  const detail = await getTableDetail("ingest", "extracted_records");
-  assert.ok(detail.columns.some(c => c.name === "raw" && c.dataType === "jsonb"));
-  const catalog = await listTables("catalog");
-  assert.deepEqual(catalog.map(t => t.name).sort(), ["school_district_relations", "source_schools"]);
+  const { listTables } = await explorer;
+  const publicTables = (await listTables("public")).map(t => t.name);
+  assert.ok(publicTables.includes("school_communities"), `public 表应含 school_communities，实际 ${publicTables.join(",")}`);
+
 });
 
-test("source archives cannot be accidentally edited through generic row controls", async () => {
-  const { insertRow } = await explorer;
-  await assert.rejects(insertRow("ingest", "extracted_records", {}), /来源审计表/);
+test("removed ingest schema is no longer browsable or writable through generic row controls", async () => {
+  const { listTables, insertRow } = await explorer;
+  // ingest schema 已于 2026-09-15 删除：既不可浏览也不在白名单（比原来的审计表保护更强）
+  assert.deepEqual(await listTables("ingest"), []);
+  await assert.rejects(insertRow("ingest", "extracted_records", {}), /whitelist/);
 });

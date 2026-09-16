@@ -4,13 +4,7 @@
   "private": true,
   "scripts": {
     "test": "node --import tsx --test tests/**/*.test.ts",
-    "ingest:xuequzhushou": "tsx scripts/ingest-xuequzhushou.ts",
     "data:optimize:xuequzhushou": "tsx scripts/optimize-xuequzhushou.ts",
-    "data:collect:xuequzhushou": "tsx scripts/collect-xuequzhushou-site.ts",
-    "data:collect:shgov-search": "tsx scripts/collect-shgov-search.ts",
-    "data:import:shgov-search": "tsx scripts/import-shgov-search.ts",
-    "data:import:xuequzhushou-site": "tsx scripts/import-xuequzhushou-site.ts",
-    "data:import:xuequzhushou-homepage": "tsx scripts/import-xuequzhushou-full.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

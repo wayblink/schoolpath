@@ -7,7 +7,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { parseXuequzhushouHtml, type ParsedXuequzhushou, type SourceDistrict } from "../lib/ingest/xuequzhushou";
+import { parseXuequzhushouHtml, type ParsedXuequzhushou, type SourceDistrict } from "../lib/import/xuequzhushou";
 
 const SOURCE_URL = "https://xuequzhushou.cn/";
 const ALLOWED_DISTRICTS = new Set(["黄浦区", "静安区", "长宁区", "虹口区", "杨浦区", "徐汇区", "闵行区", "浦东新区", "普陀区"]);

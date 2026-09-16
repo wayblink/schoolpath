@@ -26,20 +26,3 @@ test("schools list keeps canonical detail and map links", () => {
   assert.doesNotMatch(source, /Promise\.all\(\[fetch\("\/api\/v2\/schools/);
 });
 
-test("schools page distinguishes relation kinds and requests the complete relation set", () => {
-  const source = readFileSync("components/product/XuequReplica.tsx", "utf8");
-  assert.match(source, /官方招生区域/);
-  assert.match(source, /住宅小区关系/);
-  assert.match(source, /来源收录关系/);
-  assert.doesNotMatch(source, /居委关系/);
-  assert.doesNotMatch(source, /对口居委/);
-  assert.match(source, /district-relations\?limit=5000/);
-});
-
-test("school detail uses the same relation vocabulary", () => {
-  const source = readFileSync("app/schools/[id]/page.tsx", "utf8");
-  assert.match(source, /官方招生区域（待核验）/);
-  assert.match(source, /住宅小区关系/);
-  assert.match(source, /来源收录关系/);
-  assert.doesNotMatch(source, /居委关系/);
-});

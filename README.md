@@ -1,128 +1,194 @@
-# 上海学区房数据工作台
+# schoolpath · 上海学区决策助手
 
-把分散在市教委 / 各区教育局 / 各学校通告 / 链家 / 小红书的学区信息合并成一张可联动的视图。
+把分散在市教委、各区教育局与学校通告的学区信息合并成可联动的查询视图：学校梯队与详情、小学→初中的结构化升学路径、小区对口关系、区级政策公示与学区地图。
 
-**当前状态**: 九区产品版本。新版产品页面和 `/api/v2/*` 只展示黄浦、静安、长宁、虹口、杨浦、徐汇、闵行、浦东、普陀；当前 PostgreSQL 数据库是唯一运行数据版本，数据库快照保存在 `data/backups/current-schoolpath-20260911/`。学校、关系和政策仍按来源和审核状态持续补充，不能替代正式招生文件。
+**当前状态**：单数据库产品版本。PostgreSQL 是唯一运行数据版本，全部业务表位于 `public` schema（共 10 张）。数据由外部采集项目通过固定接口直灌，人工维护在 `/ops` 数据控制台完成，无审核层、无发布层。
 
 ## 产品范围
 
-产品查询层使用 canonical 区名：`黄浦`、`静安`、`长宁`、`虹口`、`杨浦`、`徐汇`、`闵行`、`浦东`、`普陀`。输入 `浦东新区`、带或不带“区”的名称会规范化，展示时使用“浦东新区”和其他“*区”形式。九区外的学校详情 ID 也会按未找到处理，不会通过详情链接绕过列表边界。
+产品层固定覆盖九个区：`黄浦`、`静安`、`长宁`、`虹口`、`杨浦`、`徐汇`、`闵行`、`浦东`、`普陀`。输入 `浦东新区`、带或不带"区"的名称会规范化；九区外的学校按未找到处理。区域范围由 `lib/product/districts.ts` 的常量统一控制，新增区域需先改常量、测试与本文档。
 
-数据库只按当前版本运行，不再保留旧版兼容页面、SQLite 回迁和历史迁移工具。
+## 架构与数据流
+
+```
+外部采集项目（闭源，可独立演进）
+        │ POST /api/ingest/records（x-ingest-token 鉴权）
+        ▼
+public.school_communities（幂等直灌，ON CONFLICT DO NOTHING）
+        │
+        ▼
+产品查询页（/schools · /pathways · /map · /sources）   ←  lib/product/queries.ts
+        ▲
+        │
+ops 数据控制台（/ops：10 张表查看/新增/编辑/删除）       ←  lib/db/crud.ts
+```
+
+设计要点：
+
+- **采集外部化**：爬取、解析、实体匹配在外部项目完成，本仓库只提供受鉴权的固定写入契约，采集能力不作为开源承诺
+- **无审核层无发布层**：导入即线上；幂等由 `uq_school_communities_pair(school_id, community_id)` 唯一索引保证；审计靠 `source_name / source_url / source_quote / source_date` 字段可追溯
+- **人工补录**：`/ops` 控制台以动态列元数据（information_schema）驱动，对全部 10 张业务表提供统一的查看、搜索、分页、新增、编辑、删除；FK 列显示关联名称，删除遇 FK 依赖时给出友好提示
+- **升学路径结构化**：`public.school_pathways` 表达"小学→初中"关系（含升学方式：对口/派位/直升/部分对口），替代历史上的 `schools.feeder_middle_school` 模糊文本字段（原值保留作原始凭证）
+
+## 页面一览
+
+| 路径 | 用途 |
+|---|---|
+| `/` | 产品首页与入口 |
+| `/schools` | 学校查询：学校索引（列表/详情链接）与区域概览（分区聚合）两个视图 |
+| `/pathways` | 升学组合：小学→初中结构化路径，按区县与升学方式筛选 |
+| `/map` | 学区地图：高德底图上的学校、小区与学区边界 |
+| `/sources` | 信息源：区级政策与学校招生记录（只读浏览） |
+| `/ops` | 数据控制台：概览 + 数据完备度 + 10 张业务表 CRUD |
+| `/db` | 旧版数据库浏览器（SQL 执行/表数据），逐步被 /ops 取代 |
+
+## 数据表（public schema）
+
+| 表 | 内容 |
+|---|---|
+| `schools` | 学校（约 2,044 所：校名、区县、梯队、类型、坐标、来源等） |
+| `communities` | 小区（约 3.1 万个：名称、区县、街道/片区、价格等） |
+| `school_communities` | 学校-小区对口关系（约 3.9 万条，含来源与年份） |
+| `school_pathways` | 小学→初中升学路径（363 条，含升学方式） |
+| `policy_documents` | 区级政策与学校招生记录（约 832 条） |
+| `web_data_source` | 信息源登记（约 3,961 条） |
+| `districts` | 区县目录（16 行，canonical 名） |
+| `community_price_snapshots` | 小区价格快照 |
+| `community_price_sources` | 小区价格来源登记 |
+| `district_boundaries` | 学区边界 GeoJSON（211 行） |
 
 ## 技术栈
 
 | 层 | 选型 |
 |---|---|
-| 框架 | Next.js 16 (App Router) + React 19 + TypeScript |
-| 样式 | Tailwind v4 |
-| 地图 | 高德地图学区边界、学校和小区视图 |
-| 数据库 | PostgreSQL + Drizzle ORM |
-| 数据获取 | TanStack Query |
-| 状态 | Zustand |
+| 框架 | Next.js 16（App Router）+ React 19 + TypeScript |
+| 样式 | Tailwind CSS v4（`app/globals.css` 手写组件样式） |
+| 数据库 | PostgreSQL 16，`pg` 驱动裸 SQL（`lib/db/crud.ts`、`lib/product/queries.ts` 动态生成 SQL） |
+| 地图 | 高德 JS API（`@amap/amap-jsapi-loader`）+ Turf |
+| 客户端状态 | TanStack Query（/db）、Zustand（选中状态） |
+| 图标 | lucide-react |
 
 ## 快速启动
 
 ```bash
 pnpm install
-docker compose up -d postgres    # 启动 PostgreSQL，宿主机端口 15432
-pnpm dev
+pnpm dev            # http://localhost:3000
 ```
 
-打开 http://localhost:3000
+数据库：本地 PostgreSQL 监听 `localhost:15432`（库 `schoolpath`，用户 `schoolpath`，连接串见 `.env.example`）。首次部署用 `docker compose up -d postgres` 起库，再从恢复基线导入数据。
 
-正式数据更新直接使用当前 PostgreSQL 数据库和受审计的数据采集入口；不要运行历史 seed、迁移或重灌库流程。数据库恢复基线是 `data/backups/current-schoolpath-20260911/schoolpath-current.dump`。
+环境变量：复制 `.env.example` 为 `.env.local` 并填写。`.env.example` 是唯一入库的 env 模板。
 
-服务：
-
-- App: http://localhost:3000
-- PostgreSQL: `postgres://schoolpath:schoolpath_dev_password@localhost:15432/schoolpath`
-
-如果本机已有 3000 端口服务，先停掉旧服务或调整 `docker-compose.yml` 里的 app 端口映射。
-
-## 质量门禁与发布
-
-本地质量门禁：
+## 数据导入（外部采集项目契约）
 
 ```bash
-pnpm lint
-pnpm exec tsc --noEmit
-pnpm test
-pnpm build
+curl -X POST http://localhost:3000/api/ingest/records \
+  -H "content-type: application/json" \
+  -H "x-ingest-token: $INGEST_TOKEN" \
+  -d '{
+    "sourceKey": "official-area-ocr",
+    "sourceName": "区教委官网 OCR 采集",
+    "records": [{
+      "recordType": "school_community",
+      "sourceKey": "official-area-ocr",
+      "schoolId": 1234,
+      "communityId": 5678,
+      "committeeName": "某小区",
+      "year": 2026,
+      "sourceUrl": "https://...",
+      "sourceQuote": "原文摘录"
+    }]
+  }'
 ```
 
-`.github/workflows/ci.yml` 在 pull request 和 `main` 分支变更时使用 frozen lockfile、Node 25、PostgreSQL 16，执行 lint、TypeScript 检查、测试和 production build。`.github/workflows/cd.yml` 只在 `main` 通过同等 CI 门禁后构建并推送 GHCR 镜像，发布 commit SHA 和 `latest` 两个标签。当前没有绑定生产主机、域名、部署凭据或回滚目标，因此 CD 的边界是镜像发布，不宣称已完成线上部署。
+- `schoolId` / `communityId` 必须是已存在的 `public.schools.id` / `public.communities.id`（外部项目负责先解析，可用 `/api/v2/schools`、`/api/v2/communities` 检索）
+- 幂等：重复推送同一 `(school_id, community_id)` 被唯一索引吃掉，返回 `{received, added, unchanged, skipped}`
+- 未配置 `INGEST_TOKEN` 时接口返回 503（视为未启用）
 
-## 数据采集配置：高德 REST Key
+## 数据恢复
 
-1. 去 https://console.amap.com/dev/key/app 申请 Web 服务 key
-2. 把 key 填进 `.env.local`，仅在运行当前数据采集脚本时需要：
+恢复基线：`data/backups/current-schoolpath-20260911/schoolpath-current.dump`（32MB custom 格式 pg_dump，**本地文件不纳入 git**，新机器需另行获取）。
 
 ```bash
-AMAP_REST_KEY=你的_key
+# 全量恢复到临时库再按需导入（参考 scripts/migration/ 的做法）
+pg_restore -d <临时库> data/backups/current-schoolpath-20260911/schoolpath-current.dump
 ```
 
-不运行高德数据采集时无需配置该变量。
+`scripts/migration/` 保留三段历史迁移脚本（catalog→public 收敛、school_communities 同构合并、schema 归位）与升学路径迁移脚本，作为数据演进记录，日常不需要运行。
 
-## 项目结构
+## 目录结构
 
 ```
 app/
 ├── api/
-│   ├── v2/                    # 当前产品 API
-│   ├── districts/             # 地图区域边界 API
-│   ├── schools/               # 地图学校 API
-│   └── db/                    # 当前数据库浏览 API
-├── layout.tsx                 # 根布局 + Providers
-├── map/page.tsx               # 地图工作台
-└── page.tsx                   # 产品首页
+│   ├── v2/              # 产品 API（schools / communities / pathways / ops / ...）
+│   ├── ingest/          # 固定导入接口（records）
+│   ├── districts|schools|communities  # 地图与产品辅助 API
+│   ├── completeness     # 数据完备度
+│   └── db/              # 旧版数据库浏览 API
+├── schools/[id]/        # 学校详情
+├── pathways|map|sources|ops|db/   # 产品与管理页
+└── page.tsx             # 首页
 
 components/
-├── Providers.tsx              # TanStack Query
-├── map/                       # 高德地图工作台与图层
-├── product/                   # 当前产品页面
-└── db/                        # 数据库浏览组件
+├── product/             # 产品页组件（学校、路径、地图、信息源、详情）
+├── ops/                 # 数据控制台（OpsConsole、OpsTableExplorer、CompletenessPanel）
+├── map/                 # 高德地图工作台
+└── db/                  # 旧数据库浏览器组件
 
 lib/
-├── db/
-│   ├── schema.ts              # Drizzle PostgreSQL schema
-│   └── client.ts              # PostgreSQL 连接
-├── store.ts                   # Zustand 选中状态
-└── utils.ts                   # cn() 工具
+├── db/                  # schema.ts（类型定义）、client.ts、crud.ts（ops 全表 CRUD 引擎）
+├── product/             # queries.ts（产品查询）、districts.ts（九区常量）、parse 等
+├── pathways/            # feeder 文本解析（纯函数 + 单测）
+├── import/push.ts       # 固定导入接口落地逻辑
+└── store.ts             # Zustand
 
-data/backups/current-schoolpath-20260911/schoolpath-current.dump # 当前数据库快照
+scripts/
+├── migration/           # 历史迁移与升学路径迁移/AI 匹配脚本
+├── fetch-* / *-collect  # 数据采集器（高德社区/价格/边界、政策、xhs 梯队）
+└── audit-* / verify-*   # 数据质量审计工具
+
+data/backups/            # 恢复基线（dump 不进 git）
+tests/                   # node:test 单测与路由冒烟
 ```
 
-## 重要决策（来自 design doc）
-
-- **形态**: Web 优先（H5 + PC 自适应），小程序作为 P1 而非 P0。研究行为需要大屏。
-- **数据**: 第一版手工录入 + AI 辅助。**不爬链家房源**（法律灰区），仅提供搜索跳转链接。
-- **产品范围**: 新版产品固定覆盖九区；新增区域需要先更新产品范围常量、测试和发布说明。
-- **数据库**: PostgreSQL 是唯一运行数据版本，当前快照作为恢复基线保留。
-
-## 后续工作
-
-- [ ] 在确认数据、部署目标和回滚策略后接入线上环境
-
-## 命令清单
+## 质量门禁与 CI/CD
 
 ```bash
-pnpm dev              # 开发
-pnpm build            # 生产构建
-pnpm start            # 生产模式启动
-pnpm lint             # ESLint
+pnpm lint
+pnpm exec tsc --noEmit
+pnpm test                # node:test，当前 49 个用例
+pnpm build
 ```
 
-## 不做（明确边界）
+`.github/workflows/ci.yml` 在 PR 与 `main` 变更时用 frozen lockfile、Node 25、PostgreSQL 16 执行 lint、类型检查、测试与生产构建；`.github/workflows/cd.yml` 在 `main` 通过门禁后构建推送 GHCR 镜像（`<commit-sha>` 与 `latest` 双标签）。镜像发布是 CD 的当前边界，未绑定生产主机与回滚目标。
 
-- ❌ 爬取链家/贝壳房源数据（法律灰区，提供跳转链接即可）
-- ❌ 占坑风险数据（数据获取太难，等社区贡献）
-- ❌ 自动化政策抓取（第一版人工 + AI 辅助足够；自动化等数据量起来再做）
-- ❌ 未经范围评审直接把其他区域加入新版产品
-- ❌ 小程序原生版（H5 内嵌即可，等 PMF 信号再投入）
+## 常用命令
 
-## 设计文档
+```bash
+pnpm dev                        # 开发服务器
+pnpm test                       # 全量测试（需本地 dev server 或 SCHOOLPATH_TEST_BASE_URL）
+pnpm lint                       # ESLint
+npx tsc --noEmit                # 类型检查
 
-`~/.gstack/projects/house/wayblink-codex-using-memory-design-20260601-134445.md`
+# 数据维护脚本（仅本地使用）
+npx tsx scripts/audit-missing-data.ts                          # 全市缺失数据审计（只读）
+npx tsx scripts/audit-school-district-sources.ts               # 学校区县来源审计
+npx tsx scripts/verify-official-exact-community-links.ts       # 官方口径对口关系核验
+npx tsx scripts/fetch-community-prices.ts                      # 小区价格快照抓取
+npx tsx scripts/backfill-school-locations-baidu-browser.ts     # 学校坐标回填
+npx tsx scripts/migration/pathways-from-feeder.ts              # feeder 文本→school_pathways（幂等）
+npx tsx scripts/migration/pathways-ai-match.ts                 # 简称→初中 AI 语义匹配补丁（幂等）
+```
 
-里面有 demand evidence 状态、premises、为什么选 B 而非 C、success criteria、本周作业（5 个家长访谈）等完整背景。
+## 明确不做
+
+- ❌ 爬取链家/贝壳房源数据（法律灰区，产品侧只提供搜索跳转链接）
+- ❌ 审核队列与批次发布（2026-09 已下线：导入即线上，来源字段可追溯）
+- ❌ 小程序原生版（H5 自适应即可）
+- ❌ 未经范围评审把九区之外区域加入产品层
+- ❌ 大文件二进制进 git（数据库 dump 与数据快照一律本地保留，见 .gitignore）
+
+## 项目管理
+
+本仓库由 Trellis 管理开发流程（任务规划、规格、检查门禁），入口见 `AGENTS.md`；活跃任务在 `.trellis/tasks/`。

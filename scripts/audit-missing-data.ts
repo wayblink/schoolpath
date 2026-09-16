@@ -135,7 +135,7 @@ const SUMMARY_SQL = `
     SELECT
       d.canonical_name AS district,
       count(DISTINCT NULLIF(trim(p.source_url), ''))::int AS policy_distinct_urls
-    FROM catalog.policy_documents p
+    FROM public.policy_documents p
     JOIN catalog.districts d ON d.id = p.district_id
     WHERE ($1::text IS NULL OR d.canonical_name = $1)
     GROUP BY d.canonical_name

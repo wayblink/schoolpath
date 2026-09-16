@@ -28,3 +28,6 @@ test("pathways API provides source school ids when either endpoint has an exact 
   assert.ok(body.pathways.every((pathway) => pathway.primaryId === null || Number.isInteger(Number(pathway.primaryId))));
   assert.ok(body.pathways.every((pathway) => pathway.middleId === null || Number.isInteger(Number(pathway.middleId))));
 });
+
+// 回归：详情页经 getSchoolRelationsByName(district, school.name) 读 catalog.school_communities。
+// 该函数曾按已收敛掉的 school_name 列过滤 → PG 42703 → 整个 /schools/[id] 页 500。

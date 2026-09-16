@@ -3,17 +3,18 @@ import test from "node:test";
 
 const baseUrl = process.env.SCHOOLPATH_TEST_BASE_URL ?? "http://127.0.0.1:3000";
 
-test("ops route keeps the admin dashboard and relation review surface", async () => {
+test("ops route keeps the admin dashboard and table CRUD surface", async () => {
   const response = await fetch(`${baseUrl}/ops`);
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /数据采集与学区审计监控/);
+  assert.match(html, /数据控制台/);
   assert.match(html, /ops-page/);
 });
 
 test("ops owns the expandable completeness details and tag filters", async () => {
-  const ops = await import("node:fs/promises").then((fs) => fs.readFile("components/product/OpsDashboard.tsx", "utf8"));
+  // 完备度面板在拆分后位于 components/ops/CompletenessPanel.tsx
+  const ops = await import("node:fs/promises").then((fs) => fs.readFile("components/ops/CompletenessPanel.tsx", "utf8"));
   assert.match(ops, /数据完备度/);
   assert.match(ops, /按缺失标签过滤/);
   assert.match(ops, /<details/);

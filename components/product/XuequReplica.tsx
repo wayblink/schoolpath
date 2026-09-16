@@ -5,6 +5,7 @@ import { BookOpen, ChartNoAxesCombined, ChevronDown, MapPinned, School as School
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { PRODUCT_DISTRICTS } from "@/lib/product/districts";
 
+type SchoolPathway = { id: number; primaryId: number; middleId: number | null; middleName: string | null; middleTier: number | null; admissionMode: string; modeLabel: string; rawText: string | null };
 type School = {
   id: number;
   district: string;
@@ -83,8 +84,9 @@ function aggregateAreas(schools: School[], relations: Relation[]) {
 
 export function XuequReplica() {
   const [schools, setSchools] = useState<School[]>([]);
-  const [relations, setRelations] = useState<Relation[]>([]);
   const [summaries, setSummaries] = useState<DistrictSummary[]>([]);
+  // 待审关系池已下线：relations 恒空（区域概览仅展示学校聚合）
+  const relations: Relation[] = [];
   const [tab, setTab] = useState<Tab>("index");
   const [district, setDistrict] = useState("");
   const [area, setArea] = useState("");
@@ -92,22 +94,30 @@ export function XuequReplica() {
   const [openDistricts, setOpenDistricts] = useState<Set<string>>(() => new Set());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [pathwaysByPrimary, setPathwaysByPrimary] = useState<Map<number, SchoolPathway[]>>(() => new Map());
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const controller = new AbortController();
     async function load() {
       try {
-        const responses = await Promise.all([
-          fetch("/api/v2/schools?limit=2000", { signal: controller.signal }),
-          fetch("/api/v2/district-relations?limit=5000", { signal: controller.signal }),
-        ]);
-        if (responses.some((response) => !response.ok)) throw new Error("学校数据加载失败，请刷新重试。");
-        const [schoolData, relationData] = await Promise.all(responses.map((response) => response.json()));
+        const response = await fetch("/api/v2/schools?limit=2000", { signal: controller.signal });
+        if (!response.ok) throw new Error("学校数据加载失败，请刷新重试。");
+        const schoolData = await response.json();
         if (controller.signal.aborted) return;
         setSchools(schoolData.schools);
         setSummaries(schoolData.districts);
-        setRelations(relationData.relations);
+        // 升学路径（school_pathways 结构化表）并行加载，学校卡片"对口初中"读结构化关系
+        const pathwayData = await fetch("/api/v2/pathways?limit=1000", { signal: controller.signal }).then((r) => r.json());
+        if (controller.signal.aborted) return;
+        const byPrimary = new Map<number, SchoolPathway[]>();
+        for (const p of pathwayData.pathways ?? []) {
+          const list = byPrimary.get(p.primaryId) ?? [];
+          list.push(p);
+          byPrimary.set(p.primaryId, list);
+        }
+        setPathwaysByPrimary(byPrimary);
+        // 待审关系池已下线（2026-09-15 用户决策 B）：relations 恒空，区域概览仅展示学校聚合
       } catch (cause) {
         if (!controller.signal.aborted) setError(cause instanceof Error ? cause.message : "学校数据加载失败，请刷新重试。");
       } finally {
@@ -279,19 +289,20 @@ export function XuequReplica() {
           })}
         </div>
         <div id="school-panel-overview" role="tabpanel" aria-labelledby="school-tab-overview" hidden={tab !== "overview"}>
-          {tab === "overview" && !loading && !error && overview.map((row) => <DistrictDashboard key={row.district} {...row} />)}
+          {tab === "overview" && !loading && !error && overview.map((row) => <DistrictDashboard key={row.district} {...row} pathways={pathwaysByPrimary} />)}
         </div>
       </div>
     </div>
   );
 }
 
-function DistrictDashboard({ district, summary, schools, relations, areas }: {
+function DistrictDashboard({ district, summary, schools, relations, areas, pathways }: {
   district: string;
   summary: DistrictSummary | undefined;
   schools: School[];
   relations: Relation[];
   areas: AreaAggregate[];
+  pathways: Map<number, SchoolPathway[]>;
 }) {
   const verifiedCount = relations.filter((relation) => relation.verified).length;
   const years = [...new Set(relations.map((relation) => relation.sourceYear)
@@ -332,7 +343,7 @@ function DistrictDashboard({ district, summary, schools, relations, areas }: {
           <table className="sw-area-table">
             <caption className="sw-sr-only">{district}街道与片区收录统计</caption>
             <thead><tr><th scope="col">街道 / 片区</th><th scope="col">学校</th><th scope="col">来源关系</th><th scope="col">已核验关系</th></tr></thead>
-            <tbody>{areas.map((area) => <StreetRows key={area.name} area={area} />)}</tbody>
+            <tbody>{areas.map((area) => <StreetRows key={area.name} area={area} pathways={pathways} />)}</tbody>
           </table>
         </div>
       ) : <p className="sw-muted">暂无街道或片区统计</p>}
@@ -340,7 +351,7 @@ function DistrictDashboard({ district, summary, schools, relations, areas }: {
   );
 }
 
-function StreetRows({ area }: { area: AreaAggregate }) {
+function StreetRows({ area, pathways }: { area: AreaAggregate; pathways: Map<number, SchoolPathway[]> }) {
   const [isOpen, setIsOpen] = useState(false);
   const id = useId();
   const buttonId = `street-toggle-${id}`;
@@ -390,7 +401,12 @@ function StreetRows({ area }: { area: AreaAggregate }) {
                           </Link>
                         </header>
                         <p>{school.evaluation || "评价待补充"}</p>
-                        <p className="sw-muted">对口初中：{school.feederMiddleSchool || "待补充"}</p>
+                        <p className="sw-muted">{(() => {
+                          const paths = (pathways.get(school.id) ?? []).filter((p: SchoolPathway) => p.middleId);
+                          if (!paths.length) return "对口初中：待补充";
+                          const label = paths.map((p: SchoolPathway) => p.middleTier ? `${p.middleName}（${p.middleTier}梯·${p.modeLabel}）` : `${p.middleName}（${p.modeLabel}）`).join("、");
+                          return `对口初中：${label}`;
+                        })()}</p>
                       </article>
                     ))}
                   </div>

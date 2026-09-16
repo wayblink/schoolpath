@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { parseXuequzhushouHtml } from "../lib/ingest/xuequzhushou";
+import { parseXuequzhushouHtml } from "../lib/import/xuequzhushou";
 
 const fixture = readFileSync(new URL("./fixtures/xuequzhushou-20260711.html", import.meta.url), "utf8");
 
