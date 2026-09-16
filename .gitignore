@@ -57,11 +57,15 @@ next-env.d.ts
 /rollback.sql
 /scripts/rollback.sql
 
-# AI agent 工具链配置（Claude Code / Codex / Trellis 等，不进版本库）
+# AI agent 工具链配置（Claude Code / Codex / Trellis / pi 等，不进版本库）
 /.agents/
 /.claude/
 /.codex/
+/.pi/
 /.trellis/
 /.github/skills/
 /AGENTS.md
 /CLAUDE.md
+
+# 临时产物（采集期 PDF/图片等，磁盘保留）
+/tmp/

@@ -189,6 +189,8 @@ npx tsx scripts/migration/pathways-ai-match.ts                 # 简称→初中
 - ❌ 未经范围评审把九区之外区域加入产品层
 - ❌ 大文件二进制进 git（数据库 dump 与数据快照一律本地保留，见 .gitignore）
 
-## 项目管理
+## 版本库约定
 
-本仓库由 Trellis 管理开发流程（任务规划、规格、检查门禁），入口见 `AGENTS.md`；活跃任务在 `.trellis/tasks/`。
+- AI agent 工具链配置（`.claude`、`.agents`、`.codex`、`.pi`、`.trellis`、`.github/skills` 等）与 `AGENTS.md` 不进版本库，仅本地保留（见 `.gitignore`）
+- 数据快照（`data/audit`、`data/ingest`）、数据库 dump 与临时产物（`tmp/`、`.tmp/`）一律本地保留
+- `.env.example` 是唯一入库的 env 模板；本地变量写在 `.env.local`

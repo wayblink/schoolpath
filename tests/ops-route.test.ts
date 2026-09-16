@@ -25,7 +25,8 @@ test("completeness API exposes school details with filterable quality tags", asy
   const response = await fetch(`${baseUrl}/api/completeness`);
   assert.equal(response.status, 200);
   const body = await response.json();
-  assert.ok(body.details.length > 1000);
+  // 本地库为全量真实数据（2000+ 所学校）；CI 使用 scripts/ci-seed.sql 合成种子（18 所），此处只验证 API 契约
+  assert.ok(body.details.length > 0);
   assert.ok(body.details.every((row: { id: number; missingTags: string[]; percent: number }) =>
     Number.isInteger(row.id) && Array.isArray(row.missingTags) && row.percent >= 0 && row.percent <= 100));
   assert.ok(body.availableTags.includes("缺梯队"));
