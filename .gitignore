@@ -56,3 +56,12 @@ next-env.d.ts
 # 迁移脚本生成的回滚 SQL（本地产物）
 /rollback.sql
 /scripts/rollback.sql
+
+# AI agent 工具链配置（Claude Code / Codex / Trellis 等，不进版本库）
+/.agents/
+/.claude/
+/.codex/
+/.trellis/
+/.github/skills/
+/AGENTS.md
+/CLAUDE.md
