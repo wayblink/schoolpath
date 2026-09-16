@@ -72,12 +72,24 @@ ops 数据控制台（/ops：10 张表查看/新增/编辑/删除）       ←  
 
 ```bash
 pnpm install
+
+# 1. 起数据库（本地已有 localhost:15432 实例可跳过）
+docker compose up -d postgres
+
+# 2. 建表（10 张 public 业务表）
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f scripts/schema.sql
+
+# 3. 灌入当前全量业务数据（2,044 学校 / 31,399 小区 / 39,384 对口关系 / 363 升学路径 / 832 政策 / 3,961 信息源）
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f data/seed.sql
+
+# 4. 启动
 pnpm dev            # http://localhost:3000
 ```
 
-数据库：本地 PostgreSQL 监听 `localhost:15432`（库 `schoolpath`，用户 `schoolpath`，连接串见 `.env.example`）。首次部署用 `docker compose up -d postgres` 起库，再从恢复基线导入数据。
-
-环境变量：复制 `.env.example` 为 `.env.local` 并填写。`.env.example` 是唯一入库的 env 模板。
+- `data/seed.sql`（约 50MB）是 2026-09-16 导出的在库全量数据快照，供开发者初始化本地环境；采集更新后重新导出覆盖即可
+- `psql` 需要 PostgreSQL 客户端（macOS：`brew install libpq` 或 `docker run --rm -v "$PWD:/w" -w /w postgres:16 psql ...`）
+- 环境变量：复制 `.env.example` 为 `.env.local` 并填写（`.env.example` 是唯一入库的 env 模板）
+- CI 不使用 seed.sql，改用 `scripts/ci-seed.sql` 合成最小种子跑门禁
 
 ## 数据导入（外部采集项目契约）
 
@@ -107,7 +119,7 @@ curl -X POST http://localhost:3000/api/ingest/records \
 
 ## 数据恢复
 
-恢复基线：`data/backups/current-schoolpath-20260911/schoolpath-current.dump`（32MB custom 格式 pg_dump，**本地文件不纳入 git**，新机器需另行获取）。
+恢复基线：`data/seed.sql`（入库的全量数据 SQL，见快速启动第 3 步）；更早的 custom 格式快照 `data/backups/current-schoolpath-20260911/schoolpath-current.dump`（32MB，**本地文件不纳入 git**）仅作历史保留。
 
 ```bash
 # 全量恢复到临时库再按需导入（参考 scripts/migration/ 的做法）
