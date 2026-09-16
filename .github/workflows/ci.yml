@@ -41,7 +41,9 @@ jobs:
           node-version: 25
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pg_restore --no-owner --no-privileges --clean --if-exists --dbname="$DATABASE_URL" data/backups/current-schoolpath-20260911/schoolpath-current.dump
+      # 恢复基线 dump 不纳入 git（32MB 二进制）：CI 用 scripts/schema.sql 建表 + scripts/ci-seed.sql 灌合成种子
+      - run: psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -q -f scripts/schema.sql
+      - run: psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -q -f scripts/ci-seed.sql
       - run: pnpm lint
       - run: pnpm exec tsc --noEmit
       - run: pnpm build
