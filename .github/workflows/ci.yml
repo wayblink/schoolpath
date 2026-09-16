@@ -41,6 +41,8 @@ jobs:
           node-version: 25
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Install Playwright chromium（map 路由冒烟测试需要）
+        run: pnpm exec playwright install chromium --with-deps
       # 恢复基线 dump 不纳入 git（32MB 二进制）：CI 用 scripts/schema.sql 建表 + scripts/ci-seed.sql 灌合成种子
       - run: psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -q -f scripts/schema.sql
       - run: psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -q -f scripts/ci-seed.sql
