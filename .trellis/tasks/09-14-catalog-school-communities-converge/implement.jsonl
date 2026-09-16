@@ -1,5 +1,0 @@
-{"file": ".trellis/tasks/09-14-catalog-school-communities-converge/design.md", "reason": "新表 DDL（D1）、列映射（D2）、S1-S8 迁移步骤与回滚（D3/D6）、代码改指清单（D4）、发布通道接缝（D5）——实施主依据"}
-{"file": ".trellis/tasks/09-14-catalog-school-communities-converge/prd.md", "reason": "三决策（合并/分层治理/改读 public/范围止于收敛）、验收标准、Confirmed Facts 链路实证"}
-{"file": "scripts/migration/converge.ts", "reason": "迁移脚本模式范本：逐步事务+rollback.sql+前置行数校验+--apply/--from/--to"}
-{"file": "lib/product/release.ts", "reason": "发布链路现状：createReleaseBatch/publishReleaseBatch 的双跳 join 需简化为一跳（D5），最高改指风险点之一"}
-{"file": "lib/ingest/xuequzhushou-import.ts", "reason": "relations 生产者：INSERT 列适配+幂等路径（loadRecords/reconcile）验证，最高代码风险点"}

@@ -1,3 +1,0 @@
-{"file":".trellis/spec/frontend/index.md","reason":"检查新版产品边界改动是否符合项目的前端规范入口。"}
-{"file":".trellis/spec/frontend/quality-guidelines.md","reason":"检查 lint、测试、CI/CD 质量门禁和回归证据。"}
-{"file":".trellis/spec/frontend/type-safety.md","reason":"检查共享查询、API 响应和脚本类型是否避免新增 any。"}

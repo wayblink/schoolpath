@@ -1,4 +1,0 @@
-{"file": ".trellis/tasks/09-14-catalog-school-communities-converge/prd.md", "reason": "验收标准逐条核对：行数对账/治理三批/grep 门禁/测试/页面回归/回滚演练"}
-{"file": ".trellis/tasks/09-14-catalog-school-communities-converge/design.md", "reason": "D2 列映射逐列核对（尤其 school_id 可空、legacy_id 转换、丢弃列清单）、D4 清单逐项确认"}
-{"file": "lib/product/queries.ts", "reason": "4 处线上函数改读 public 与 relations 函数改指新表后，SQL 正确性与口径一致性核查"}
-{"file": "lib/db/explorer.ts", "reason": "/db 白名单与 DB 实际表状态一致性核查"}
